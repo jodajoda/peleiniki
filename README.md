@@ -1,2 +1,0 @@
-# peleiniki
-Website for photos
