@@ -1,0 +1,253 @@
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-top: 70px; /* Added to prevent content from being hidden by the fixed header */
+}
+
+header {
+    background-color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: padding 0.3s;
+}
+
+header.shrink {
+    padding: 0.5rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    height: 50px;
+    transition: height 0.3s;
+}
+
+header.shrink .logo {
+    height: 30px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #e67e22;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-main {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.contact-main h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #e67e22;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 3rem;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #d35400;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-links a {
+    display: inline-block;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover img {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid #ddd;
+}
+
+.footer-links {
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #555;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer .social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-on-load {
+    opacity: 0;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.packages-main {
+    padding: 4rem 2rem;
+}
+
+.packages-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.package {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.package h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.package .description {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.package .duration,
+.package .photos {
+    margin-bottom: 0.5rem;
+}
+
+.package .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e67e22;
+    margin-top: 1.5rem;
+}
+
+.location-note {
+    margin-top: 2rem;
+    font-style: italic;
+    color: #555;
+}
+
+.about-main {
+    padding: 4rem 2rem;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.about-text {
+    text-align: left;
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    line-height: 1.6;
+}
