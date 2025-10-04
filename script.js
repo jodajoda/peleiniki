@@ -7,3 +7,8 @@ function scrollFunction() {
     document.querySelector("header").classList.remove("shrink");
   }
 }
+
+document.querySelector('.hamburger-menu').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('active');
+    document.querySelector('.hamburger-menu').classList.toggle('active');
+});
