@@ -1,14 +1,16 @@
-/* Color Palette for Family & Children Photography */
+/* Color Palette - Minimalist & Elegant for Family & Children Photography */
 :root {
-    --primary-color: #e8b4a8;        /* Soft peachy pink - warm, welcoming */
-    --secondary-color: #c89f94;      /* Muted terracotta - earthy, natural */
-    --accent-color: #f4d4c8;         /* Light blush - gentle, delicate */
-    --text-dark: #4a4a4a;            /* Soft charcoal - readable, not harsh */
-    --text-light: #7a7a7a;           /* Medium gray - secondary text */
-    --background-light: #faf8f6;     /* Warm off-white - cozy, inviting */
-    --background-cream: #f5f1ed;     /* Cream - subtle warmth */
+    --primary-color: #d4a5a5;        /* Dusty rose - soft, romantic */
+    --secondary-color: #9b8b8b;      /* Warm taupe - elegant, neutral */
+    --accent-color: #c8b5a0;         /* Sandy beige - natural accent */
+    --text-dark: #2d2d2d;            /* Almost black - clean, readable */
+    --text-light: #6b6b6b;           /* Medium gray - secondary text */
+    --background-light: #fafafa;     /* Off-white - subtle base */
+    --background-cream: #f8f5f2;     /* Warm cream - cozy background */
+    --background-pink: #faf5f3;      /* Blush cream - gentle background */
+    --background-purple: #f5f3f6;    /* Lavender mist - soft background */
     --white: #ffffff;                /* Pure white */
-    --shadow: rgba(0, 0, 0, 0.1);    /* Subtle shadows */
+    --shadow: rgba(0, 0, 0, 0.08);   /* Very subtle shadows */
 }
 
 html {
@@ -149,6 +151,8 @@ h1, h2 {
     border-radius: 5px;
     margin-bottom: 3rem;
     transition: background-color 0.3s;
+    align-self: center;
+    max-width: fit-content;
 }
 
 .contact-button:hover {
@@ -247,6 +251,8 @@ footer .social-links img {
     box-shadow: 0 2px 4px var(--shadow);
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .package:hover {
@@ -264,26 +270,35 @@ footer .social-links img {
     font-style: italic;
     margin-bottom: 1rem;
     color: var(--text-light);
+    min-height: 3em;
+    flex-grow: 0;
 }
 
 .package-details {
     list-style: none;
     padding: 0;
-    margin: 1rem 0;
+    margin: auto 0 1rem 0;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .package-details li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
     line-height: 1.6;
+    flex: 1 1 auto;
+    min-width: 150px;
 }
 
 .package-details strong {
     color: var(--text-dark);
+    display: block;
 }
 
 .package .duration,
 .package .photos {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
 }
 
 .package-note {
@@ -292,11 +307,18 @@ footer .social-links img {
     margin-top: 0.5rem;
 }
 
+.package .price-item {
+    flex: 0 0 auto;
+}
+
 .package .price {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--primary-color);
-    margin-top: 1.5rem;
+}
+
+.package-details .price {
+    display: inline;
 }
 
 .location-note {
@@ -319,8 +341,24 @@ footer .social-links img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem 0 3rem 0;
+    margin: 0;
     gap: 1.5rem;
+    padding: 4rem 2rem;
+    background-color: var(--white);
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.content-section:nth-of-type(odd) {
+    background-color: var(--background-pink);
+}
+
+.content-section:nth-of-type(even) {
+    background-color: var(--background-purple);
+}
+
+.content-section:nth-of-type(3n) {
+    background-color: var(--background-cream);
 }
 
 .content-image-wrapper {
