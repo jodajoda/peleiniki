@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const modal = document.getElementById("lightbox-modal");
     const modalImg = document.getElementById("lightbox-image");
-    const galleryImages = Array.from(document.querySelectorAll(".gallery img"));
+    const galleryImages = Array.from(document.querySelectorAll(".gallery img, .content-image"));
     const closeModal = document.querySelector(".close-button");
     const prevButton = document.querySelector(".prev-button");
     const nextButton = document.querySelector(".next-button");
