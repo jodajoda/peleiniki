@@ -212,11 +212,33 @@ footer .social-links img {
 .package .description {
     font-style: italic;
     margin-bottom: 1rem;
+    color: #666;
+}
+
+.package-details {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.package-details li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.package-details strong {
+    color: #333;
 }
 
 .package .duration,
 .package .photos {
     margin-bottom: 0.5rem;
+}
+
+.package-note {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
 }
 
 .package .price {

@@ -1,45 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Pelei Niki Fotográfus</title>
+    <meta name="description" content="Pelei Niki fotográfus portfóliója - Családi és gyermekfotózás különleges pillanatai. Tekintsd meg munkáimat és gyönyörködj a természetes felvételekben!">
+    <title>Portfólió - Pelei Niki Fotográfus</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <!-- Header -->
     <header>
-        <nav class="nav-container">
-            <a href="index.html"><img src="assets/icons/pnfotos.png" alt="Pelei Niki Fotós" class="logo"></a>
-            <a href="#" class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+        <nav class="nav-container" aria-label="Fő navigáció">
+            <a href="index.html" aria-label="Vissza a kezdőlapra">
+                <img src="assets/icons/pnfotos.png" alt="Pelei Niki Fotós" class="logo">
             </a>
+            <button class="hamburger-menu" aria-label="Menü megnyitása" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="photoshooting.html">A photoshooting with me</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About me</a></li>
-                <li><a href="packages.html">Packages</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="photoshooting.html">A fotózás velem</a></li>
+                <li><a href="portfolio.html" aria-current="page">Portfólió</a></li>
+                <li><a href="about.html">Rólam</a></li>
+                <li><a href="packages.html">Csomagok</a></li>
+                <li><a href="contact.html">Kapcsolat</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Main Content -->
     <main>
-        <div class="portfolio-group animate-on-load">
-            <h2>Abigél keresztelője</h2>
+        <h1 class="animate-on-load">Portfólió</h1>
+
+        <section class="portfolio-group animate-on-load" aria-labelledby="abigel-keresztelo">
+            <h2 id="abigel-keresztelo">Abigél keresztelője</h2>
             <p>Egy csodálatos nap emlékére, amikor Abigélt a családja és a barátai körében köszöntöttük.</p>
             <div class="gallery">
-                <div class="img-wrapper"><img src="assets/portfolio/abigel-keresztelo_20240922-01948-2.jpg" alt="Portfolio image"></div>
-                <div class="img-wrapper"><img src="assets/portfolio/abigel-keresztelo_20240922-02496.jpg" alt="Portfolio image"></div>
+                <div class="img-wrapper"><img src="assets/portfolio/abigel-keresztelo_20240922-01948-2.jpg" alt="Abigél keresztelője - családi fotó" loading="lazy"></div>
+                <div class="img-wrapper"><img src="assets/portfolio/abigel-keresztelo_20240922-02496.jpg" alt="Abigél keresztelője - ünneplés" loading="lazy"></div>
             </div>
-        </div>
+        </section>
 
-        <div class="portfolio-group animate-on-load">
-            <h2>Ajándék fotózás a Szent István parkban</h2>
+        <section class="portfolio-group animate-on-load" aria-labelledby="szentistvan-park">
+            <h2 id="szentistvan-park">Ajándék fotózás a Szent István parkban</h2>
             <p>Egy vidám délután a parkban, tele játékkal és nevetéssel. A legjobb ajándék, amit adhatsz: az együtt töltött idő.</p>
             <div class="gallery">
                 <div class="img-wrapper"><img src="assets/portfolio/ajandekfotozas-szentistvanparkjatszoter_20240511_01.jpg" alt="Portfolio image"></div>
@@ -55,7 +63,7 @@
                 <div class="img-wrapper"><img src="assets/portfolio/ajandekfotozas-szentistvanparkjatszoter_20240511_17.jpg" alt="Portfolio image"></div>
                 <div class="img-wrapper"><img src="assets/portfolio/ajandekfotozas-szentistvanparkjatszoter_20240511_19.jpg" alt="Portfolio image"></div>
                 <div class="img-wrapper"><img src="assets/portfolio/ajandekfotozas-szentistvanparkjatszoter_20240511_21.jpg" alt="Portfolio image"></div>
-                <div class="img-wrapper"><img src_="assets/portfolio/ajandekfotozas-szentistvanparkjatszoter_20240511_23.jpg" alt="Portfolio image"></div>
+                <div class="img-wrapper"><img src="assets/portfolio/ajandekfotozas-szentistvanparkjatszoter_20240511_23.jpg" alt="Portfolio image" loading="lazy"></div>
                 <div class="img-wrapper"><img src="assets/portfolio/ajandekfotozas-szentistvanparkjatszoter_20240511_25.jpg" alt="Portfolio image"></div>
                 <div class="img-wrapper"><img src="assets/portfolio/ajandekfotozas-szentistvanparkjatszoter_20240511_26.jpg" alt="Portfolio image"></div>
                 <div class="img-wrapper"><img src="assets/portfolio/ajandekfotozas-szentistvanparkjatszoter_20240511_28.jpg" alt="Portfolio image"></div>
@@ -69,27 +77,27 @@
                 <div class="img-wrapper"><img src="assets/portfolio/ajandekfotozas-szentistvanparkjatszoter_20240511_45.jpg" alt="Portfolio image"></div>
                 <div class="img-wrapper"><img src="assets/portfolio/ajandekfotozas-szentistvanparkjatszoter_20240511_47.jpg" alt="Portfolio image"></div>
             </div>
-        </div>
+        </section>
 
-        <div class="portfolio-group animate-on-load">
-            <h2>Anikó szülinapja</h2>
+        <section class="portfolio-group animate-on-load" aria-labelledby="aniko-szulinap">
+            <h2 id="aniko-szulinap">Anikó szülinapja</h2>
             <p>Az ünnepelt és a torta. Kell ennél több?</p>
             <div class="gallery">
                 <div class="img-wrapper"><img src="assets/portfolio/anikoszulinapaji-09288.jpg" alt="Portfolio image"></div>
             </div>
-        </div>
+        </section>
 
-        <div class="portfolio-group animate-on-load">
-            <h2>Anitaéknál</h2>
+        <section class="portfolio-group animate-on-load" aria-labelledby="anitaeknal">
+            <h2 id="anitaeknal">Anitaéknál</h2>
             <p>Az otthon melege, a közös játék és a szeretet. Ezek a legfontosabb pillanatok.</p>
             <div class="gallery">
                 <div class="img-wrapper"><img src="assets/portfolio/anitaeknal-20230702-03039.jpg" alt="Portfolio image"></div>
                 <div class="img-wrapper"><img src="assets/portfolio/anitaeknal-20230702-03055.jpg" alt="Portfolio image"></div>
             </div>
-        </div>
+        </section>
 
-        <div class="portfolio-group animate-on-load">
-            <h2>Az élet</h2>
+        <section class="portfolio-group animate-on-load" aria-labelledby="az-elet">
+            <h2 id="az-elet">Az élet</h2>
             <p>A mindennapok csodái, a kis pillanatok, amik az életet jelentik.</p>
             <div class="gallery">
                 <div class="img-wrapper"><img src="assets/portfolio/azelet-202405-00394.jpg" alt="Portfolio image"></div>
@@ -97,10 +105,10 @@
                 <div class="img-wrapper"><img src="assets/portfolio/azelet-202405-08169.jpg" alt="Portfolio image"></div>
                 <div class="img-wrapper"><img src="assets/portfolio/azelet-202405-08192.jpg" alt="Portfolio image"></div>
             </div>
-        </div>
+        </section>
 
-        <div class="portfolio-group animate-on-load">
-            <h2>Családfotózás Jancsóéknál</h2>
+        <section class="portfolio-group animate-on-load" aria-labelledby="jancso-csalad">
+            <h2 id="jancso-csalad">Családfotózás Jancsóéknál</h2>
             <p>Egy hideg téli napon is lehet meleg a hangulat, ha a család együtt van.</p>
             <div class="gallery">
                 <div class="img-wrapper"><img src="assets/portfolio/csaladfotozas_jancsoidieknel_20231216-09469.jpg" alt="Portfolio image"></div>
@@ -121,10 +129,10 @@
                 <div class="img-wrapper"><img src="assets/portfolio/csaladfotozas_jancsoildieknel_20231216-00054.jpg" alt="Portfolio image"></div>
                 <div class="img-wrapper"><img src="assets/portfolio/csaladfotozas_jancsoildieknel_20231216-00138.jpg" alt="Portfolio image"></div>
             </div>
-        </div>
+        </section>
 
-        <div class="portfolio-group animate-on-load">
-            <h2>Családfotózás a Margitszigeten</h2>
+        <section class="portfolio-group animate-on-load" aria-labelledby="margitsziget">
+            <h2 id="margitsziget">Családfotózás a Margitszigeten</h2>
             <p>Egy nyári nap a Margitszigeten, ahol a természet és a család szeretete találkozik.</p>
             <div class="gallery">
                 <div class="img-wrapper"><img src="assets/portfolio/csaladfotozas-szantner-vargaevi-margitsziget_20240609-04022.jpg" alt="Portfolio image"></div>
@@ -137,48 +145,53 @@
                 <div class="img-wrapper"><img src="assets/portfolio/csaladfotozas-szantner-vargaevi-margitsziget_20240609-04425.jpg" alt="Portfolio image"></div>
                 <div class="img-wrapper"><img src="assets/portfolio/csaladfotozas-szantner-vargaevi-margitsziget_20240609-04563.jpg" alt="Portfolio image"></div>
             </div>
-        </div>
+        </section>
 
-        <div class="portfolio-group animate-on-load">
-            <h2>Demjén család a Városligetben</h2>
+        <section class="portfolio-group animate-on-load" aria-labelledby="demjen-csalad">
+            <h2 id="demjen-csalad">Demjén család a Városligetben</h2>
             <p>Együtt a szabadban, a Városliget zöldjében. A Demjén család boldog pillanatai.</p>
             <div class="gallery">
                 <div class="img-wrapper"><img src="assets/portfolio/demjencsalad_varosliget_20240730-08172.jpg" alt="Portfolio image"></div>
                 <div class="img-wrapper"><img src="assets/portfolio/demjencsalad_varosliget_20240730-08188.jpg" alt="Portfolio image"></div>
-                <div class="img-wrapper"><img src="assets/portfolio/demjencsalad_varosliget_20240730-08219-1.jpg" alt="Portfolio image"></div>
-                <div class="img-wrapper"><img src="assets/portfolio/demjencsalad_varosliget_20240730-08219-2.jpg" alt="Portfolio image"></div>
+                <div class="img-wrapper"><img src="assets/portfolio/demjencsalad_varosliget_20240730-08219-1.jpg" alt="Portfolio image" loading="lazy"></div>
+                <div class="img-wrapper"><img src="assets/portfolio/demjencsalad_varosliget_20240730-08219-2.jpg" alt="Portfolio image" loading="lazy"></div>
             </div>
-        </div>
+        </section>
     </main>
+
+    <!-- Footer -->
     <footer>
-        <div class="social-links">
-            <a href="YOUR_INSTAGRAM_URL" target="_blank">
-                <img src="assets/icons/instagram.svg" alt="Instagram">
+        <div class="social-links" aria-label="Közösségi média linkek">
+            <a href="YOUR_INSTAGRAM_URL" target="_blank" rel="noopener noreferrer" aria-label="Instagram profil">
+                <img src="assets/icons/instagram.svg" alt="Instagram ikon" width="24" height="24">
             </a>
-            <a href="YOUR_FACEBOOK_URL" target="_blank">
-                <img src="assets/icons/facebook.svg" alt="Facebook">
+            <a href="YOUR_FACEBOOK_URL" target="_blank" rel="noopener noreferrer" aria-label="Facebook oldal">
+                <img src="assets/icons/facebook.svg" alt="Facebook ikon" width="24" height="24">
             </a>
-            <a href="mailto:YOUR_EMAIL_ADDRESS">
-                <img src="assets/icons/email.svg" alt="Email">
+            <a href="mailto:YOUR_EMAIL_ADDRESS" aria-label="E-mail küldése">
+                <img src="assets/icons/email.svg" alt="E-mail ikon" width="24" height="24">
             </a>
         </div>
-        <div class="footer-links">
+        <nav class="footer-links" aria-label="Lábléc navigáció">
             <a href="#">Családfotózás</a>
             <a href="#">Adatkezelési tájékoztató</a>
             <a href="#">Impresszum</a>
-        </div>
+        </nav>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="modal" role="dialog" aria-modal="true" aria-label="Képnagyító">
+        <button class="close-button" aria-label="Bezárás">&times;</button>
+        <button class="prev-button" aria-label="Előző kép">&#10094;</button>
+        <button class="next-button" aria-label="Következő kép">&#10095;</button>
+        <div class="modal-wrapper">
+            <img class="modal-content" id="lightbox-image" alt="">
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
     <script src="animate.js"></script>
     <script src="lightbox.js"></script>
-    <div id="lightbox-modal" class="modal">
-        <span class="close-button">&times;</span>
-        <a class="prev-button">&#10094;</a>
-        <a class="next-button">&#10095;</a>
-        <div class="modal-wrapper">
-            <img class="modal-content" id="lightbox-image">
-        </div>
-    </div>
 </body>
-
 </html>

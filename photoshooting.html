@@ -1,53 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A photoshooting with me - Pelei Niki Fotográfus</title>
+    <meta name="description" content="Hogyan zajlik egy fotózás Pelei Nikivel? Ismerkedj meg a fotózási folyamattal, légkörrel és a várható élménnyel!">
+    <title>A fotózás velem - Pelei Niki Fotográfus</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <nav class="nav-container">
-            <a href="index.html"><img src="assets/icons/pnfotos.png" alt="Pelei Niki Fotós" class="logo"></a>
-            <a href="#" class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+        <nav class="nav-container" aria-label="Fő navigáció">
+            <a href="index.html" aria-label="Vissza a kezdőlapra">
+                <img src="assets/icons/pnfotos.png" alt="Pelei Niki Fotós" class="logo">
             </a>
+            <button class="hamburger-menu" aria-label="Menü megnyitása" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="photoshooting.html">A photoshooting with me</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About me</a></li>
-                <li><a href="packages.html">Packages</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="photoshooting.html" aria-current="page">A fotózás velem</a></li>
+                <li><a href="portfolio.html">Portfólió</a></li>
+                <li><a href="about.html">Rólam</a></li>
+                <li><a href="packages.html">Csomagok</a></li>
+                <li><a href="contact.html">Kapcsolat</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>A photoshooting with me</h1>
-        <p>Information about what a photoshooting is like with Niki.</p>
+
+    <!-- Main Content -->
+    <main class="about-main">
+        <article>
+            <h1 class="animate-on-load">A fotózás menete</h1>
+
+            <section class="about-text">
+                <h2 class="animate-on-load">A Lazább fotózás</h2>
+                <p class="animate-on-load">
+                    Nálam nem kell kicsinosítanod magad, felöltöznöd, tökéletesnek lenned.
+                    Sőt! Annál jobb, minél lazábban érzitek magatokat. Akár pizsamában, kócos hajjal,
+                    kávéval a kezedben – pont olyannak, amilyenek vagytok egy hétköznap reggelén.
+                </p>
+                <p class="animate-on-load">
+                    Ez nem egy klasszikus "fotózás". Ez inkább olyan, mintha átjönnék egy kávéra,
+                    miközben ti csináljátok a dolgotokat. Játszotok a gyerekkel, bújós, cicázás,
+                    vagy csak úgy lótok-futotok a lakásban. Én meg közben csendben megörökítem,
+                    ahogy éltek, nevetgéltek, ölelgezitek egymást.
+                </p>
+                <p class="animate-on-load">
+                    Lehet otthon a kanapén hempergőzve, a konyhában süti sütés közben,
+                    vagy a játszószőnyegen autózgatva. Az a lényeg, hogy ti jól érezzétek magatokat,
+                    és közben én elkaptam azokat a pillanatokat, amiket évek múlva is szeretnétek majd visszanézni.
+                </p>
+
+                <h2 class="animate-on-load">Nincs póz, csak élet</h2>
+                <p class="animate-on-load">
+                    Nálam nem lesz „Nézz a kamerába és mosolyogj!" felszólítás. Ehelyett játszotok,
+                    nevettek, ölelitek egymást, és én közben diszkréten megörökítem a pillanatokat.
+                    A képek tele lesznek élettel: a gyerek őszinte nevetésével, az apuka büszke pillantásával,
+                    az anyuka gyengéd simogatásával.
+                </p>
+                <p class="animate-on-load">
+                    Minden érzelem helyet kap: a játékos percek, a nevetés, de akár a könnycseppek és a
+                    megnyugtató ölelések is. Ezek az őszinte pillanatok teszik a fotókat igazán különlegessé
+                    és értékessé.
+                </p>
+
+                <h2 class="animate-on-load">A helyszín</h2>
+                <p class="animate-on-load">
+                    Fotózhatunk otthon, a kerted zugaiban, a kedvenc játszótereken, parkokban,
+                    vagy bármilyen más helyen, ami számotokra fontos és biztonságot ad.
+                    A saját környezetetek adja a leghitelesebb hátteret – nincs szükség stúdióra
+                    vagy mesterséges díszletekre.
+                </p>
+                <p class="animate-on-load">
+                    A lényeg, hogy olyan legyen a helyszín, ahol jól érzitek magatokat,
+                    ahol szabadon mozoghattok, és ahol a gyerekek is természetesen viselkednek.
+                </p>
+
+                <h2 class="animate-on-load">A fotózás után</h2>
+                <p class="animate-on-load">
+                    A fotózást követően gondosan átválogatom az összes felvételt, és kiválasztom
+                    a legszebb, legkifejezőbb pillanatokat. Ezeket professzionális szoftverekkel
+                    retusálom és színkorrigálom, hogy a végeredmény tökéletes legyen.
+                </p>
+                <p class="animate-on-load">
+                    A kész képeket online galérián keresztül kapjátok meg, ahonnan könnyedén letölthetők
+                    és megoszthatók. A képek a tieitek lesznek – nyomtathatjátok, keretezhetitek,
+                    megoszthatjátok a családdal és barátokkal.
+                </p>
+
+                <h2 class="animate-on-load">Képzeld el!</h2>
+                <p class="animate-on-load">
+                    Képzeld el, hogy évek múlva visszanézed ezeket a képeket, és emlékszel
+                    arra a napra, amikor a kicsi még csak ennyike volt. A mosolyára, a nevetésére,
+                    arra, ahogy simult hozzád. Ezek az emlékek felbecsülhetetlen értékűek,
+                    és a fotók segítenek megőrizni őket.
+                </p>
+
+                <h2 class="animate-on-load">Készen állsz?</h2>
+                <p class="animate-on-load">
+                    Ha felkeltette az érdeklődésed a Lazább fotózás, és szeretnéd, hogy megörökítsem
+                    a ti különleges történeteteket, <a href="contact.html">vedd fel velem a kapcsolatot</a>!
+                    Meséljétek el, milyenek vagytok, mi teszi különlegessé a ti családotokat,
+                    és találjunk egy közös időpontot!
+                </p>
+                <p class="animate-on-load">
+                    Szeretettel várlak benneteket!
+                </p>
+            </section>
+        </article>
     </main>
+
+    <!-- Footer -->
     <footer>
-        <div class="social-links">
-            <a href="YOUR_INSTAGRAM_URL" target="_blank">
-                <img src="assets/icons/instagram.svg" alt="Instagram">
+        <div class="social-links" aria-label="Közösségi média linkek">
+            <a href="YOUR_INSTAGRAM_URL" target="_blank" rel="noopener noreferrer" aria-label="Instagram profil">
+                <img src="assets/icons/instagram.svg" alt="Instagram ikon" width="24" height="24">
             </a>
-            <a href="YOUR_FACEBOOK_URL" target="_blank">
-                <img src="assets/icons/facebook.svg" alt="Facebook">
+            <a href="YOUR_FACEBOOK_URL" target="_blank" rel="noopener noreferrer" aria-label="Facebook oldal">
+                <img src="assets/icons/facebook.svg" alt="Facebook ikon" width="24" height="24">
             </a>
-            <a href="mailto:YOUR_EMAIL_ADDRESS">
-                <img src="assets/icons/email.svg" alt="Email">
+            <a href="mailto:YOUR_EMAIL_ADDRESS" aria-label="E-mail küldése">
+                <img src="assets/icons/email.svg" alt="E-mail ikon" width="24" height="24">
             </a>
         </div>
-        <div class="footer-links">
+        <nav class="footer-links" aria-label="Lábléc navigáció">
             <a href="#">Családfotózás</a>
             <a href="#">Adatkezelési tájékoztató</a>
             <a href="#">Impresszum</a>
-        </div>
+        </nav>
     </footer>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
+    <script src="animate.js"></script>
 </body>
 </html>
