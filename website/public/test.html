@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Test</title>
+</head>
+<body>
+    <h1>Image Test Page</h1>
+    <h2>Logo:</h2>
+    <img src="/peleiniki/assets/icons/pnfotos.png" alt="Logo" width="200">
+    
+    <h2>Homepage Images:</h2>
+    <img src="/peleiniki/assets/homepage/homepage-00368.jpg" alt="Test 1" width="300">
+    <img src="/peleiniki/assets/homepage/homepage-01034.jpg" alt="Test 2" width="300">
+    
+    <h2>Test Results:</h2>
+    <p id="status">Loading...</p>
+    
+    <script>
+        const imgs = document.querySelectorAll('img');
+        let loaded = 0;
+        let failed = 0;
+        
+        imgs.forEach(img => {
+            img.onload = () => {
+                loaded++;
+                updateStatus();
+            };
+            img.onerror = () => {
+                failed++;
+                console.error('Failed to load:', img.src);
+                updateStatus();
+            };
+        });
+        
+        function updateStatus() {
+            document.getElementById('status').textContent = 
+                `Loaded: ${loaded}, Failed: ${failed} of ${imgs.length} images`;
+        }
+    </script>
+</body>
+</html>
