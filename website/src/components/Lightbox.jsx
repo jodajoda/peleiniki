@@ -1,11 +1,46 @@
-import { useEffect } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 
 const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [imageKey, setImageKey] = useState(0);
+  const [direction, setDirection] = useState('none');
+
+  useEffect(() => {
+    // Trigger fade-in animation on mount
+    setIsVisible(true);
+  }, []);
+
+  useEffect(() => {
+    // Trigger image transition animation when index changes
+    setImageKey(prev => prev + 1);
+  }, [currentIndex]);
+
+  const handleClose = useCallback(() => {
+    setIsVisible(false);
+    setTimeout(() => onClose(), 300);
+  }, [onClose]);
+
+  const handleNext = useCallback(() => {
+    setDirection('right');
+    setTimeout(() => {
+      onNext();
+      setDirection('none');
+    }, 150);
+  }, [onNext]);
+
+  const handlePrev = useCallback(() => {
+    setDirection('left');
+    setTimeout(() => {
+      onPrev();
+      setDirection('none');
+    }, 150);
+  }, [onPrev]);
+
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') onClose();
-      if (e.key === 'ArrowLeft') onPrev();
-      if (e.key === 'ArrowRight') onNext();
+      if (e.key === 'Escape') handleClose();
+      if (e.key === 'ArrowLeft') handlePrev();
+      if (e.key === 'ArrowRight') handleNext();
     };
 
     window.addEventListener('keydown', handleKeyDown);
@@ -15,7 +50,7 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
       window.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'unset';
     };
-  }, [onClose, onNext, onPrev]);
+  }, [handleClose, handleNext, handlePrev]);
 
   if (currentIndex === null) return null;
 
@@ -23,13 +58,15 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
-      onClick={onClose}
+      className={`fixed inset-0 z-50 bg-black/95 flex items-center justify-center transition-opacity duration-300 ${
+        isVisible ? 'opacity-100' : 'opacity-0'
+      }`}
+      onClick={handleClose}
     >
       {/* Close button */}
       <button
-        onClick={onClose}
-        className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+        onClick={handleClose}
+        className="absolute top-4 right-4 text-white hover:text-gray-300 transition-all duration-300 z-10 hover:scale-110"
         aria-label="Bezárás"
       >
         <svg
@@ -52,9 +89,9 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
         <button
           onClick={(e) => {
             e.stopPropagation();
-            onPrev();
+            handlePrev();
           }}
-          className="absolute left-4 text-white hover:text-gray-300 transition-colors z-10"
+          className="absolute left-4 text-white hover:text-gray-300 transition-all duration-300 z-10 hover:scale-110"
           aria-label="Előző kép"
         >
           <svg
@@ -79,9 +116,16 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <img
+          key={imageKey}
           src={currentImage.src}
           alt={currentImage.alt}
-          className="max-w-full max-h-[90vh] object-contain"
+          className={`max-w-full max-h-[90vh] object-contain transition-all duration-300 ${
+            direction === 'left'
+              ? 'animate-slide-in-left'
+              : direction === 'right'
+              ? 'animate-slide-in-right'
+              : 'animate-fade-in'
+          }`}
         />
       </div>
 
@@ -90,9 +134,9 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
         <button
           onClick={(e) => {
             e.stopPropagation();
-            onNext();
+            handleNext();
           }}
-          className="absolute right-4 text-white hover:text-gray-300 transition-colors z-10"
+          className="absolute right-4 text-white hover:text-gray-300 transition-all duration-300 z-10 hover:scale-110"
           aria-label="Következő kép"
         >
           <svg

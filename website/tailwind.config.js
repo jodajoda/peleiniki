@@ -44,6 +44,15 @@ export default {
         'glow': '0 0 25px rgba(191, 160, 148, 0.5)',
         'glow-warm': '0 0 30px rgba(255, 138, 101, 0.4)',
       },
+      keyframes: {
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+      },
+      animation: {
+        shimmer: 'shimmer 2s infinite linear',
+      },
     },
   },
   plugins: [],

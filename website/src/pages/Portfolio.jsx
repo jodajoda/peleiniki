@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Lightbox from '../components/Lightbox';
+import LazyImage from '../components/LazyImage';
 
 const Portfolio = () => {
   const [lightboxIndex, setLightboxIndex] = useState(null);
@@ -162,11 +163,10 @@ const Portfolio = () => {
                     style={{ animationDelay: `${imageIndex * 0.05}s` }}
                     onClick={() => openLightbox(groupIndex, imageIndex)}
                   >
-                    <img
+                    <LazyImage
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-72 object-cover hover-zoom image-soft-glow"
-                      loading="lazy"
+                      className="h-72 hover-zoom image-soft-glow"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
                       <svg
