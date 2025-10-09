@@ -8,6 +8,7 @@ import Portfolio from './pages/Portfolio';
 import About from './pages/About';
 import Packages from './pages/Packages';
 import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/packages" element={<Packages />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/adatkezelesi-tajekoztato" element={<PrivacyPolicy />} />
           </Routes>
         </main>
         <Footer />

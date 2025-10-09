@@ -51,16 +51,8 @@ const Footer = () => {
 
           {/* Footer Navigation */}
           <nav className="flex flex-wrap justify-center gap-4 text-sm" aria-label="Lábléc navigáció">
-            <Link to="#" className="text-gray-600 hover:text-primary-700 transition-colors">
-              Családfotózás
-            </Link>
-            <span className="text-gray-400">•</span>
-            <Link to="#" className="text-gray-600 hover:text-primary-700 transition-colors">
+            <Link to="/adatkezelesi-tajekoztato" className="text-gray-600 hover:text-primary-700 transition-colors">
               Adatkezelési tájékoztató
-            </Link>
-            <span className="text-gray-400">•</span>
-            <Link to="#" className="text-gray-600 hover:text-primary-700 transition-colors">
-              Impresszum
             </Link>
           </nav>
 
