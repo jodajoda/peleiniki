@@ -1,13 +1,28 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const location = useLocation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     message: '',
   });
+
+  useEffect(() => {
+    if (location.state?.message) {
+      setFormData((prev) => ({ ...prev, message: location.state.message }));
+      // Scroll to form section on mobile
+      setTimeout(() => {
+        const formElement = document.getElementById('contact-form');
+        if (formElement) {
+          formElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 100);
+    }
+  }, [location.state]);
   const [status, setStatus] = useState({ type: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -164,7 +179,7 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="animate-slide-left stagger-3">
-              <form onSubmit={handleSubmit} className="space-y-4 p-6 rounded-lg bg-gradient-to-br from-white to-primary-50 shadow-soft">
+              <form id="contact-form" onSubmit={handleSubmit} className="space-y-4 p-6 rounded-lg bg-gradient-to-br from-white to-primary-50 shadow-soft">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                     Név *

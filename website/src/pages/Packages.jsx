@@ -1,4 +1,13 @@
+import { useNavigate } from 'react-router-dom';
+
 const Packages = () => {
+  const navigate = useNavigate();
+
+  const handlePackageClick = (packageTitle) => {
+    const message = `Szia! Érdeklődnék a "${packageTitle}" csomaggal kapcsolatban. Kérek további információt!`;
+    navigate('/contact', { state: { message } });
+  };
+
   const packages = [
     {
       id: 1,
@@ -46,8 +55,12 @@ const Packages = () => {
           {packages.map((pkg, index) => (
             <article
               key={pkg.id}
-              className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={() => handlePackageClick(pkg.title)}
+              className="bg-gradient-to-br from-white via-primary-50 to-gray-50 border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer animate-fade-in hover:scale-[1.02]"
+              style={{
+                animationDelay: `${index * 0.1}s`,
+                animationFillMode: 'both'
+              }}
             >
               <h2 className="text-2xl font-bold text-primary-800 mb-3">
                 {pkg.title}

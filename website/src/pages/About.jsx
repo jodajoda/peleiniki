@@ -5,11 +5,12 @@ const About = () => {
         <article className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Image */}
-            <div className="animate-scale-in">
+            <div className="animate-scale-in overflow-hidden rounded-lg shadow-soft hover:shadow-glow transition-shadow duration-500">
               <img
                 src="/peleiniki/assets/about-me/magamrol_202410-03733-2.jpg"
                 alt="Pelei Niki fotográfus portréja"
-                className="w-full rounded-lg shadow-soft hover:shadow-glow transition-all duration-500 image-warm-filter hover-lift"
+                className="w-full h-auto object-cover transition-all duration-700 ease-in-out hover:scale-110"
+                style={{ filter: 'saturate(1.1) brightness(1.05) contrast(1.02)' }}
                 loading="eager"
               />
             </div>
