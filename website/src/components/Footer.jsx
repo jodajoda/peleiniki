@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex items-center space-x-6" aria-label="Közösségi média linkek">
             <a
-              href="YOUR_INSTAGRAM_URL"
+              href="https://www.instagram.com/peleinikifotoi/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram profil"
@@ -22,7 +22,7 @@ const Footer = () => {
               />
             </a>
             <a
-              href="YOUR_FACEBOOK_URL"
+              href="https://www.facebook.com/peleinikifoto"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook oldal"
@@ -36,7 +36,7 @@ const Footer = () => {
               />
             </a>
             <a
-              href="mailto:YOUR_EMAIL_ADDRESS"
+              href="mailto:peleinikifotoi@gmail.com"
               aria-label="E-mail küldése"
               className="hover:opacity-70 transition-opacity"
             >

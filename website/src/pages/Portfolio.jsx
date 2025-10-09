@@ -125,44 +125,52 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen pt-24 pb-16">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 animate-fade-in">
+      <div className="container mx-auto px-4 mb-16">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 animate-fade-in text-gradient-primary">
           Portfólió
         </h1>
-        <p className="text-lg text-gray-600 text-center mb-16 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
+        <p className="text-lg text-gray-600 text-center max-w-2xl mx-auto animate-slide-left stagger-1">
           Válogatás munkáimból
         </p>
+      </div>
 
-        <div className="space-y-20">
-          {portfolioGroups.map((group, groupIndex) => (
-            <section
-              key={group.id}
-              className="animate-fade-in"
-              style={{ animationDelay: `${groupIndex * 0.1}s` }}
-            >
-              <div className="mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-2">
+      <div className="space-y-20">
+        {portfolioGroups.map((group, groupIndex) => (
+          <section
+            key={group.id}
+            className="relative bg-gradient-to-br from-primary-50 via-primary-100 to-primary-50 overflow-hidden py-16 animate-fade-in"
+            style={{ animationDelay: `${groupIndex * 0.1}s` }}
+          >
+            {/* Floating blur elements */}
+            <div className="absolute inset-0 opacity-10 pointer-events-none">
+              <div className="absolute top-10 left-10 w-72 h-72 bg-primary-300 rounded-full blur-3xl animate-float"></div>
+              <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent-warm rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+            </div>
+            <div className="container mx-auto px-4">
+              <div className="mb-8 relative z-10">
+                <h2 className="text-3xl font-bold text-gray-900 mb-2 animate-slide-right">
                   {group.title}
                 </h2>
-                <p className="text-gray-600">{group.description}</p>
+                <p className="text-gray-600 animate-fade-in stagger-1">{group.description}</p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10">
                 {group.images.map((image, imageIndex) => (
                   <div
                     key={imageIndex}
-                    className="relative overflow-hidden rounded-lg cursor-pointer group"
+                    className="relative overflow-hidden rounded-lg cursor-pointer group shadow-soft hover:shadow-soft-lg transition-all duration-500 animate-scale-in"
+                    style={{ animationDelay: `${imageIndex * 0.05}s` }}
                     onClick={() => openLightbox(groupIndex, imageIndex)}
                   >
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-72 object-cover hover-zoom"
+                      className="w-full h-72 object-cover hover-zoom image-soft-glow"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
                       <svg
-                        className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity"
+                        className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -178,9 +186,9 @@ const Portfolio = () => {
                   </div>
                 ))}
               </div>
-            </section>
-          ))}
-        </div>
+            </div>
+          </section>
+        ))}
       </div>
 
       {/* Lightbox */}

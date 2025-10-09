@@ -38,7 +38,7 @@ const Packages = () => {
   return (
     <div className="min-h-screen pt-24 pb-16">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in text-gradient-primary">
           Fotózási Csomagok
         </h1>
 

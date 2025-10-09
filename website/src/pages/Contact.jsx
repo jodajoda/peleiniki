@@ -59,23 +59,23 @@ const Contact = () => {
     <div className="min-h-screen pt-24 pb-16">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 animate-fade-in">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 animate-fade-in text-gradient-primary">
             Kapcsolat
           </h1>
-          <p className="text-lg text-gray-600 text-center mb-12 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <p className="text-lg text-gray-600 text-center mb-12 animate-slide-left stagger-1">
             Vedd fel velem a kapcsolatot, és beszéljük meg a részleteket!
           </p>
 
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Information */}
-            <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="space-y-6 animate-slide-right stagger-2">
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
                   Elérhetőségek
                 </h2>
 
                 <div className="space-y-4">
-                  <div className="flex items-start">
+                  <div className="flex items-start p-4 rounded-lg bg-gradient-to-r from-primary-50 to-transparent hover:from-primary-100 transition-all duration-300 hover-lift">
                     <svg
                       className="w-6 h-6 text-primary-600 mt-1 mr-3 flex-shrink-0"
                       fill="none"
@@ -92,15 +92,15 @@ const Contact = () => {
                     <div>
                       <div className="font-medium text-gray-900">Email</div>
                       <a
-                        href="mailto:YOUR_EMAIL_ADDRESS"
-                        className="text-primary-600 hover:text-primary-700"
+                        href="mailto:peleinikifotoi@gmail.com"
+                        className="text-primary-600 hover:text-primary-700 transition-colors duration-300"
                       >
-                        YOUR_EMAIL_ADDRESS
+                        peleinikifotoi@gmail.com
                       </a>
                     </div>
                   </div>
 
-                  <div className="flex items-start">
+                  <div className="flex items-start p-4 rounded-lg bg-gradient-to-r from-primary-50 to-transparent hover:from-primary-100 transition-all duration-300 hover-lift">
                     <svg
                       className="w-6 h-6 text-primary-600 mt-1 mr-3 flex-shrink-0"
                       fill="none"
@@ -118,7 +118,7 @@ const Contact = () => {
                       <div className="font-medium text-gray-900">Telefon</div>
                       <a
                         href="tel:YOUR_PHONE"
-                        className="text-primary-600 hover:text-primary-700"
+                        className="text-primary-600 hover:text-primary-700 transition-colors duration-300"
                       >
                         YOUR_PHONE_NUMBER
                       </a>
@@ -136,7 +136,7 @@ const Contact = () => {
                     href="YOUR_INSTAGRAM_URL"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-primary-50 rounded-full hover:bg-primary-100 transition-colors"
+                    className="p-3 bg-gradient-to-br from-primary-50 to-primary-100 rounded-full hover:bg-primary-200 hover:shadow-glow transition-all duration-300 hover:-translate-y-1 hover:rotate-6"
                     aria-label="Instagram"
                   >
                     <img
@@ -149,7 +149,7 @@ const Contact = () => {
                     href="YOUR_FACEBOOK_URL"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-primary-50 rounded-full hover:bg-primary-100 transition-colors"
+                    className="p-3 bg-gradient-to-br from-primary-50 to-primary-100 rounded-full hover:bg-primary-200 hover:shadow-glow transition-all duration-300 hover:-translate-y-1 hover:rotate-6"
                     aria-label="Facebook"
                   >
                     <img
@@ -163,8 +163,8 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="animate-slide-left stagger-3">
+              <form onSubmit={handleSubmit} className="space-y-4 p-6 rounded-lg bg-gradient-to-br from-white to-primary-50 shadow-soft">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                     Név *
@@ -176,7 +176,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 hover:shadow-soft"
                   />
                 </div>
 
@@ -191,7 +191,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 hover:shadow-soft"
                   />
                 </div>
 
@@ -205,7 +205,7 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 hover:shadow-soft"
                   />
                 </div>
 
@@ -220,14 +220,14 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none transition-all duration-300 hover:shadow-soft"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-primary-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-primary-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-800 hover:shadow-glow transition-all duration-300 hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed shimmer"
                 >
                   {isSubmitting ? 'Küldés...' : 'Üzenet küldése'}
                 </button>

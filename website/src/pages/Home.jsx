@@ -42,10 +42,11 @@ const Home = () => {
           <img
             src="/peleiniki/assets/homepage/homepage-06935.jpg"
             alt="Pelei Niki Fotográfus - Családfotózás"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover image-warm-filter animate-scale-in"
           />
           {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
+          <div className="absolute inset-0 gradient-overlay-sunset opacity-30"></div>
         </div>
 
         {/* Hero Content */}
@@ -54,13 +55,13 @@ const Home = () => {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-fade-in drop-shadow-lg">
               Pelei Niki Fotográfus
             </h1>
-            <p className="text-lg md:text-2xl text-white max-w-3xl mx-auto animate-fade-in drop-shadow-md" style={{ animationDelay: '0.2s' }}>
+            <p className="text-lg md:text-2xl text-white max-w-3xl mx-auto animate-slide-left drop-shadow-md stagger-2">
               Családi pillanatok megörökítése természetes, spontán környezetben
             </p>
-            <div className="mt-8 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div className="mt-8 animate-bounce-in stagger-4">
               <a
                 href="/peleiniki/contact"
-                className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
+                className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 hover:shadow-glow-warm transition-all duration-300 shadow-lg hover:-translate-y-1"
               >
                 Kapcsolatfelvétel
               </a>
@@ -71,7 +72,7 @@ const Home = () => {
 
       {/* Preview Sections */}
       <section className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 animate-fade-in">
           Fedezd fel
         </h2>
 
@@ -80,7 +81,7 @@ const Home = () => {
             <Link
               key={section.id}
               to={section.link}
-              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in"
+              className="group relative overflow-hidden rounded-lg shadow-soft hover:shadow-soft-lg transition-all duration-500 animate-fade-in hover-lift"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Image */}
@@ -88,10 +89,12 @@ const Home = () => {
                 <img
                   src={section.image}
                   alt={section.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  style={{ filter: 'brightness(1.05) saturate(1.1)' }}
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
 
               {/* Content */}
@@ -117,17 +120,21 @@ const Home = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-primary-50 py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+      <section className="relative bg-gradient-to-br from-primary-50 via-primary-100 to-primary-50 py-16 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-primary-300 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent-warm rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+        </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 animate-fade-in">
             Foglalj időpontot!
           </h2>
-          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto animate-slide-left stagger-1">
             Örökítsük meg együtt családod különleges pillanatait
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-primary-700 text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-800 transition-colors"
+            className="inline-block bg-primary-700 text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-800 hover:shadow-glow transition-all duration-300 hover:-translate-y-1 animate-bounce-in stagger-2 shimmer"
           >
             Kapcsolatfelvétel
           </Link>
