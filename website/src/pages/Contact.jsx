@@ -60,6 +60,9 @@ const Contact = () => {
 
       // Validate environment variables
       if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+        console.info('Service ID ', SERVICE_ID);
+        console.info('Template ID ', TEMPLATE_ID);
+        console.info('Public Key ', PUBLIC_KEY);
         throw new Error('EmailJS credentials are not configured');
       }
 
