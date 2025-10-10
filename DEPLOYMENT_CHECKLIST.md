@@ -16,6 +16,22 @@ Complete these steps to ensure your contact form works on the live website.
 
 ## 🔴 REQUIRED: Complete These Steps
 
+### 0. Create EmailJS Template (FIRST)
+
+**You need to create an email template in EmailJS before the contact form will work!**
+
+Follow the guide: [EMAILJS_TEMPLATE_SETUP.md](EMAILJS_TEMPLATE_SETUP.md)
+
+**Quick Steps:**
+1. Go to: https://dashboard.emailjs.com/
+2. Create an **Email Service** (if you haven't already)
+3. Create an **Email Template** using the HTML template provided
+4. Copy the **Service ID**, **Template ID**, and **Public Key**
+
+**Status:** ⚠️ **PENDING - You must do this first**
+
+---
+
 ### 1. Configure GitHub Secrets (CRITICAL)
 
 **Without this, the contact form will NOT work on the deployed site!**
@@ -77,10 +93,11 @@ git push origin main
 
 ---
 
-## 📊 Security Status
+## 📊 Setup Status
 
-| Security Feature | Status | Action Required |
-|------------------|--------|-----------------|
+| Step | Status | Action Required |
+|------|--------|-----------------|
+| EmailJS Template | ⚠️ **Not Set** | **Create in EmailJS** |
 | Environment Variables | ✅ Configured | None |
 | GitHub Secrets | ⚠️ **Not Set** | **Set up in GitHub** |
 | Domain Whitelist | ⚠️ **Not Set** | **Configure in EmailJS** |
@@ -105,9 +122,10 @@ Public Key:  00skKQszSH1adZxe3
 
 ## 📚 Documentation Reference
 
-- **Quick Setup:** [GITHUB_SECRETS_SETUP.md](GITHUB_SECRETS_SETUP.md)
+- **EmailJS Template Setup:** [EMAILJS_TEMPLATE_SETUP.md](EMAILJS_TEMPLATE_SETUP.md)
+- **GitHub Secrets Setup:** [GITHUB_SECRETS_SETUP.md](GITHUB_SECRETS_SETUP.md)
 - **Security Guide:** [SECURITY.md](SECURITY.md)
-- **Development:** [CLAUDE.md](CLAUDE.md)
+- **Development Guide:** [CLAUDE.md](CLAUDE.md)
 
 ---
 
