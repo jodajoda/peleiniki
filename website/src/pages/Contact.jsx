@@ -82,6 +82,7 @@ const Contact = () => {
       });
       setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (error) {
+      console.error('EmailJS Error:', error);
       setStatus({
         type: 'error',
         message: 'Hiba történt az üzenet küldése során. Kérlek próbáld újra később.',
