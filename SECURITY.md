@@ -95,21 +95,53 @@ VITE_EMAILJS_PUBLIC_KEY=00skKQszSH1adZxe3
 - Anyone can view these values in the browser's developer tools
 - **Never** commit `.env` files to version control (already protected via `.gitignore`)
 
-### Production Deployment
+### Production Deployment (GitHub Pages)
 
-For GitHub Pages deployment:
+For GitHub Pages deployment, environment variables must be configured as **GitHub Secrets** since `.env` files are gitignored and won't be available during CI/CD builds.
 
-1. **GitHub Actions** automatically builds and deploys from the `website/` directory
-2. Environment variables are embedded during the build process
-3. The `.env` file must exist in `website/.env` for the build to succeed
-4. Domain restrictions in EmailJS dashboard provide the actual security
+#### Setting Up GitHub Secrets
 
-**Deployment Setup:**
+**Step 1: Add Secrets to GitHub Repository**
+
+1. Go to your GitHub repository: `https://github.com/jodajoda/peleiniki`
+2. Click **Settings** → **Secrets and variables** → **Actions**
+3. Click **New repository secret**
+4. Add each of the following secrets:
+
+| Secret Name | Value | Example |
+|-------------|-------|---------|
+| `VITE_EMAILJS_SERVICE_ID` | Your EmailJS Service ID | `service_lxc4g8l` |
+| `VITE_EMAILJS_TEMPLATE_ID` | Your EmailJS Template ID | `template_n3otimx` |
+| `VITE_EMAILJS_PUBLIC_KEY` | Your EmailJS Public Key | `00skKQszSH1adZxe3` |
+
+**Step 2: How It Works**
+
+The GitHub Actions workflow ([.github/workflows/deploy.yml](.github/workflows/deploy.yml)) automatically:
+1. Reads secrets from GitHub repository settings
+2. Injects them as environment variables during the build step
+3. Vite bundles them into the production JavaScript
+4. Deploys to GitHub Pages with credentials embedded
+
+**Step 3: Verify Deployment**
+
+After pushing to `main` branch:
+1. Check **Actions** tab in GitHub to see deployment status
+2. Visit your live site: `https://jodajoda.github.io/peleiniki/contact`
+3. Test the contact form to ensure emails are sent successfully
+
+**Important Notes:**
+- ✅ GitHub Secrets are encrypted and secure
+- ✅ Only visible to repository maintainers
+- ✅ Automatically available to GitHub Actions workflows
+- ⚠️ Values are still bundled into client-side JavaScript (visible in browser)
+- 🔒 Domain restrictions in EmailJS dashboard are still your primary security
+
+**Local Development:**
 ```bash
 cd website
-cp .env.example .env  # If you have an example file
+cp .env.example .env
 # Edit .env with your credentials
-npm run build
+npm run dev
 ```
 
 ---

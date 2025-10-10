@@ -54,15 +54,12 @@ const Contact = () => {
 
     try {
       // EmailJS credentials from environment variables
-      const SERVICE_ID = 'service_lxc4g8l';
-      const TEMPLATE_ID = 'template_n3otimx';
-      const PUBLIC_KEY = '00skKQszSH1adZxe3';
+      const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
       // Validate environment variables
       if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
-        console.info('Service ID ', SERVICE_ID);
-        console.info('Template ID ', TEMPLATE_ID);
-        console.info('Public Key ', PUBLIC_KEY);
         throw new Error('EmailJS credentials are not configured');
       }
 
