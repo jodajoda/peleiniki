@@ -126,19 +126,26 @@ Custom theme extensions in [tailwind.config.js](website/tailwind.config.js):
 
 ### EmailJS Integration
 
-Contact form in [Contact.jsx](website/src/pages/Contact.jsx) requires EmailJS credentials:
+Contact form in [Contact.jsx](website/src/pages/Contact.jsx) uses EmailJS for email delivery. Credentials are managed via environment variables.
 
-```javascript
-// Update these values in src/pages/Contact.jsx
-const SERVICE_ID = 'your_service_id';
-const TEMPLATE_ID = 'your_template_id';
-const PUBLIC_KEY = 'your_public_key';
-```
-
-Setup instructions:
+**Setup instructions:**
 1. Sign up at [emailjs.com](https://www.emailjs.com/)
 2. Create email service and template
-3. Replace placeholder credentials in Contact.jsx
+3. Copy `website/.env.example` to `website/.env`
+4. Update `.env` with your EmailJS credentials:
+   ```env
+   VITE_EMAILJS_SERVICE_ID=your_service_id
+   VITE_EMAILJS_TEMPLATE_ID=your_template_id
+   VITE_EMAILJS_PUBLIC_KEY=your_public_key
+   ```
+5. **CRITICAL**: Configure domain whitelist in EmailJS dashboard (see [SECURITY.md](SECURITY.md))
+
+**Security features:**
+- Environment variable management for credentials
+- Client-side rate limiting (30 second cooldown)
+- Domain restrictions (must be configured in EmailJS dashboard)
+
+**Important:** See [SECURITY.md](SECURITY.md) for comprehensive security setup and best practices
 
 ### Asset Management
 

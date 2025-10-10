@@ -25,6 +25,7 @@ const Contact = () => {
   }, [location.state]);
   const [status, setStatus] = useState({ type: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [lastSubmitTime, setLastSubmitTime] = useState(0);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -33,15 +34,34 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Rate limiting: prevent submissions within 30 seconds
+    const now = Date.now();
+    const timeSinceLastSubmit = now - lastSubmitTime;
+    const RATE_LIMIT_MS = 30000; // 30 seconds
+
+    if (timeSinceLastSubmit < RATE_LIMIT_MS) {
+      const remainingSeconds = Math.ceil((RATE_LIMIT_MS - timeSinceLastSubmit) / 1000);
+      setStatus({
+        type: 'error',
+        message: `Kérlek várj ${remainingSeconds} másodpercet újabb üzenet küldése előtt.`,
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     setStatus({ type: '', message: '' });
 
     try {
-      // Replace these with your EmailJS credentials
-      // You can get these from https://www.emailjs.com/
-      const SERVICE_ID = 'YOUR_SERVICE_ID';
-      const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-      const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+      // EmailJS credentials from environment variables
+      const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      // Validate environment variables
+      if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+        throw new Error('EmailJS credentials are not configured');
+      }
 
       await emailjs.send(
         SERVICE_ID,
@@ -55,6 +75,7 @@ const Contact = () => {
         PUBLIC_KEY
       );
 
+      setLastSubmitTime(now);
       setStatus({
         type: 'success',
         message: 'Köszönöm az üzeneted! Hamarosan jelentkezem.',
