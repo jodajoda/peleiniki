@@ -159,7 +159,7 @@ const Portfolio = () => {
                 {group.images.map((image, imageIndex) => (
                   <div
                     key={imageIndex}
-                    className="relative overflow-hidden rounded-lg cursor-pointer group shadow-soft hover:shadow-soft-lg transition-all duration-500 animate-scale-in"
+                    className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in"
                     style={{ animationDelay: `${imageIndex * 0.05}s` }}
                     onClick={() => openLightbox(groupIndex, imageIndex)}
                   >
