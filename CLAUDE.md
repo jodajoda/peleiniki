@@ -4,176 +4,274 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a static photography portfolio website for Pelei Niki Fotográfus (photographer). The site is built with vanilla HTML, CSS, and JavaScript - no build process or frameworks required. Content is primarily in Hungarian.
+Photography portfolio website for Pelei Niki Fotográfus (photographer), built with React, Vite, and Tailwind CSS. The site features responsive design, image lightbox functionality, contact form integration, and smooth animations. Content is primarily in Hungarian.
+
+**Repository Structure:**
+- `website/` - Main React application (primary development directory)
+- `public/` - Symlink to `../assets/` for image assets
+- Root directory contains deployment outputs from `website/dist/`
+
+## Development Commands
+
+All commands must be run from the `website/` directory:
+
+```bash
+cd website
+
+# Development
+npm install          # Install dependencies
+npm run dev          # Start dev server (http://localhost:5173)
+
+# Production
+npm run build        # Build for production (outputs to dist/)
+npm run preview      # Preview production build locally
+
+# Code Quality
+npm run lint         # Run ESLint
+
+# Deployment (automated via GitHub Actions)
+npm run deploy       # Build and copy to root (manual deployment)
+```
 
 ## Architecture
 
-### Page Structure
-The site consists of 6 main HTML pages, all following a consistent structure:
-- `index.html` - Homepage with gallery of featured photos
-- `about.html` - About the photographer page
-- `portfolio.html` - Portfolio organized into themed photo groups
-- `packages.html` - Photography packages and pricing
-- `photoshooting.html` - Information about photoshoot experience
-- `contact.html` - Contact information and social links
+### Tech Stack
+- **React 19.1** - UI framework
+- **Vite 7.1** - Build tool and dev server
+- **Tailwind CSS 3.4** - Utility-first styling
+- **React Router 7.9** - Client-side routing
+- **EmailJS 4.4** - Contact form email integration
 
-### JavaScript Modules
-The site uses three separate JavaScript files loaded independently:
+### Project Structure
 
-- **`script.js`** - Core navigation functionality:
-  - Header shrink effect on scroll
-  - Hamburger menu toggle for mobile navigation
-  - Loaded on ALL pages
+```
+website/
+├── src/
+│   ├── App.jsx              # Main app with routing setup
+│   ├── main.jsx             # React entry point
+│   ├── index.css            # Global styles + Tailwind directives
+│   ├── components/
+│   │   ├── Navigation.jsx   # Header navigation with mobile menu
+│   │   ├── Footer.jsx       # Footer with social links
+│   │   ├── Lightbox.jsx     # Image lightbox modal (keyboard nav)
+│   │   ├── LazyImage.jsx    # Lazy loading image component
+│   │   └── ScrollToTop.jsx  # Scroll restoration on route change
+│   └── pages/
+│       ├── Home.jsx         # Homepage with featured gallery
+│       ├── Photoshooting.jsx # Photoshoot experience info
+│       ├── Portfolio.jsx    # Portfolio with grouped collections
+│       ├── About.jsx        # About the photographer
+│       ├── Packages.jsx     # Photography packages & pricing
+│       ├── Contact.jsx      # Contact form (EmailJS integration)
+│       └── PrivacyPolicy.jsx # Privacy policy (Hungarian: Adatkezelési tájékoztató)
+├── public/
+│   └── assets/              # Symlink to ../../assets/
+├── dist/                    # Build output (gitignored)
+├── index.html               # HTML entry point
+├── vite.config.js           # Vite configuration (base: '/peleiniki/')
+└── tailwind.config.js       # Tailwind theme customization
+```
 
-- **`animate.js`** - Animation system:
-  - Handles `.animate-on-load` elements
-  - Staggered fade-in animations with 0.2s delays per element
-  - Loaded on ALL pages
+### Routing Configuration
 
-- **`lightbox.js`** - Image lightbox/modal functionality:
-  - Click to enlarge gallery images
-  - Previous/next navigation (mouse clicks and arrow keys)
-  - ESC key to close
-  - ONLY loaded on `portfolio.html` (where the lightbox modal markup exists)
+App uses React Router with base path `/peleiniki/` for GitHub Pages deployment:
 
-### CSS Architecture
-Single `style.css` file contains all styles organized by component:
-- Global styles and header/navigation (lines 1-59)
-- Main content and gallery grid (lines 61-93)
-- Contact page styles (lines 94-118)
-- Footer and social links (lines 120-166)
-- Animations (lines 168-185)
-- Packages page styles (lines 187-233)
-- About page styles (lines 235-263)
-- Hamburger menu and mobile navigation (lines 264-343)
-- Portfolio page styles (lines 345-356)
-- Lightbox modal styles (lines 358-443)
+- `/` - Home
+- `/photoshooting` - Photoshoot Experience
+- `/portfolio` - Portfolio Collections
+- `/about` - About Page
+- `/packages` - Photography Packages
+- `/contact` - Contact Form
+- `/adatkezelesi-tajekoztato` - Privacy Policy
 
-### Common Patterns
+**Important:** Router basename is set to `/peleiniki/` in [App.jsx:15](website/src/App.jsx#L15) and Vite base in [vite.config.js:7](website/vite.config.js#L7).
 
-**Header Navigation:**
-All pages share identical header structure:
-- Fixed header with shrink effect on scroll
-- Logo linking to homepage
-- Hamburger menu (button) for mobile
-- Desktop navigation links
-- Current page should have `aria-current="page"` attribute
+### Key Components
 
-**Footer:**
-All pages share identical footer with:
-- Social media links (Instagram, Facebook, Email) - placeholders need updating
-- Footer navigation links (Családfotózás, Adatkezelési tájékoztató, Impresszum)
+**Navigation.jsx**
+- Sticky header with scroll-triggered shrink effect
+- Hamburger menu for mobile with smooth transitions
+- Active page highlighting
+- Manages its own mobile menu state
 
-**Gallery Images:**
-- Images use `.gallery` grid layout (auto-fill, minmax(300px, 1fr))
-- Individual images wrapped in `.img-wrapper` div for hover effects
-- Homepage: Direct `<img>` tags with `.animate-on-load` class
-- Portfolio: Images wrapped in `.img-wrapper` divs, organized in `.portfolio-group` sections
+**Lightbox.jsx**
+- Full-screen image viewer with smooth animations
+- Keyboard navigation: Arrow keys (next/prev), Escape (close)
+- Click outside to close
+- Direction-based slide transitions
+- Used in Portfolio page for gallery images
 
-**Animation System:**
-- Add `.animate-on-load` class to any element for staggered fade-in
-- Animation triggers on DOMContentLoaded
-- Each element gets 0.2s delay multiplied by its index
+**LazyImage.jsx**
+- Lazy loading with intersection observer
+- Shimmer placeholder animation
+- Smooth fade-in on load
 
-## Development Workflow
+**ScrollToTop.jsx**
+- Restores scroll position to top on route changes
+- Essential for SPA navigation
 
-### No Build Process
-This is a static site - simply open HTML files in a browser or use a local server:
+### Tailwind Configuration
+
+Custom theme extensions in [tailwind.config.js](website/tailwind.config.js):
+
+**Color Palette:**
+- `primary.*` - Earth tones (50-900 scale) for brand identity
+- `accent.*` - Named colors (warm, sunset, gold, rose, lavender)
+
+**Custom Utilities:**
+- `shadow-soft`, `shadow-soft-lg` - Subtle shadows
+- `shadow-glow`, `shadow-glow-warm` - Glowing effects
+- `bg-gradient-*` - Pre-defined gradient backgrounds (primary, warm, sunset, dreamy, ocean)
+- `animate-shimmer` - Shimmer loading effect
+
+### EmailJS Integration
+
+Contact form in [Contact.jsx](website/src/pages/Contact.jsx) requires EmailJS credentials:
+
+```javascript
+// Update these values in src/pages/Contact.jsx
+const SERVICE_ID = 'your_service_id';
+const TEMPLATE_ID = 'your_template_id';
+const PUBLIC_KEY = 'your_public_key';
+```
+
+Setup instructions:
+1. Sign up at [emailjs.com](https://www.emailjs.com/)
+2. Create email service and template
+3. Replace placeholder credentials in Contact.jsx
+
+### Asset Management
+
+Images are stored in `assets/` at repository root and symlinked into `public/`:
+
+```
+assets/
+├── homepage/        # Featured photos for homepage
+├── portfolio/       # Portfolio collection images
+├── about-me/        # About page photos
+├── emma-birthday/   # Additional collections
+└── icons/          # Logo and social media icons
+```
+
+In React components, reference assets as: `assets/homepage/image.jpg`
+
+The symlink ensures assets are accessible during development and get copied during build.
+
+## Deployment
+
+### GitHub Pages (Automated)
+
+Deployment is automated via GitHub Actions on push to `main`:
+
+1. Workflow runs in `website/` directory
+2. Builds production bundle (`npm run build`)
+3. Uploads `website/dist/` to GitHub Pages
+4. Site deploys to: https://jodajoda.github.io/peleiniki/
+
+Configuration in [.github/workflows/deploy.yml](.github/workflows/deploy.yml).
+
+### Manual Deployment
+
+If needed, use the deploy script:
 ```bash
-# Python 3
-python3 -m http.server 8000
-
-# Python 2
-python -m SimpleHTTPServer 8000
-
-# Node.js (if http-server is installed)
-npx http-server -p 8000
+cd website
+npm run deploy
 ```
 
-Then visit `http://localhost:8000`
+This builds and copies dist contents to repository root, then commits and pushes.
 
-### File Organization
+## Development Patterns
+
+### Adding New Pages
+
+1. Create page component in `src/pages/NewPage.jsx`
+2. Add route in [src/App.jsx](website/src/App.jsx):
+   ```jsx
+   import NewPage from './pages/NewPage';
+   // ...
+   <Route path="/new-page" element={<NewPage />} />
+   ```
+3. Add navigation link in [src/components/Navigation.jsx](website/src/components/Navigation.jsx)
+
+### Using Animations
+
+Common animation patterns:
+
+```jsx
+// Fade in on scroll
+<div className="opacity-0 animate-fadeIn">Content</div>
+
+// Hover scale effect
+<div className="transition-transform hover:scale-105">Card</div>
+
+// Staggered animations (manually using delays)
+<div className="animate-fadeIn delay-100">Item 1</div>
+<div className="animate-fadeIn delay-200">Item 2</div>
 ```
-/
-├── *.html           # 6 main page files
-├── style.css        # All styles
-├── script.js        # Navigation & header
-├── animate.js       # Animation system
-├── lightbox.js      # Lightbox (portfolio only)
-└── assets/
-    ├── homepage/    # Homepage gallery images
-    ├── portfolio/   # Portfolio gallery images
-    ├── about-me/    # About page images
-    ├── emma-birthday/ # Additional photo collections
-    └── icons/       # Logo and social media icons
-```
 
-## Important Notes
+### Image Galleries
 
-### Language Consistency
-- Primary language is Hungarian (`lang="hu"`)
-- Some pages still have `lang="en"` - should be updated to `lang="hu"`
-- Navigation text mixing English/Hungarian - standardize to Hungarian
+Use LazyImage component for performance:
 
-### Placeholder Content
-Several placeholders need to be updated:
-- Social media URLs: `YOUR_INSTAGRAM_URL`, `YOUR_FACEBOOK_URL`
-- Email address: `YOUR_EMAIL_ADDRESS`
-- Footer links currently point to `#` (no destination)
+```jsx
+import LazyImage from '../components/LazyImage';
 
-### Accessibility Considerations
-When editing:
-- Maintain ARIA labels on navigation and interactive elements
-- Use `<button>` for hamburger menu (not `<a>`)
-- Include `aria-current="page"` on current page nav link
-- Add `rel="noopener noreferrer"` to external links
-- Provide descriptive alt text for images
-- Include width/height attributes on footer social icons
-
-### Known Issues
-- Line 58 in `portfolio.html` has typo: `src_` instead of `src`
-- Inconsistent language attributes across pages
-- Some navigation text inconsistent (e.g., "Home" vs "Kezdőlap")
-
-## Adding New Content
-
-### Adding Portfolio Group
-In `portfolio.html`, add within `<main>`:
-```html
-<div class="portfolio-group animate-on-load">
-    <h2>Portfolio Title</h2>
-    <p>Description of the portfolio collection.</p>
-    <div class="gallery">
-        <div class="img-wrapper">
-            <img src="assets/portfolio/image.jpg" alt="Descriptive alt text">
-        </div>
-        <!-- More images... -->
-    </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <LazyImage
+    src="assets/portfolio/photo1.jpg"
+    alt="Description"
+    className="w-full h-auto"
+  />
 </div>
 ```
 
-### Adding Package
-In `packages.html`, add within `.packages-container`:
-```html
-<article class="package animate-on-load">
-    <h2>Package Name</h2>
-    <p class="description">Package description</p>
-    <ul class="package-details">
-        <li class="duration"><strong>Időtartam:</strong> Duration info</li>
-        <li class="photos"><strong>Képek száma:</strong> Photo count</li>
-    </ul>
-    <p class="price" aria-label="Ár: price">Price Ft</p>
-</article>
-```
+For lightbox functionality, see Portfolio.jsx implementation.
 
-## Refactoring Guidelines
+## Important Notes
 
-When refactoring HTML pages:
-1. Use semantic HTML (`<article>`, `<section>`, `<nav>`)
-2. Add proper ARIA attributes for accessibility
-3. Use `<button>` for interactive elements (not `<a href="#">`)
-4. Include meta description for SEO
-5. Add preconnect for external resources (fonts)
-6. Maintain consistent structure across all pages
-7. Keep Hungarian language throughout (`lang="hu"`)
-8. Use structured lists (`<ul>`) for grouped content where appropriate
+### Language
+- Primary language: Hungarian (`lang="hu"` in index.html)
+- UI text should be in Hungarian
+- Some placeholder English text may need translation
+
+### Social Media Links
+Update social media URLs in:
+- [src/components/Footer.jsx](website/src/components/Footer.jsx)
+- [src/pages/Contact.jsx](website/src/pages/Contact.jsx)
+
+Currently uses placeholders that need real URLs.
+
+### Performance Considerations
+- All images should use LazyImage component for lazy loading
+- Large portfolios benefit from image optimization before committing
+- Vite automatically code-splits routes
+
+### Accessibility
+- Navigation includes proper ARIA labels
+- Lightbox supports keyboard navigation
+- Use semantic HTML elements
+- Maintain sufficient color contrast with primary palette
+- Add descriptive alt text to all images
+
+## Troubleshooting
+
+**Dev server not starting:**
+- Ensure you're in `website/` directory
+- Delete `node_modules/` and `package-lock.json`, then `npm install`
+
+**Assets not loading:**
+- Check symlink: `ls -la website/public/assets`
+- Should point to `../../assets`
+
+**Build errors:**
+- Check ESLint: `npm run lint`
+- Verify all imports use correct paths
+- Ensure EmailJS credentials aren't causing issues
+
+**Deployment failing:**
+- Check GitHub Actions logs
+- Verify base path matches: `/peleiniki/` in both vite.config.js and App.jsx
+
+**Routing issues after deployment:**
+- GitHub Pages requires hash routing for SPAs, or proper base configuration
+- Current setup uses base path `/peleiniki/` correctly configured
