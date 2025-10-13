@@ -29,6 +29,13 @@ npm run preview      # Preview production build locally
 # Code Quality
 npm run lint         # Run ESLint
 
+# Testing (Playwright E2E tests)
+npm test             # Run all tests (headless)
+npm run test:ui      # Run tests with interactive UI
+npm run test:headed  # Run tests with visible browser
+npm run test:debug   # Debug tests interactively
+npm run test:report  # View last test report
+
 # Deployment (automated via GitHub Actions)
 npm run deploy       # Build and copy to root (manual deployment)
 ```
@@ -41,6 +48,7 @@ npm run deploy       # Build and copy to root (manual deployment)
 - **Tailwind CSS 3.4** - Utility-first styling
 - **React Router 7.9** - Client-side routing
 - **EmailJS 4.4** - Contact form email integration
+- **Playwright 1.56** - End-to-end testing framework
 
 ### Project Structure
 
@@ -66,9 +74,16 @@ website/
 │       └── PrivacyPolicy.jsx # Privacy policy (Hungarian: Adatkezelési tájékoztató)
 ├── public/
 │   └── assets/              # Symlink to ../../assets/
+├── tests/                   # Playwright E2E tests
+│   ├── navigation.spec.js   # Navigation component tests
+│   ├── contact-form.spec.js # Contact form validation & submission tests
+│   ├── lightbox.spec.js     # Image lightbox tests
+│   ├── routing.spec.js      # Routing & page load tests
+│   └── README.md            # Testing documentation
 ├── dist/                    # Build output (gitignored)
 ├── index.html               # HTML entry point
 ├── vite.config.js           # Vite configuration (base: '/peleiniki/')
+├── playwright.config.js     # Playwright test configuration
 └── tailwind.config.js       # Tailwind theme customization
 ```
 
@@ -287,3 +302,64 @@ Currently uses placeholders that need real URLs.
 **Routing issues after deployment:**
 - GitHub Pages requires hash routing for SPAs, or proper base configuration
 - Current setup uses base path `/peleiniki/` correctly configured
+
+## Testing
+
+### Overview
+
+The project includes comprehensive end-to-end tests using Playwright covering:
+- **Navigation**: Desktop/mobile menus, scroll behavior
+- **Contact Form**: Validation, submission, rate limiting
+- **Lightbox**: Keyboard navigation, image gallery
+- **Routing**: All pages, SEO, accessibility
+
+**Total Coverage**: 66+ test cases across 4 test files
+
+See [TESTING.md](../TESTING.md) for complete testing guide.
+
+### Quick Test Commands
+
+```bash
+cd website
+
+# First time setup
+npx playwright install
+
+# Run tests
+npm test              # Headless mode
+npm run test:ui       # Interactive UI (recommended)
+npm run test:headed   # With visible browser
+npm run test:debug    # Debug mode
+npm run test:report   # View last report
+```
+
+### Test Files
+
+- [tests/navigation.spec.js](website/tests/navigation.spec.js) - Navigation component tests
+- [tests/contact-form.spec.js](website/tests/contact-form.spec.js) - Contact form tests
+- [tests/lightbox.spec.js](website/tests/lightbox.spec.js) - Lightbox functionality tests
+- [tests/routing.spec.js](website/tests/routing.spec.js) - Routing and page load tests
+
+### Writing New Tests
+
+1. Create test file in `website/tests/` with `.spec.js` extension
+2. Follow existing patterns (see [tests/README.md](website/tests/README.md))
+3. Use semantic selectors: `getByRole`, `getByLabel`
+4. Mock external services (EmailJS)
+5. Run tests: `npm test`
+
+### CI/CD Integration
+
+Tests automatically run on GitHub Actions for:
+- Push to `main` or `develop` branches
+- Pull requests to `main`
+
+Configuration: [.github/workflows/playwright-tests.yml](../.github/workflows/playwright-tests.yml)
+
+### Test Environment
+
+Environment variables for EmailJS (optional, tests use mocks):
+```bash
+cp .env.test.example .env
+# Edit .env with EmailJS credentials
+```
