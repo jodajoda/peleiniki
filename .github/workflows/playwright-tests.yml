@@ -111,7 +111,7 @@ jobs:
         run: npm ci --prefer-offline --no-audit
 
       - name: Download all reports
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           path: website/all-reports/
           pattern: playwright-report-*
