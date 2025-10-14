@@ -69,15 +69,15 @@ jobs:
           echo "VITE_EMAILJS_PUBLIC_KEY=${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}" >> .env
 
       - name: Run Playwright tests
-        run: npx playwright test --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
+        run: npx playwright test --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }} --reporter=blob
 
-      - name: Upload test results
+      - name: Upload blob report
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: playwright-report-${{ matrix.shardIndex }}
-          path: website/playwright-report/
-          retention-days: 30
+          name: blob-report-${{ matrix.shardIndex }}
+          path: website/blob-report/
+          retention-days: 1
 
       - name: Upload test screenshots
         uses: actions/upload-artifact@v4
@@ -110,19 +110,20 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit
 
-      - name: Download all reports
+      - name: Download blob reports
         uses: actions/download-artifact@v4
         with:
-          path: website/all-reports
-          pattern: playwright-report-*
+          path: all-blob-reports
+          pattern: blob-report-*
           merge-multiple: true
 
-      - name: Merge reports
-        run: npx playwright merge-reports --reporter html ./all-reports
+      - name: Merge into HTML Report
+        run: npx playwright merge-reports --reporter html ../all-blob-reports
 
-      - name: Upload merged report
+      - name: Upload HTML report
         uses: actions/upload-artifact@v4
+        if: always()
         with:
-          name: playwright-report-merged
+          name: playwright-report
           path: website/playwright-report/
           retention-days: 30
