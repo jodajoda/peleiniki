@@ -157,11 +157,13 @@ const Portfolio = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10">
                 {group.images.map((image, imageIndex) => (
-                  <div
+                  <button
                     key={imageIndex}
-                    className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in"
+                    type="button"
+                    className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500"
                     style={{ animationDelay: `${imageIndex * 0.05}s` }}
                     onClick={() => openLightbox(groupIndex, imageIndex)}
+                    aria-label={`${image.alt} megnyitása nagyobb méretben`}
                   >
                     <LazyImage
                       src={image.src}
@@ -183,7 +185,7 @@ const Portfolio = () => {
                         />
                       </svg>
                     </div>
-                  </div>
+                  </button>
                 ))}
               </div>
             </div>

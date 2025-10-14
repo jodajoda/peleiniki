@@ -47,6 +47,13 @@ npm run test:debug
 
 # View last test report
 npm run test:report
+
+# Run specific test file
+npm test -- navigation.spec.js
+npm test -- contact-form.spec.js
+
+# Run tests matching a pattern
+npm test -- --grep "lightbox"
 ```
 
 ### Running Specific Tests

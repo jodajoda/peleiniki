@@ -58,6 +58,9 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
 
   return (
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-label="Képnéző"
       className={`fixed inset-0 z-50 bg-black/95 flex items-center justify-center transition-opacity duration-300 ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
@@ -156,7 +159,12 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
       )}
 
       {/* Counter */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm">
+      <div
+        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      >
         {currentIndex + 1} / {images.length}
       </div>
     </div>

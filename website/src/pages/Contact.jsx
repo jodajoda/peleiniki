@@ -201,7 +201,7 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="animate-slide-left stagger-3">
-              <form id="contact-form" onSubmit={handleSubmit} className="space-y-4 p-6 rounded-lg bg-gradient-to-br from-white to-primary-50 shadow-soft">
+              <form id="contact-form" onSubmit={handleSubmit} className="space-y-4 p-6 rounded-lg bg-gradient-to-br from-white to-primary-50 shadow-soft" aria-label="Kapcsolatfelvételi űrlap">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                     Név *
@@ -271,6 +271,9 @@ const Contact = () => {
 
                 {status.message && (
                   <div
+                    role="status"
+                    aria-live="polite"
+                    aria-atomic="true"
                     className={`p-4 rounded-lg ${
                       status.type === 'success'
                         ? 'bg-green-50 text-green-800'

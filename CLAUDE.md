@@ -274,11 +274,39 @@ Currently uses placeholders that need real URLs.
 - Vite automatically code-splits routes
 
 ### Accessibility
-- Navigation includes proper ARIA labels
-- Lightbox supports keyboard navigation
-- Use semantic HTML elements
-- Maintain sufficient color contrast with primary palette
-- Add descriptive alt text to all images
+
+The website meets WCAG 2.1 Level AA standards with comprehensive accessibility features:
+
+**Keyboard Navigation:**
+- Skip-to-content link (visible on focus)
+- All interactive elements are keyboard accessible
+- Enhanced focus indicators (2px ring on all focusable elements)
+- Lightbox supports Arrow keys and Escape
+
+**Screen Readers:**
+- Semantic HTML with proper landmarks (`<header>`, `<nav>`, `<main>`, `<footer>`)
+- ARIA labels on all interactive elements
+- `aria-current="page"` for active navigation links
+- `aria-live` regions for dynamic content updates
+- Proper heading hierarchy on all pages
+
+**Visual Accessibility:**
+- WCAG AA color contrast ratios
+- `prefers-reduced-motion` support
+- Clear focus indicators on all interactive elements
+
+**Forms:**
+- All inputs have associated labels
+- Required fields properly marked
+- Error messages announced to screen readers
+- Status updates via `aria-live` regions
+
+**Testing:**
+- Automated accessibility tests using axe-core
+- 180+ test cases covering WCAG compliance
+- Run tests: `npm test -- accessibility.spec.js`
+
+See [ACCESSIBILITY.md](../ACCESSIBILITY.md) for complete documentation.
 
 ## Troubleshooting
 
