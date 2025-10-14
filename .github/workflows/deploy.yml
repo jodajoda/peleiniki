@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'website/**'
+      - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
 permissions:
@@ -13,11 +16,16 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./website
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,12 +37,21 @@ jobs:
           cache: 'npm'
           cache-dependency-path: website/package-lock.json
 
+      - name: Cache Vite build
+        uses: actions/cache@v4
+        with:
+          path: |
+            website/node_modules/.vite
+            website/.vite-cache
+          key: ${{ runner.os }}-vite-${{ hashFiles('website/package-lock.json') }}-${{ hashFiles('website/**/*.jsx', 'website/**/*.js', 'website/**/*.css') }}
+          restore-keys: |
+            ${{ runner.os }}-vite-${{ hashFiles('website/package-lock.json') }}-
+            ${{ runner.os }}-vite-
+
       - name: Install dependencies
-        working-directory: ./website
-        run: npm ci
+        run: npm ci --prefer-offline --no-audit
 
       - name: Build
-        working-directory: ./website
         run: npm run build
         env:
           VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
