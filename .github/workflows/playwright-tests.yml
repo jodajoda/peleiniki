@@ -113,12 +113,12 @@ jobs:
       - name: Download all reports
         uses: actions/download-artifact@v4
         with:
-          path: all-reports
+          path: website/all-reports
           pattern: playwright-report-*
           merge-multiple: true
 
       - name: Merge reports
-        run: npx playwright merge-reports --reporter html ../all-reports
+        run: npx playwright merge-reports --reporter html ./all-reports
 
       - name: Upload merged report
         uses: actions/upload-artifact@v4
