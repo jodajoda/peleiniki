@@ -190,10 +190,21 @@ The symlink ensures assets are accessible during development and get copied duri
 
 Deployment is automated via GitHub Actions on push to `main`:
 
-1. Workflow runs in `website/` directory
-2. Builds production bundle (`npm run build`)
-3. Uploads `website/dist/` to GitHub Pages
-4. Site deploys to: https://jodajoda.github.io/peleiniki/
+**Deployment Pipeline** (tests → build → deploy):
+
+1. **Test Job** - Runs Playwright E2E tests (parallel execution)
+   - **Deployment is blocked if tests fail** ✅
+   - Tests run in 2 parallel shards for speed
+   - Uploads test reports and screenshots
+
+2. **Build Job** - Creates production bundle (requires tests to pass)
+   - Runs in `website/` directory
+   - Executes `npm run build`
+   - Injects EmailJS secrets as environment variables
+
+3. **Deploy Job** - Publishes to GitHub Pages (requires build to pass)
+   - Uploads `website/dist/` to GitHub Pages
+   - Site deploys to: https://jodajoda.github.io/peleiniki/
 
 Configuration in [.github/workflows/deploy.yml](.github/workflows/deploy.yml).
 
