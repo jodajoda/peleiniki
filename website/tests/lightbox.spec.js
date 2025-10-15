@@ -23,7 +23,7 @@ test.describe('Lightbox Component', () => {
         await page.keyboard.press('Escape');
         await page.waitForTimeout(500);
       }
-    } catch (e) {
+    } catch {
       // Lightbox not open, that's fine
     }
   });
