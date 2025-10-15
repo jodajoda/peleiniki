@@ -14,7 +14,7 @@ const Home = () => {
       id: 2,
       title: 'Portfólió',
       description: 'Nézd meg korábbi munkáimat. Családok, keresztelők, szülinapok és sok-sok szeretet.',
-      image: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-3.jpg',
+      image: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1.jpg',
       link: '/portfolio',
     },
     {
