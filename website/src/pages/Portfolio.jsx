@@ -52,9 +52,9 @@ const Portfolio = () => {
       images: [
         { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-1.JPG', alt: 'Kismamafotózás' }, // Column 1, Row 1
         { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-2.JPG', alt: 'Kismamafotózás' }, // Column 1, Row 2
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-3.JPG', alt: 'Kismamafotózás' }, // Column 2 (standing)
+        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5.JPG', alt: 'Kismamafotózás' }, // Column 2 (standing)
         { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-4.JPG', alt: 'Kismamafotózás' }, // Column 3, Row 1
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5.JPG', alt: 'Kismamafotózás' }, // Column 3, Row 2
+        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-3.JPG', alt: 'Kismamafotózás' }, // Column 3, Row 2
       ],
     },
     {
@@ -219,6 +219,117 @@ const Portfolio = () => {
                       </div>
                     </button>
                   ))}
+                </div>
+              ) : group.id === 'csalad-otthon' ? (
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-4 relative z-10">
+                  {/* First column: 1 tall standing image (csalad-otthon-1.JPG) */}
+                  <button
+                    type="button"
+                    className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500 h-[calc(36rem+1rem)]"
+                    style={{ animationDelay: '0s' }}
+                    onClick={() => openLightbox(groupIndex, 0)}
+                    aria-label={`${group.images[0].alt} megnyitása nagyobb méretben`}
+                  >
+                    <LazyImage
+                      src={group.images[0].src}
+                      alt={group.images[0].alt}
+                      className="h-full hover-zoom image-soft-glow"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                      <svg
+                        className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+
+                  {/* Second column: 2 rows with 2-2 images */}
+                  <div className="grid grid-cols-1 gap-4">
+                    {/* First row: 2 images (csalad-otthon-2, csalad-otthon-3) */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {[1, 2].map((index) => {
+                        const image = group.images[index];
+                        return (
+                          <button
+                            key={index}
+                            type="button"
+                            className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500"
+                            style={{ animationDelay: `${index * 0.05}s` }}
+                            onClick={() => openLightbox(groupIndex, index)}
+                            aria-label={`${image.alt} megnyitása nagyobb méretben`}
+                          >
+                            <LazyImage
+                              src={image.src}
+                              alt={image.alt}
+                              className="h-72 hover-zoom image-soft-glow"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                              <svg
+                                className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                                />
+                              </svg>
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    {/* Second row: 2 images (csalad-otthon-4, csalad-otthon-5) */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {[3, 4].map((index) => {
+                        const image = group.images[index];
+                        return (
+                          <button
+                            key={index}
+                            type="button"
+                            className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500"
+                            style={{ animationDelay: `${index * 0.05}s` }}
+                            onClick={() => openLightbox(groupIndex, index)}
+                            aria-label={`${image.alt} megnyitása nagyobb méretben`}
+                          >
+                            <LazyImage
+                              src={image.src}
+                              alt={image.alt}
+                              className="h-72 hover-zoom image-soft-glow"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                              <svg
+                                className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                                />
+                              </svg>
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
                 </div>
               ) : group.id === 'kismama-otthon' ? (
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr_1fr] gap-4 relative z-10">
