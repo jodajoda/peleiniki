@@ -78,7 +78,7 @@ const Navigation = () => {
               <li key={path}>
                 <Link
                   to={path}
-                  className={`text-sm font-medium transition-colors hover:text-primary-600 ${
+                  className={`text-base font-medium transition-colors hover:text-primary-600 ${
                     location.pathname === path
                       ? 'text-primary-700 border-b-2 border-primary-700 pb-1'
                       : 'text-gray-700'
@@ -103,7 +103,7 @@ const Navigation = () => {
               <li key={path}>
                 <Link
                   to={path}
-                  className={`block px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`block px-4 py-2 rounded-md text-base font-medium transition-colors ${
                     location.pathname === path
                       ? 'bg-primary-100 text-primary-800'
                       : 'text-gray-700 hover:bg-gray-100'

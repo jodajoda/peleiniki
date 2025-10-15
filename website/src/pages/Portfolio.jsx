@@ -129,9 +129,6 @@ const Portfolio = () => {
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 animate-fade-in text-gradient-primary">
           Portfólió
         </h1>
-        <p className="text-lg text-gray-600 text-center max-w-2xl mx-auto animate-slide-left stagger-1">
-          Válogatás munkáimból
-        </p>
       </div>
 
       <div className="space-y-20">
