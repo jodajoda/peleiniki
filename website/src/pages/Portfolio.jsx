@@ -50,12 +50,11 @@ const Portfolio = () => {
       title: 'Kismamafotózás otthon',
       description: 'Intim pillanatok otthon, a babavárás izgalmával.',
       images: [
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-1.JPG', alt: 'Kismamafotózás' },
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-2.JPG', alt: 'Kismamafotózás' },
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-3.JPG', alt: 'Kismamafotózás' },
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-4.JPG', alt: 'Kismamafotózás' },
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5.JPG', alt: 'Kismamafotózás' },
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-6.JPG', alt: 'Kismamafotózás' },
+        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-1.JPG', alt: 'Kismamafotózás' }, // Column 1, Row 1
+        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-2.JPG', alt: 'Kismamafotózás' }, // Column 1, Row 2
+        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-3.JPG', alt: 'Kismamafotózás' }, // Column 2 (standing)
+        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-4.JPG', alt: 'Kismamafotózás' }, // Column 3, Row 1
+        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5.JPG', alt: 'Kismamafotózás' }, // Column 3, Row 2
       ],
     },
     {
@@ -225,7 +224,7 @@ const Portfolio = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr_1fr] gap-4 relative z-10">
                   {/* First column: 2 landscape images (kismama-otthon-1, kismama-otthon-4) */}
                   <div className="grid grid-cols-1 gap-4">
-                    {[0, 3].map((index) => {
+                    {[0, 1].map((index) => {
                       const image = group.images[index];
                       return (
                         <button
@@ -266,12 +265,12 @@ const Portfolio = () => {
                     type="button"
                     className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500 h-[calc(36rem+1rem)]"
                     style={{ animationDelay: '0.1s' }}
-                    onClick={() => openLightbox(groupIndex, 4)}
-                    aria-label={`${group.images[4].alt} megnyitása nagyobb méretben`}
+                    onClick={() => openLightbox(groupIndex, 2)}
+                    aria-label={`${group.images[2].alt} megnyitása nagyobb méretben`}
                   >
                     <LazyImage
-                      src={group.images[4].src}
-                      alt={group.images[4].alt}
+                      src={group.images[2].src}
+                      alt={group.images[2].alt}
                       className="h-full hover-zoom image-soft-glow"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
@@ -293,14 +292,14 @@ const Portfolio = () => {
 
                   {/* Third column: 2 images (kismama-otthon-3, kismama-otthon-2) */}
                   <div className="grid grid-cols-1 gap-4">
-                    {[2, 1].map((index) => {
+                    {[3, 4].map((index) => {
                       const image = group.images[index];
                       return (
                         <button
                           key={index}
                           type="button"
                           className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500"
-                          style={{ animationDelay: `${(index + 3) * 0.05}s` }}
+                          style={{ animationDelay: `${(index + 1) * 0.05}s` }}
                           onClick={() => openLightbox(groupIndex, index)}
                           aria-label={`${image.alt} megnyitása nagyobb méretben`}
                         >
