@@ -12,12 +12,12 @@ const Portfolio = () => {
       title: 'Családfotózás Margitszigeten',
       description: 'Egy kellemes délután a Margitszigeten, ahol a család játékosan töltötte az időt.',
       images: [
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/Csaladfotozas-Szantner-VargaEvi-Margitsziget_20240609-04022.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/Csaladfotozas-Szantner-VargaEvi-Margitsziget_20240609-04063.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/Csaladfotozas-Szantner-VargaEvi-Margitsziget_20240609-04123.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/Csaladfotozas-Szantner-VargaEvi-Margitsziget_20240609-04145-2.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/Csaladfotozas-Szantner-VargaEvi-Margitsziget_20240609-04201.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/Csaladfotozas-Szantner-VargaEvi-Margitsziget_20240609-04217.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-2.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-3.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-4.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-5.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-6.jpg', alt: 'Családfotózás Margitszigeten' },
       ],
     },
     {
@@ -25,25 +25,24 @@ const Portfolio = () => {
       title: 'Játszótéri móka',
       description: 'Spontán pillanatok a játszótéren, ahol a gyerekek szabadon játszhatnak.',
       images: [
-        { src: '/peleiniki/assets/portfolio/jatszoteri-moka/EsoManoProjekt_20241018-02814.jpg', alt: 'Játszótéri fotózás' },
-        { src: '/peleiniki/assets/portfolio/jatszoteri-moka/EsoManoProjekt_20241018-02821.jpg', alt: 'Játszótéri fotózás' },
-        { src: '/peleiniki/assets/portfolio/jatszoteri-moka/EsoManoProjekt_20241018-02829.jpg', alt: 'Játszótéri fotózás' },
-        { src: '/peleiniki/assets/portfolio/jatszoteri-moka/EsoManoProjekt_20241018-02831.jpg', alt: 'Játszótéri fotózás' },
-        { src: '/peleiniki/assets/portfolio/jatszoteri-moka/EsoManoProjekt_20241018-02845.jpg', alt: 'Játszótéri fotózás' },
-        { src: '/peleiniki/assets/portfolio/jatszoteri-moka/EsoManoProjekt_20241018-02851.jpg', alt: 'Játszótéri fotózás' },
+        { src: '/peleiniki/assets/portfolio/jatszoteri-moka/jatszoteri-moka-1.jpg', alt: 'Játszótéri fotózás' },
+        { src: '/peleiniki/assets/portfolio/jatszoteri-moka/jatszoteri-moka-2.jpg', alt: 'Játszótéri fotózás' },
+        { src: '/peleiniki/assets/portfolio/jatszoteri-moka/jatszoteri-moka-3.jpg', alt: 'Játszótéri fotózás' },
+        { src: '/peleiniki/assets/portfolio/jatszoteri-moka/jatszoteri-moka-5.jpg', alt: 'Játszótéri fotózás' },
+        { src: '/peleiniki/assets/portfolio/jatszoteri-moka/jatszoteri-moka-6.jpg', alt: 'Játszótéri fotózás' },
       ],
     },
     {
-      id: 'flori-keresztelo',
-      title: 'Flori keresztelője',
+      id: 'keresztelo',
+      title: 'Keresztelő',
       description: 'Egy különleges családi esemény megörökítése.',
       images: [
-        { src: '/peleiniki/assets/portfolio/flori-keresztelo/RaczDorottya-Keresztelo_20241027-08422.JPG', alt: 'Keresztelő fotózás' },
-        { src: '/peleiniki/assets/portfolio/flori-keresztelo/RaczDorottya-Keresztelo_20241027-08458.JPG', alt: 'Keresztelő fotózás' },
-        { src: '/peleiniki/assets/portfolio/flori-keresztelo/RaczDorottya-Keresztelo_20241027-08471.JPG', alt: 'Keresztelő fotózás' },
-        { src: '/peleiniki/assets/portfolio/flori-keresztelo/RaczDorottya-Keresztelo_20241027-08523.JPG', alt: 'Keresztelő fotózás' },
-        { src: '/peleiniki/assets/portfolio/flori-keresztelo/RaczDorottya-Keresztelo_20241027-08546.JPG', alt: 'Keresztelő fotózás' },
-        { src: '/peleiniki/assets/portfolio/flori-keresztelo/RaczDorottya-Keresztelo_20241027-08560.JPG', alt: 'Keresztelő fotózás' },
+        { src: '/peleiniki/assets/portfolio/keresztelo/keresztelo-1.JPG', alt: 'Keresztelő fotózás' },
+        { src: '/peleiniki/assets/portfolio/keresztelo/keresztelo-2.JPG', alt: 'Keresztelő fotózás' },
+        { src: '/peleiniki/assets/portfolio/keresztelo/keresztelo-3.JPG', alt: 'Keresztelő fotózás' },
+        { src: '/peleiniki/assets/portfolio/keresztelo/keresztelo-4.JPG', alt: 'Keresztelő fotózás' },
+        { src: '/peleiniki/assets/portfolio/keresztelo/keresztelo-5.JPG', alt: 'Keresztelő fotózás' },
+        { src: '/peleiniki/assets/portfolio/keresztelo/keresztelo-6.JPG', alt: 'Keresztelő fotózás' },
       ],
     },
     {
@@ -51,12 +50,12 @@ const Portfolio = () => {
       title: 'Kismamafotózás otthon',
       description: 'Intim pillanatok otthon, a babavárás izgalmával.',
       images: [
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/MD-Csalad-Kismamafotozas-20250816-05822.JPG', alt: 'Kismamafotózás' },
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/MD-Csalad-Kismamafotozas-20250816-05855.JPG', alt: 'Kismamafotózás' },
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/MD-Csalad-Kismamafotozas-20250816-06190.JPG', alt: 'Kismamafotózás' },
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/MD-Csalad-Kismamafotozas-20250816-06670.JPG', alt: 'Kismamafotózás' },
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/MD-Csalad-Kismamafotozas-20250816-06690.JPG', alt: 'Kismamafotózás' },
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/MD-Csalad-Kismamafotozas-20250816-07138.JPG', alt: 'Kismamafotózás' },
+        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-1.JPG', alt: 'Kismamafotózás' },
+        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-2.JPG', alt: 'Kismamafotózás' },
+        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-3.JPG', alt: 'Kismamafotózás' },
+        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-4.JPG', alt: 'Kismamafotózás' },
+        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5.JPG', alt: 'Kismamafotózás' },
+        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-6.JPG', alt: 'Kismamafotózás' },
       ],
     },
     {
@@ -64,12 +63,12 @@ const Portfolio = () => {
       title: 'Családfotózás a Városligetben',
       description: 'Természetes környezetben, a Városliget zöld oázisában.',
       images: [
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-a-varosligetben/DemjenCsalad_Varosliget_20240730-08170.jpg', alt: 'Családfotózás Városligetben' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-a-varosligetben/DemjenCsalad_Varosliget_20240730-08172.jpg', alt: 'Családfotózás Városligetben' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-a-varosligetben/DemjenCsalad_Varosliget_20240730-08188.jpg', alt: 'Családfotózás Városligetben' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-a-varosligetben/DemjenCsalad_Varosliget_20240730-08195.jpg', alt: 'Családfotózás Városligetben' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-a-varosligetben/DemjenCsalad_Varosliget_20240730-08219.jpg', alt: 'Családfotózás Városligetben' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-a-varosligetben/DemjenCsalad_Varosliget_20240730-08242-2.jpg', alt: 'Családfotózás Városligetben' },
+        { src: '/peleiniki/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-1.jpg', alt: 'Családfotózás Városligetben' },
+        { src: '/peleiniki/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-2.jpg', alt: 'Családfotózás Városligetben' },
+        { src: '/peleiniki/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-3.jpg', alt: 'Családfotózás Városligetben' },
+        { src: '/peleiniki/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-4.jpg', alt: 'Családfotózás Városligetben' },
+        { src: '/peleiniki/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-5.jpg', alt: 'Családfotózás Városligetben' },
+        { src: '/peleiniki/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-6.jpg', alt: 'Családfotózás Városligetben' },
       ],
     },
     {
@@ -77,12 +76,12 @@ const Portfolio = () => {
       title: 'Családfotózás otthon',
       description: 'Otthoni környezetben, ahol a család a leginkább önmaga lehet.',
       images: [
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-otthon/JancsoIldiko-Csaladi_20241019_k-03928.JPG', alt: 'Családfotózás otthon' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-otthon/JancsoIldiko-Csaladi_20241019_k-03984.JPG', alt: 'Családfotózás otthon' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-otthon/JancsoIldiko-Csaladi_20241019_k-04107.JPG', alt: 'Családfotózás otthon' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-otthon/JancsoIldiko-Csaladi_20241019_k-04112.JPG', alt: 'Családfotózás otthon' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-otthon/JancsoIldiko-Csaladi_20241019_k-04163.JPG', alt: 'Családfotózás otthon' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-otthon/JancsoIldiko-Csaladi_20241019_k-04196.JPG', alt: 'Családfotózás otthon' },
+        { src: '/peleiniki/assets/portfolio/csaladfotozes-otthon/csalad-otthon-1.JPG', alt: 'Családfotózás otthon' },
+        { src: '/peleiniki/assets/portfolio/csaladfotozes-otthon/csalad-otthon-2.JPG', alt: 'Családfotózás otthon' },
+        { src: '/peleiniki/assets/portfolio/csaladfotozes-otthon/csalad-otthon-3.JPG', alt: 'Családfotózás otthon' },
+        { src: '/peleiniki/assets/portfolio/csaladfotozes-otthon/csalad-otthon-4.JPG', alt: 'Családfotózás otthon' },
+        { src: '/peleiniki/assets/portfolio/csaladfotozes-otthon/csalad-otthon-5.JPG', alt: 'Családfotózás otthon' },
+        { src: '/peleiniki/assets/portfolio/csaladfotozes-otthon/csalad-otthon-6.JPG', alt: 'Családfotózás otthon' },
       ],
     },
     {
@@ -90,12 +89,12 @@ const Portfolio = () => {
       title: 'Szülinapi fotózás',
       description: 'Egy különleges nap, tele örömmel és nevetéssel.',
       images: [
-        { src: '/peleiniki/assets/portfolio/szulinap/NKR-Csaladfotozas_20250517-03892.JPG', alt: 'Szülinapi fotózás' },
-        { src: '/peleiniki/assets/portfolio/szulinap/NKR-Csaladfotozas_20250517-03974.JPG', alt: 'Szülinapi fotózás' },
-        { src: '/peleiniki/assets/portfolio/szulinap/NKR-Csaladfotozas_20250517-03979.JPG', alt: 'Szülinapi fotózás' },
-        { src: '/peleiniki/assets/portfolio/szulinap/NKR-Csaladfotozas_20250517-04509.JPG', alt: 'Szülinapi fotózás' },
-        { src: '/peleiniki/assets/portfolio/szulinap/NKR-Csaladfotozas_20250517-04599.JPG', alt: 'Szülinapi fotózás' },
-        { src: '/peleiniki/assets/portfolio/szulinap/NKR-Csaladfotozas_20250517-04648.JPG', alt: 'Szülinapi fotózás' },
+        { src: '/peleiniki/assets/portfolio/szulinap/szulinap-1.JPG', alt: 'Szülinapi fotózás' },
+        { src: '/peleiniki/assets/portfolio/szulinap/szulinap-2.JPG', alt: 'Szülinapi fotózás' },
+        { src: '/peleiniki/assets/portfolio/szulinap/szulinap-3.JPG', alt: 'Szülinapi fotózás' },
+        { src: '/peleiniki/assets/portfolio/szulinap/szulinap-4.JPG', alt: 'Szülinapi fotózás' },
+        { src: '/peleiniki/assets/portfolio/szulinap/szulinap-5.JPG', alt: 'Szülinapi fotózás' },
+        { src: '/peleiniki/assets/portfolio/szulinap/szulinap-6.jpg', alt: 'Szülinapi fotózás' },
       ],
     },
   ];
@@ -155,39 +154,111 @@ const Portfolio = () => {
                 <p className="text-gray-600 animate-fade-in stagger-1">{group.description}</p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10">
-                {group.images.map((image, imageIndex) => (
-                  <button
-                    key={imageIndex}
-                    type="button"
-                    className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500"
-                    style={{ animationDelay: `${imageIndex * 0.05}s` }}
-                    onClick={() => openLightbox(groupIndex, imageIndex)}
-                    aria-label={`${image.alt} megnyitása nagyobb méretben`}
-                  >
-                    <LazyImage
-                      src={image.src}
-                      alt={image.alt}
-                      className="h-72 hover-zoom image-soft-glow"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
-                      <svg
-                        className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+              {group.id === 'jatszoteri-moka' ? (
+                <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 relative z-10">
+                  {/* First column: 4 landscape images in 2x2 grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 auto-rows-fr">
+                    {group.images.slice(0, 4).map((image, imageIndex) => (
+                      <button
+                        key={imageIndex}
+                        type="button"
+                        className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500"
+                        style={{ animationDelay: `${imageIndex * 0.05}s` }}
+                        onClick={() => openLightbox(groupIndex, imageIndex)}
+                        aria-label={`${image.alt} megnyitása nagyobb méretben`}
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                        <LazyImage
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-full object-cover hover-zoom image-soft-glow"
                         />
-                      </svg>
-                    </div>
-                  </button>
-                ))}
-              </div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                          <svg
+                            className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                            />
+                          </svg>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+
+                  {/* Second column: 1 tall standing image */}
+                  {group.images.slice(4).map((image, imageIndex) => (
+                    <button
+                      key={imageIndex + 4}
+                      type="button"
+                      className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full h-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500"
+                      style={{ animationDelay: `${(imageIndex + 4) * 0.05}s` }}
+                      onClick={() => openLightbox(groupIndex, imageIndex + 4)}
+                      aria-label={`${image.alt} megnyitása nagyobb méretben`}
+                    >
+                      <LazyImage
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-cover hover-zoom image-soft-glow"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                        <svg
+                          className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10">
+                  {group.images.map((image, imageIndex) => (
+                    <button
+                      key={imageIndex}
+                      type="button"
+                      className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500"
+                      style={{ animationDelay: `${imageIndex * 0.05}s` }}
+                      onClick={() => openLightbox(groupIndex, imageIndex)}
+                      aria-label={`${image.alt} megnyitása nagyobb méretben`}
+                    >
+                      <LazyImage
+                        src={image.src}
+                        alt={image.alt}
+                        className="h-72 hover-zoom image-soft-glow"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                        <svg
+                          className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           </section>
         ))}

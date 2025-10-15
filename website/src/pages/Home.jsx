@@ -7,28 +7,28 @@ const Home = () => {
       id: 1,
       title: 'A fotózás velem',
       description: 'Fedezd fel, hogyan zajlik egy fotózás. Lazán, természetesen, sok nevetéssel.',
-      image: '/peleiniki/assets/homepage/homepage-07031.jpg',
+      image: '/peleiniki/assets/homepage/fotozas-velem.jpg',
       link: '/photoshooting',
     },
     {
       id: 2,
       title: 'Portfólió',
       description: 'Nézd meg korábbi munkáimat. Családok, keresztelők, szülinapok és sok-sok szeretet.',
-      image: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/Csaladfotozas-Szantner-VargaEvi-Margitsziget_20240609-04022.jpg',
+      image: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-3.jpg',
       link: '/portfolio',
     },
     {
       id: 3,
       title: 'Rólam',
       description: 'Kicsoda Pelei Niki? Ismerd meg jobban a fotóst és a történetet.',
-      image: '/peleiniki/assets/about-me/magamrol_202410-03733-2.jpg',
+      image: '/peleiniki/assets/homepage/rolam.jpg',
       link: '/about',
     },
     {
       id: 4,
       title: 'Csomagok',
       description: 'Válassz a különböző fotózási csomagok közül, ami a legjobban illik hozzátok.',
-      image: '/peleiniki/assets/homepage/homepage-01123.jpg',
+      image: '/peleiniki/assets/homepage/csomagok.jpg',
       link: '/packages',
     },
   ];
@@ -40,7 +40,7 @@ const Home = () => {
         {/* Hero Image */}
         <div className="absolute inset-0">
           <img
-            src="/peleiniki/assets/homepage/homepage-06935.jpg"
+            src="/peleiniki/assets/homepage/hero.jpg"
             alt="Pelei Niki Fotográfus - Családfotózás"
             className="w-full h-full object-cover image-warm-filter animate-scale-in"
           />
