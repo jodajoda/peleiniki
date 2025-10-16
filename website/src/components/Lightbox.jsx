@@ -19,6 +19,11 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
 
   const handleClose = useCallback(() => {
     setIsVisible(false);
+
+    // Simply remove the no-scroll class - no scroll restoration needed
+    document.body.classList.remove('no-scroll');
+    document.body.style.removeProperty('padding-right');
+
     setTimeout(() => onClose(), 300);
   }, [onClose]);
 
@@ -55,7 +60,10 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
     delta: 50, // Minimum distance for swipe
   });
 
+  // Separate effect for keyboard navigation
   useEffect(() => {
+    if (currentIndex === null) return;
+
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') handleClose();
       if (e.key === 'ArrowLeft') handlePrev();
@@ -63,13 +71,47 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
     };
 
     window.addEventListener('keydown', handleKeyDown);
-    document.body.style.overflow = 'hidden';
-
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'unset';
     };
-  }, [handleClose, handleNext, handlePrev]);
+  }, [currentIndex, handleClose, handleNext, handlePrev]);
+
+  // Separate effect for scroll prevention (only runs on mount/unmount)
+  useEffect(() => {
+    if (currentIndex === null) return;
+
+    // Calculate scrollbar width to prevent layout shift
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+    // Apply no-scroll class and compensate for scrollbar
+    document.body.classList.add('no-scroll');
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+
+    // Prevent touch and wheel scrolling
+    const preventScroll = (e) => {
+      if (e.target.closest('.lightbox-content')) {
+        // Allow scrolling within lightbox content if needed
+        return;
+      }
+      e.preventDefault();
+    };
+
+    document.addEventListener('touchmove', preventScroll, { passive: false });
+    document.addEventListener('wheel', preventScroll, { passive: false });
+
+    return () => {
+      // Only remove event listeners; scroll restoration is handled in handleClose
+      document.removeEventListener('touchmove', preventScroll);
+      document.removeEventListener('wheel', preventScroll);
+
+      // Failsafe: restore if component unmounts without handleClose being called
+      if (document.body.classList.contains('no-scroll')) {
+        document.body.classList.remove('no-scroll');
+        document.body.style.removeProperty('padding-right');
+      }
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Only run on mount/unmount, not when currentIndex changes
 
   if (currentIndex === null) return null;
 
@@ -81,10 +123,11 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
       role="dialog"
       aria-modal="true"
       aria-label="Képnéző"
-      className={`fixed inset-0 z-50 bg-black/95 flex items-center justify-center transition-opacity duration-300 ${
+      className={`fixed inset-0 z-50 bg-black/95 flex items-center justify-center transition-opacity duration-300 overflow-hidden ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
       onClick={handleClose}
+      style={{ touchAction: 'none' }}
     >
       {/* Close button */}
       <button
@@ -135,7 +178,7 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
 
       {/* Image */}
       <div
-        className="max-w-7xl max-h-[90vh] p-4 select-none"
+        className="lightbox-content max-w-7xl max-h-[90vh] p-4 select-none"
         onClick={(e) => e.stopPropagation()}
         role="img"
         aria-label={`Kép ${currentIndex + 1} / ${images.length}: ${currentImage.alt}`}

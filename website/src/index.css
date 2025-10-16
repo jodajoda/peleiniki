@@ -321,4 +321,9 @@
       transform: translateX(100%);
     }
   }
+
+  /* Prevent scroll when lightbox/modal is open */
+  body.no-scroll {
+    overflow: hidden !important;
+  }
 }

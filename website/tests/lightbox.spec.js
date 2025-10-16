@@ -257,17 +257,29 @@ test.describe('Lightbox Component', () => {
     // Wait for lightbox to open
     await page.waitForSelector('div[class*="fixed inset-0 z-50"]');
 
-    // Check body overflow style
-    const bodyOverflow = await page.evaluate(() => document.body.style.overflow);
-    expect(bodyOverflow).toBe('hidden');
+    // Check body has no-scroll class and overflow hidden
+    const bodyState = await page.evaluate(() => {
+      return {
+        hasNoScroll: document.body.classList.contains('no-scroll'),
+        overflow: window.getComputedStyle(document.body).overflow,
+      };
+    });
+    expect(bodyState.hasNoScroll).toBe(true);
+    expect(bodyState.overflow).toBe('hidden');
 
     // Close lightbox
     await page.keyboard.press('Escape');
     await page.waitForTimeout(500);
 
     // Body overflow should be restored
-    const bodyOverflowAfter = await page.evaluate(() => document.body.style.overflow);
-    expect(bodyOverflowAfter).not.toBe('hidden');
+    const bodyOverflowAfter = await page.evaluate(() => {
+      return {
+        hasNoScroll: document.body.classList.contains('no-scroll'),
+        overflow: window.getComputedStyle(document.body).overflow,
+      };
+    });
+    expect(bodyOverflowAfter.hasNoScroll).toBe(false);
+    expect(bodyOverflowAfter.overflow).not.toBe('hidden');
   });
 
   test('should display image with proper styling', async ({ page }) => {
