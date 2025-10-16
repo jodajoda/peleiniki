@@ -1,0 +1,45 @@
+# robots.txt for Pelei Niki Fotográfus
+# https://peleiniki.com
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin and configuration files (if any)
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Sitemap location
+Sitemap: https://peleiniki.com/sitemap.xml
+
+# Crawl-delay for polite crawling (optional)
+# Crawl-delay: 10
+
+# Allow specific bots full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
