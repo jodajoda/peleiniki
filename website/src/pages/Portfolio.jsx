@@ -133,30 +133,55 @@ const Portfolio = () => {
         ogImageAlt="Portfólió - Családfotózás Margitszigeten"
         canonicalUrl="/portfolio"
       />
-      <div className="container mx-auto px-4 mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 animate-fade-in text-gradient-primary">
-          Portfólió
-        </h1>
+      {/* Enhanced Header */}
+      <div className="container mx-auto px-4 mb-20">
+        <div className="text-center max-w-3xl mx-auto">
+          <div className="inline-block mb-4">
+            <span className="text-primary-600 text-sm tracking-[0.3em] uppercase font-semibold">Munkáim</span>
+          </div>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gray-900">
+            Portfólió
+          </h1>
+          <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-6"></div>
+          <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+            Fedezd fel korábbi munkáimat - családi pillanatok, keresztelők, szülinapok és különleges emlékek
+          </p>
+        </div>
       </div>
 
       <div className="space-y-20">
         {portfolioGroups.map((group, groupIndex) => (
           <section
             key={group.id}
-            className="relative bg-gradient-to-br from-primary-50 via-primary-100 to-primary-50 overflow-hidden py-16 animate-fade-in"
+            className="relative bg-gradient-to-br from-primary-50 via-white to-primary-100 overflow-hidden py-20 md:py-24"
             style={{ animationDelay: `${groupIndex * 0.1}s` }}
           >
-            {/* Floating blur elements */}
-            <div className="absolute inset-0 opacity-10 pointer-events-none">
-              <div className="absolute top-10 left-10 w-72 h-72 bg-primary-300 rounded-full blur-3xl animate-float"></div>
-              <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent-warm rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+            {/* Enhanced floating blur elements */}
+            <div className="absolute inset-0 opacity-15 pointer-events-none">
+              <div className="absolute top-10 left-10 w-80 h-80 bg-gradient-to-br from-orange-200 to-amber-300 rounded-full blur-3xl animate-float"></div>
+              <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-tl from-amber-200 to-orange-300 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+              <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-orange-100 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
             </div>
+
+            {/* Decorative pattern overlay */}
+            <div className="absolute inset-0 opacity-5 pointer-events-none">
+              <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <pattern id={`dots-${group.id}`} x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <circle cx="20" cy="20" r="2" fill="currentColor" />
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill={`url(#dots-${group.id})`} />
+              </svg>
+            </div>
+
             <div className="container mx-auto px-4">
-              <div className="mb-8 relative z-10">
-                <h2 className="text-3xl font-bold text-gray-900 mb-2 animate-slide-right">
+              <div className="mb-12 relative z-10 text-center md:text-left max-w-4xl mx-auto">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
                   {group.title}
                 </h2>
-                <p className="text-gray-600 animate-fade-in stagger-1">{group.description}</p>
+                <div className="w-16 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mb-4 mx-auto md:mx-0"></div>
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed">{group.description}</p>
               </div>
 
               {group.id === 'jatszoteri-moka' ? (
@@ -167,7 +192,7 @@ const Portfolio = () => {
                       <button
                         key={imageIndex}
                         type="button"
-                        className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500"
+                        className="relative overflow-hidden rounded-2xl cursor-pointer group hover:shadow-2xl transition-all duration-700 transform hover:scale-[1.02] w-full text-left focus:outline-none focus:ring-4 focus:ring-orange-400"
                         style={{ animationDelay: `${imageIndex * 0.05}s` }}
                         onClick={() => openLightbox(groupIndex, imageIndex)}
                         aria-label={`${image.alt} megnyitása nagyobb méretben`}
@@ -175,11 +200,48 @@ const Portfolio = () => {
                         <LazyImage
                           src={image.src}
                           alt={image.alt}
-                          className="h-72 hover-zoom image-soft-glow"
+                          className="h-72 object-cover transition-transform duration-1000 group-hover:scale-110"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex items-center justify-center">
+                          <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <svg
+                              className="w-14 h-14 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-90 group-hover:scale-100"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+
+                  {/* Second column: 1 tall standing image */}
+                  {group.images.slice(4).map((image, imageIndex) => (
+                    <button
+                      key={imageIndex + 4}
+                      type="button"
+                      className="relative overflow-hidden rounded-2xl cursor-pointer group hover:shadow-2xl transition-all duration-700 transform hover:scale-[1.02] w-full text-left focus:outline-none focus:ring-4 focus:ring-orange-400 h-[calc(36rem+1rem)]"
+                      style={{ animationDelay: `${(imageIndex + 4) * 0.05}s` }}
+                      onClick={() => openLightbox(groupIndex, imageIndex + 4)}
+                      aria-label={`${image.alt} megnyitása nagyobb méretben`}
+                    >
+                      <LazyImage
+                        src={image.src}
+                        alt={image.alt}
+                        className="h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex items-center justify-center">
+                        <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                           <svg
-                            className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+                            className="w-14 h-14 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-90 group-hover:scale-100"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -192,39 +254,6 @@ const Portfolio = () => {
                             />
                           </svg>
                         </div>
-                      </button>
-                    ))}
-                  </div>
-
-                  {/* Second column: 1 tall standing image */}
-                  {group.images.slice(4).map((image, imageIndex) => (
-                    <button
-                      key={imageIndex + 4}
-                      type="button"
-                      className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500 h-[calc(36rem+1rem)]"
-                      style={{ animationDelay: `${(imageIndex + 4) * 0.05}s` }}
-                      onClick={() => openLightbox(groupIndex, imageIndex + 4)}
-                      aria-label={`${image.alt} megnyitása nagyobb méretben`}
-                    >
-                      <LazyImage
-                        src={image.src}
-                        alt={image.alt}
-                        className="h-full hover-zoom image-soft-glow"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
-                        <svg
-                          className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                          />
-                        </svg>
                       </div>
                     </button>
                   ))}
@@ -234,7 +263,7 @@ const Portfolio = () => {
                   {/* First column: 1 tall standing image (csalad-otthon-1.JPG) */}
                   <button
                     type="button"
-                    className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500 h-[calc(36rem+1rem)]"
+                    className="relative overflow-hidden rounded-2xl cursor-pointer group hover:shadow-2xl transition-all duration-700 transform hover:scale-[1.02] w-full text-left focus:outline-none focus:ring-4 focus:ring-orange-400 h-[calc(36rem+1rem)]"
                     style={{ animationDelay: '0s' }}
                     onClick={() => openLightbox(groupIndex, 0)}
                     aria-label={`${group.images[0].alt} megnyitása nagyobb méretben`}
@@ -271,7 +300,7 @@ const Portfolio = () => {
                           <button
                             key={index}
                             type="button"
-                            className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500"
+                            className="relative overflow-hidden rounded-2xl cursor-pointer group hover:shadow-2xl transition-all duration-700 transform hover:scale-[1.02] w-full text-left focus:outline-none focus:ring-4 focus:ring-orange-400"
                             style={{ animationDelay: `${index * 0.05}s` }}
                             onClick={() => openLightbox(groupIndex, index)}
                             aria-label={`${image.alt} megnyitása nagyobb méretben`}
@@ -279,7 +308,7 @@ const Portfolio = () => {
                             <LazyImage
                               src={image.src}
                               alt={image.alt}
-                              className="h-72 hover-zoom image-soft-glow"
+                              className="h-72 object-cover transition-transform duration-1000 group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
                               <svg
@@ -309,7 +338,7 @@ const Portfolio = () => {
                           <button
                             key={index}
                             type="button"
-                            className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500"
+                            className="relative overflow-hidden rounded-2xl cursor-pointer group hover:shadow-2xl transition-all duration-700 transform hover:scale-[1.02] w-full text-left focus:outline-none focus:ring-4 focus:ring-orange-400"
                             style={{ animationDelay: `${index * 0.05}s` }}
                             onClick={() => openLightbox(groupIndex, index)}
                             aria-label={`${image.alt} megnyitása nagyobb méretben`}
@@ -317,7 +346,7 @@ const Portfolio = () => {
                             <LazyImage
                               src={image.src}
                               alt={image.alt}
-                              className="h-72 hover-zoom image-soft-glow"
+                              className="h-72 object-cover transition-transform duration-1000 group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
                               <svg
@@ -350,7 +379,7 @@ const Portfolio = () => {
                         <button
                           key={index}
                           type="button"
-                          className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500"
+                          className="relative overflow-hidden rounded-2xl cursor-pointer group hover:shadow-2xl transition-all duration-700 transform hover:scale-[1.02] w-full text-left focus:outline-none focus:ring-4 focus:ring-orange-400"
                           style={{ animationDelay: `${index * 0.05}s` }}
                           onClick={() => openLightbox(groupIndex, index)}
                           aria-label={`${image.alt} megnyitása nagyobb méretben`}
@@ -358,7 +387,7 @@ const Portfolio = () => {
                           <LazyImage
                             src={image.src}
                             alt={image.alt}
-                            className="h-72 hover-zoom image-soft-glow"
+                            className="h-72 object-cover transition-transform duration-1000 group-hover:scale-110"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
                             <svg
@@ -383,7 +412,7 @@ const Portfolio = () => {
                   {/* Second column: 1 tall standing image (kismama-otthon-5) */}
                   <button
                     type="button"
-                    className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500 h-[calc(36rem+1rem)]"
+                    className="relative overflow-hidden rounded-2xl cursor-pointer group hover:shadow-2xl transition-all duration-700 transform hover:scale-[1.02] w-full text-left focus:outline-none focus:ring-4 focus:ring-orange-400 h-[calc(36rem+1rem)]"
                     style={{ animationDelay: '0.1s' }}
                     onClick={() => openLightbox(groupIndex, 2)}
                     aria-label={`${group.images[2].alt} megnyitása nagyobb méretben`}
@@ -418,7 +447,7 @@ const Portfolio = () => {
                         <button
                           key={index}
                           type="button"
-                          className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500"
+                          className="relative overflow-hidden rounded-2xl cursor-pointer group hover:shadow-2xl transition-all duration-700 transform hover:scale-[1.02] w-full text-left focus:outline-none focus:ring-4 focus:ring-orange-400"
                           style={{ animationDelay: `${(index + 1) * 0.05}s` }}
                           onClick={() => openLightbox(groupIndex, index)}
                           aria-label={`${image.alt} megnyitása nagyobb méretben`}
@@ -426,7 +455,7 @@ const Portfolio = () => {
                           <LazyImage
                             src={image.src}
                             alt={image.alt}
-                            className="h-72 hover-zoom image-soft-glow"
+                            className="h-72 object-cover transition-transform duration-1000 group-hover:scale-110"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
                             <svg
@@ -454,7 +483,7 @@ const Portfolio = () => {
                     <button
                       key={imageIndex}
                       type="button"
-                      className="relative overflow-hidden rounded-lg cursor-pointer group hover:shadow-soft-lg transition-all duration-500 animate-scale-in w-full text-left focus:outline-none focus:ring-4 focus:ring-primary-500"
+                      className="relative overflow-hidden rounded-2xl cursor-pointer group hover:shadow-2xl transition-all duration-700 transform hover:scale-[1.02] w-full text-left focus:outline-none focus:ring-4 focus:ring-orange-400"
                       style={{ animationDelay: `${imageIndex * 0.05}s` }}
                       onClick={() => openLightbox(groupIndex, imageIndex)}
                       aria-label={`${image.alt} megnyitása nagyobb méretben`}
@@ -464,20 +493,22 @@ const Portfolio = () => {
                         alt={image.alt}
                         className="h-72 hover-zoom image-soft-glow"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
-                        <svg
-                          className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                          />
-                        </svg>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex items-center justify-center">
+                        <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                          <svg
+                            className="w-14 h-14 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-90 group-hover:scale-100"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   ))}
