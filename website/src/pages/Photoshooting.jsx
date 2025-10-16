@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const Photoshooting = () => {
   const sections = [
@@ -60,6 +61,14 @@ const Photoshooting = () => {
 
   return (
     <div className="min-h-screen pt-24 pb-16">
+      <SEO
+        title="A fotózás velem"
+        description="Lazán, természetesen, sok nevetéssel - fedezd fel, hogyan zajlik egy családi fotózás. Őszinte pillanatok otthon vagy szabadban."
+        keywords="fotózás menete, családi fotózás Budapest, természetes fotózás, otthoni fotózás, kismama fotózás"
+        ogImage="/assets/photoshooting/lazabb-fotozes.jpg"
+        ogImageAlt="A fotózás velem - Természetes családi fotózás"
+        canonicalUrl="/photoshooting"
+      />
       <div className="container mx-auto px-4 mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-center animate-fade-in text-gradient-primary">
           A fotózás velem

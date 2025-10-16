@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
+import SEO from '../components/SEO';
 
 const Contact = () => {
   const location = useLocation();
@@ -94,6 +95,14 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen pt-24 pb-16">
+      <SEO
+        title="Kapcsolat"
+        description="Vedd fel velem a kapcsolatot fotózási időpont egyeztetéséhez. Elérhető vagyok emailen és közösségi médiában. Várom megkeresésed!"
+        keywords="kapcsolat, fotózás foglalás, időpont egyeztetés, fotográfus elérhetőség, fotózás árajánlat"
+        ogImage="/assets/homepage/hero.jpg"
+        ogImageAlt="Kapcsolatfelvétel - Pelei Niki Fotográfus"
+        canonicalUrl="/contact"
+      />
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 animate-fade-in text-gradient-primary">

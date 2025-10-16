@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Lightbox from '../components/Lightbox';
 import LazyImage from '../components/LazyImage';
+import SEO from '../components/SEO';
 
 const Portfolio = () => {
   const [lightboxIndex, setLightboxIndex] = useState(null);
@@ -124,6 +125,14 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen pt-24 pb-16">
+      <SEO
+        title="Portfólió"
+        description="Tekintse meg korábbi munkáimat - családfotózás, gyermekfotózás, kismama fotózás, keresztelő, szülinap és különleges családi pillanatok."
+        keywords="portfólió, családi fotók, gyermekfotók, kismama fotók, keresztelő fotók, szülinapi fotók, fotó galéria"
+        ogImage="/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1.jpg"
+        ogImageAlt="Portfólió - Családfotózás Margitszigeten"
+        canonicalUrl="/portfolio"
+      />
       <div className="container mx-auto px-4 mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 animate-fade-in text-gradient-primary">
           Portfólió

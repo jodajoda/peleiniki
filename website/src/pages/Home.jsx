@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const Home = () => {
   // Preview sections with images and links
@@ -35,6 +36,14 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Főoldal"
+        description="Pelei Niki Fotográfus - Családi és gyermekfotózás természetes környezetben. Őszinte pillanatok megörökítése Budapesten és környékén."
+        keywords="családi fotózás, gyermekfotózás, kismama fotózás, fotográfus Budapest, természetes fotók, családi fotós"
+        ogImage="/assets/homepage/hero.jpg"
+        ogImageAlt="Pelei Niki Fotográfus - Családfotózás"
+        canonicalUrl="/"
+      />
       {/* Hero Section */}
       <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
         {/* Hero Image */}

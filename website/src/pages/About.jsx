@@ -1,6 +1,16 @@
+import SEO from '../components/SEO';
+
 const About = () => {
   return (
     <div className="min-h-screen pt-24 pb-16">
+      <SEO
+        title="Rólam"
+        description="Pelei Niki vagyok, családi és gyermekfotós. Ismerd meg jobban a történetemet és azt, miért szeretem megörökíteni a családok őszinte pillanatait."
+        keywords="Pelei Niki, fotográfus bemutatkozás, családi fotós Budapest, fotós bemutatkozó"
+        ogImage="/assets/about-me/magamrol_202410-03733-2.jpg"
+        ogImageAlt="Pelei Niki fotográfus portréja"
+        canonicalUrl="/about"
+      />
       <div className="container mx-auto px-4">
         <article className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">

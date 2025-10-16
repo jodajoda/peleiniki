@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const Packages = () => {
   const navigate = useNavigate();
@@ -46,6 +47,14 @@ const Packages = () => {
 
   return (
     <div className="min-h-screen pt-24 pb-16">
+      <SEO
+        title="Fotózási Csomagok"
+        description="Válassz a fotózási csomagjaim közül - játszótéri fotózás, családi fotózás, kismama fotózás, keresztelő és egyedi rendezvények. Árak és részletek."
+        keywords="fotózási csomagok, fotózás árak, családi fotózás ár, kismama fotózás ár, keresztelő fotózás ár, esküvői fotózás"
+        ogImage="/assets/homepage/csomagok.jpg"
+        ogImageAlt="Fotózási Csomagok és Árak"
+        canonicalUrl="/packages"
+      />
       <div className="container mx-auto px-4">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in text-gradient-primary pb-2">
           Fotózási Csomagok
