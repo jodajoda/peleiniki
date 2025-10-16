@@ -15,7 +15,7 @@ const Footer = () => {
               className="hover:opacity-70 transition-opacity"
             >
               <img
-                src="/peleiniki/assets/icons/instagram.svg"
+                src="/assets/icons/instagram.svg"
                 alt="Instagram ikon"
                 width="24"
                 height="24"
@@ -29,7 +29,7 @@ const Footer = () => {
               className="hover:opacity-70 transition-opacity"
             >
               <img
-                src="/peleiniki/assets/icons/facebook.svg"
+                src="/assets/icons/facebook.svg"
                 alt="Facebook ikon"
                 width="24"
                 height="24"
@@ -41,7 +41,7 @@ const Footer = () => {
               className="hover:opacity-70 transition-opacity"
             >
               <img
-                src="/peleiniki/assets/icons/email.svg"
+                src="/assets/icons/email.svg"
                 alt="E-mail ikon"
                 width="24"
                 height="24"

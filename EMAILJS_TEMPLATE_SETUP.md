@@ -156,8 +156,8 @@ Copy and paste this into the **Content** field:
                 Ez az üzenet a Pelei Niki Photography weboldalról érkezett
             </p>
             <p style="color: #999; font-size: 12px; margin: 5px 0;">
-                <a href="https://jodajoda.github.io/peleiniki/" style="color: #8a7968; text-decoration: none;">
-                    jodajoda.github.io/peleiniki
+                <a href="https://peleiniki.com/" style="color: #8a7968; text-decoration: none;">
+                    peleiniki.com
                 </a>
             </p>
         </div>
@@ -196,7 +196,7 @@ mailto:{{from_email}}
 
 ---
 Ez az üzenet a Pelei Niki Photography weboldalról érkezett.
-https://jodajoda.github.io/peleiniki/
+https://peleiniki.com
 ```
 
 ---
@@ -433,7 +433,7 @@ Subject: Új üzenet a Pelei Niki Photography oldalról - Kovács Anna
 ────────────────────────────────────────────
 Ez az üzenet a Pelei Niki Photography
 weboldalról érkezett
-jodajoda.github.io/peleiniki
+peleiniki.com
 ```
 
 ---

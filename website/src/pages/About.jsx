@@ -17,7 +17,7 @@ const About = () => {
             {/* Image */}
             <div className="animate-scale-in overflow-hidden rounded-lg shadow-soft hover:shadow-glow transition-shadow duration-500">
               <img
-                src="/peleiniki/assets/about-me/magamrol_202410-03733-2.jpg"
+                src="/assets/about-me/magamrol_202410-03733-2.jpg"
                 alt="Pelei Niki fotográfus portréja"
                 className="w-full h-auto object-cover transition-all duration-700 ease-in-out hover:scale-110"
                 style={{ filter: 'saturate(1.1) brightness(1.05) contrast(1.02)' }}

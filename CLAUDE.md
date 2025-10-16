@@ -82,14 +82,14 @@ website/
 │   └── README.md            # Testing documentation
 ├── dist/                    # Build output (gitignored)
 ├── index.html               # HTML entry point
-├── vite.config.js           # Vite configuration (base: '/peleiniki/')
+├── vite.config.js           # Vite configuration (base: '/')
 ├── playwright.config.js     # Playwright test configuration
 └── tailwind.config.js       # Tailwind theme customization
 ```
 
 ### Routing Configuration
 
-App uses React Router with base path `/peleiniki/` for GitHub Pages deployment:
+App uses React Router with base path `/` for custom domain deployment (https://peleiniki.com):
 
 - `/` - Home
 - `/photoshooting` - Photoshoot Experience
@@ -99,7 +99,7 @@ App uses React Router with base path `/peleiniki/` for GitHub Pages deployment:
 - `/contact` - Contact Form
 - `/adatkezelesi-tajekoztato` - Privacy Policy
 
-**Important:** Router basename is set to `/peleiniki/` in [App.jsx:15](website/src/App.jsx#L15) and Vite base in [vite.config.js:7](website/vite.config.js#L7).
+**Important:** Router basename is set to `/` in [App.jsx:15](website/src/App.jsx#L15) and Vite base in [vite.config.js:7](website/vite.config.js#L7) for custom domain deployment.
 
 ### Key Components
 
@@ -203,10 +203,43 @@ Deployment is automated via GitHub Actions on push to `main`:
    - Injects EmailJS secrets as environment variables
 
 3. **Deploy Job** - Publishes to GitHub Pages (requires build to pass)
-   - Uploads `website/dist/` to GitHub Pages
-   - Site deploys to: https://jodajoda.github.io/peleiniki/
+   - Uploads `website/dist/` to GitHub Pages with CNAME file
+   - Site deploys to: https://peleiniki.com
 
 Configuration in [.github/workflows/deploy.yml](.github/workflows/deploy.yml).
+
+### DNS Configuration for Custom Domain
+
+To configure the custom domain `peleiniki.com` with GitHub Pages:
+
+**DNS Settings:**
+
+Add the following DNS records at your domain registrar:
+
+1. **A Records** (for apex domain):
+   ```
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+   ```
+
+2. **CNAME Record** (optional, for www subdomain):
+   ```
+   www.peleiniki.com → [YOUR-USERNAME].github.io
+   ```
+
+**GitHub Pages Settings:**
+
+1. Go to repository **Settings** → **Pages**
+2. Under **Custom domain**, enter: `peleiniki.com`
+3. Enable **Enforce HTTPS** (after DNS propagation)
+4. The CNAME file in `website/public/` ensures the domain persists after deployment
+
+**Verification:**
+- DNS propagation can take 24-48 hours
+- Check DNS status: `dig peleiniki.com` or use [dnschecker.org](https://dnschecker.org)
+- Once propagated, site will be accessible at https://peleiniki.com
 
 ### Manual Deployment
 
@@ -336,11 +369,13 @@ See [ACCESSIBILITY.md](../ACCESSIBILITY.md) for complete documentation.
 
 **Deployment failing:**
 - Check GitHub Actions logs
-- Verify base path matches: `/peleiniki/` in both vite.config.js and App.jsx
+- Verify base path is `/` in both vite.config.js and App.jsx
+- Ensure CNAME file exists in public/ folder with `peleiniki.com`
 
 **Routing issues after deployment:**
-- GitHub Pages requires hash routing for SPAs, or proper base configuration
-- Current setup uses base path `/peleiniki/` correctly configured
+- Custom domain requires proper DNS configuration (see DNS setup section)
+- Ensure CNAME file is deployed with the build
+- Current setup uses base path `/` for custom domain
 
 ## Testing
 

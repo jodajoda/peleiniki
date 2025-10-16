@@ -95,12 +95,12 @@ test.describe('Page Routing and Navigation', () => {
     await expect(page).toHaveURL(/.*adatkezelesi-tajekoztato/);
   });
 
-  test('should preserve base path /peleiniki/ in all routes', async ({ page }) => {
+  test('should use correct base path for all routes', async ({ page }) => {
     await page.goto('/');
     await page.waitForLoadState('networkidle');
 
     const url = page.url();
-    expect(url).toContain('/peleiniki');
+    expect(url).toContain('localhost:5173');
 
     // Navigate through all pages via UI and check URL contains base path
     const desktopNav = page.locator('nav ul.hidden.lg\\:flex');
@@ -344,7 +344,7 @@ test.describe('Page Routing and Navigation', () => {
   test('should handle direct URL access to all routes', async ({ page }) => {
     // Simulate direct URL access (not through navigation)
     // Using full URL with base path since Playwright baseURL isn't working as expected
-    const baseUrl = 'http://localhost:5173/peleiniki';
+    const baseUrl = 'http://localhost:5173';
     const routes = [
       { path: '/photoshooting', fullUrl: `${baseUrl}/photoshooting` },
       { path: '/portfolio', fullUrl: `${baseUrl}/portfolio` },

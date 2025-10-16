@@ -231,79 +231,61 @@ function App() {
 
 ### 3.2 JSON-LD Structured Data
 
-**Add to pages:**
+**Status:** ✅ Completed on 2025-10-15
 
-```javascript
-const photographerSchema = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Pelei Niki Fotográfus",
-  "image": "...",
-  "description": "...",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Budapest",
-    "addressCountry": "HU"
-  },
-  "priceRange": "$$",
-  "telephone": "...",
-  "email": "peleinikifotoi@gmail.com"
-};
-```
+**Completed Work:**
+- ✅ Enhanced [SEO.jsx](website/src/components/SEO.jsx) to support structured data injection
+- ✅ Added comprehensive ProfessionalService schema to [Home.jsx](website/src/pages/Home.jsx#L5-L41)
+  - Business information (name, description, URL)
+  - Contact details (email, telephone)
+  - Location (Budapest, Hungary with geo-coordinates)
+  - Service types (családi fotózás, gyermekfotózás, kismama fotózás, etc.)
+  - Social media links (Facebook, Instagram)
+  - Price range indicator
+- ✅ Structured data automatically injected into `<head>` via React useEffect
+- ✅ Proper cleanup on component unmount
 
-**Impact:** Better search engine visibility, rich snippets
+**Impact:** ✅ Enhanced search engine visibility, eligibility for rich snippets in Google
 
 ---
 
-### 3.3 Dynamic Page Titles
+### 3.3 Sitemap & Robots.txt
 
-**Install:**
-```bash
-npm install react-helmet-async
-```
+**Status:** ✅ Completed on 2025-10-15
 
-**Usage:**
-```jsx
-import { Helmet } from 'react-helmet-async';
+**Completed Work:**
+- ✅ Created [sitemap.xml](website/public/sitemap.xml) with all 7 pages
+  - Includes priority levels (homepage: 1.0, portfolio: 0.9, etc.)
+  - Change frequency hints for search engines
+  - Last modification dates
+  - Image sitemaps for all main page images
+- ✅ Created [robots.txt](website/public/robots.txt)
+  - Allows all major search engines (Google, Bing, DuckDuckGo, Yandex, Baidu)
+  - Allows social media crawlers (Facebook, Twitter)
+  - Excludes admin and config directories
+  - References sitemap location
+- ✅ Both files automatically copied to dist/ during build
 
-function Portfolio() {
-  return (
-    <>
-      <Helmet>
-        <title>Portfólió - Pelei Niki Fotográfus</title>
-        <meta name="description" content="..." />
-      </Helmet>
-      {/* page content */}
-    </>
-  );
-}
-```
+**Impact:** ✅ Better crawling efficiency, improved search engine indexation
 
 ---
 
-### 3.4 Sitemap & Robots.txt
+### 3.4 Dynamic Page Titles
 
-**Create public/sitemap.xml:**
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://jodajoda.github.io/peleiniki/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <!-- Add all pages -->
-</urlset>
-```
+**Status:** ✅ Completed via SEO component (no react-helmet-async needed)
 
-**Create public/robots.txt:**
-```
-User-agent: *
-Allow: /
-Sitemap: https://jodajoda.github.io/peleiniki/sitemap.xml
-```
+Already implemented in [SEO.jsx](website/src/components/SEO.jsx#L43-L44) using native React and DOM APIs.
 
-**Impact:** Better crawlability, improved search rankings
+---
+
+### 3.5 Future SEO Enhancements
+
+**Potential additions:**
+
+- [ ] Add breadcrumb structured data for navigation
+- [ ] Add ImageObject schema for portfolio images
+- [ ] Implement AggregateRating if collecting reviews
+- [ ] Add FAQ schema if adding FAQ section
 
 ---
 

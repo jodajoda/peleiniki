@@ -38,7 +38,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <img
-              src="/peleiniki/assets/icons/pnfotos.png"
+              src="/assets/icons/pnfotos.png"
               alt="Pelei Niki Fotós"
               className={`transition-all duration-300 ${
                 isScrolled ? 'h-12' : 'h-16'

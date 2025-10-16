@@ -39,7 +39,7 @@ Follow the guide: [EMAILJS_TEMPLATE_SETUP.md](EMAILJS_TEMPLATE_SETUP.md)
 Follow the guide: [GITHUB_SECRETS_SETUP.md](GITHUB_SECRETS_SETUP.md)
 
 **Quick Steps:**
-1. Go to: https://github.com/jodajoda/peleiniki/settings/secrets/actions
+1. Go to: https://github.com/[YOUR-USERNAME]/peleiniki/settings/secrets/actions
 2. Click **New repository secret** (3 times)
 3. Add these three secrets:
 
@@ -63,7 +63,7 @@ Follow the guide: [GITHUB_SECRETS_SETUP.md](GITHUB_SECRETS_SETUP.md)
 3. Enable **"Allow only from specific domains"**
 4. Add these domains:
    ```
-   jodajoda.github.io
+   peleiniki.com
    localhost
    ```
 5. Click **Save**
@@ -85,7 +85,7 @@ git push origin main
 
 **Test:**
 1. Wait for GitHub Actions to complete (check **Actions** tab)
-2. Visit: https://jodajoda.github.io/peleiniki/contact
+2. Visit: https://peleiniki.com/contact
 3. Fill out and submit the contact form
 4. Verify email arrives at your inbox
 
@@ -131,10 +131,10 @@ Public Key:  00skKQszSH1adZxe3
 
 ## ⚡ Quick Links
 
-- **GitHub Secrets Setup:** https://github.com/jodajoda/peleiniki/settings/secrets/actions
+- **GitHub Secrets Setup:** https://github.com/[YOUR-USERNAME]/peleiniki/settings/secrets/actions
 - **EmailJS Dashboard:** https://dashboard.emailjs.com/
-- **Live Site:** https://jodajoda.github.io/peleiniki/
-- **GitHub Actions:** https://github.com/jodajoda/peleiniki/actions
+- **Live Site:** https://peleiniki.com
+- **GitHub Actions:** https://github.com/[YOUR-USERNAME]/peleiniki/actions
 
 ---
 

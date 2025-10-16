@@ -2,34 +2,72 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
 const Home = () => {
+  // Structured data for homepage (Professional Service + Local Business)
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Pelei Niki Fotográfus",
+    "image": "https://peleiniki.com/assets/homepage/hero.jpg",
+    "description": "Családi és gyermekfotózás természetes környezetben. Őszinte pillanatok megörökítése Budapesten és környékén.",
+    "url": "https://peleiniki.com",
+    "telephone": "+36-XX-XXX-XXXX",
+    "email": "peleinikifotoi@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Budapest",
+      "addressCountry": "HU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 47.4979,
+      "longitude": 19.0402
+    },
+    "priceRange": "$$",
+    "areaServed": {
+      "@type": "City",
+      "name": "Budapest"
+    },
+    "serviceType": [
+      "Családi fotózás",
+      "Gyermekfotózás",
+      "Kismama fotózás",
+      "Keresztelő fotózás",
+      "Szülinapi fotózás"
+    ],
+    "sameAs": [
+      "https://www.facebook.com/peleinikifotoi",
+      "https://www.instagram.com/peleinikifotoi"
+    ]
+  };
+
   // Preview sections with images and links
   const previewSections = [
     {
       id: 1,
       title: 'A fotózás velem',
       description: 'Fedezd fel, hogyan zajlik egy fotózás. Lazán, természetesen, sok nevetéssel.',
-      image: '/peleiniki/assets/homepage/fotozas-velem.jpg',
+      image: '/assets/homepage/fotozas-velem.jpg',
       link: '/photoshooting',
     },
     {
       id: 2,
       title: 'Portfólió',
       description: 'Nézd meg korábbi munkáimat. Családok, keresztelők, szülinapok és sok-sok szeretet.',
-      image: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1.jpg',
+      image: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1.jpg',
       link: '/portfolio',
     },
     {
       id: 3,
       title: 'Rólam',
       description: 'Kicsoda Pelei Niki? Ismerd meg jobban a fotóst és a történetet.',
-      image: '/peleiniki/assets/homepage/rolam.jpg',
+      image: '/assets/homepage/rolam.jpg',
       link: '/about',
     },
     {
       id: 4,
       title: 'Csomagok',
       description: 'Válassz a különböző fotózási csomagok közül, ami a legjobban illik hozzátok.',
-      image: '/peleiniki/assets/homepage/csomagok.jpg',
+      image: '/assets/homepage/csomagok.jpg',
       link: '/packages',
     },
   ];
@@ -43,13 +81,14 @@ const Home = () => {
         ogImage="/assets/homepage/hero.jpg"
         ogImageAlt="Pelei Niki Fotográfus - Családfotózás"
         canonicalUrl="/"
+        structuredData={structuredData}
       />
       {/* Hero Section */}
       <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
         {/* Hero Image */}
         <div className="absolute inset-0">
           <img
-            src="/peleiniki/assets/homepage/hero.jpg"
+            src="/assets/homepage/hero.jpg"
             alt="Pelei Niki Fotográfus - Családfotózás"
             className="w-full h-full object-cover image-warm-filter animate-scale-in"
           />
@@ -68,12 +107,12 @@ const Home = () => {
               Családi pillanatok megörökítése természetes, spontán környezetben
             </p>
             <div className="mt-8 animate-bounce-in stagger-4">
-              <a
-                href="/peleiniki/contact"
+              <Link
+                to="/contact"
                 className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 hover:shadow-glow-warm transition-all duration-300 shadow-lg hover:-translate-y-1"
               >
                 Kapcsolatfelvétel
-              </a>
+              </Link>
             </div>
           </div>
         </div>

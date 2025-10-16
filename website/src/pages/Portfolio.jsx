@@ -13,12 +13,12 @@ const Portfolio = () => {
       title: 'Családfotózás Margitszigeten',
       description: 'Egy kellemes délután a Margitszigeten, ahol a család játékosan töltötte az időt.',
       images: [
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-2.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-3.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-4.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-5.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-6.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-2.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-3.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-4.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-5.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-6.jpg', alt: 'Családfotózás Margitszigeten' },
       ],
     },
     {
@@ -26,11 +26,11 @@ const Portfolio = () => {
       title: 'Játszótéri móka',
       description: 'Spontán pillanatok a játszótéren, ahol a gyerekek szabadon játszhatnak.',
       images: [
-        { src: '/peleiniki/assets/portfolio/jatszoteri-moka/jatszoteri-moka-1.jpg', alt: 'Játszótéri fotózás' },
-        { src: '/peleiniki/assets/portfolio/jatszoteri-moka/jatszoteri-moka-2.jpg', alt: 'Játszótéri fotózás' },
-        { src: '/peleiniki/assets/portfolio/jatszoteri-moka/jatszoteri-moka-3.jpg', alt: 'Játszótéri fotózás' },
-        { src: '/peleiniki/assets/portfolio/jatszoteri-moka/jatszoteri-moka-5.jpg', alt: 'Játszótéri fotózás' },
-        { src: '/peleiniki/assets/portfolio/jatszoteri-moka/jatszoteri-moka-6.jpg', alt: 'Játszótéri fotózás' },
+        { src: '/assets/portfolio/jatszoteri-moka/jatszoteri-moka-1.jpg', alt: 'Játszótéri fotózás' },
+        { src: '/assets/portfolio/jatszoteri-moka/jatszoteri-moka-2.jpg', alt: 'Játszótéri fotózás' },
+        { src: '/assets/portfolio/jatszoteri-moka/jatszoteri-moka-3.jpg', alt: 'Játszótéri fotózás' },
+        { src: '/assets/portfolio/jatszoteri-moka/jatszoteri-moka-5.jpg', alt: 'Játszótéri fotózás' },
+        { src: '/assets/portfolio/jatszoteri-moka/jatszoteri-moka-6.jpg', alt: 'Játszótéri fotózás' },
       ],
     },
     {
@@ -38,12 +38,12 @@ const Portfolio = () => {
       title: 'Keresztelő',
       description: 'Egy különleges családi esemény megörökítése.',
       images: [
-        { src: '/peleiniki/assets/portfolio/keresztelo/keresztelo-1.JPG', alt: 'Keresztelő fotózás' },
-        { src: '/peleiniki/assets/portfolio/keresztelo/keresztelo-2.JPG', alt: 'Keresztelő fotózás' },
-        { src: '/peleiniki/assets/portfolio/keresztelo/keresztelo-3.JPG', alt: 'Keresztelő fotózás' },
-        { src: '/peleiniki/assets/portfolio/keresztelo/keresztelo-4.JPG', alt: 'Keresztelő fotózás' },
-        { src: '/peleiniki/assets/portfolio/keresztelo/keresztelo-5.JPG', alt: 'Keresztelő fotózás' },
-        { src: '/peleiniki/assets/portfolio/keresztelo/keresztelo-6.JPG', alt: 'Keresztelő fotózás' },
+        { src: '/assets/portfolio/keresztelo/keresztelo-1.JPG', alt: 'Keresztelő fotózás' },
+        { src: '/assets/portfolio/keresztelo/keresztelo-2.JPG', alt: 'Keresztelő fotózás' },
+        { src: '/assets/portfolio/keresztelo/keresztelo-3.JPG', alt: 'Keresztelő fotózás' },
+        { src: '/assets/portfolio/keresztelo/keresztelo-4.JPG', alt: 'Keresztelő fotózás' },
+        { src: '/assets/portfolio/keresztelo/keresztelo-5.JPG', alt: 'Keresztelő fotózás' },
+        { src: '/assets/portfolio/keresztelo/keresztelo-6.JPG', alt: 'Keresztelő fotózás' },
       ],
     },
     {
@@ -51,11 +51,11 @@ const Portfolio = () => {
       title: 'Kismamafotózás otthon',
       description: 'Intim pillanatok otthon, a babavárás izgalmával.',
       images: [
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-1.JPG', alt: 'Kismamafotózás' }, // Column 1, Row 1
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-2.JPG', alt: 'Kismamafotózás' }, // Column 1, Row 2
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5.JPG', alt: 'Kismamafotózás' }, // Column 2 (standing)
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-4.JPG', alt: 'Kismamafotózás' }, // Column 3, Row 1
-        { src: '/peleiniki/assets/portfolio/kismamafotozas-otthon/kismama-otthon-3.JPG', alt: 'Kismamafotózás' }, // Column 3, Row 2
+        { src: '/assets/portfolio/kismamafotozas-otthon/kismama-otthon-1.JPG', alt: 'Kismamafotózás' }, // Column 1, Row 1
+        { src: '/assets/portfolio/kismamafotozas-otthon/kismama-otthon-2.JPG', alt: 'Kismamafotózás' }, // Column 1, Row 2
+        { src: '/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5.JPG', alt: 'Kismamafotózás' }, // Column 2 (standing)
+        { src: '/assets/portfolio/kismamafotozas-otthon/kismama-otthon-4.JPG', alt: 'Kismamafotózás' }, // Column 3, Row 1
+        { src: '/assets/portfolio/kismamafotozas-otthon/kismama-otthon-3.JPG', alt: 'Kismamafotózás' }, // Column 3, Row 2
       ],
     },
     {
@@ -63,12 +63,12 @@ const Portfolio = () => {
       title: 'Családfotózás a Városligetben',
       description: 'Természetes környezetben, a Városliget zöld oázisában.',
       images: [
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-1.jpg', alt: 'Családfotózás Városligetben' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-2.jpg', alt: 'Családfotózás Városligetben' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-3.jpg', alt: 'Családfotózás Városligetben' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-4.jpg', alt: 'Családfotózás Városligetben' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-5.jpg', alt: 'Családfotózás Városligetben' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-6.jpg', alt: 'Családfotózás Városligetben' },
+        { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-1.jpg', alt: 'Családfotózás Városligetben' },
+        { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-2.jpg', alt: 'Családfotózás Városligetben' },
+        { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-3.jpg', alt: 'Családfotózás Városligetben' },
+        { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-4.jpg', alt: 'Családfotózás Városligetben' },
+        { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-5.jpg', alt: 'Családfotózás Városligetben' },
+        { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-6.jpg', alt: 'Családfotózás Városligetben' },
       ],
     },
     {
@@ -76,12 +76,12 @@ const Portfolio = () => {
       title: 'Családfotózás otthon',
       description: 'Otthoni környezetben, ahol a család a leginkább önmaga lehet.',
       images: [
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-otthon/csalad-otthon-1.JPG', alt: 'Családfotózás otthon' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-otthon/csalad-otthon-2.JPG', alt: 'Családfotózás otthon' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-otthon/csalad-otthon-3.JPG', alt: 'Családfotózás otthon' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-otthon/csalad-otthon-4.JPG', alt: 'Családfotózás otthon' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-otthon/csalad-otthon-5.JPG', alt: 'Családfotózás otthon' },
-        { src: '/peleiniki/assets/portfolio/csaladfotozes-otthon/csalad-otthon-6.JPG', alt: 'Családfotózás otthon' },
+        { src: '/assets/portfolio/csaladfotozes-otthon/csalad-otthon-1.JPG', alt: 'Családfotózás otthon' },
+        { src: '/assets/portfolio/csaladfotozes-otthon/csalad-otthon-2.JPG', alt: 'Családfotózás otthon' },
+        { src: '/assets/portfolio/csaladfotozes-otthon/csalad-otthon-3.JPG', alt: 'Családfotózás otthon' },
+        { src: '/assets/portfolio/csaladfotozes-otthon/csalad-otthon-4.JPG', alt: 'Családfotózás otthon' },
+        { src: '/assets/portfolio/csaladfotozes-otthon/csalad-otthon-5.JPG', alt: 'Családfotózás otthon' },
+        { src: '/assets/portfolio/csaladfotozes-otthon/csalad-otthon-6.JPG', alt: 'Családfotózás otthon' },
       ],
     },
     {
@@ -89,12 +89,12 @@ const Portfolio = () => {
       title: 'Szülinapi fotózás',
       description: 'Egy különleges nap, tele örömmel és nevetéssel.',
       images: [
-        { src: '/peleiniki/assets/portfolio/szulinap/szulinap-1.JPG', alt: 'Szülinapi fotózás' },
-        { src: '/peleiniki/assets/portfolio/szulinap/szulinap-2.JPG', alt: 'Szülinapi fotózás' },
-        { src: '/peleiniki/assets/portfolio/szulinap/szulinap-3.JPG', alt: 'Szülinapi fotózás' },
-        { src: '/peleiniki/assets/portfolio/szulinap/szulinap-4.JPG', alt: 'Szülinapi fotózás' },
-        { src: '/peleiniki/assets/portfolio/szulinap/szulinap-5.JPG', alt: 'Szülinapi fotózás' },
-        { src: '/peleiniki/assets/portfolio/szulinap/szulinap-6.jpg', alt: 'Szülinapi fotózás' },
+        { src: '/assets/portfolio/szulinap/szulinap-1.JPG', alt: 'Szülinapi fotózás' },
+        { src: '/assets/portfolio/szulinap/szulinap-2.JPG', alt: 'Szülinapi fotózás' },
+        { src: '/assets/portfolio/szulinap/szulinap-3.JPG', alt: 'Szülinapi fotózás' },
+        { src: '/assets/portfolio/szulinap/szulinap-4.JPG', alt: 'Szülinapi fotózás' },
+        { src: '/assets/portfolio/szulinap/szulinap-5.JPG', alt: 'Szülinapi fotózás' },
+        { src: '/assets/portfolio/szulinap/szulinap-6.jpg', alt: 'Szülinapi fotózás' },
       ],
     },
   ];

@@ -12,7 +12,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   return (
-    <Router basename="/peleiniki">
+    <Router basename="/">
       <ScrollToTop />
       <a
         href="#main-content"

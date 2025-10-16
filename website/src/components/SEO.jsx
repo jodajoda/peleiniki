@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 /**
- * SEO Component for managing meta tags dynamically
- * Updates document title and meta tags for each page
+ * SEO Component for managing meta tags and structured data dynamically
+ * Updates document title, meta tags, and JSON-LD structured data for each page
  */
 function SEO({
   title,
@@ -13,10 +13,11 @@ function SEO({
   ogImage,
   ogImageAlt,
   twitterCard = 'summary_large_image',
-  canonicalUrl
+  canonicalUrl,
+  structuredData
 }) {
   // Base URL for the website
-  const baseUrl = 'https://jodajoda.github.io/peleiniki';
+  const baseUrl = 'https://peleiniki.com';
 
   // Default OG image if none provided
   const defaultOgImage = `${baseUrl}/assets/homepage/hero.jpg`;
@@ -95,11 +96,27 @@ function SEO({
     // Update canonical URL
     updateLinkTag('canonical', canonical);
 
-    // Cleanup function (optional)
+    // Add or update JSON-LD structured data
+    if (structuredData) {
+      let scriptElement = document.querySelector('script[type="application/ld+json"][data-seo]');
+      if (!scriptElement) {
+        scriptElement = document.createElement('script');
+        scriptElement.setAttribute('type', 'application/ld+json');
+        scriptElement.setAttribute('data-seo', 'true');
+        document.head.appendChild(scriptElement);
+      }
+      scriptElement.textContent = JSON.stringify(structuredData);
+    }
+
+    // Cleanup function
     return () => {
-      // You could remove tags here if needed, but usually not necessary
+      // Remove structured data script when component unmounts
+      const scriptElement = document.querySelector('script[type="application/ld+json"][data-seo]');
+      if (scriptElement && structuredData) {
+        scriptElement.remove();
+      }
     };
-  }, [fullTitle, description, keywords, ogType, ogImageUrl, ogImageAltText, twitterCard, canonical]);
+  }, [fullTitle, description, keywords, ogType, ogImageUrl, ogImageAltText, twitterCard, canonical, structuredData]);
 
   // This component doesn't render anything
   return null;
@@ -113,7 +130,8 @@ SEO.propTypes = {
   ogImage: PropTypes.string,
   ogImageAlt: PropTypes.string,
   twitterCard: PropTypes.string,
-  canonicalUrl: PropTypes.string
+  canonicalUrl: PropTypes.string,
+  structuredData: PropTypes.object
 };
 
 export default SEO;

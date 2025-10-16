@@ -35,7 +35,7 @@ This prevents unauthorized websites from using your public key to send emails th
 3. Enable **"Allow only from specific domains"**
 4. Add the following domains:
    ```
-   jodajoda.github.io
+   peleiniki.com
    localhost
    ```
 5. Click **Save**
@@ -103,7 +103,7 @@ For GitHub Pages deployment, environment variables must be configured as **GitHu
 
 **Step 1: Add Secrets to GitHub Repository**
 
-1. Go to your GitHub repository: `https://github.com/jodajoda/peleiniki`
+1. Go to your GitHub repository: `https://github.com/[YOUR-USERNAME]/peleiniki`
 2. Click **Settings** → **Secrets and variables** → **Actions**
 3. Click **New repository secret**
 4. Add each of the following secrets:
@@ -126,7 +126,7 @@ The GitHub Actions workflow ([.github/workflows/deploy.yml](.github/workflows/de
 
 After pushing to `main` branch:
 1. Check **Actions** tab in GitHub to see deployment status
-2. Visit your live site: `https://jodajoda.github.io/peleiniki/contact`
+2. Visit your live site: `https://peleiniki.com/contact`
 3. Test the contact form to ensure emails are sent successfully
 
 **Important Notes:**
@@ -259,7 +259,7 @@ Similar approach using Netlify Functions directory structure.
 Use this checklist to ensure proper security configuration:
 
 - [ ] Domain whitelist configured in EmailJS dashboard
-- [ ] Added `jodajoda.github.io` to allowed domains
+- [ ] Added `peleiniki.com` to allowed domains
 - [ ] Added `localhost` for local development testing
 - [ ] `.env` file created in `website/` directory
 - [ ] `.env` files excluded from version control (check `.gitignore`)

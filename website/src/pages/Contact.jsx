@@ -186,7 +186,7 @@ const Contact = () => {
                     aria-label="Instagram"
                   >
                     <img
-                      src="/peleiniki/assets/icons/instagram.svg"
+                      src="/assets/icons/instagram.svg"
                       alt="Instagram"
                       className="w-6 h-6"
                     />
@@ -199,7 +199,7 @@ const Contact = () => {
                     aria-label="Facebook"
                   >
                     <img
-                      src="/peleiniki/assets/icons/facebook.svg"
+                      src="/assets/icons/facebook.svg"
                       alt="Facebook"
                       className="w-6 h-6"
                     />

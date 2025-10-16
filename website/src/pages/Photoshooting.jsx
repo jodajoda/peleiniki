@@ -6,7 +6,7 @@ const Photoshooting = () => {
     {
       id: 'lazabb-fotozes',
       title: 'A Lazább fotózás',
-      image: '/peleiniki/assets/photoshooting/lazabb-fotozes.jpg',
+      image: '/assets/photoshooting/lazabb-fotozes.jpg',
       content: [
         'Nálam nem kell kicsinosítanod magad, felöltöznöd, tökéletesnek lenned. Sőt! Annál jobb, minél lazábban érzitek magatokat. Akár pizsamában, kócos hajjal, kávéval a kezedben – pont olyannak, amilyenek vagytok egy hétköznap reggelén.',
         'Ez nem egy klasszikus "fotózás". Ez inkább olyan, mintha átjönnék egy kávéra, miközben ti csináljátok a dolgotokat. Játszotok a gyerekkel, bújós, cicázás, vagy csak úgy lótok-futotok a lakásban. Én meg közben csendben megörökítem, ahogy éltek, nevetgéltek, ölelgezitek egymást.',
@@ -16,7 +16,7 @@ const Photoshooting = () => {
     {
       id: 'nincs-poz',
       title: 'Nincs póz, csak élet',
-      image: '/peleiniki/assets/photoshooting/nincs-poz.jpg',
+      image: '/assets/photoshooting/nincs-poz.jpg',
       content: [
         'Nálam nem lesz „Nézz a kamerába és mosolyogj!" felszólítás. Ehelyett játszotok, nevettek, ölelitek egymást, és én közben diszkréten megörökítem a pillanatokat. A képek tele lesznek élettel: a gyerek őszinte nevetésével, az apuka büszke pillantásával, az anyuka gyengéd simogatásával.',
         'Minden érzelem helyet kap: a játékos percek, a nevetés, de akár a könnycseppek és a megnyugtató ölelések is. Ezek az őszinte pillanatok teszik a fotókat igazán különlegessé és értékessé.',
@@ -25,7 +25,7 @@ const Photoshooting = () => {
     {
       id: 'helyszin',
       title: 'A helyszín',
-      image: '/peleiniki/assets/photoshooting/helyszin.jpg',
+      image: '/assets/photoshooting/helyszin.jpg',
       content: [
         'Fotózhatunk otthon, a kerted zugaiban, a kedvenc játszótereken, parkokban, vagy bármilyen más helyen, ami számotokra fontos és biztonságot ad. A saját környezetetek adja a leghitelesebb hátteret – nincs szükség stúdióra vagy mesterséges díszletekre.',
         'A lényeg, hogy olyan legyen a helyszín, ahol jól érzitek magatokat, ahol szabadon mozoghattok, és ahol a gyerekek is természetesen viselkednek.',
@@ -34,7 +34,7 @@ const Photoshooting = () => {
     {
       id: 'fotozes-utan',
       title: 'A fotózás után',
-      image: '/peleiniki/assets/photoshooting/fotozes-utan.jpg',
+      image: '/assets/photoshooting/fotozes-utan.jpg',
       content: [
         'A fotózást követően gondosan átválogatom az összes felvételt, és kiválasztom a legszebb, legkifejezőbb pillanatokat. Ezeket professzionális szoftverekkel retusálom és színkorrigálom, hogy a végeredmény tökéletes legyen.',
         'A kész képeket online galérián keresztül kapjátok meg, ahonnan könnyedén letölthetők és megoszthatók. A képek a tieitek lesznek – nyomtathatjátok, keretezhetitek, megoszthatjátok a családdal és barátokkal.',
@@ -43,7 +43,7 @@ const Photoshooting = () => {
     {
       id: 'kepzeld-el',
       title: 'Képzeld el!',
-      image: '/peleiniki/assets/photoshooting/kepzeld-el.jpg',
+      image: '/assets/photoshooting/kepzeld-el.jpg',
       content: [
         'Képzeld el, hogy évek múlva visszanézed ezeket a képeket, és emlékszel arra a napra, amikor a kicsi még csak ennyike volt. A mosolyára, a nevetésére, arra, ahogy simult hozzád. Ezek az emlékek felbecsülhetetlen értékűek, és a fotók segítenek megőrizni őket.',
       ],
@@ -51,7 +51,7 @@ const Photoshooting = () => {
     {
       id: 'keszen-allsz',
       title: 'Készen állsz?',
-      image: '/peleiniki/assets/photoshooting/keszen-allsz.jpg',
+      image: '/assets/photoshooting/keszen-allsz.jpg',
       content: [
         'Ha felkeltette az érdeklődésed a Lazább fotózás, és szeretnéd, hogy megörökítsem a ti különleges történeteteket, vedd fel velem a kapcsolatot! Meséljétek el, milyenek vagytok, mi teszi különlegessé a ti családotokat, és találjunk egy közös időpontot!',
         'Szeretettel várlak benneteket!',
