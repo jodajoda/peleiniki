@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Lightbox from '../components/Lightbox';
 import LazyImage from '../components/LazyImage';
 import SEO from '../components/SEO';
@@ -6,6 +6,32 @@ import SEO from '../components/SEO';
 const Portfolio = () => {
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const [currentGroup, setCurrentGroup] = useState(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [visibleSections, setVisibleSections] = useState(new Set());
+  const sectionRefs = useRef([]);
+
+  useEffect(() => {
+    setIsVisible(true);
+
+    // Intersection Observer for section animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = entry.target.getAttribute('data-section-index');
+            setVisibleSections((prev) => new Set([...prev, parseInt(index)]));
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }
+    );
+
+    sectionRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const portfolioGroups = [
     {
@@ -136,25 +162,28 @@ const Portfolio = () => {
       {/* Enhanced Header */}
       <div className="container mx-auto px-4 mb-20">
         <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-block mb-4">
+          <div className={`inline-block mb-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <span className="text-primary-600 text-sm tracking-[0.3em] uppercase font-semibold">Munkáim</span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gray-900">
+          <h1 className={`text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gray-900 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Portfólió
           </h1>
-          <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-6"></div>
-          <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+          <div className={`w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-6 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
+          <p className={`text-lg md:text-xl text-gray-600 leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Fedezd fel korábbi munkáimat - családi pillanatok, keresztelők, szülinapok és különleges emlékek
           </p>
         </div>
       </div>
 
       <div className="space-y-20">
-        {portfolioGroups.map((group, groupIndex) => (
+        {portfolioGroups.map((group, groupIndex) => {
+          const isSectionVisible = visibleSections.has(groupIndex);
+          return (
           <section
             key={group.id}
+            ref={(el) => (sectionRefs.current[groupIndex] = el)}
+            data-section-index={groupIndex}
             className="relative bg-gradient-to-br from-primary-50 via-white to-primary-100 overflow-hidden py-20 md:py-24"
-            style={{ animationDelay: `${groupIndex * 0.1}s` }}
           >
             {/* Enhanced floating blur elements */}
             <div className="absolute inset-0 opacity-15 pointer-events-none">
@@ -177,11 +206,11 @@ const Portfolio = () => {
 
             <div className="container mx-auto px-4">
               <div className="mb-12 relative z-10 text-center md:text-left max-w-4xl mx-auto">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+                <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 transition-all duration-1000 ${isSectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                   {group.title}
                 </h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mb-4 mx-auto md:mx-0"></div>
-                <p className="text-base md:text-lg text-gray-600 leading-relaxed">{group.description}</p>
+                <div className={`w-16 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mb-4 mx-auto md:mx-0 transition-all duration-1000 delay-200 ${isSectionVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
+                <p className={`text-base md:text-lg text-gray-600 leading-relaxed transition-all duration-1000 delay-300 ${isSectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>{group.description}</p>
               </div>
 
               {group.id === 'jatszoteri-moka' ? (
@@ -516,7 +545,8 @@ const Portfolio = () => {
               )}
             </div>
           </section>
-        ))}
+          );
+        })}
       </div>
 
       {/* Lightbox */}
