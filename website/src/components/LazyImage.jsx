@@ -22,6 +22,8 @@ import { getAssetPath } from '../utils/assets';
  * @param {number} [props.width] - Image width for layout shift prevention
  * @param {number} [props.height] - Image height for layout shift prevention
  * @param {boolean} [props.useResponsive=true] - Enable responsive images
+ * @param {boolean} [props.showWatermark=false] - Show copyright watermark
+ * @param {boolean} [props.preventContextMenu=false] - Prevent right-click context menu
  */
 const LazyImage = ({
   src,
@@ -32,6 +34,8 @@ const LazyImage = ({
   width,
   height,
   useResponsive = true,
+  showWatermark = false,
+  preventContextMenu = false,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -96,11 +100,19 @@ const LazyImage = ({
   // Calculate aspect ratio for layout shift prevention
   const aspectRatio = width && height ? (height / width) * 100 : null;
 
+  // Handler to prevent right-click context menu
+  const handleContextMenu = (e) => {
+    if (preventContextMenu) {
+      e.preventDefault();
+    }
+  };
+
   return (
     <div
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       onClick={onClick}
+      onContextMenu={handleContextMenu}
       style={{
         ...style,
         ...(aspectRatio && { paddingBottom: `${aspectRatio}%` }),
@@ -145,6 +157,7 @@ const LazyImage = ({
             onLoad={handleLoad}
             loading="lazy"
             decoding="async"
+            draggable={preventContextMenu ? false : undefined}
           />
         </picture>
       ) : (
@@ -161,8 +174,16 @@ const LazyImage = ({
             onLoad={handleLoad}
             loading="lazy"
             decoding="async"
+            draggable={preventContextMenu ? false : undefined}
           />
         )
+      )}
+
+      {/* Copyright watermark */}
+      {showWatermark && isLoaded && (
+        <div className="absolute bottom-2 right-2 text-white/50 text-xs font-medium pointer-events-none select-none backdrop-blur-sm bg-black/20 px-2 py-1 rounded">
+          © Pelei Niki
+        </div>
       )}
     </div>
   );
@@ -177,6 +198,8 @@ LazyImage.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
   useResponsive: PropTypes.bool,
+  showWatermark: PropTypes.bool,
+  preventContextMenu: PropTypes.bool,
 };
 
 export default LazyImage;

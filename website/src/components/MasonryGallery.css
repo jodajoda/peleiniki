@@ -1,0 +1,31 @@
+/* Masonry Grid Layout */
+.masonry-grid {
+  display: flex;
+  margin-left: -1rem; /* Gutter size offset */
+  width: auto;
+}
+
+.masonry-column {
+  padding-left: 1rem; /* Gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.masonry-column > button {
+  margin-bottom: 1rem; /* Space between items */
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .masonry-grid {
+    margin-left: -0.5rem;
+  }
+
+  .masonry-column {
+    padding-left: 0.5rem;
+  }
+
+  .masonry-column > button {
+    margin-bottom: 0.5rem;
+  }
+}

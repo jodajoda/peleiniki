@@ -1,6 +1,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import { getAssetPath } from '../utils/assets';
+import ImageDetails from './ImageDetails';
 
 const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -178,8 +179,9 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
 
       {/* Image */}
       <div
-        className="lightbox-content max-w-7xl max-h-[90vh] p-4 select-none"
+        className="lightbox-content max-w-7xl max-h-[90vh] p-4 select-none relative"
         onClick={(e) => e.stopPropagation()}
+        onContextMenu={(e) => e.preventDefault()}
         role="img"
         aria-label={`Kép ${currentIndex + 1} / ${images.length}: ${currentImage.alt}`}
       >
@@ -195,7 +197,12 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
               ? 'animate-slide-in-right'
               : 'animate-fade-in'
           }`}
+          style={{ userSelect: 'none' }}
         />
+        {/* Copyright watermark */}
+        <div className="absolute bottom-8 right-8 text-white/60 text-sm font-medium pointer-events-none select-none backdrop-blur-sm bg-black/30 px-3 py-2 rounded">
+          © Pelei Niki
+        </div>
       </div>
 
       {/* Next button */}
@@ -224,14 +231,17 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
         </button>
       )}
 
-      {/* Counter */}
+      {/* Counter and EXIF data */}
       <div
-        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm"
+        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm text-center space-y-2"
         role="status"
         aria-live="polite"
         aria-atomic="true"
       >
-        {currentIndex + 1} / {images.length}
+        <div className="font-medium">
+          {currentIndex + 1} / {images.length}
+        </div>
+        <ImageDetails imageSrc={currentImage.src} className="text-white/80" />
       </div>
     </div>
   );

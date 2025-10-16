@@ -26,8 +26,6 @@ test.describe('Lightbox Scroll Prevention', () => {
     await page.evaluate(() => window.scrollTo(0, 500));
     await page.waitForTimeout(500);
 
-    const scrollPosition = await page.evaluate(() => window.scrollY);
-
     // Open lightbox by clicking an image
     const firstImage = page.locator('button[aria-label*="megnyitása nagyobb méretben"]').first();
     await firstImage.click();
