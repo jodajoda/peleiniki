@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
+import DOMPurify from 'dompurify';
 import SEO from '../components/SEO';
 
 const Contact = () => {
@@ -10,6 +11,7 @@ const Contact = () => {
     email: '',
     phone: '',
     message: '',
+    website: '', // Honeypot field - should remain empty
   });
 
   useEffect(() => {
@@ -28,13 +30,36 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [lastSubmitTime, setLastSubmitTime] = useState(0);
 
+  const validatePhone = (phone) => {
+    // Allow empty phone or valid phone format (numbers, spaces, +, -, parentheses)
+    const phoneRegex = /^[\d\s+()-]*$/;
+    return !phone || phoneRegex.test(phone);
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    // Validate phone number format
+    if (name === 'phone' && !validatePhone(value)) {
+      return; // Reject invalid characters
+    }
+
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Honeypot check - if filled, likely a bot
+    if (formData.website) {
+      // Silently reject (don't inform the bot)
+      setStatus({
+        type: 'success',
+        message: 'Köszönöm az üzeneted! Hamarosan jelentkezem.',
+      });
+      setFormData({ name: '', email: '', phone: '', message: '', website: '' });
+      return;
+    }
 
     // Rate limiting: prevent submissions within 30 seconds
     const now = Date.now();
@@ -64,15 +89,18 @@ const Contact = () => {
         throw new Error('EmailJS credentials are not configured');
       }
 
+      // Sanitize all inputs before sending
+      const sanitizedData = {
+        from_name: DOMPurify.sanitize(formData.name, { ALLOWED_TAGS: [] }),
+        from_email: DOMPurify.sanitize(formData.email, { ALLOWED_TAGS: [] }),
+        phone: DOMPurify.sanitize(formData.phone, { ALLOWED_TAGS: [] }),
+        message: DOMPurify.sanitize(formData.message, { ALLOWED_TAGS: [] }),
+      };
+
       await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-        },
+        sanitizedData,
         PUBLIC_KEY
       );
 
@@ -81,7 +109,7 @@ const Contact = () => {
         type: 'success',
         message: 'Köszönöm az üzeneted! Hamarosan jelentkezem.',
       });
-      setFormData({ name: '', email: '', phone: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', message: '', website: '' });
     } catch (error) {
       console.error('EmailJS Error:', error);
       setStatus({
@@ -269,6 +297,18 @@ const Contact = () => {
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none transition-all duration-300 hover:shadow-soft"
                   />
                 </div>
+
+                {/* Honeypot field - hidden from users, bots will fill it */}
+                <input
+                  type="text"
+                  name="website"
+                  value={formData.website}
+                  onChange={handleChange}
+                  style={{ display: 'none' }}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                />
 
                 <button
                   type="submit"
