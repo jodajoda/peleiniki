@@ -209,7 +209,7 @@ test.describe('Contact Form', () => {
       window.history.pushState(
         { message: 'Érdekel a Standard csomag!' },
         '',
-        '/peleiniki/contact'
+        '/contact'
       );
       window.dispatchEvent(new PopStateEvent('popstate'));
     });

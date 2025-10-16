@@ -117,7 +117,6 @@ test.describe('Page Routing and Navigation', () => {
       await desktopNav.getByRole('link', { name: link.name, exact: true }).click({ force: true });
       await page.waitForLoadState('networkidle');
       const currentUrl = page.url();
-      expect(currentUrl).toContain('/peleiniki');
       expect(currentUrl).toContain(link.expectedPath);
     }
   });
@@ -370,7 +369,7 @@ test.describe('404 and Error Handling', () => {
     // Note: Since React Router doesn't have a 404 route defined,
     // it will likely show a blank page. You might want to add a catch-all route.
 
-    const response = await page.goto('http://localhost:5173/peleiniki/non-existent-page');
+    const response = await page.goto('http://localhost:5173/non-existent-page');
     await page.waitForLoadState('networkidle');
 
     // The page should still return 200 (SPA behavior)

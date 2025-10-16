@@ -104,7 +104,7 @@ npx playwright test --project="Mobile Chrome"
 
 ### Routing Tests
 - All pages load correctly
-- Base path preservation (`/peleiniki/`)
+- Base path (`/`) for custom domain
 - Scroll to top on navigation
 - Browser back/forward buttons
 - No JavaScript errors
@@ -117,7 +117,7 @@ npx playwright test --project="Mobile Chrome"
 
 Configuration is defined in [playwright.config.js](../playwright.config.js):
 
-- **Base URL**: `http://localhost:5173/peleiniki`
+- **Base URL**: `http://localhost:5173`
 - **Browsers**: Chromium, Firefox, WebKit, Mobile Chrome, Mobile Safari
 - **Parallelization**: Full parallel execution (except on CI)
 - **Retries**: 2 retries on CI, 0 locally
