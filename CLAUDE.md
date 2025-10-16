@@ -37,7 +37,8 @@ npm run test:debug   # Debug tests interactively
 npm run test:report  # View last test report
 
 # Deployment (automated via GitHub Actions)
-npm run deploy       # Build and copy to root (manual deployment)
+# Push to main branch to trigger automatic deployment
+# No manual deployment needed - GitHub Actions handles everything
 ```
 
 ## Architecture
@@ -243,13 +244,14 @@ Add the following DNS records at your domain registrar:
 
 ### Manual Deployment
 
-If needed, use the deploy script:
-```bash
-cd website
-npm run deploy
-```
+**Not needed!** Deployment is fully automated via GitHub Actions.
 
-This builds and copies dist contents to repository root, then commits and pushes.
+Simply push your changes to the `main` branch and GitHub Actions will:
+1. Run all tests
+2. Build the production bundle from `website/`
+3. Deploy directly from `website/dist/` to GitHub Pages
+
+**Note:** The root directory should NOT contain deployment files (index.html, assets/, etc.) - these are automatically generated and deployed by GitHub Actions. They are gitignored to keep the repository clean.
 
 ## Development Patterns
 

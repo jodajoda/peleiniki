@@ -31,3 +31,13 @@ Thumbs.db
 *.bak
 *.backup
 *~
+
+# Deployment files (generated from website/dist/)
+# These should NOT be in git - they're deployed via GitHub Actions
+/index.html
+/CNAME
+/favicon-*.png
+/robots.txt
+/sitemap.xml
+/vite.svg
+/assets/
