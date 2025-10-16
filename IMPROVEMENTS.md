@@ -608,7 +608,7 @@ function App() {
 
 ### 7.4 Touch Gestures in Lightbox - COMPLETED
 
-**Status:** ✅ Completed on 2025-10-16
+**Status:** ✅ Completed on 2025-10-16 (Enhanced on 2025-10-16)
 
 **Completed Work:**
 - ✅ Installed `react-swipeable` library (v7.0.2)
@@ -616,10 +616,13 @@ function App() {
   - Swipe left to view next image
   - Swipe right to view previous image
   - Mouse drag support enabled via `trackMouse: true`
-  - Prevents default touch events for smooth interaction
+  - Prevents background scrolling when swiping
   - Minimum swipe distance of 50px to prevent accidental triggers
   - Image marked as non-draggable for better UX
-  - Touch-friendly CSS classes added
+- ✅ **Enhanced swipe experience (2025-10-16):**
+  - **Moved swipe handlers to entire overlay** - Users can now swipe anywhere on the lightbox (including black background), not just on the image
+  - **Fixed background scrolling issue** - Changed from `preventDefaultTouchmoveEvent` to `preventScrollOnSwipe` to prevent scrolling background content
+  - **Removed unnecessary touch classes** - Simplified implementation by removing `touch-pan-y` from image container
 
 **Implementation:**
 ```jsx
@@ -637,17 +640,20 @@ const swipeHandlers = useSwipeable({
       handlePrev();
     }
   },
-  preventDefaultTouchmoveEvent: true,
+  preventScrollOnSwipe: true,  // Prevents background scrolling
   trackMouse: true,
   delta: 50,
 });
 
-<div {...swipeHandlers} className="max-w-7xl max-h-[90vh] p-4 touch-pan-y select-none">
-  <img src={currentImage.src} alt={currentImage.alt} draggable={false} />
+// Apply handlers to entire overlay, not just image
+<div {...swipeHandlers} className="fixed inset-0 z-50 bg-black/95">
+  <div className="max-w-7xl max-h-[90vh] p-4 select-none">
+    <img src={currentImage.src} alt={currentImage.alt} draggable={false} />
+  </div>
 </div>
 ```
 
-**Impact:** ✅ Significantly better mobile user experience, intuitive navigation, modern touch interactions
+**Impact:** ✅ Significantly better mobile user experience with intuitive navigation, modern touch interactions, and proper background scroll prevention. Swipe gestures work anywhere on the lightbox for a more natural mobile experience.
 
 ---
 

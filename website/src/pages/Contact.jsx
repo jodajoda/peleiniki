@@ -192,10 +192,10 @@ const Contact = () => {
                     <div>
                       <div className="font-medium text-gray-900">Telefon</div>
                       <a
-                        href="tel:YOUR_PHONE"
+                        href="tel:+36203655393"
                         className="text-primary-600 hover:text-primary-700 transition-colors duration-300"
                       >
-                        YOUR_PHONE_NUMBER
+                        +36 20 365 5393
                       </a>
                     </div>
                   </div>
@@ -208,7 +208,7 @@ const Contact = () => {
                 </h3>
                 <div className="flex space-x-4">
                   <a
-                    href="YOUR_INSTAGRAM_URL"
+                    href="https://www.instagram.com/peleinikifotoi/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-gradient-to-br from-primary-50 to-primary-100 rounded-full hover:bg-primary-200 hover:shadow-glow transition-all duration-300 hover:-translate-y-1 hover:rotate-6"
@@ -221,7 +221,7 @@ const Contact = () => {
                     />
                   </a>
                   <a
-                    href="YOUR_FACEBOOK_URL"
+                    href="https://www.facebook.com/peleinikifoto"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-gradient-to-br from-primary-50 to-primary-100 rounded-full hover:bg-primary-200 hover:shadow-glow transition-all duration-300 hover:-translate-y-1 hover:rotate-6"

@@ -50,7 +50,7 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
         handlePrev();
       }
     },
-    preventDefaultTouchmoveEvent: true,
+    preventScrollOnSwipe: true,
     trackMouse: true, // Also enables mouse dragging
     delta: 50, // Minimum distance for swipe
   });
@@ -77,6 +77,7 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
 
   return (
     <div
+      {...swipeHandlers}
       role="dialog"
       aria-modal="true"
       aria-label="Képnéző"
@@ -134,8 +135,7 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
 
       {/* Image */}
       <div
-        {...swipeHandlers}
-        className="max-w-7xl max-h-[90vh] p-4 touch-pan-y select-none"
+        className="max-w-7xl max-h-[90vh] p-4 select-none"
         onClick={(e) => e.stopPropagation()}
         role="img"
         aria-label={`Kép ${currentIndex + 1} / ${images.length}: ${currentImage.alt}`}
