@@ -1,0 +1,1748 @@
+{
+  "/assets/about-me/magamrol_202410-03733-2.jpg": {
+    "original": "about-me/magamrol_202410-03733-2.jpg",
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIDBAX/xAAgEAABBAEEAwAAAAAAAAAAAAABAAIDBBESITFhQXGB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCnBGXyg/UzeceeUleQiQJgdbpGuzhrdt+1Fs1zmvGekKOm7NSL0hIf/9k=",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/about-me/magamrol_202410-03733-2-400w.jpg",
+        "webp": "/assets/about-me/magamrol_202410-03733-2-400w.webp",
+        "jpegSize": 17656,
+        "webpSize": 8720
+      },
+      "800": {
+        "jpeg": "/assets/about-me/magamrol_202410-03733-2-800w.jpg",
+        "webp": "/assets/about-me/magamrol_202410-03733-2-800w.webp",
+        "jpegSize": 57360,
+        "webpSize": 22320
+      },
+      "1200": {
+        "jpeg": "/assets/about-me/magamrol_202410-03733-2-1200w.jpg",
+        "webp": "/assets/about-me/magamrol_202410-03733-2-1200w.webp",
+        "jpegSize": 129959,
+        "webpSize": 49086
+      },
+      "1600": {
+        "jpeg": "/assets/about-me/magamrol_202410-03733-2-1600w.jpg",
+        "webp": "/assets/about-me/magamrol_202410-03733-2-1600w.webp",
+        "jpegSize": 242280,
+        "webpSize": 102848
+      }
+    }
+  },
+  "/assets/about-me/magamrol_202410-03824.jpg": {
+    "original": "about-me/magamrol_202410-03824.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIBAwb/xAAgEAABBAEEAwAAAAAAAAAAAAARAAECAwQSExQxcZHB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBcocWmT9RlI+0mI7b1b6iZt9VFl8tvT0JuH8qMMtlVuSZMg0CEpQqj/9k=",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/about-me/magamrol_202410-03824-400w.jpg",
+        "webp": "/assets/about-me/magamrol_202410-03824-400w.webp",
+        "jpegSize": 16998,
+        "webpSize": 8378
+      },
+      "800": {
+        "jpeg": "/assets/about-me/magamrol_202410-03824-800w.jpg",
+        "webp": "/assets/about-me/magamrol_202410-03824-800w.webp",
+        "jpegSize": 57997,
+        "webpSize": 23382
+      },
+      "1200": {
+        "jpeg": "/assets/about-me/magamrol_202410-03824-1200w.jpg",
+        "webp": "/assets/about-me/magamrol_202410-03824-1200w.webp",
+        "jpegSize": 129864,
+        "webpSize": 53282
+      },
+      "1600": {
+        "jpeg": "/assets/about-me/magamrol_202410-03824-1600w.jpg",
+        "webp": "/assets/about-me/magamrol_202410-03824-1600w.webp",
+        "jpegSize": 233739,
+        "webpSize": 93150
+      }
+    }
+  },
+  "/assets/homepage/csomagok.jpg": {
+    "original": "homepage/csomagok.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQBAgP/xAAgEAACAgIBBQEAAAAAAAAAAAABAgADBBESBRMhUWFx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgH/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEkH/2gAMAwEAAhEDEQA/AHVyGZdBT+zO281OvFjoeT6MRpyHarbHZEm20ldEQ0U6rZ1HIVyO/r5whELDycmEov/Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/homepage/csomagok-400w.jpg",
+        "webp": "/assets/homepage/csomagok-400w.webp",
+        "jpegSize": 16088,
+        "webpSize": 7522
+      },
+      "800": {
+        "jpeg": "/assets/homepage/csomagok-800w.jpg",
+        "webp": "/assets/homepage/csomagok-800w.webp",
+        "jpegSize": 62941,
+        "webpSize": 31622
+      },
+      "1200": {
+        "jpeg": "/assets/homepage/csomagok-1200w.jpg",
+        "webp": "/assets/homepage/csomagok-1200w.webp",
+        "jpegSize": 164932,
+        "webpSize": 117130
+      },
+      "1600": {
+        "jpeg": "/assets/homepage/csomagok-1600w.jpg",
+        "webp": "/assets/homepage/csomagok-1600w.webp",
+        "jpegSize": 334262,
+        "webpSize": 255486
+      }
+    }
+  },
+  "/assets/homepage/fotozas-velem.jpg": {
+    "original": "homepage/fotozas-velem.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EACEQAAEEAQQDAQAAAAAAAAAAAAIAAQMRBBITITEFMlFx/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFhEBAQEAAAAAAAAAAAAAAAAAABES/9oADAMBAAIRAxEAPwDSLIhHU24Nt3SQ3kITjZ+euWUBZBjHqpvykwCqEWpZ0sNLOgKva2b4hSbx2/SEpH//2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/homepage/fotozas-velem-400w.jpg",
+        "webp": "/assets/homepage/fotozas-velem-400w.webp",
+        "jpegSize": 31494,
+        "webpSize": 25438
+      },
+      "800": {
+        "jpeg": "/assets/homepage/fotozas-velem-800w.jpg",
+        "webp": "/assets/homepage/fotozas-velem-800w.webp",
+        "jpegSize": 113378,
+        "webpSize": 88588
+      },
+      "1200": {
+        "jpeg": "/assets/homepage/fotozas-velem-1200w.jpg",
+        "webp": "/assets/homepage/fotozas-velem-1200w.webp",
+        "jpegSize": 230753,
+        "webpSize": 171128
+      },
+      "1600": {
+        "jpeg": "/assets/homepage/fotozas-velem-1600w.jpg",
+        "webp": "/assets/homepage/fotozas-velem-1600w.webp",
+        "jpegSize": 379131,
+        "webpSize": 269278
+      }
+    }
+  },
+  "/assets/homepage/hero.jpg": {
+    "original": "homepage/hero.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIBAwT/xAAfEAACAgEEAwAAAAAAAAAAAAABAgARAwQFEiExQXH/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/8QAFREBAQAAAAAAAAAAAAAAAAAAADH/2gAMAwEAAhEDEQA/AKtLuPFSmRbAWlrzMmUuLTIKN38iUcZDA9g1EZ2ZizEkn2YGDqEiEQ//2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/homepage/hero-400w.jpg",
+        "webp": "/assets/homepage/hero-400w.webp",
+        "jpegSize": 11690,
+        "webpSize": 5350
+      },
+      "800": {
+        "jpeg": "/assets/homepage/hero-800w.jpg",
+        "webp": "/assets/homepage/hero-800w.webp",
+        "jpegSize": 33353,
+        "webpSize": 12748
+      },
+      "1200": {
+        "jpeg": "/assets/homepage/hero-1200w.jpg",
+        "webp": "/assets/homepage/hero-1200w.webp",
+        "jpegSize": 69388,
+        "webpSize": 21724
+      },
+      "1600": {
+        "jpeg": "/assets/homepage/hero-1600w.jpg",
+        "webp": "/assets/homepage/hero-1600w.webp",
+        "jpegSize": 125427,
+        "webpSize": 33270
+      }
+    }
+  },
+  "/assets/homepage/portfolio.jpg": {
+    "original": "homepage/portfolio.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAwABBP/EACIQAAEEAAUFAAAAAAAAAAAAAAEAAgMRBBIUMVEhIjJxof/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBNbmcWsZnI4QyvkxMzQKDQOhuqW4dzWz1kHjuglm7zUbbvdA8YLGAHE16aVLl1EnPxSD//2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/homepage/portfolio-400w.jpg",
+        "webp": "/assets/homepage/portfolio-400w.webp",
+        "jpegSize": 26649,
+        "webpSize": 19184
+      },
+      "800": {
+        "jpeg": "/assets/homepage/portfolio-800w.jpg",
+        "webp": "/assets/homepage/portfolio-800w.webp",
+        "jpegSize": 96089,
+        "webpSize": 70806
+      },
+      "1200": {
+        "jpeg": "/assets/homepage/portfolio-1200w.jpg",
+        "webp": "/assets/homepage/portfolio-1200w.webp",
+        "jpegSize": 217211,
+        "webpSize": 179726
+      },
+      "1600": {
+        "jpeg": "/assets/homepage/portfolio-1600w.jpg",
+        "webp": "/assets/homepage/portfolio-1600w.webp",
+        "jpegSize": 393644,
+        "webpSize": 328098
+      }
+    }
+  },
+  "/assets/homepage/rolam.jpg": {
+    "original": "homepage/rolam.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgMF/8QAHhABAAICAgMBAAAAAAAAAAAAAQACAxEhMQQSFHH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBbM1Mtne1BA/CT416/RjDv2NxdzWGutnHPPc2x3LeXjuVK+1+pNdthKLCIX//Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/homepage/rolam-400w.jpg",
+        "webp": "/assets/homepage/rolam-400w.webp",
+        "jpegSize": 17156,
+        "webpSize": 8178
+      },
+      "800": {
+        "jpeg": "/assets/homepage/rolam-800w.jpg",
+        "webp": "/assets/homepage/rolam-800w.webp",
+        "jpegSize": 60941,
+        "webpSize": 25216
+      },
+      "1200": {
+        "jpeg": "/assets/homepage/rolam-1200w.jpg",
+        "webp": "/assets/homepage/rolam-1200w.webp",
+        "jpegSize": 142059,
+        "webpSize": 70410
+      },
+      "1600": {
+        "jpeg": "/assets/homepage/rolam-1600w.jpg",
+        "webp": "/assets/homepage/rolam-1600w.webp",
+        "jpegSize": 262243,
+        "webpSize": 121800
+      }
+    }
+  },
+  "/assets/photoshooting/fotozes-utan.jpg": {
+    "original": "photoshooting/fotozes-utan.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAwABBP/EACIQAAEEAAUFAAAAAAAAAAAAAAEAAgMRBBIUMVEhIjJxof/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBNbmcWsZnI4QyvkxMzQKDQOhuqW4dzWz1kHjuglm7zUbbvdA8YLGAHE16aVLl1EnPxSD//2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/photoshooting/fotozes-utan-400w.jpg",
+        "webp": "/assets/photoshooting/fotozes-utan-400w.webp",
+        "jpegSize": 26649,
+        "webpSize": 19184
+      },
+      "800": {
+        "jpeg": "/assets/photoshooting/fotozes-utan-800w.jpg",
+        "webp": "/assets/photoshooting/fotozes-utan-800w.webp",
+        "jpegSize": 96089,
+        "webpSize": 70806
+      },
+      "1200": {
+        "jpeg": "/assets/photoshooting/fotozes-utan-1200w.jpg",
+        "webp": "/assets/photoshooting/fotozes-utan-1200w.webp",
+        "jpegSize": 217211,
+        "webpSize": 179726
+      },
+      "1600": {
+        "jpeg": "/assets/photoshooting/fotozes-utan-1600w.jpg",
+        "webp": "/assets/photoshooting/fotozes-utan-1600w.webp",
+        "jpegSize": 393644,
+        "webpSize": 328098
+      }
+    }
+  },
+  "/assets/photoshooting/helyszin.jpg": {
+    "original": "photoshooting/helyszin.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEBf/EACIQAAEDAwMFAAAAAAAAAAAAAAEAAhEDBCExQVEFEhMiUv/EABYBAQEBAAAAAAAAAAAAAAAAAAIAAf/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AGs3TblsmO4zjVW1KrmW/pAdGJ5UFkwupmHFoDjpuq30sAucXcTsiTOvKh8wmJLRMcoSdQxcwPkIU1//2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/photoshooting/helyszin-400w.jpg",
+        "webp": "/assets/photoshooting/helyszin-400w.webp",
+        "jpegSize": 21786,
+        "webpSize": 12878
+      },
+      "800": {
+        "jpeg": "/assets/photoshooting/helyszin-800w.jpg",
+        "webp": "/assets/photoshooting/helyszin-800w.webp",
+        "jpegSize": 68320,
+        "webpSize": 33634
+      },
+      "1200": {
+        "jpeg": "/assets/photoshooting/helyszin-1200w.jpg",
+        "webp": "/assets/photoshooting/helyszin-1200w.webp",
+        "jpegSize": 141201,
+        "webpSize": 63042
+      },
+      "1600": {
+        "jpeg": "/assets/photoshooting/helyszin-1600w.jpg",
+        "webp": "/assets/photoshooting/helyszin-1600w.webp",
+        "jpegSize": 245163,
+        "webpSize": 107914
+      }
+    }
+  },
+  "/assets/photoshooting/kepzeld-el.jpg": {
+    "original": "photoshooting/kepzeld-el.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQBAgP/xAAgEAACAgIBBQEAAAAAAAAAAAABAgADBBESBRMhUWFx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgH/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEkH/2gAMAwEAAhEDEQA/AHVyGZdBT+zO281OvFjoeT6MRpyHarbHZEm20ldEQ0U6rZ1HIVyO/r5whELDycmEov/Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/photoshooting/kepzeld-el-400w.jpg",
+        "webp": "/assets/photoshooting/kepzeld-el-400w.webp",
+        "jpegSize": 16088,
+        "webpSize": 7522
+      },
+      "800": {
+        "jpeg": "/assets/photoshooting/kepzeld-el-800w.jpg",
+        "webp": "/assets/photoshooting/kepzeld-el-800w.webp",
+        "jpegSize": 62941,
+        "webpSize": 31622
+      },
+      "1200": {
+        "jpeg": "/assets/photoshooting/kepzeld-el-1200w.jpg",
+        "webp": "/assets/photoshooting/kepzeld-el-1200w.webp",
+        "jpegSize": 164932,
+        "webpSize": 117130
+      },
+      "1600": {
+        "jpeg": "/assets/photoshooting/kepzeld-el-1600w.jpg",
+        "webp": "/assets/photoshooting/kepzeld-el-1600w.webp",
+        "jpegSize": 334262,
+        "webpSize": 255486
+      }
+    }
+  },
+  "/assets/photoshooting/keszen-allsz.jpg": {
+    "original": "photoshooting/keszen-allsz.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQBAgP/xAAiEAACAgICAAcAAAAAAAAAAAABAgARAyESMQQTFEFRYXH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AFsuFG4253f5JHgka+JOh3NvLBS72SK+pZ8YxK9EkKQavuCi/pUXoZSPke8I2EWga73CBf/Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/photoshooting/keszen-allsz-400w.jpg",
+        "webp": "/assets/photoshooting/keszen-allsz-400w.webp",
+        "jpegSize": 35321,
+        "webpSize": 28154
+      },
+      "800": {
+        "jpeg": "/assets/photoshooting/keszen-allsz-800w.jpg",
+        "webp": "/assets/photoshooting/keszen-allsz-800w.webp",
+        "jpegSize": 118415,
+        "webpSize": 88686
+      },
+      "1200": {
+        "jpeg": "/assets/photoshooting/keszen-allsz-1200w.jpg",
+        "webp": "/assets/photoshooting/keszen-allsz-1200w.webp",
+        "jpegSize": 243816,
+        "webpSize": 184106
+      },
+      "1600": {
+        "jpeg": "/assets/photoshooting/keszen-allsz-1600w.jpg",
+        "webp": "/assets/photoshooting/keszen-allsz-1600w.webp",
+        "jpegSize": 414890,
+        "webpSize": 311912
+      }
+    }
+  },
+  "/assets/photoshooting/lazabb-fotozes.jpg": {
+    "original": "photoshooting/lazabb-fotozes.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAC/8QAIRAAAgIBAwUBAAAAAAAAAAAAAQIAEQQSEzEDQVFhcYH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABYRAQEBAAAAAAAAAAAAAAAAAAARQf/aAAwDAQACEQMRAD8AZMhdIAVmYeBcNsht8AK+kC3FcRsZzsgDtMPjsgJPVZyTZsc+pF0gcHi6+SgjJNVoH5KCP//Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/photoshooting/lazabb-fotozes-400w.jpg",
+        "webp": "/assets/photoshooting/lazabb-fotozes-400w.webp",
+        "jpegSize": 22873,
+        "webpSize": 14182
+      },
+      "800": {
+        "jpeg": "/assets/photoshooting/lazabb-fotozes-800w.jpg",
+        "webp": "/assets/photoshooting/lazabb-fotozes-800w.webp",
+        "jpegSize": 68157,
+        "webpSize": 37744
+      },
+      "1200": {
+        "jpeg": "/assets/photoshooting/lazabb-fotozes-1200w.jpg",
+        "webp": "/assets/photoshooting/lazabb-fotozes-1200w.webp",
+        "jpegSize": 128965,
+        "webpSize": 65918
+      },
+      "1600": {
+        "jpeg": "/assets/photoshooting/lazabb-fotozes-1600w.jpg",
+        "webp": "/assets/photoshooting/lazabb-fotozes-1600w.webp",
+        "jpegSize": 206234,
+        "webpSize": 98116
+      }
+    }
+  },
+  "/assets/photoshooting/nincs-poz.jpg": {
+    "original": "photoshooting/nincs-poz.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAME/8QAIhAAAgIBAQkAAAAAAAAAAAAAAQIAAwQSERMhMUFDYYGC/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQH/2gAMAwEAAhEDEQA/ALjJuPZUfUHLtV1XdrsbzMwsOmTssKkSLqou12tiwQc+piYySeIJHuI3Q//Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/photoshooting/nincs-poz-400w.jpg",
+        "webp": "/assets/photoshooting/nincs-poz-400w.webp",
+        "jpegSize": 40030,
+        "webpSize": 35380
+      },
+      "800": {
+        "jpeg": "/assets/photoshooting/nincs-poz-800w.jpg",
+        "webp": "/assets/photoshooting/nincs-poz-800w.webp",
+        "jpegSize": 152922,
+        "webpSize": 135368
+      },
+      "1200": {
+        "jpeg": "/assets/photoshooting/nincs-poz-1200w.jpg",
+        "webp": "/assets/photoshooting/nincs-poz-1200w.webp",
+        "jpegSize": 315546,
+        "webpSize": 269794
+      },
+      "1600": {
+        "jpeg": "/assets/photoshooting/nincs-poz-1600w.jpg",
+        "webp": "/assets/photoshooting/nincs-poz-1600w.webp",
+        "jpegSize": 517514,
+        "webpSize": 429136
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-1.jpg": {
+    "original": "portfolio/csaladfotozes-a-varosligetben/varosliget-1.jpg",
+    "width": 2000,
+    "height": 1333,
+    "aspectRatio": 1.5003750937734435,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFA//EACIQAAICAgEDBQAAAAAAAAAAAAECAAMREgQhIjEyQUNRkf/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AFOJZaL3FQ6k+T7ShykNlDC5/QuwYCJ10oNTg7P12BwRN7bSwSsjKsAp+4Um9o+Q/kIWIEsZfODjMIg//9k=",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-1-400w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-1-400w.webp",
+        "jpegSize": 26451,
+        "webpSize": 19004
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-1-800w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-1-800w.webp",
+        "jpegSize": 82411,
+        "webpSize": 52612
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-1-1200w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-1-1200w.webp",
+        "jpegSize": 158660,
+        "webpSize": 89230
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-1-1600w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-1-1600w.webp",
+        "jpegSize": 259355,
+        "webpSize": 132466
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-2.jpg": {
+    "original": "portfolio/csaladfotozes-a-varosligetben/varosliget-2.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEBf/EACEQAAIBAgYDAAAAAAAAAAAAAAECABESAwQTIUFhUmKR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8Aky6viuCSCANid6RmcryaVpLNG+lraY9RETJYakG5j0ZCswgqSLa9wmuVTwX5CKP/2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-2-400w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-2-400w.webp",
+        "jpegSize": 29876,
+        "webpSize": 22874
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-2-800w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-2-800w.webp",
+        "jpegSize": 91457,
+        "webpSize": 62898
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-2-1200w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-2-1200w.webp",
+        "jpegSize": 179125,
+        "webpSize": 116190
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-2-1600w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-2-1600w.webp",
+        "jpegSize": 291584,
+        "webpSize": 176356
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-3.jpg": {
+    "original": "portfolio/csaladfotozes-a-varosligetben/varosliget-3.jpg",
+    "width": 2000,
+    "height": 1333,
+    "aspectRatio": 1.5003750937734435,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EACAQAAICAQQDAQAAAAAAAAAAAAECABEDBBIhIhQkQWH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAwDAQACEQMRAD8ATUafTpjY4iWcfC10JJkPjHJ1AbigIqDebutw7fs1Nl9RVCii3MMVKExKcaE4gxIFmoShcwjhf//Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-3-400w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-3-400w.webp",
+        "jpegSize": 33520,
+        "webpSize": 27124
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-3-800w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-3-800w.webp",
+        "jpegSize": 114342,
+        "webpSize": 88814
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-3-1200w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-3-1200w.webp",
+        "jpegSize": 227911,
+        "webpSize": 162412
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-3-1600w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-3-1600w.webp",
+        "jpegSize": 370558,
+        "webpSize": 246772
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-4.jpg": {
+    "original": "portfolio/csaladfotozes-a-varosligetben/varosliget-4.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EAB8QAAICAgIDAQAAAAAAAAAAAAECABEDEgQhQXGBof/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwDGr6IEcGz+SmXFVMjGtdjE5HXJxihV1X2bMqhSAoqx4gSY8rIupbse4S6ABAKHQqEyq//Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-4-400w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-4-400w.webp",
+        "jpegSize": 28394,
+        "webpSize": 21524
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-4-800w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-4-800w.webp",
+        "jpegSize": 90530,
+        "webpSize": 62752
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-4-1200w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-4-1200w.webp",
+        "jpegSize": 177619,
+        "webpSize": 114960
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-4-1600w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-4-1600w.webp",
+        "jpegSize": 287805,
+        "webpSize": 173720
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-5.jpg": {
+    "original": "portfolio/csaladfotozes-a-varosligetben/varosliget-5.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBP/EACEQAQABBAIBBQAAAAAAAAAAAAECAAMRIQQSMRMUMkFx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAXEQEBAQEAAAAAAAAAAAAAAAAAAREh/9oADAMBAAIRAxEAPwBxHkJ37A53h+qXHmJfjmakjxre608mXp4IAZKmXbUY3SePlIfypxUih2mruADrLRSIw9yNxwbx4zRRwY//2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-5-400w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-5-400w.webp",
+        "jpegSize": 27410,
+        "webpSize": 19890
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-5-800w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-5-800w.webp",
+        "jpegSize": 89195,
+        "webpSize": 62714
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-5-1200w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-5-1200w.webp",
+        "jpegSize": 176586,
+        "webpSize": 112250
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-5-1600w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-5-1600w.webp",
+        "jpegSize": 286246,
+        "webpSize": 164406
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-6.jpg": {
+    "original": "portfolio/csaladfotozes-a-varosligetben/varosliget-6.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIEAwX/xAAhEAACAQQCAgMAAAAAAAAAAAABAgMABBEhElExQQUiMv/EABUBAQEAAAAAAAAAAAAAAAAAAAEA/8QAFxEBAAMAAAAAAAAAAAAAAAAAABEhQf/aAAwDAQACEQMRAD8AotrxmgiIhJ0Bn1TXF06gSx/lThl7qGB25Ps62B0a1mcrbswzkb8+aoOnX5VMfaI5HVFc6CFJYyz8i2T7opFP/9k=",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-6-400w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-6-400w.webp",
+        "jpegSize": 29320,
+        "webpSize": 21752
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-6-800w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-6-800w.webp",
+        "jpegSize": 92251,
+        "webpSize": 64296
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-6-1200w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-6-1200w.webp",
+        "jpegSize": 182067,
+        "webpSize": 121034
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-6-1600w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-6-1600w.webp",
+        "jpegSize": 294068,
+        "webpSize": 185258
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1.jpg": {
+    "original": "portfolio/csaladfotozes-margitszigeten/margitsziget-1.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAABAv/EACIQAAIBBAEEAwAAAAAAAAAAAAECAAMREiEiBCMxQVFSYf/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAFhEBAQEAAAAAAAAAAAAAAAAAABES/9oADAMBAAIRAxEAPwAjKjuajE5MxM1tsqMMh5AX0Jwzg5cbWGtxh40lawuvwLX9QkJV6bn2iMf3Uo2qtNXtgx19jKUien//2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1-400w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1-400w.webp",
+        "jpegSize": 31439,
+        "webpSize": 25018
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1-800w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1-800w.webp",
+        "jpegSize": 101673,
+        "webpSize": 72554
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1-1200w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1-1200w.webp",
+        "jpegSize": 200512,
+        "webpSize": 129946
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1-1600w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1-1600w.webp",
+        "jpegSize": 327411,
+        "webpSize": 192676
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-2.jpg": {
+    "original": "portfolio/csaladfotozes-margitszigeten/margitsziget-2.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIEAwX/xAAgEAACAwACAQUAAAAAAAAAAAABAgADESExBBIiMkFh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAB/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oADAMBAAIRAxEAPwDdXrRWYKVGcDI73VmoBtDZzg7P5OWPLciwHkDrTHqt0YQfUR8t6gKRYlxA9lTFfrFhI6r3CcGEsZj/2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-2-400w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-2-400w.webp",
+        "jpegSize": 33883,
+        "webpSize": 27544
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-2-800w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-2-800w.webp",
+        "jpegSize": 100694,
+        "webpSize": 70236
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-2-1200w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-2-1200w.webp",
+        "jpegSize": 186585,
+        "webpSize": 116590
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-2-1600w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-2-1600w.webp",
+        "jpegSize": 287177,
+        "webpSize": 164182
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-3.jpg": {
+    "original": "portfolio/csaladfotozes-margitszigeten/margitsziget-3.jpg",
+    "width": 2000,
+    "height": 1333,
+    "aspectRatio": 1.5003750937734435,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EACAQAAIDAAIBBQAAAAAAAAAAAAECAAMRBBIhMTNBUXL/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABcRAQADAAAAAAAAAAAAAAAAAAABESH/2gAMAwEAAhEDEQA/ANaWhK+zL1+tEVeYtYCW+XJw56CLyX7AA+RmyFtK2VGwkggaAJEHGqxi7aoGZ8wlKvaT8iEmg//Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-3-400w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-3-400w.webp",
+        "jpegSize": 24621,
+        "webpSize": 17046
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-3-800w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-3-800w.webp",
+        "jpegSize": 76079,
+        "webpSize": 47438
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-3-1200w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-3-1200w.webp",
+        "jpegSize": 145179,
+        "webpSize": 85546
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-3-1600w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-3-1600w.webp",
+        "jpegSize": 231242,
+        "webpSize": 126388
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-4.jpg": {
+    "original": "portfolio/csaladfotozes-margitszigeten/margitsziget-4.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUCAwT/xAAfEAACAgICAwEAAAAAAAAAAAABAgARAyESMQQjQVH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABcRAAMBAAAAAAAAAAAAAAAAAAABERL/2gAMAwEAAhEDEQA/AJjiuTQ0b6EMlcw96/ZScjnyAhIph8FVNBZVWlTd93CNlVIWvgZWPr53uxuEZFQYRyRo/9k=",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-4-400w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-4-400w.webp",
+        "jpegSize": 27388,
+        "webpSize": 19752
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-4-800w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-4-800w.webp",
+        "jpegSize": 80006,
+        "webpSize": 49358
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-4-1200w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-4-1200w.webp",
+        "jpegSize": 148617,
+        "webpSize": 78944
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-4-1600w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-4-1600w.webp",
+        "jpegSize": 233374,
+        "webpSize": 111932
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-5.jpg": {
+    "original": "portfolio/csaladfotozes-margitszigeten/margitsziget-5.jpg",
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMCBAX/xAAeEAEAAgICAwEAAAAAAAAAAAABAgMAEQQxEiFxUf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCHGru41uiJLy7y7bdKkJaDRp3iuPY3T0mhB9fMbOknvyVOvmA2F7ZAlETf4YZnWXnHm1FZIj0q4YH/2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-5-400w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-5-400w.webp",
+        "jpegSize": 28185,
+        "webpSize": 20230
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-5-800w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-5-800w.webp",
+        "jpegSize": 90641,
+        "webpSize": 60566
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-5-1200w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-5-1200w.webp",
+        "jpegSize": 178869,
+        "webpSize": 113558
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-5-1600w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-5-1600w.webp",
+        "jpegSize": 286942,
+        "webpSize": 170418
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-6.jpg": {
+    "original": "portfolio/csaladfotozes-margitszigeten/margitsziget-6.jpg",
+    "width": 1333,
+    "height": 2000,
+    "aspectRatio": 0.6665,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAgX/xAAgEAACAgICAwEBAAAAAAAAAAABAgARAwQSIRMiMVFh/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAECA//EABkRAQACAwAAAAAAAAAAAAAAAAABEQISIf/aAAwDAQACEQMRAD8Ae+YWrLZI+1NZX82DNy6IW+4rL6KgSiPhkJxuNl2LevdkmZxYiFetscMIXzlf5V1Ca0UrCbAvkfphCw1uAYShXodzm7LO4DG+P7KszeZByJ67EWCMyBSKEePTU6RxHXHkALA12IRSgIKHyErVNv/Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-6-400w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-6-400w.webp",
+        "jpegSize": 42435,
+        "webpSize": 24308
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-6-800w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-6-800w.webp",
+        "jpegSize": 134219,
+        "webpSize": 62728
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-6-1200w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-6-1200w.webp",
+        "jpegSize": 291753,
+        "webpSize": 117266
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-1.JPG": {
+    "original": "portfolio/csaladfotozes-otthon/csalad-otthon-1.JPG",
+    "width": 1334,
+    "height": 2000,
+    "aspectRatio": 0.667,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgUD/8QAIxAAAgIBBAICAwAAAAAAAAAAAQIAAxEEEiExQWEiURNxkf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwB7UOyV/AfI8A/U46S3eMs3P0fEtrGxTwcHMT0xVVxkq2cBjyP5A1s+oRem1mrBPfRhAU1NwdtqgYU9+5C2BNoJGSAT7itFqZYODz0R4lb6guywOWDnyIGpWrNvZThSxx+oS9dg/GuFxxCB/9k=",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-1-400w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-1-400w.webp",
+        "jpegSize": 38401,
+        "webpSize": 21786
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-1-800w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-1-800w.webp",
+        "jpegSize": 132992,
+        "webpSize": 64902
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-1-1200w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-1-1200w.webp",
+        "jpegSize": 302740,
+        "webpSize": 145846
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-2.JPG": {
+    "original": "portfolio/csaladfotozes-otthon/csalad-otthon-2.JPG",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEBf/EACIQAAEEAAUFAAAAAAAAAAAAAAEAAgMRBBITITIxM1Fxgv/EABUBAQEAAAAAAAAAAAAAAAAAAAEA/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhEDEQA/AEjGnh3vdzPb914U0s+tkkdyIo0NkjJCx7Sbc4G7JRuZHNBIDOlIpjYkxccbspZf2EKIwg1mJJoboQn/2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-2-400w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-2-400w.webp",
+        "jpegSize": 26824,
+        "webpSize": 17836
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-2-800w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-2-800w.webp",
+        "jpegSize": 76289,
+        "webpSize": 44454
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-2-1200w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-2-1200w.webp",
+        "jpegSize": 144259,
+        "webpSize": 73588
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-2-1600w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-2-1600w.webp",
+        "jpegSize": 231105,
+        "webpSize": 109350
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-3.JPG": {
+    "original": "portfolio/csaladfotozes-otthon/csalad-otthon-3.JPG",
+    "width": 1333,
+    "height": 2000,
+    "aspectRatio": 0.6665,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBAgUE/8QAIxAAAgMAAQMEAwAAAAAAAAAAAQIAAxESITFBBBMigVFhkf/EABYBAQEBAAAAAAAAAAAAAAAAAAABA//EABcRAQEBAQAAAAAAAAAAAAAAAAABERL/2gAMAwEAAhEDEQA/AFkDBvbRv9jmrqcA1qQysPuVtTjQSBvTdPiRT6nk4TQNKtn14ghhapDxaxQw7gmEy7jtzk9fkYSbV5jUavkmM5I8je85aPTpXV7r5yB0DZQGKutIPBeh/MYas6JyJwnesIn3m/UJWeV//9k=",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-3-400w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-3-400w.webp",
+        "jpegSize": 48270,
+        "webpSize": 27806
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-3-800w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-3-800w.webp",
+        "jpegSize": 165411,
+        "webpSize": 84186
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-3-1200w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-3-1200w.webp",
+        "jpegSize": 358710,
+        "webpSize": 177192
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-4.JPG": {
+    "original": "portfolio/csaladfotozes-otthon/csalad-otthon-4.JPG",
+    "width": 2000,
+    "height": 1333,
+    "aspectRatio": 1.5003750937734435,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBBAX/xAAgEAABAwQCAwAAAAAAAAAAAAABAAIDBBEhMRJxMmGh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAWEQEBAQAAAAAAAAAAAAAAAAAAETH/2gAMAwEAAhEDEQA/AG1M3F8cYYLOGb9pk9QA2NjQLO2VXriRJIRsREj1lInaGRxEDOvgTVsbQ0EKG+I6QoP/2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-4-400w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-4-400w.webp",
+        "jpegSize": 21267,
+        "webpSize": 12376
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-4-800w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-4-800w.webp",
+        "jpegSize": 65953,
+        "webpSize": 30910
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-4-1200w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-4-1200w.webp",
+        "jpegSize": 134907,
+        "webpSize": 57790
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-4-1600w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-4-1600w.webp",
+        "jpegSize": 237802,
+        "webpSize": 97318
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-5.JPG": {
+    "original": "portfolio/csaladfotozes-otthon/csalad-otthon-5.JPG",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEDBAX/xAAhEAACAwABAwUAAAAAAAAAAAABAgADESEFEiIxUZGx8P/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFxEBAQEBAAAAAAAAAAAAAAAAAAERIf/aAAwDAQACEQMRAD8AXUnZbyFOai/ZkjawFHkRvBmlkS1VJUAcnIrlRalYIuk86N/ekSmL0209mA6Ac94TnWXFWzPg5CXqZH//2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-5-400w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-5-400w.webp",
+        "jpegSize": 29849,
+        "webpSize": 20580
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-5-800w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-5-800w.webp",
+        "jpegSize": 92953,
+        "webpSize": 56160
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-5-1200w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-5-1200w.webp",
+        "jpegSize": 179499,
+        "webpSize": 96992
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-5-1600w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-5-1600w.webp",
+        "jpegSize": 290865,
+        "webpSize": 143132
+      }
+    }
+  },
+  "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-1.jpg": {
+    "original": "portfolio/jatszoteri-moka/jatszoteri-moka-1.jpg",
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAf/EAB8QAAEEAQUBAAAAAAAAAAAAAAEAAgMRBBIhQVFhMf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AE40M2i2tJd0UZIlk0khxq2k8qrBeSa87W5Nt+VVnj1SKkEcIFFo25c02UJtWAbQg//Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-1-400w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-1-400w.webp",
+        "jpegSize": 39060,
+        "webpSize": 34600
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-1-800w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-1-800w.webp",
+        "jpegSize": 129460,
+        "webpSize": 108678
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-1-1200w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-1-1200w.webp",
+        "jpegSize": 256296,
+        "webpSize": 201122
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-1-1600w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-1-1600w.webp",
+        "jpegSize": 414326,
+        "webpSize": 305054
+      }
+    }
+  },
+  "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-2.jpg": {
+    "original": "portfolio/jatszoteri-moka/jatszoteri-moka-2.jpg",
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFA//EAB8QAAICAgIDAQAAAAAAAAAAAAECABEDMQQSEyEyUf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAA//EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAwDAQACEQMRAD8AnVTBevoxhcT+HyWSqnR3Fgxs1ofvuVeJxcb4FZu1st/WjDNVsjXAqJjpms7+YRHMzOUYsbKi4Qxo/9k=",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-2-400w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-2-400w.webp",
+        "jpegSize": 27998,
+        "webpSize": 19784
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-2-800w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-2-800w.webp",
+        "jpegSize": 81983,
+        "webpSize": 49828
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-2-1200w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-2-1200w.webp",
+        "jpegSize": 158121,
+        "webpSize": 87404
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-2-1600w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-2-1600w.webp",
+        "jpegSize": 260498,
+        "webpSize": 132082
+      }
+    }
+  },
+  "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-3.jpg": {
+    "original": "portfolio/jatszoteri-moka/jatszoteri-moka-3.jpg",
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAf/EACIQAAEEAQIHAAAAAAAAAAAAAAEAAgMRIRIxBBQiUVJxkf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFREBAQAAAAAAAAAAAAAAAAAAACH/2gAMAwEAAhEDEQA/AJpIppnF7gM1i8BD+GNGwA/fSDigmyzmNmGg3hT80+uoAnYHtalUI0AYdG+/aFut3kfqEh//2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-3-400w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-3-400w.webp",
+        "jpegSize": 25432,
+        "webpSize": 17126
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-3-800w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-3-800w.webp",
+        "jpegSize": 74154,
+        "webpSize": 42520
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-3-1200w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-3-1200w.webp",
+        "jpegSize": 142531,
+        "webpSize": 71284
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-3-1600w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-3-1600w.webp",
+        "jpegSize": 233402,
+        "webpSize": 107150
+      }
+    }
+  },
+  "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-4.jpg": {
+    "original": "portfolio/jatszoteri-moka/jatszoteri-moka-4.jpg",
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMBAv/EACAQAAEEAgIDAQAAAAAAAAAAAAEAAhESAyExYSJBQnH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABcRAQEBAQAAAAAAAAAAAAAAAAARASH/2gAMAwEAAhEDEQA/AFHNy0B7/FWxIYXV40fYUDEsgVNZ0e1bC+pOpMRJ5UTV8jgS+Tdg39Eyi3Axwx+LmxJ5bKJD/9k=",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-4-400w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-4-400w.webp",
+        "jpegSize": 31779,
+        "webpSize": 22818
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-4-800w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-4-800w.webp",
+        "jpegSize": 91864,
+        "webpSize": 54556
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-4-1200w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-4-1200w.webp",
+        "jpegSize": 176002,
+        "webpSize": 93098
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-4-1600w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-4-1600w.webp",
+        "jpegSize": 293598,
+        "webpSize": 147750
+      }
+    }
+  },
+  "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-5.jpg": {
+    "original": "portfolio/jatszoteri-moka/jatszoteri-moka-5.jpg",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgT/xAAiEAACAgIBAwUAAAAAAAAAAAABAgMRACEEExRBMVGRoeH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAwDAQACEQMRAD8AXAFijDEguRo36fuTJGwjelVb3s6+cXQHIWMAVV39YzmKVkjAbVhN+ci1Uxm7YlVZbYEX7YZaYDqtrzhjof/Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-5-400w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-5-400w.webp",
+        "jpegSize": 36519,
+        "webpSize": 29348
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-5-800w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-5-800w.webp",
+        "jpegSize": 108547,
+        "webpSize": 74302
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-5-1200w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-5-1200w.webp",
+        "jpegSize": 203266,
+        "webpSize": 125706
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-5-1600w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-5-1600w.webp",
+        "jpegSize": 320299,
+        "webpSize": 183184
+      }
+    }
+  },
+  "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-6.jpg": {
+    "original": "portfolio/jatszoteri-moka/jatszoteri-moka-6.jpg",
+    "width": 1333,
+    "height": 2000,
+    "aspectRatio": 0.6665,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIEAQP/xAAhEAACAgEDBQEAAAAAAAAAAAABAgADERIhQQQTMVFhFP/EABYBAQEBAAAAAAAAAAAAAAAAAAACAf/EABkRAQEAAwEAAAAAAAAAAAAAAAARARIhQf/aAAwDAQACEQMRAD8A38yKRryzeuBHrKqSezhOcbzrYSAWUDfyfUzpVFo1ZJUbeJHsVOVPf0i2WalGAR6hLXtVG0mEqFIrq9TB12+zrXYi0ZAAA4AkIt2xiOlhwRGMt1UpbWRkk5PwQkneIhMpq//Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-6-400w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-6-400w.webp",
+        "jpegSize": 34950,
+        "webpSize": 19308
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-6-800w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-6-800w.webp",
+        "jpegSize": 111590,
+        "webpSize": 48174
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-6-1200w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-6-1200w.webp",
+        "jpegSize": 239628,
+        "webpSize": 86358
+      }
+    }
+  },
+  "/assets/portfolio/keresztelo/keresztelo-1.JPG": {
+    "original": "portfolio/keresztelo/keresztelo-1.JPG",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EAB8QAAICAgEFAAAAAAAAAAAAAAECAAMRIRITFCJBUf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAwDAQACEQMRAD8ARCtiOLCARpVX0ZnR7Ffp55KDs4zL02DtrWK+Tkkn5M6WWNUxD4470INktrQOQDmEizMTswkNj//Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-1-400w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-1-400w.webp",
+        "jpegSize": 28024,
+        "webpSize": 19538
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-1-800w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-1-800w.webp",
+        "jpegSize": 81722,
+        "webpSize": 49848
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-1-1200w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-1-1200w.webp",
+        "jpegSize": 158295,
+        "webpSize": 86262
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-1-1600w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-1-1600w.webp",
+        "jpegSize": 260847,
+        "webpSize": 130378
+      }
+    }
+  },
+  "/assets/portfolio/keresztelo/keresztelo-2.JPG": {
+    "original": "portfolio/keresztelo/keresztelo-2.JPG",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgT/xAAdEAABBAMBAQAAAAAAAAAAAAABAAIDERIhQTGB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AKwz1gS4iTYqrscSZ5ZAaOiDokUUhzrlGIx8GuKJtSObd0SEDnyPy0QfniFmyPChB//Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-2-400w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-2-400w.webp",
+        "jpegSize": 27242,
+        "webpSize": 19256
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-2-800w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-2-800w.webp",
+        "jpegSize": 85086,
+        "webpSize": 54532
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-2-1200w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-2-1200w.webp",
+        "jpegSize": 167073,
+        "webpSize": 97212
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-2-1600w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-2-1600w.webp",
+        "jpegSize": 272452,
+        "webpSize": 144392
+      }
+    }
+  },
+  "/assets/portfolio/keresztelo/keresztelo-3.JPG": {
+    "original": "portfolio/keresztelo/keresztelo-3.JPG",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEEAwX/xAAdEAACAwEBAAMAAAAAAAAAAAABAgADESExEkFR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAXEQEBAQEAAAAAAAAAAAAAAAAAASER/9oADAMBAAIRAxEAPwDa69lqILqpBO56BOOSos+SsfeZE9zWOznhI7kdagjsFTcWUNY1f0c5pEJfRUq0oB+Qhw2v/9k=",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-3-400w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-3-400w.webp",
+        "jpegSize": 19931,
+        "webpSize": 11528
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-3-800w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-3-800w.webp",
+        "jpegSize": 58527,
+        "webpSize": 27378
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-3-1200w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-3-1200w.webp",
+        "jpegSize": 120079,
+        "webpSize": 49954
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-3-1600w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-3-1600w.webp",
+        "jpegSize": 209170,
+        "webpSize": 83812
+      }
+    }
+  },
+  "/assets/portfolio/keresztelo/keresztelo-4.JPG": {
+    "original": "portfolio/keresztelo/keresztelo-4.JPG",
+    "width": 2000,
+    "height": 1333,
+    "aspectRatio": 1.5003750937734435,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEAf/EACEQAAIBBAICAwAAAAAAAAAAAAECAAMEETESIRMiFEGh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAf/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwDEsPDxqj2cbQ6hcFfjNUKdZyeI0Y9G4c1GpnsD7kt87qi0AfRjn9gaiZuRySTCKdwiH//Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-4-400w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-4-400w.webp",
+        "jpegSize": 17948,
+        "webpSize": 10632
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-4-800w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-4-800w.webp",
+        "jpegSize": 50738,
+        "webpSize": 24396
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-4-1200w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-4-1200w.webp",
+        "jpegSize": 100459,
+        "webpSize": 40752
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-4-1600w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-4-1600w.webp",
+        "jpegSize": 172926,
+        "webpSize": 59860
+      }
+    }
+  },
+  "/assets/portfolio/keresztelo/keresztelo-5.JPG": {
+    "original": "portfolio/keresztelo/keresztelo-5.JPG",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBAgQF/8QAIhAAAQMEAQUBAAAAAAAAAAAAAQACAwQREiFRExQxMkFx/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhEDEQA/AFUtN3IzdJo7sPhUMY8VhiA/TwFnpp3QxuIF+N2TaNxfU5u9iN2Q1Fp4OnKWtIcPIOKF0HjI30hCf//Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-5-400w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-5-400w.webp",
+        "jpegSize": 26989,
+        "webpSize": 18152
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-5-800w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-5-800w.webp",
+        "jpegSize": 78317,
+        "webpSize": 44408
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-5-1200w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-5-1200w.webp",
+        "jpegSize": 147848,
+        "webpSize": 73634
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-5-1600w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-5-1600w.webp",
+        "jpegSize": 236463,
+        "webpSize": 107094
+      }
+    }
+  },
+  "/assets/portfolio/keresztelo/keresztelo-6.JPG": {
+    "original": "portfolio/keresztelo/keresztelo-6.JPG",
+    "width": 2000,
+    "height": 1333,
+    "aspectRatio": 1.5003750937734435,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCAwX/xAAgEAACAgICAgMAAAAAAAAAAAABAgARAyEEEiJRQUJx/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhEDEQA/AFeEoyMV+1alufC+IrrR+KivELLmXq1G/U0uSS1hjfUg3CtQmD22tkfkJBsW/Fio9Qgn/9k=",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-6-400w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-6-400w.webp",
+        "jpegSize": 19200,
+        "webpSize": 10334
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-6-800w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-6-800w.webp",
+        "jpegSize": 56503,
+        "webpSize": 25314
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-6-1200w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-6-1200w.webp",
+        "jpegSize": 116024,
+        "webpSize": 44410
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/keresztelo/keresztelo-6-1600w.JPG",
+        "webp": "/assets/portfolio/keresztelo/keresztelo-6-1600w.webp",
+        "jpegSize": 203617,
+        "webpSize": 73012
+      }
+    }
+  },
+  "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-1.JPG": {
+    "original": "portfolio/kismamafotozas-otthon/kismama-otthon-1.JPG",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQBAgX/xAAfEAACAgMAAgMAAAAAAAAAAAABAgMRABIhMVEEImH/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwBdUW/sNdR0nuNOHi+KQSNSl16JyImSRyDGQaq9svOoiCKnF8ke8CjGbrE/uGNyyKZGOlWfF4YqMf/Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-1-400w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-1-400w.webp",
+        "jpegSize": 24470,
+        "webpSize": 15450
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-1-800w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-1-800w.webp",
+        "jpegSize": 74852,
+        "webpSize": 41858
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-1-1200w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-1-1200w.webp",
+        "jpegSize": 149389,
+        "webpSize": 73284
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-1-1600w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-1-1600w.webp",
+        "jpegSize": 249484,
+        "webpSize": 114484
+      }
+    }
+  },
+  "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-2.JPG": {
+    "original": "portfolio/kismamafotozas-otthon/kismama-otthon-2.JPG",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIBBAX/xAAiEAACAgECBwEAAAAAAAAAAAABAgMRAAQxEhMhIiNBUWH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAwDAQACEQMRAD8AiCdiAhj7zsfWNCyJqV5pp7J/KONoFuPjNWRe2JKnjlLUwIHSvmTVxcOrjidl+m8MxnlLGzvWGN0TH//Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-2-400w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-2-400w.webp",
+        "jpegSize": 26950,
+        "webpSize": 17860
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-2-800w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-2-800w.webp",
+        "jpegSize": 83547,
+        "webpSize": 49828
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-2-1200w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-2-1200w.webp",
+        "jpegSize": 165076,
+        "webpSize": 87758
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-2-1600w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-2-1600w.webp",
+        "jpegSize": 271623,
+        "webpSize": 133792
+      }
+    }
+  },
+  "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-3.JPG": {
+    "original": "portfolio/kismamafotozas-otthon/kismama-otthon-3.JPG",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEBf/EACIQAAEDAwMFAAAAAAAAAAAAAAEAAhEDBCExQVEFEhMiUv/EABYBAQEBAAAAAAAAAAAAAAAAAAIAAf/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AGs3TblsmO4zjVW1KrmW/pAdGJ5UFkwupmHFoDjpuq30sAucXcTsiTOvKh8wmJLRMcoSdQxcwPkIU1//2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-3-400w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-3-400w.webp",
+        "jpegSize": 21805,
+        "webpSize": 12854
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-3-800w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-3-800w.webp",
+        "jpegSize": 68372,
+        "webpSize": 33610
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-3-1200w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-3-1200w.webp",
+        "jpegSize": 140832,
+        "webpSize": 62588
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-3-1600w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-3-1600w.webp",
+        "jpegSize": 241562,
+        "webpSize": 104316
+      }
+    }
+  },
+  "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-4.JPG": {
+    "original": "portfolio/kismamafotozas-otthon/kismama-otthon-4.JPG",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAgP/xAAfEAACAQQDAQEAAAAAAAAAAAABAgADBBESMUFRIXH/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwDdhU0tmbwdxtCzLTaprnPXEn2hxRA9MYoXDsXHwakgQ04obfkJy3xyATCUY//Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-4-400w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-4-400w.webp",
+        "jpegSize": 18380,
+        "webpSize": 10122
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-4-800w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-4-800w.webp",
+        "jpegSize": 58829,
+        "webpSize": 28524
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-4-1200w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-4-1200w.webp",
+        "jpegSize": 125899,
+        "webpSize": 57966
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-4-1600w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-4-1600w.webp",
+        "jpegSize": 220087,
+        "webpSize": 96738
+      }
+    }
+  },
+  "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5.JPG": {
+    "original": "portfolio/kismamafotozas-otthon/kismama-otthon-5.JPG",
+    "width": 1333,
+    "height": 2000,
+    "aspectRatio": 0.6665,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAIEBQED/8QAIhAAAgICAgICAwAAAAAAAAAAAQIAAxEhBDESQRMiI1Fh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oADAMBAAIRAxEAPwC6nlVXWtWhPkv81O33pVo7J9SXiUtxywYAsW79Rbk/MMLkZ2c9mGtSPVGcr9K8jP7hGHyppKyAd4G8QksP362ZNbyKq7vAuARFN7MjsfQ1IbKxYS3RgWm3NKnC8ex19MrDBhMvzt4/0V9dwiH/2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5-400w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5-400w.webp",
+        "jpegSize": 55621,
+        "webpSize": 39596
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5-800w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5-800w.webp",
+        "jpegSize": 186947,
+        "webpSize": 119208
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5-1200w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5-1200w.webp",
+        "jpegSize": 387702,
+        "webpSize": 216920
+      }
+    }
+  },
+  "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-6.JPG": {
+    "original": "portfolio/kismamafotozas-otthon/kismama-otthon-6.JPG",
+    "width": 1333,
+    "height": 2000,
+    "aspectRatio": 0.6665,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAeABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAwQABf/EACQQAAEEAgEDBQEAAAAAAAAAAAEAAgMREiEEEyIxBSNBUXFh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAB/8QAFhEBAQEAAAAAAAAAAAAAAAAAABFB/9oADAMBAAIRAxEAPwCrlDqe2QMQRdpuL3Q0cRjoBv18KPk8lkc7hkcgBqlRC4NJcNeAUdLFJDRSyGSQWKe2q+1khcyZol9UZvWrv+K/EN48mWw5tfukMMfT7/LneUk0lREV5I+UaUFwYcePRo041YWTQvDYwAP1ZbFX/9k=",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-6-400w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-6-400w.webp",
+        "jpegSize": 49136,
+        "webpSize": 32630
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-6-800w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-6-800w.webp",
+        "jpegSize": 174412,
+        "webpSize": 106278
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-6-1200w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-6-1200w.webp",
+        "jpegSize": 367464,
+        "webpSize": 206400
+      }
+    }
+  },
+  "/assets/portfolio/szulinap/szulinap-1.JPG": {
+    "original": "portfolio/szulinap/szulinap-1.JPG",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQBAgP/xAAfEAACAwABBQEAAAAAAAAAAAABAgADESESEzFhkaH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAv/EABYRAQEBAAAAAAAAAAAAAAAAAAARIf/aAAwDAQACEQMRAD8AbVw1VboQQDyR8i1xqsVqA+WFtJyZ0VYGQsSD+STV2H6w2kepOLhOxitjKGPByEs41yThJO+IRR//2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-1-400w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-1-400w.webp",
+        "jpegSize": 30424,
+        "webpSize": 22038
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-1-800w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-1-800w.webp",
+        "jpegSize": 99003,
+        "webpSize": 65530
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-1-1200w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-1-1200w.webp",
+        "jpegSize": 197006,
+        "webpSize": 122348
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-1-1600w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-1-1600w.webp",
+        "jpegSize": 321064,
+        "webpSize": 178796
+      }
+    }
+  },
+  "/assets/portfolio/szulinap/szulinap-2.JPG": {
+    "original": "portfolio/szulinap/szulinap-2.JPG",
+    "width": 2000,
+    "height": 1333,
+    "aspectRatio": 1.5003750937734435,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAD/8QAHxAAAgICAgMBAAAAAAAAAAAAAQIDEQAEEjEhIkFx/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AQdxKAgRQftjNYdxXC8lpiaPnrDjVihPTOR9Y4edRCWdeyQfzBo2ciSS/cUK9csJFsc0t4wxvvLBP/9k=",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-2-400w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-2-400w.webp",
+        "jpegSize": 29409,
+        "webpSize": 22328
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-2-800w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-2-800w.webp",
+        "jpegSize": 96572,
+        "webpSize": 69836
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-2-1200w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-2-1200w.webp",
+        "jpegSize": 187464,
+        "webpSize": 126066
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-2-1600w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-2-1600w.webp",
+        "jpegSize": 304312,
+        "webpSize": 187964
+      }
+    }
+  },
+  "/assets/portfolio/szulinap/szulinap-3.JPG": {
+    "original": "portfolio/szulinap/szulinap-3.JPG",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBP/EACEQAQEAAgECBwAAAAAAAAAAAAECAAMRBCESIjEyQVGx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAL/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8Af0/WzWpbnln1XF7NxtqPHBRydvhcwaFddH2d8c8MyJ7U/MmqViYDsSGGQqaKfM4YK//Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-3-400w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-3-400w.webp",
+        "jpegSize": 32299,
+        "webpSize": 25560
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-3-800w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-3-800w.webp",
+        "jpegSize": 116668,
+        "webpSize": 90976
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-3-1200w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-3-1200w.webp",
+        "jpegSize": 242599,
+        "webpSize": 179118
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-3-1600w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-3-1600w.webp",
+        "jpegSize": 402564,
+        "webpSize": 288342
+      }
+    }
+  },
+  "/assets/portfolio/szulinap/szulinap-4.JPG": {
+    "original": "portfolio/szulinap/szulinap-4.JPG",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQBAwX/xAAgEAACAgIBBQEAAAAAAAAAAAABAgARAwRBBRIzUVJh/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIDBP/EABkRAAMAAwAAAAAAAAAAAAAAAAABEQIhMf/aAAwDAQACEQMRAD8AZ2wrsqmr/YmoxrnT3fEOot3OoPNyrXUDYxkfQixGhLKaNwG1BhIw+MQhIvp//9k=",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-4-400w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-4-400w.webp",
+        "jpegSize": 19811,
+        "webpSize": 11564
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-4-800w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-4-800w.webp",
+        "jpegSize": 59867,
+        "webpSize": 29258
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-4-1200w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-4-1200w.webp",
+        "jpegSize": 123373,
+        "webpSize": 52802
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-4-1600w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-4-1600w.webp",
+        "jpegSize": 214617,
+        "webpSize": 87648
+      }
+    }
+  },
+  "/assets/portfolio/szulinap/szulinap-5.JPG": {
+    "original": "portfolio/szulinap/szulinap-5.JPG",
+    "width": 1920,
+    "height": 1279,
+    "aspectRatio": 1.5011727912431587,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EAB4QAAICAwADAQAAAAAAAAAAAAECAAMEESESMVFx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/AFriWoC7rwd+7jDRY1Oww/PUoyiaz5Ke6k62Nbzej9hTqC3IsWwqrkAcAIhNc46trzIcga2ygmEsh2v/2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-5-400w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-5-400w.webp",
+        "jpegSize": 22439,
+        "webpSize": 14096
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-5-800w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-5-800w.webp",
+        "jpegSize": 61826,
+        "webpSize": 31360
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-5-1200w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-5-1200w.webp",
+        "jpegSize": 119307,
+        "webpSize": 50998
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-5-1600w.JPG",
+        "webp": "/assets/portfolio/szulinap/szulinap-5-1600w.webp",
+        "jpegSize": 198655,
+        "webpSize": 76064
+      }
+    }
+  },
+  "/assets/portfolio/szulinap/szulinap-6.jpg": {
+    "original": "portfolio/szulinap/szulinap-6.jpg",
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMBBP/EACAQAAICAgICAwAAAAAAAAAAAAECAxEABBIhIzFBUVL/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/xAAWEQEBAQAAAAAAAAAAAAAAAAAAETH/2gAMAwEAAhEDEQA/AOhNxnib9A0DkZHKuJaCcrPf3lGip1ReKj5pfeZJopGRyd35WOz6wawj2uEYC0VrqsZHZ0/IAkhVQOhWMIn/2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-6-400w.jpg",
+        "webp": "/assets/portfolio/szulinap/szulinap-6-400w.webp",
+        "jpegSize": 30318,
+        "webpSize": 22310
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-6-800w.jpg",
+        "webp": "/assets/portfolio/szulinap/szulinap-6-800w.webp",
+        "jpegSize": 93565,
+        "webpSize": 62594
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-6-1200w.jpg",
+        "webp": "/assets/portfolio/szulinap/szulinap-6-1200w.webp",
+        "jpegSize": 186284,
+        "webpSize": 115220
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/szulinap/szulinap-6-1600w.jpg",
+        "webp": "/assets/portfolio/szulinap/szulinap-6-1600w.webp",
+        "jpegSize": 308200,
+        "webpSize": 171176
+      }
+    }
+  }
+}
