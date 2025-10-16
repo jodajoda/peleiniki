@@ -117,7 +117,7 @@ npx playwright test --project="Mobile Chrome"
 
 Configuration is defined in [playwright.config.js](../playwright.config.js):
 
-- **Base URL**: `http://localhost:5173`
+- **Base URL**: `http://localhost:5173/peleiniki`
 - **Browsers**: Chromium, Firefox, WebKit, Mobile Chrome, Mobile Safari
 - **Parallelization**: Full parallel execution (except on CI)
 - **Retries**: 2 retries on CI, 0 locally

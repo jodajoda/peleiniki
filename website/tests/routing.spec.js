@@ -343,7 +343,7 @@ test.describe('Page Routing and Navigation', () => {
   test('should handle direct URL access to all routes', async ({ page }) => {
     // Simulate direct URL access (not through navigation)
     // Using full URL with base path since Playwright baseURL isn't working as expected
-    const baseUrl = 'http://localhost:5173';
+    const baseUrl = 'http://localhost:5173/peleiniki';
     const routes = [
       { path: '/photoshooting', fullUrl: `${baseUrl}/photoshooting` },
       { path: '/portfolio', fullUrl: `${baseUrl}/portfolio` },
@@ -369,7 +369,7 @@ test.describe('404 and Error Handling', () => {
     // Note: Since React Router doesn't have a 404 route defined,
     // it will likely show a blank page. You might want to add a catch-all route.
 
-    const response = await page.goto('http://localhost:5173/non-existent-page');
+    const response = await page.goto('http://localhost:5173/peleiniki/non-existent-page');
     await page.waitForLoadState('networkidle');
 
     // The page should still return 200 (SPA behavior)
