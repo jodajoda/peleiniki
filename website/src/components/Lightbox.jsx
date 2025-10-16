@@ -1,4 +1,6 @@
 import { useEffect, useState, useCallback } from 'react';
+import { useSwipeable } from 'react-swipeable';
+import { getAssetPath } from '../utils/assets';
 
 const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,6 +37,23 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
       setDirection('none');
     }, 150);
   }, [onPrev]);
+
+  // Swipeable handlers for touch gestures
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (currentIndex < images.length - 1) {
+        handleNext();
+      }
+    },
+    onSwipedRight: () => {
+      if (currentIndex > 0) {
+        handlePrev();
+      }
+    },
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true, // Also enables mouse dragging
+    delta: 50, // Minimum distance for swipe
+  });
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -115,13 +134,17 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
 
       {/* Image */}
       <div
-        className="max-w-7xl max-h-[90vh] p-4"
+        {...swipeHandlers}
+        className="max-w-7xl max-h-[90vh] p-4 touch-pan-y select-none"
         onClick={(e) => e.stopPropagation()}
+        role="img"
+        aria-label={`Kép ${currentIndex + 1} / ${images.length}: ${currentImage.alt}`}
       >
         <img
           key={imageKey}
-          src={currentImage.src}
+          src={getAssetPath(currentImage.src)}
           alt={currentImage.alt}
+          draggable={false}
           className={`max-w-full max-h-[90vh] object-contain transition-all duration-300 ${
             direction === 'left'
               ? 'animate-slide-in-left'

@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import DOMPurify from 'dompurify';
 import SEO from '../components/SEO';
+import { getAssetPath } from '../utils/assets';
 
 const Contact = () => {
   const location = useLocation();
@@ -214,7 +215,7 @@ const Contact = () => {
                     aria-label="Instagram"
                   >
                     <img
-                      src="/assets/icons/instagram.svg"
+                      src={getAssetPath('assets/icons/instagram.svg')}
                       alt="Instagram"
                       className="w-6 h-6"
                     />
@@ -227,7 +228,7 @@ const Contact = () => {
                     aria-label="Facebook"
                   >
                     <img
-                      src="/assets/icons/facebook.svg"
+                      src={getAssetPath('assets/icons/facebook.svg')}
                       alt="Facebook"
                       className="w-6 h-6"
                     />

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { getAssetPath } from '../utils/assets';
 
 const Footer = () => {
   return (
@@ -15,7 +16,7 @@ const Footer = () => {
               className="hover:opacity-70 transition-opacity"
             >
               <img
-                src="/assets/icons/instagram.svg"
+                src={getAssetPath('assets/icons/instagram.svg')}
                 alt="Instagram ikon"
                 width="24"
                 height="24"
@@ -29,7 +30,7 @@ const Footer = () => {
               className="hover:opacity-70 transition-opacity"
             >
               <img
-                src="/assets/icons/facebook.svg"
+                src={getAssetPath('assets/icons/facebook.svg')}
                 alt="Facebook ikon"
                 width="24"
                 height="24"
@@ -41,7 +42,7 @@ const Footer = () => {
               className="hover:opacity-70 transition-opacity"
             >
               <img
-                src="/assets/icons/email.svg"
+                src={getAssetPath('assets/icons/email.svg')}
                 alt="E-mail ikon"
                 width="24"
                 height="24"

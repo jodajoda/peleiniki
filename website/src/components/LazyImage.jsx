@@ -1,9 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
+import { getAssetPath } from '../utils/assets';
 
 const LazyImage = ({ src, alt, className, onClick, style }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef(null);
+
+  // Get the correct asset path with base URL
+  const imageSrc = getAssetPath(src);
 
   useEffect(() => {
     const currentRef = imgRef.current;
@@ -55,7 +59,7 @@ const LazyImage = ({ src, alt, className, onClick, style }) => {
       {/* Actual image */}
       {isInView && (
         <img
-          src={src}
+          src={imageSrc}
           alt={alt}
           className={`w-full h-full object-cover transition-opacity duration-700 ${
             isLoaded ? 'opacity-100' : 'opacity-0'

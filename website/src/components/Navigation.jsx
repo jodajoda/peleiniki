@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { getAssetPath } from '../utils/assets';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +39,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <img
-              src="/assets/icons/pnfotos.png"
+              src={getAssetPath('assets/icons/pnfotos.png')}
               alt="Pelei Niki Fotós"
               className={`transition-all duration-300 ${
                 isScrolled ? 'h-12' : 'h-16'

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import { getAssetPath } from '../utils/assets';
 
 const Photoshooting = () => {
   const sections = [
@@ -97,7 +98,7 @@ const Photoshooting = () => {
                 <div className={`${sectionIndex % 2 === 1 ? 'lg:order-2 animate-slide-right' : 'lg:order-1 animate-slide-left'}`}>
                   <div className="overflow-hidden rounded-lg shadow-soft hover:shadow-glow transition-all duration-500">
                     <img
-                      src={section.image}
+                      src={getAssetPath(section.image)}
                       alt={section.title}
                       className="w-full h-auto object-cover hover-zoom"
                       style={{ filter: 'brightness(1.05) saturate(1.1)' }}

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import { getAssetPath } from '../utils/assets';
 
 const Home = () => {
   // Structured data for homepage (Professional Service + Local Business)
@@ -88,7 +89,7 @@ const Home = () => {
         {/* Hero Image */}
         <div className="absolute inset-0">
           <img
-            src="/assets/homepage/hero.jpg"
+            src={getAssetPath('assets/homepage/hero.jpg')}
             alt="Pelei Niki Fotográfus - Családfotózás"
             className="w-full h-full object-cover image-warm-filter animate-scale-in"
           />
@@ -135,7 +136,7 @@ const Home = () => {
               {/* Image */}
               <div className="relative h-80 overflow-hidden">
                 <img
-                  src={section.image}
+                  src={getAssetPath(section.image)}
                   alt={section.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   style={{ filter: 'brightness(1.05) saturate(1.1)' }}
