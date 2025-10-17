@@ -1,4 +1,5 @@
 import SEO from '../components/SEO';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 
 const PrivacyPolicy = () => {
   return (
@@ -223,6 +224,9 @@ const PrivacyPolicy = () => {
           </div>
         </article>
       </div>
+
+      {/* Scroll to top button */}
+      <ScrollToTopButton />
     </div>
   );
 };

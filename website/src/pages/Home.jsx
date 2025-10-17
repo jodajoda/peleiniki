@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import SEO from '../components/SEO';
 import { getAssetPath } from '../utils/assets';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -374,6 +375,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Scroll to top button */}
+      <ScrollToTopButton />
     </div>
   );
 };

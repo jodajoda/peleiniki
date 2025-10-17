@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import DOMPurify from 'dompurify';
 import SEO from '../components/SEO';
 import { getAssetPath } from '../utils/assets';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 
 const Contact = () => {
   const location = useLocation();
@@ -423,6 +424,9 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      {/* Scroll to top button */}
+      <ScrollToTopButton />
     </div>
   );
 };

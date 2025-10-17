@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import Lightbox from '../components/Lightbox';
 import LazyImage from '../components/LazyImage';
 import SEO from '../components/SEO';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 
 const Portfolio = () => {
   const [lightboxIndex, setLightboxIndex] = useState(null);
@@ -559,6 +560,9 @@ const Portfolio = () => {
           onPrev={prevImage}
         />
       )}
+
+      {/* Scroll to top button */}
+      <ScrollToTopButton />
     </div>
   );
 };

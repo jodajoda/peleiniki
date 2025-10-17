@@ -67,6 +67,11 @@ const LazyImage = ({
 
   useEffect(() => {
     const currentRef = imgRef.current;
+
+    // More aggressive preloading on mobile for smoother scrolling
+    const isMobile = window.innerWidth < 768;
+    const loadDistance = isMobile ? '400px' : '300px';
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -77,7 +82,7 @@ const LazyImage = ({
         });
       },
       {
-        rootMargin: '200px', // Start loading 200px before image enters viewport
+        rootMargin: loadDistance, // Start loading earlier on mobile for smoother scrolling
         threshold: 0.01,
       }
     );

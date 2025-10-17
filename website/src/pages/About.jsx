@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import SEO from '../components/SEO';
 import { getAssetPath } from '../utils/assets';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -164,6 +165,9 @@ const About = () => {
           </article>
         </div>
       </section>
+
+      {/* Scroll to top button */}
+      <ScrollToTopButton />
     </div>
   );
 };

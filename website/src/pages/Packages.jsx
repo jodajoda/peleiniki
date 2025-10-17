@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SEO from '../components/SEO';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 
 const Packages = () => {
   const navigate = useNavigate();
@@ -241,6 +242,9 @@ const Packages = () => {
           </div>
         </div>
       </div>
+
+      {/* Scroll to top button */}
+      <ScrollToTopButton />
     </div>
   );
 };

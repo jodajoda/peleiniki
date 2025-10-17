@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { getAssetPath } from '../utils/assets';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 
 const Photoshooting = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -242,6 +243,9 @@ const Photoshooting = () => {
           </div>
         </div>
       </div>
+
+      {/* Scroll to top button */}
+      <ScrollToTopButton />
     </div>
   );
 };
