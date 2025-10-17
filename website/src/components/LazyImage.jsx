@@ -68,9 +68,19 @@ const LazyImage = ({
   useEffect(() => {
     const currentRef = imgRef.current;
 
-    // More aggressive preloading on mobile for smoother scrolling
+    // Very aggressive preloading on mobile for smoother scrolling
+    // Mobile devices need much more preloading distance due to fast scrolling
     const isMobile = window.innerWidth < 768;
-    const loadDistance = isMobile ? '400px' : '300px';
+    const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
+
+    let loadDistance;
+    if (isMobile) {
+      loadDistance = '800px'; // Load 2 screens ahead on mobile
+    } else if (isTablet) {
+      loadDistance = '600px'; // Load 1.5 screens ahead on tablet
+    } else {
+      loadDistance = '400px'; // Load 1 screen ahead on desktop
+    }
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -82,7 +92,7 @@ const LazyImage = ({
         });
       },
       {
-        rootMargin: loadDistance, // Start loading earlier on mobile for smoother scrolling
+        rootMargin: loadDistance, // Start loading much earlier for smoother scrolling
         threshold: 0.01,
       }
     );
