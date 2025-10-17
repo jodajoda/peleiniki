@@ -116,48 +116,48 @@ const About = () => {
 
             {/* Enhanced Stat Cards */}
             <div className="grid md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
-            <div className={`group relative text-center p-5 sm:p-6 bg-gradient-to-br from-orange-50 via-white to-amber-50 rounded-xl sm:rounded-2xl shadow-soft hover:shadow-2xl transition-all duration-1000 transform hover:scale-105 overflow-hidden delay-700 ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className={`group relative text-center p-4 sm:p-5 bg-gradient-to-br from-orange-50 via-white to-amber-50 rounded-xl shadow-soft hover:shadow-2xl transition-all duration-1000 transform hover:scale-105 overflow-hidden delay-700 ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               {/* Decorative element */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-orange-200/30 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-orange-200/30 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
 
               <div className="relative">
-                <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-orange-300 to-amber-400 mb-3 sm:mb-4 shadow-lg">
-                  <svg className="w-7 h-7 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-orange-300 to-amber-400 mb-2 sm:mb-3 shadow-lg">
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-2 sm:mb-3">5+</div>
-                <div className="text-sm sm:text-base md:text-lg text-gray-700 font-medium">Év tapasztalat</div>
+                <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1 sm:mb-2">5+</div>
+                <div className="text-sm sm:text-base text-gray-700 font-medium">Év tapasztalat</div>
               </div>
             </div>
 
-            <div className={`group relative text-center p-5 sm:p-6 bg-gradient-to-br from-orange-50 via-white to-amber-50 rounded-xl sm:rounded-2xl shadow-soft hover:shadow-2xl transition-all duration-1000 transform hover:scale-105 overflow-hidden delay-[900ms] ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className={`group relative text-center p-4 sm:p-5 bg-gradient-to-br from-orange-50 via-white to-amber-50 rounded-xl shadow-soft hover:shadow-2xl transition-all duration-1000 transform hover:scale-105 overflow-hidden delay-[900ms] ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               {/* Decorative element */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-orange-200/30 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-orange-200/30 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
 
               <div className="relative">
-                <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-orange-300 to-amber-400 mb-3 sm:mb-4 shadow-lg">
-                  <svg className="w-7 h-7 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-orange-300 to-amber-400 mb-2 sm:mb-3 shadow-lg">
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-2 sm:mb-3">100+</div>
-                <div className="text-sm sm:text-base md:text-lg text-gray-700 font-medium">Boldog család</div>
+                <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1 sm:mb-2">100+</div>
+                <div className="text-sm sm:text-base text-gray-700 font-medium">Boldog család</div>
               </div>
             </div>
 
-            <div className={`group relative text-center p-5 sm:p-6 bg-gradient-to-br from-orange-50 via-white to-amber-50 rounded-xl sm:rounded-2xl shadow-soft hover:shadow-2xl transition-all duration-1000 transform hover:scale-105 overflow-hidden delay-[1100ms] ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className={`group relative text-center p-4 sm:p-5 bg-gradient-to-br from-orange-50 via-white to-amber-50 rounded-xl shadow-soft hover:shadow-2xl transition-all duration-1000 transform hover:scale-105 overflow-hidden delay-[1100ms] ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               {/* Decorative element */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-orange-200/30 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-orange-200/30 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
 
               <div className="relative">
-                <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-orange-300 to-amber-400 mb-3 sm:mb-4 shadow-lg">
-                  <svg className="w-7 h-7 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-orange-300 to-amber-400 mb-2 sm:mb-3 shadow-lg">
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                   </svg>
                 </div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-2 sm:mb-3">∞</div>
-                <div className="text-sm sm:text-base md:text-lg text-gray-700 font-medium">Különleges pillanat</div>
+                <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1 sm:mb-2">∞</div>
+                <div className="text-sm sm:text-base text-gray-700 font-medium">Különleges pillanat</div>
               </div>
             </div>
           </div>
