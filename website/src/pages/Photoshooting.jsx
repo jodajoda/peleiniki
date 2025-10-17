@@ -26,7 +26,7 @@ const Photoshooting = () => {
       },
       {
         threshold: 0.1,
-        rootMargin: isMobile ? '0px 0px 50px 0px' : '0px 0px -100px 0px'
+        rootMargin: isMobile ? '0px 0px 50px 0px' : '0px 0px 0px 0px'
       }
     );
 
@@ -173,9 +173,9 @@ const Photoshooting = () => {
                 {/* Text content - alternating order */}
                 <div className={`space-y-4 sm:space-y-5 md:space-y-6 ${sectionIndex % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
                   {section.content.map((paragraph, index) => {
-                    // Faster delays on mobile (150ms base + 80ms per item), slower on desktop (500ms base + 200ms per item)
+                    // Faster delays on mobile (150ms base + 80ms per item), slower on desktop (200ms base + 150ms per item)
                     const paragraphDelayMobile = 150 + (index * 80);
-                    const paragraphDelayDesktop = 500 + (index * 200);
+                    const paragraphDelayDesktop = 150 + (index * 80);
                     // Check if this is the last section (Készen állsz?) and first paragraph
                     if (section.id === 'keszen-allsz' && index === 0) {
                       // Split at "vedd fel velem a kapcsolatot"

@@ -209,6 +209,12 @@ Deployment is automated via GitHub Actions on push to `main`:
 
 Configuration in [.github/workflows/deploy.yml](.github/workflows/deploy.yml).
 
+**Additional CI/CD Workflows:**
+- **[playwright-tests.yml](.github/workflows/playwright-tests.yml)** - Runs tests on PRs to `main` and pushes to `develop` branch
+- **[ci.yml](.github/workflows/ci.yml)** - Runs linting and build checks on PRs and `develop` branch
+
+Note: Tests only run once on push to `main` (in deploy.yml). Separate test workflow handles PRs and develop branch.
+
 ### DNS Configuration for Custom Domain
 
 To configure the custom domain `peleiniki.com` with GitHub Pages:

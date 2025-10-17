@@ -1,8 +1,10 @@
 name: Playwright Tests
+# Runs on: PRs to main, pushes to develop
+# Note: Tests for main branch are run in deploy.yml before deployment
 
 on:
   push:
-    branches: [main, develop]
+    branches: [develop]
     paths:
       - 'website/**'
       - '.github/workflows/playwright-tests.yml'

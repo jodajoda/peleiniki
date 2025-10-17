@@ -199,10 +199,6 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
           }`}
           style={{ userSelect: 'none' }}
         />
-        {/* Copyright watermark */}
-        <div className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 text-white/60 text-xs sm:text-sm font-medium pointer-events-none select-none backdrop-blur-sm bg-black/30 px-2 sm:px-3 py-1 sm:py-2 rounded">
-          © Pelei Niki
-        </div>
       </div>
 
       {/* Next button */}

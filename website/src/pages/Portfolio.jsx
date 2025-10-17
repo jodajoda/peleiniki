@@ -28,7 +28,7 @@ const Portfolio = () => {
       },
       {
         threshold: 0.1,
-        rootMargin: isMobile ? '0px 0px 50px 0px' : '0px 0px -100px 0px'
+        rootMargin: isMobile ? '0px 0px 50px 0px' : '0px 0px 0px 0px'
       }
     );
 

@@ -1,4 +1,6 @@
 name: Deploy to GitHub Pages
+# Runs on: pushes to main
+# Pipeline: test → build → deploy (deployment blocked if tests fail)
 
 on:
   push:
