@@ -15,6 +15,8 @@ const Portfolio = () => {
     setIsVisible(true);
 
     // Intersection Observer for section animations
+    // On mobile: trigger earlier with reduced rootMargin for faster content appearance
+    const isMobile = window.innerWidth < 768;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -24,7 +26,10 @@ const Portfolio = () => {
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }
+      {
+        threshold: 0.1,
+        rootMargin: isMobile ? '0px 0px 50px 0px' : '0px 0px -100px 0px'
+      }
     );
 
     sectionRefs.current.forEach((ref) => {
@@ -163,14 +168,14 @@ const Portfolio = () => {
       {/* Enhanced Header */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-6 sm:mb-8 md:mb-10">
         <div className="text-center max-w-3xl mx-auto">
-          <div className={`inline-block mb-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <div className={`inline-block mb-2 transition-all duration-700 md:duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <span className="text-primary-600 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase font-semibold">Munkáim</span>
           </div>
-          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 text-gray-900 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 text-gray-900 transition-all duration-700 delay-75 md:duration-1000 md:delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Portfólió
           </h1>
-          <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-2 sm:mb-3 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
-          <p className={`text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-2 sm:mb-3 transition-all duration-700 delay-100 md:duration-1000 md:delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
+          <p className={`text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed transition-all duration-700 delay-150 md:duration-1000 md:delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Fedezd fel korábbi munkáimat - családi pillanatok, keresztelők, szülinapok és különleges emlékek
           </p>
         </div>
@@ -207,11 +212,11 @@ const Portfolio = () => {
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="mb-4 sm:mb-5 md:mb-6 relative z-10 text-center md:text-left max-w-4xl mx-auto">
-                <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 transition-all duration-1000 ${isSectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 transition-all duration-700 md:duration-1000 ${isSectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                   {group.title}
                 </h2>
-                <div className={`w-12 sm:w-14 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mb-2 mx-auto md:mx-0 transition-all duration-1000 delay-200 ${isSectionVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
-                <p className={`text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed transition-all duration-1000 delay-300 ${isSectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>{group.description}</p>
+                <div className={`w-12 sm:w-14 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mb-2 mx-auto md:mx-0 transition-all duration-700 delay-75 md:duration-1000 md:delay-200 ${isSectionVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
+                <p className={`text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed transition-all duration-700 delay-100 md:duration-1000 md:delay-300 ${isSectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>{group.description}</p>
               </div>
 
               {group.id === 'jatszoteri-moka' ? (

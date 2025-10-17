@@ -13,6 +13,8 @@ const Packages = () => {
     setIsVisible(true);
 
     // Intersection Observer for card animations
+    // On mobile: trigger earlier with increased rootMargin for faster card appearance
+    const isMobile = window.innerWidth < 768;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -22,7 +24,10 @@ const Packages = () => {
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      {
+        threshold: 0.1,
+        rootMargin: isMobile ? '0px 0px 150px 0px' : '0px 0px -50px 0px'
+      }
     );
 
     cardRefs.current.forEach((ref) => {
@@ -106,14 +111,14 @@ const Packages = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Enhanced Header */}
         <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-10">
-          <div className={`inline-block mb-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <div className={`inline-block mb-2 transition-all duration-700 md:duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <span className="text-primary-600 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase font-semibold">Áraim</span>
           </div>
-          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 text-gray-900 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 text-gray-900 transition-all duration-700 delay-75 md:duration-1000 md:delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Fotózási Csomagok
           </h1>
-          <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-2 sm:mb-3 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
-          <p className={`text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-2 sm:mb-3 transition-all duration-700 delay-100 md:duration-1000 md:delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
+          <p className={`text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed transition-all duration-700 delay-150 md:duration-1000 md:delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Válassz a fotózási csomagjaim közül, és örökítsük meg együtt a családod legszebb pillanatait
           </p>
         </div>
@@ -128,11 +133,11 @@ const Packages = () => {
                 ref={(el) => (cardRefs.current[index] = el)}
                 data-card-index={index}
                 onClick={() => handlePackageClick(pkg.title)}
-                className={`relative group bg-gradient-to-br from-white via-primary-50 to-white border border-gray-200 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-soft hover:shadow-soft-lg transition-all duration-700 cursor-pointer overflow-hidden ${
+                className={`relative group bg-gradient-to-br from-white via-primary-50 to-white border border-gray-200 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-soft hover:shadow-soft-lg transition-all duration-600 md:duration-700 cursor-pointer overflow-hidden ${
                   isCardVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                 }`}
                 style={{
-                  transitionDelay: `${index * 0.15}s`
+                  transitionDelay: window.innerWidth < 768 ? `${index * 0.08}s` : `${index * 0.15}s`
                 }}
               >
                 {/* Hover gradient overlay */}
@@ -234,7 +239,7 @@ const Packages = () => {
         </div>
 
         {/* Bottom Note */}
-        <div className={`text-center mt-8 sm:mt-12 md:mt-16 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`text-center mt-8 sm:mt-12 md:mt-16 transition-all duration-700 delay-200 md:duration-1000 md:delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="inline-block bg-gradient-to-r from-orange-50 to-amber-50 rounded-full px-4 sm:px-6 py-2 sm:py-3 border border-orange-200">
             <p className="text-xs sm:text-sm text-gray-700 italic">
               * Az árak a választott helyszíntől függően változhatnak

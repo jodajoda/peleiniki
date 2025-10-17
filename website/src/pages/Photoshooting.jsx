@@ -13,6 +13,8 @@ const Photoshooting = () => {
     setIsVisible(true);
 
     // Intersection Observer for section animations
+    // On mobile: trigger earlier with reduced rootMargin for faster content appearance
+    const isMobile = window.innerWidth < 768;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -22,7 +24,10 @@ const Photoshooting = () => {
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }
+      {
+        threshold: 0.1,
+        rootMargin: isMobile ? '0px 0px 50px 0px' : '0px 0px -100px 0px'
+      }
     );
 
     sectionRefs.current.forEach((ref) => {
@@ -101,14 +106,14 @@ const Photoshooting = () => {
       {/* Enhanced Header */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-6 sm:mb-8 md:mb-10">
         <div className="text-center max-w-3xl mx-auto">
-          <div className={`inline-block mb-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <div className={`inline-block mb-2 transition-all duration-700 md:duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <span className="text-primary-600 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase font-semibold">Hogyan dolgozom</span>
           </div>
-          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 text-gray-900 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 text-gray-900 transition-all duration-700 delay-75 md:duration-1000 md:delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             A fotózás velem
           </h1>
-          <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-2 sm:mb-3 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
-          <p className={`text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-2 sm:mb-3 transition-all duration-700 delay-100 md:duration-1000 md:delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
+          <p className={`text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed transition-all duration-700 delay-150 md:duration-1000 md:delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Lazán, természetesen, sok nevetéssel - fedezd fel, hogyan zajlik egy családi fotózás
           </p>
         </div>
@@ -145,16 +150,16 @@ const Photoshooting = () => {
               </div>
 
               <div className="text-center mb-4 sm:mb-5 md:mb-6 relative z-10">
-                <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 transition-all duration-1000 ${isSectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 transition-all duration-700 md:duration-1000 ${isSectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                   {section.title}
                 </h2>
-                <div className={`w-12 sm:w-14 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mx-auto transition-all duration-1000 delay-200 ${isSectionVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
+                <div className={`w-12 sm:w-14 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mx-auto transition-all duration-700 delay-75 md:duration-1000 md:delay-200 ${isSectionVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
               </div>
 
               <div className={`grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center relative z-10 ${sectionIndex % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                 {/* Image - alternating order */}
                 <div className={`${sectionIndex % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
-                  <div className={`group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-2xl transition-all duration-1000 transform hover:scale-[1.02] delay-300 ${isSectionVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${sectionIndex % 2 === 1 ? 'translate-x-8' : '-translate-x-8'}`}`}>
+                  <div className={`group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-2xl transition-all duration-700 delay-100 md:duration-1000 md:delay-300 transform hover:scale-[1.02] ${isSectionVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${sectionIndex % 2 === 1 ? 'translate-x-8' : '-translate-x-8'}`}`}>
                     <img
                       src={getAssetPath(section.image)}
                       alt={section.title}
@@ -168,13 +173,15 @@ const Photoshooting = () => {
                 {/* Text content - alternating order */}
                 <div className={`space-y-4 sm:space-y-5 md:space-y-6 ${sectionIndex % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
                   {section.content.map((paragraph, index) => {
-                    const paragraphDelay = 500 + (index * 200);
+                    // Faster delays on mobile (150ms base + 80ms per item), slower on desktop (500ms base + 200ms per item)
+                    const paragraphDelayMobile = 150 + (index * 80);
+                    const paragraphDelayDesktop = 500 + (index * 200);
                     // Check if this is the last section (Készen állsz?) and first paragraph
                     if (section.id === 'keszen-allsz' && index === 0) {
                       // Split at "vedd fel velem a kapcsolatot"
                       const parts = paragraph.split('vedd fel velem a kapcsolatot');
                       return (
-                        <p key={index} className={`text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed transition-all duration-1000 ${isSectionVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${sectionIndex % 2 === 1 ? '-translate-x-8' : 'translate-x-8'}`}`} style={{ transitionDelay: `${paragraphDelay}ms` }}>
+                        <p key={index} className={`text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed transition-all duration-700 md:duration-1000 ${isSectionVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${sectionIndex % 2 === 1 ? '-translate-x-8' : 'translate-x-8'}`}`} style={{ transitionDelay: window.innerWidth < 768 ? `${paragraphDelayMobile}ms` : `${paragraphDelayDesktop}ms` }}>
                           {parts[0]}
                           <Link
                             to="/contact"
@@ -186,7 +193,7 @@ const Photoshooting = () => {
                         </p>
                       );
                     }
-                    return <p key={index} className={`text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed transition-all duration-1000 ${isSectionVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${sectionIndex % 2 === 1 ? '-translate-x-8' : 'translate-x-8'}`}`} style={{ transitionDelay: `${paragraphDelay}ms` }}>{paragraph}</p>;
+                    return <p key={index} className={`text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed transition-all duration-700 md:duration-1000 ${isSectionVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${sectionIndex % 2 === 1 ? '-translate-x-8' : 'translate-x-8'}`}`} style={{ transitionDelay: window.innerWidth < 768 ? `${paragraphDelayMobile}ms` : `${paragraphDelayDesktop}ms` }}>{paragraph}</p>;
                   })}
                 </div>
               </div>

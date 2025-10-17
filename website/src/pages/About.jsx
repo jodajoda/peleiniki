@@ -12,13 +12,18 @@ const About = () => {
     setIsVisible(true);
 
     // Intersection Observer for content section
+    // On mobile: trigger earlier with reduced rootMargin for faster content appearance
+    const isMobile = window.innerWidth < 768;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setContentVisible(true);
         }
       },
-      { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }
+      {
+        threshold: 0.1,
+        rootMargin: isMobile ? '0px 0px 50px 0px' : '0px 0px -100px 0px'
+      }
     );
 
     if (contentRef.current) {
@@ -42,14 +47,14 @@ const About = () => {
       {/* Enhanced Header */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-6 sm:mb-8 md:mb-10">
         <div className="text-center max-w-3xl mx-auto">
-          <div className={`inline-block mb-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <div className={`inline-block mb-2 transition-all duration-700 md:duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <span className="text-primary-600 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase font-semibold">Ki vagyok én?</span>
           </div>
-          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 text-gray-900 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 text-gray-900 transition-all duration-700 delay-75 md:duration-1000 md:delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Magamról
           </h1>
-          <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-2 sm:mb-3 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
-          <p className={`text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-2 sm:mb-3 transition-all duration-700 delay-100 md:duration-1000 md:delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
+          <p className={`text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed transition-all duration-700 delay-150 md:duration-1000 md:delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Ismerj meg jobban - történetem és szenvedélyem a fotózás iránt
           </p>
         </div>
@@ -80,7 +85,7 @@ const About = () => {
           <article className="max-w-6xl mx-auto relative z-10" ref={contentRef}>
             <div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center mb-8 sm:mb-10 md:mb-12">
               {/* Image */}
-              <div className={`group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-2xl transition-all duration-1000 transform hover:scale-[1.02] ${contentVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+              <div className={`group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-2xl transition-all duration-700 md:duration-1000 transform hover:scale-[1.02] ${contentVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
                 <img
                   src={getAssetPath('assets/about-me/magamrol_202410-03733-2.jpg')}
                   alt="Pelei Niki fotográfus portréja"
@@ -93,21 +98,21 @@ const About = () => {
               {/* Text */}
               <div className="space-y-6 sm:space-y-8">
                 <div className="space-y-4 sm:space-y-5 md:space-y-6 text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
-                  <p className={`transition-all duration-1000 delay-200 ${contentVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
+                  <p className={`transition-all duration-700 delay-75 md:duration-1000 md:delay-200 ${contentVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
                     Pelei Niki vagyok, feleség és egy kislány anyukája, valamint két kutya büszke tulajdonosa.
                     A fotózás iránti szeretetem a saját családom és a mindennapi pillanatok megörökítéséből fakad.
                     Rájöttem, hogy a legértékesebb kincseink az emlékeink, és a fényképek segítenek megőrizni
                     ezeket a múló pillanatokat.
                   </p>
 
-                  <p className={`transition-all duration-1000 delay-400 ${contentVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
+                  <p className={`transition-all duration-700 delay-150 md:duration-1000 md:delay-400 ${contentVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
                     A fotózás számomra nem csak munka, hanem szenvedély. Szeretem megfigyelni az embereket,
                     az érzelmeket és a kapcsolatokat, és ezeket őszintén, természetes módon visszaadni a képeimen.
                     Hiszem, hogy a legjobb fotók akkor születnek, amikor mindenki felszabadultan érzi magát,
                     ezért a fotózásaim során barátságos és laza légkört teremtek.
                   </p>
 
-                  <p className={`transition-all duration-1000 delay-600 ${contentVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
+                  <p className={`transition-all duration-700 delay-200 md:duration-1000 md:delay-600 ${contentVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
                     Célom, hogy olyan képeket készítsek, amelyek nemcsak szépek, hanem történetet mesélnek,
                     és évek múltán is mosolyt csalnak az arcotokra.
                   </p>
@@ -117,7 +122,7 @@ const About = () => {
 
             {/* Enhanced Stat Cards */}
             <div className="grid md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
-            <div className={`group relative text-center p-4 sm:p-5 bg-gradient-to-br from-orange-50 via-white to-amber-50 rounded-xl shadow-soft hover:shadow-2xl transition-all duration-1000 transform hover:scale-105 overflow-hidden delay-700 ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className={`group relative text-center p-4 sm:p-5 bg-gradient-to-br from-orange-50 via-white to-amber-50 rounded-xl shadow-soft hover:shadow-2xl transition-all duration-700 delay-250 md:duration-1000 md:delay-700 transform hover:scale-105 overflow-hidden ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               {/* Decorative element */}
               <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-orange-200/30 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
 
@@ -132,7 +137,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className={`group relative text-center p-4 sm:p-5 bg-gradient-to-br from-orange-50 via-white to-amber-50 rounded-xl shadow-soft hover:shadow-2xl transition-all duration-1000 transform hover:scale-105 overflow-hidden delay-[900ms] ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className={`group relative text-center p-4 sm:p-5 bg-gradient-to-br from-orange-50 via-white to-amber-50 rounded-xl shadow-soft hover:shadow-2xl transition-all duration-700 delay-300 md:duration-1000 md:delay-[900ms] transform hover:scale-105 overflow-hidden ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               {/* Decorative element */}
               <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-orange-200/30 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
 
@@ -147,7 +152,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className={`group relative text-center p-4 sm:p-5 bg-gradient-to-br from-orange-50 via-white to-amber-50 rounded-xl shadow-soft hover:shadow-2xl transition-all duration-1000 transform hover:scale-105 overflow-hidden delay-[1100ms] ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className={`group relative text-center p-4 sm:p-5 bg-gradient-to-br from-orange-50 via-white to-amber-50 rounded-xl shadow-soft hover:shadow-2xl transition-all duration-700 delay-[350ms] md:duration-1000 md:delay-[1100ms] transform hover:scale-105 overflow-hidden ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               {/* Decorative element */}
               <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-orange-200/30 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
 
