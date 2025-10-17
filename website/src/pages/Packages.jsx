@@ -142,23 +142,23 @@ const Packages = () => {
 
                 <div className="relative z-10 flex flex-col h-full">
                   {/* Package Title */}
-                  <div className="mb-2 sm:mb-3">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-800 mb-2 group-hover:text-primary-900 transition-colors duration-500">
+                  <div className="mb-2">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-800 mb-1 sm:mb-2 group-hover:text-primary-900 transition-colors duration-500">
                       {pkg.title}
                     </h2>
-                    <div className="w-10 sm:w-12 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full transform origin-left transition-all duration-500 group-hover:w-16 sm:group-hover:w-20"></div>
+                    <div className="w-10 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full transform origin-left transition-all duration-500 group-hover:w-14 sm:group-hover:w-16"></div>
                   </div>
 
-                  <p className="text-gray-600 text-sm sm:text-base md:text-lg mb-4 sm:mb-5 leading-relaxed">{pkg.description}</p>
+                  <p className="text-gray-600 text-sm sm:text-base mb-3 sm:mb-4 leading-relaxed">{pkg.description}</p>
 
                   {/* Package Details */}
                   {pkg.duration || pkg.photos ? (
-                    <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-5">
+                    <ul className="space-y-2 mb-3 sm:mb-4">
                       {pkg.duration && (
                         <li className="flex items-start group/item">
-                          <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-500">
+                          <div className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center mr-2 sm:mr-3 group-hover:scale-110 transition-transform duration-500">
                             <svg
-                              className="w-4 h-4 sm:w-5 sm:h-5 text-primary-600"
+                              className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary-600"
                               fill="currentColor"
                               viewBox="0 0 20 20"
                             >
@@ -170,16 +170,16 @@ const Packages = () => {
                             </svg>
                           </div>
                           <div className="flex-1">
-                            <strong className="text-gray-900 text-sm sm:text-base block mb-1">Időtartam</strong>
-                            <span className="text-gray-700 text-sm sm:text-base">{pkg.duration}</span>
+                            <strong className="text-gray-900 text-xs sm:text-sm block mb-0.5">Időtartam</strong>
+                            <span className="text-gray-700 text-xs sm:text-sm">{pkg.duration}</span>
                           </div>
                         </li>
                       )}
                       {pkg.photos && (
                         <li className="flex items-start group/item">
-                          <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-500">
+                          <div className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center mr-2 sm:mr-3 group-hover:scale-110 transition-transform duration-500">
                             <svg
-                              className="w-4 h-4 sm:w-5 sm:h-5 text-primary-600"
+                              className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary-600"
                               fill="currentColor"
                               viewBox="0 0 20 20"
                             >
@@ -191,8 +191,8 @@ const Packages = () => {
                             </svg>
                           </div>
                           <div className="flex-1">
-                            <strong className="text-gray-900 text-sm sm:text-base block mb-1">Képek száma</strong>
-                            <span className="text-gray-700 text-sm sm:text-base">{pkg.photos}</span>
+                            <strong className="text-gray-900 text-xs sm:text-sm block mb-0.5">Képek száma</strong>
+                            <span className="text-gray-700 text-xs sm:text-sm">{pkg.photos}</span>
                           </div>
                         </li>
                       )}
@@ -203,27 +203,27 @@ const Packages = () => {
                   <div className="flex-grow"></div>
 
                   {/* Call to Action Hint */}
-                  <div className="mb-3 sm:mb-4 text-xs sm:text-sm text-primary-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="mb-2 sm:mb-3 text-xs text-primary-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     Kattints a részletekért →
                   </div>
 
                   {/* Price Section - Now at the bottom */}
-                  <div className="border-t border-gray-200 pt-3 sm:pt-4 pb-1">
+                  <div className="border-t border-gray-200 pt-2 sm:pt-3 pb-1">
                     <div className="flex items-baseline justify-between">
                       <div className="pb-1">
-                        <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wide mb-1">Ár</p>
-                        <p className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent leading-tight pb-2" aria-label={`Ár: ${pkg.price}`}>
+                        <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Ár</p>
+                        <p className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent leading-tight pb-1" aria-label={`Ár: ${pkg.price}`}>
                           {pkg.price}
                         </p>
                       </div>
                       <div className="text-primary-600 group-hover:translate-x-2 transition-transform duration-500">
-                        <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
                       </div>
                     </div>
                     {pkg.note && (
-                      <p className="text-xs sm:text-sm text-gray-600 mt-2 sm:mt-3 italic">{pkg.note}</p>
+                      <p className="text-xs text-gray-600 mt-2 italic">{pkg.note}</p>
                     )}
                   </div>
                 </div>

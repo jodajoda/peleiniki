@@ -6,26 +6,42 @@ import { getAssetPath } from '../utils/assets';
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
 
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          // Clamp scroll value to prevent negative parallax when scrolling back to top
-          const clampedScroll = Math.max(0, window.scrollY);
-          setScrollY(clampedScroll);
-          ticking = false;
-        });
-        ticking = true;
-      }
+    // Detect mobile devices
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
     };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    // Only enable parallax on desktop
+    if (window.innerWidth >= 768) {
+      let ticking = false;
+
+      const handleScroll = () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            // Clamp scroll value to prevent negative parallax when scrolling back to top
+            const clampedScroll = Math.max(0, window.scrollY);
+            setScrollY(clampedScroll);
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener('resize', checkMobile);
+      };
+    }
+
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
   // Structured data for homepage (Professional Service + Local Business)
   const structuredData = {
@@ -110,18 +126,18 @@ const Home = () => {
       />
       {/* Hero Section */}
       <section className="relative h-[85vh] md:h-[90vh] overflow-hidden">
-        {/* Hero Image with Parallax */}
+        {/* Hero Image with Parallax (disabled on mobile for performance) */}
         <div
           className="absolute inset-0"
-          style={{
+          style={!isMobile ? {
             transform: `translate3d(0, ${Math.min(scrollY * 0.3, 200)}px, 0)`,
             willChange: 'transform'
-          }}
+          } : {}}
         >
           <img
             src={getAssetPath('assets/homepage/hero.jpg')}
             alt="Pelei Niki Fotográfus - Családfotózás"
-            className="w-full h-[115%] object-cover image-warm-filter"
+            className="w-full h-full md:h-[115%] object-cover image-warm-filter"
           />
           {/* Enhanced Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-black/70"></div>
@@ -131,8 +147,8 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-accent-warm/10 via-transparent to-transparent opacity-60"></div>
         </div>
 
-        {/* Floating decorative elements */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Floating decorative elements (simplified on mobile for performance) */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden hidden md:block">
           <div className="absolute top-20 left-10 w-32 h-32 bg-accent-warm/10 rounded-full blur-3xl animate-float"></div>
           <div className="absolute bottom-32 right-20 w-40 h-40 bg-accent-rose/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
           <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-accent-gold/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '4s' }}></div>
@@ -269,7 +285,7 @@ const Home = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="relative bg-gradient-to-br from-primary-50 via-white to-primary-100 py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary-50 via-white to-primary-100 py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-accent-warm to-accent-gold rounded-full blur-3xl animate-float"></div>
@@ -291,27 +307,27 @@ const Home = () => {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           {/* Icon or decorative element */}
-          <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-orange-300 to-amber-400 mb-6 sm:mb-8 shadow-lg animate-bounce-in">
-            <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-orange-300 to-amber-400 mb-4 sm:mb-6 shadow-lg animate-bounce-in">
+            <svg className="w-7 h-7 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3 sm:mb-4">
             Foglalj időpontot!
           </h2>
 
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-3 sm:mb-4 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-2 sm:mb-3 max-w-3xl mx-auto leading-relaxed">
             Örökítsük meg együtt családod különleges pillanatait
           </p>
 
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-8 sm:mb-10 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto">
             Természetes, spontán fotózás Budapest legszebb helyszínein
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-10 sm:mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-10">
             <Link
               to="/contact"
               className="group relative inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-orange-400 to-amber-400 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 overflow-hidden"

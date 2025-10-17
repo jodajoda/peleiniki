@@ -173,18 +173,18 @@ const Contact = () => {
 
           <div className="grid md:grid-cols-2 gap-5 sm:gap-6 md:gap-8">
             {/* Contact Information */}
-            <div className={`space-y-3 sm:space-y-4 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-              <div className="bg-gradient-to-br from-white via-primary-50 to-white rounded-xl sm:rounded-2xl p-4 sm:p-5 shadow-soft border border-gray-200">
-                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center">
-                  <span className="w-8 sm:w-10 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mr-2 sm:mr-3"></span>
+            <div className={`space-y-3 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+              <div className="bg-gradient-to-br from-white via-primary-50 to-white rounded-xl sm:rounded-2xl p-4 shadow-soft border border-gray-200">
+                <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 flex items-center">
+                  <span className="w-8 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mr-2"></span>
                   Elérhetőségek
                 </h2>
 
-                <div className="space-y-2 sm:space-y-3">
-                  <div className="group flex items-start p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-r from-orange-50 to-transparent hover:from-orange-100 transition-all duration-500 hover:shadow-soft hover:translate-x-2">
-                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-500">
+                <div className="space-y-2">
+                  <div className="group flex items-start p-3 rounded-lg bg-gradient-to-r from-orange-50 to-transparent hover:from-orange-100 transition-all duration-500 hover:shadow-soft hover:translate-x-2">
+                    <div className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center mr-2 sm:mr-3 group-hover:scale-110 transition-transform duration-500">
                       <svg
-                        className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600"
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-primary-600"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -198,20 +198,20 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="font-semibold text-gray-900 mb-1 text-base sm:text-lg">Email</div>
+                      <div className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Email</div>
                       <a
                         href="mailto:peleinikifotoi@gmail.com"
-                        className="text-primary-600 hover:text-primary-700 transition-colors duration-300 break-all"
+                        className="text-primary-600 hover:text-primary-700 transition-colors duration-300 break-all text-sm sm:text-base"
                       >
                         peleinikifotoi@gmail.com
                       </a>
                     </div>
                   </div>
 
-                  <div className="group flex items-start p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-r from-orange-50 to-transparent hover:from-orange-100 transition-all duration-500 hover:shadow-soft hover:translate-x-2">
-                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-500">
+                  <div className="group flex items-start p-3 rounded-lg bg-gradient-to-r from-orange-50 to-transparent hover:from-orange-100 transition-all duration-500 hover:shadow-soft hover:translate-x-2">
+                    <div className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center mr-2 sm:mr-3 group-hover:scale-110 transition-transform duration-500">
                       <svg
-                        className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600"
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-primary-600"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -225,10 +225,10 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div className="flex-1">
-                      <div className="font-semibold text-gray-900 mb-1 text-base sm:text-lg">Telefon</div>
+                      <div className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Telefon</div>
                       <a
                         href="tel:+36203655393"
-                        className="text-primary-600 hover:text-primary-700 transition-colors duration-300"
+                        className="text-primary-600 hover:text-primary-700 transition-colors duration-300 text-sm sm:text-base"
                       >
                         +36 20 365 5393
                       </a>
@@ -238,42 +238,42 @@ const Contact = () => {
               </div>
 
               {/* Social Media Section */}
-              <div className="bg-gradient-to-br from-white via-primary-50 to-white rounded-xl sm:rounded-2xl p-4 sm:p-5 shadow-soft border border-gray-200">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 flex items-center">
-                  <span className="w-8 sm:w-10 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mr-2 sm:mr-3"></span>
+              <div className="bg-gradient-to-br from-white via-primary-50 to-white rounded-xl sm:rounded-2xl p-4 shadow-soft border border-gray-200">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 flex items-center">
+                  <span className="w-8 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mr-2"></span>
                   Közösségi média
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">
+                <p className="text-sm text-gray-600 mb-3 leading-relaxed">
                   Kövess be Instagramon és Facebookon, hogy ne maradj le a legfrissebb munkáimról!
                 </p>
-                <div className="flex space-x-3">
+                <div className="flex space-x-2 sm:space-x-3">
                   <a
                     href="https://www.instagram.com/peleinikifotoi/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group relative p-3 sm:p-4 bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl sm:rounded-2xl hover:shadow-soft-lg transition-all duration-500 hover:-translate-y-2 hover:rotate-3 border border-orange-100"
+                    className="group relative p-3 bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl hover:shadow-soft-lg transition-all duration-500 hover:-translate-y-2 hover:rotate-3 border border-orange-100"
                     aria-label="Instagram"
                   >
                     <img
                       src={getAssetPath('assets/icons/instagram.svg')}
                       alt="Instagram"
-                      className="w-8 h-8 transition-transform duration-500 group-hover:scale-110"
+                      className="w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-200 to-amber-200 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-200 to-amber-200 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                   </a>
                   <a
                     href="https://www.facebook.com/peleinikifoto"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group relative p-4 bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl hover:shadow-soft-lg transition-all duration-500 hover:-translate-y-2 hover:rotate-3 border border-orange-100"
+                    className="group relative p-3 bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl hover:shadow-soft-lg transition-all duration-500 hover:-translate-y-2 hover:rotate-3 border border-orange-100"
                     aria-label="Facebook"
                   >
                     <img
                       src={getAssetPath('assets/icons/facebook.svg')}
                       alt="Facebook"
-                      className="w-8 h-8 transition-transform duration-500 group-hover:scale-110"
+                      className="w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-200 to-amber-200 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-200 to-amber-200 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                   </a>
                 </div>
               </div>
@@ -281,10 +281,10 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
-              <form id="contact-form" onSubmit={handleSubmit} className="space-y-4 p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-white via-primary-50 to-white shadow-soft-lg border border-gray-200" aria-label="Kapcsolatfelvételi űrlap">
+              <form id="contact-form" onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 p-4 rounded-2xl bg-gradient-to-br from-white via-primary-50 to-white shadow-soft-lg border border-gray-200" aria-label="Kapcsolatfelvételi űrlap">
                 <div className="mb-1">
-                  <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1 sm:mb-2 flex items-center">
-                    <span className="w-8 sm:w-10 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mr-2 sm:mr-3"></span>
+                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 flex items-center">
+                    <span className="w-8 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mr-2"></span>
                     Írj nekem!
                   </h2>
                   <p className="text-gray-600 leading-relaxed text-sm">
