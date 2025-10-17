@@ -12,17 +12,13 @@ const About = () => {
     setIsVisible(true);
 
     // Intersection Observer for content section
-    // Trigger animations earlier for better mobile experience
-    const isMobile = window.innerWidth < 768;
-    const triggerMargin = isMobile ? '0px 0px -50px 0px' : '0px 0px 50px 0px';
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setContentVisible(true);
         }
       },
-      { threshold: 0.05, rootMargin: triggerMargin }
+      { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }
     );
 
     if (contentRef.current) {
