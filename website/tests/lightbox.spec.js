@@ -104,10 +104,9 @@ test.describe('Lightbox Component', () => {
     // Wait for lightbox to open
     await page.waitForSelector('div[class*="fixed inset-0 z-50"]');
 
-    // Get initial counter value
-    const initialCounter = await page
-      .locator('div[class*="absolute bottom-4"]')
-      .textContent();
+    // Get initial counter value - use status role to find the counter specifically
+    const counterElement = page.locator('div[role="status"][aria-live="polite"] > div.font-medium').first();
+    const initialCounter = await counterElement.textContent();
 
     // Click next button if available
     const nextButton = page.getByRole('button', { name: 'Következő kép' });
@@ -119,7 +118,7 @@ test.describe('Lightbox Component', () => {
       await page.waitForTimeout(500);
 
       // Counter should have changed
-      const newCounter = await page.locator('div[class*="absolute bottom-4"]').textContent();
+      const newCounter = await counterElement.textContent();
       expect(newCounter).not.toBe(initialCounter);
     }
   });
@@ -146,7 +145,8 @@ test.describe('Lightbox Component', () => {
       await page.waitForTimeout(500);
 
       // Should show first image (counter should be "1 / X")
-      const counter = await page.locator('div[class*="absolute bottom-4"]').textContent();
+      const counterElement = page.locator('div[role="status"][aria-live="polite"] > div.font-medium').first();
+      const counter = await counterElement.textContent();
       expect(counter.trim().startsWith('1 /')).toBeTruthy();
     }
   });
@@ -160,10 +160,9 @@ test.describe('Lightbox Component', () => {
     // Wait for lightbox to open
     await page.waitForSelector('div[class*="fixed inset-0 z-50"]');
 
-    // Get initial counter
-    const initialCounter = await page
-      .locator('div[class*="absolute bottom-4"]')
-      .textContent();
+    // Get initial counter - use status role to find the counter specifically
+    const counterElement = page.locator('div[role="status"][aria-live="polite"] > div.font-medium').first();
+    const initialCounter = await counterElement.textContent();
 
     // Check if there are multiple images
     const hasMultipleImages = initialCounter.includes('/');
@@ -177,7 +176,7 @@ test.describe('Lightbox Component', () => {
       await page.waitForTimeout(500);
 
       // Counter should have changed
-      const newCounter = await page.locator('div[class*="absolute bottom-4"]').textContent();
+      const newCounter = await counterElement.textContent();
       expect(newCounter).not.toBe(initialCounter);
 
       // Press left arrow key
@@ -185,7 +184,7 @@ test.describe('Lightbox Component', () => {
       await page.waitForTimeout(500);
 
       // Should be back to first image
-      const finalCounter = await page.locator('div[class*="absolute bottom-4"]').textContent();
+      const finalCounter = await counterElement.textContent();
       expect(finalCounter).toBe(initialCounter);
     }
   });
@@ -199,12 +198,12 @@ test.describe('Lightbox Component', () => {
     // Wait for lightbox to open
     await page.waitForSelector('div[class*="fixed inset-0 z-50"]');
 
-    // Counter should be visible and show current position
-    const counter = page.locator('div[class*="absolute bottom-4"]');
-    await expect(counter).toBeVisible();
+    // Counter should be visible and show current position - use status role to find the counter specifically
+    const counterElement = page.locator('div[role="status"][aria-live="polite"] > div.font-medium').first();
+    await expect(counterElement).toBeVisible();
 
     // Should match pattern "X / Y"
-    const counterText = await counter.textContent();
+    const counterText = await counterElement.textContent();
     expect(counterText.trim()).toMatch(/^\d+ \/ \d+$/);
   });
 
@@ -235,8 +234,9 @@ test.describe('Lightbox Component', () => {
       await page.waitForSelector('div[class*="fixed inset-0 z-50"]');
 
       // Navigate to last image if not already there
-      // Check counter to verify we're on last image
-      const counter = await page.locator('div[class*="absolute bottom-4"]').textContent();
+      // Check counter to verify we're on last image - use status role to find the counter specifically
+      const counterElement = page.locator('div[role="status"][aria-live="polite"] > div.font-medium').first();
+      const counter = await counterElement.textContent();
       const currentIndex = parseInt(counter.split('/')[0].trim());
       const totalImages = parseInt(counter.split('/')[1].trim());
 

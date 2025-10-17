@@ -13,11 +13,14 @@ test.describe('Contact Form', () => {
   });
 
   test('should display contact form with all fields', async ({ page }) => {
-    // Check page title - wait longer for animations
-    await expect(page.getByRole('heading', { name: 'Kapcsolat', exact: true })).toBeVisible({ timeout: 10000 });
+    // Wait for page animations and content to load
+    await page.waitForTimeout(1000);
+
+    // Check page title - the main heading is "Vegyük fel a kapcsolatot!"
+    await expect(page.getByRole('heading', { name: 'Vegyük fel a kapcsolatot!' })).toBeVisible({ timeout: 15000 });
 
     // Check all form fields are present
-    await expect(page.getByLabel('Név *')).toBeVisible();
+    await expect(page.getByLabel('Név *')).toBeVisible({ timeout: 10000 });
     await expect(page.getByLabel('Email *')).toBeVisible();
     await expect(page.getByLabel('Telefonszám')).toBeVisible();
     await expect(page.getByLabel('Üzenet *')).toBeVisible();
