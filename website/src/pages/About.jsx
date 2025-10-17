@@ -39,15 +39,15 @@ const About = () => {
       />
 
       {/* Enhanced Header */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-10 md:mb-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-6 sm:mb-8 md:mb-10">
         <div className="text-center max-w-3xl mx-auto">
-          <div className={`inline-block mb-2 sm:mb-3 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <div className={`inline-block mb-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <span className="text-primary-600 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase font-semibold">Ki vagyok én?</span>
           </div>
-          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-4 text-gray-900 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 text-gray-900 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Magamról
           </h1>
-          <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-3 sm:mb-4 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
+          <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-2 sm:mb-3 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
           <p className={`text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Ismerj meg jobban - történetem és szenvedélyem a fotózás iránt
           </p>
@@ -55,7 +55,7 @@ const About = () => {
       </div>
 
       {/* Main Content Section */}
-      <section className="relative bg-gradient-to-br from-primary-50 via-white to-primary-100 overflow-hidden py-8 sm:py-10 md:py-12 lg:py-16">
+      <section className="relative bg-gradient-to-br from-primary-50 via-white to-primary-100 overflow-hidden py-6 sm:py-8 md:py-10">
         {/* Enhanced floating blur elements */}
         <div className="absolute inset-0 opacity-15 pointer-events-none">
           <div className="absolute top-10 left-10 w-80 h-80 bg-gradient-to-br from-orange-200 to-amber-300 rounded-full blur-3xl animate-float"></div>
@@ -115,8 +115,8 @@ const About = () => {
             </div>
 
             {/* Enhanced Stat Cards */}
-            <div className="grid md:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
-            <div className={`group relative text-center p-6 sm:p-8 bg-gradient-to-br from-orange-50 via-white to-amber-50 rounded-xl sm:rounded-2xl shadow-soft hover:shadow-2xl transition-all duration-1000 transform hover:scale-105 overflow-hidden delay-700 ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="grid md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
+            <div className={`group relative text-center p-5 sm:p-6 bg-gradient-to-br from-orange-50 via-white to-amber-50 rounded-xl sm:rounded-2xl shadow-soft hover:shadow-2xl transition-all duration-1000 transform hover:scale-105 overflow-hidden delay-700 ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               {/* Decorative element */}
               <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-orange-200/30 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
 
@@ -131,7 +131,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className={`group relative text-center p-6 sm:p-8 bg-gradient-to-br from-orange-50 via-white to-amber-50 rounded-xl sm:rounded-2xl shadow-soft hover:shadow-2xl transition-all duration-1000 transform hover:scale-105 overflow-hidden delay-[900ms] ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className={`group relative text-center p-5 sm:p-6 bg-gradient-to-br from-orange-50 via-white to-amber-50 rounded-xl sm:rounded-2xl shadow-soft hover:shadow-2xl transition-all duration-1000 transform hover:scale-105 overflow-hidden delay-[900ms] ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               {/* Decorative element */}
               <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-orange-200/30 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
 
@@ -146,7 +146,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className={`group relative text-center p-6 sm:p-8 bg-gradient-to-br from-orange-50 via-white to-amber-50 rounded-xl sm:rounded-2xl shadow-soft hover:shadow-2xl transition-all duration-1000 transform hover:scale-105 overflow-hidden delay-[1100ms] ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className={`group relative text-center p-5 sm:p-6 bg-gradient-to-br from-orange-50 via-white to-amber-50 rounded-xl sm:rounded-2xl shadow-soft hover:shadow-2xl transition-all duration-1000 transform hover:scale-105 overflow-hidden delay-[1100ms] ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               {/* Decorative element */}
               <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-orange-200/30 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
 

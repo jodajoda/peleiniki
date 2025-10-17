@@ -98,22 +98,22 @@ const Photoshooting = () => {
         canonicalUrl="/photoshooting"
       />
       {/* Enhanced Header */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-10 md:mb-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-6 sm:mb-8 md:mb-10">
         <div className="text-center max-w-3xl mx-auto">
-          <div className={`inline-block mb-2 sm:mb-3 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <div className={`inline-block mb-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <span className="text-primary-600 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase font-semibold">Hogyan dolgozom</span>
           </div>
-          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-4 text-gray-900 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 text-gray-900 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             A fotózás velem
           </h1>
-          <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-3 sm:mb-4 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
+          <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-2 sm:mb-3 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
           <p className={`text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Lazán, természetesen, sok nevetéssel - fedezd fel, hogyan zajlik egy családi fotózás
           </p>
         </div>
       </div>
 
-      <div className="space-y-8 sm:space-y-10 md:space-y-12">
+      <div className="space-y-6 sm:space-y-8 md:space-y-10">
         {sections.map((section, sectionIndex) => {
           const isSectionVisible = visibleSections.has(sectionIndex);
           return (
@@ -121,7 +121,7 @@ const Photoshooting = () => {
             key={section.id}
             ref={(el) => (sectionRefs.current[sectionIndex] = el)}
             data-section-index={sectionIndex}
-            className="relative bg-gradient-to-br from-primary-50 via-white to-primary-100 overflow-hidden py-8 sm:py-10 md:py-12 lg:py-16"
+            className="relative bg-gradient-to-br from-primary-50 via-white to-primary-100 overflow-hidden py-6 sm:py-8 md:py-10"
           >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               {/* Enhanced floating blur elements */}
@@ -143,11 +143,11 @@ const Photoshooting = () => {
                 </svg>
               </div>
 
-              <div className="text-center mb-6 sm:mb-7 md:mb-8 relative z-10">
-                <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 transition-all duration-1000 ${isSectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className="text-center mb-4 sm:mb-5 md:mb-6 relative z-10">
+                <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 transition-all duration-1000 ${isSectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                   {section.title}
                 </h2>
-                <div className={`w-12 sm:w-14 md:w-16 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mx-auto transition-all duration-1000 delay-200 ${isSectionVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
+                <div className={`w-12 sm:w-14 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mx-auto transition-all duration-1000 delay-200 ${isSectionVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
               </div>
 
               <div className={`grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center relative z-10 ${sectionIndex % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>

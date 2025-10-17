@@ -158,31 +158,31 @@ const Contact = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Enhanced Header */}
-          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 md:mb-12">
-            <div className={`inline-block mb-2 sm:mb-3 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-10">
+            <div className={`inline-block mb-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <span className="text-primary-600 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase font-semibold">Kapcsolat</span>
             </div>
-            <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-4 text-gray-900 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 text-gray-900 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               Vegyük fel a kapcsolatot!
             </h1>
-            <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-3 sm:mb-4 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
+            <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-2 sm:mb-3 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
             <p className={`text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               Várom megkeresésed! Írj bátran, és beszéljük meg együtt, hogyan örökíthetem meg a családod legszebb pillanatait
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+          <div className="grid md:grid-cols-2 gap-5 sm:gap-6 md:gap-8">
             {/* Contact Information */}
-            <div className={`space-y-4 sm:space-y-6 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-              <div className="bg-gradient-to-br from-white via-primary-50 to-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-soft border border-gray-200">
-                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 flex items-center">
+            <div className={`space-y-3 sm:space-y-4 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+              <div className="bg-gradient-to-br from-white via-primary-50 to-white rounded-xl sm:rounded-2xl p-4 sm:p-5 shadow-soft border border-gray-200">
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center">
                   <span className="w-8 sm:w-10 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mr-2 sm:mr-3"></span>
                   Elérhetőségek
                 </h2>
 
-                <div className="space-y-3 sm:space-y-5">
-                  <div className="group flex items-start p-3 sm:p-4 md:p-5 rounded-lg sm:rounded-xl bg-gradient-to-r from-orange-50 to-transparent hover:from-orange-100 transition-all duration-500 hover:shadow-soft hover:translate-x-2">
-                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-500">
+                <div className="space-y-2 sm:space-y-3">
+                  <div className="group flex items-start p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-r from-orange-50 to-transparent hover:from-orange-100 transition-all duration-500 hover:shadow-soft hover:translate-x-2">
+                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-500">
                       <svg
                         className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600"
                         fill="none"
@@ -208,8 +208,8 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="group flex items-start p-3 sm:p-4 md:p-5 rounded-lg sm:rounded-xl bg-gradient-to-r from-orange-50 to-transparent hover:from-orange-100 transition-all duration-500 hover:shadow-soft hover:translate-x-2">
-                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-500">
+                  <div className="group flex items-start p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-r from-orange-50 to-transparent hover:from-orange-100 transition-all duration-500 hover:shadow-soft hover:translate-x-2">
+                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-500">
                       <svg
                         className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600"
                         fill="none"
@@ -238,15 +238,15 @@ const Contact = () => {
               </div>
 
               {/* Social Media Section */}
-              <div className="bg-gradient-to-br from-white via-primary-50 to-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-soft border border-gray-200">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center">
+              <div className="bg-gradient-to-br from-white via-primary-50 to-white rounded-xl sm:rounded-2xl p-4 sm:p-5 shadow-soft border border-gray-200">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 flex items-center">
                   <span className="w-8 sm:w-10 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mr-2 sm:mr-3"></span>
                   Közösségi média
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-5 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">
                   Kövess be Instagramon és Facebookon, hogy ne maradj le a legfrissebb munkáimról!
                 </p>
-                <div className="flex space-x-3 sm:space-x-4">
+                <div className="flex space-x-3">
                   <a
                     href="https://www.instagram.com/peleinikifotoi/"
                     target="_blank"
@@ -281,10 +281,10 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
-              <form id="contact-form" onSubmit={handleSubmit} className="space-y-5 p-6 rounded-2xl bg-gradient-to-br from-white via-primary-50 to-white shadow-soft-lg border border-gray-200" aria-label="Kapcsolatfelvételi űrlap">
-                <div className="mb-2">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2 flex items-center">
-                    <span className="w-10 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mr-3"></span>
+              <form id="contact-form" onSubmit={handleSubmit} className="space-y-4 p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-white via-primary-50 to-white shadow-soft-lg border border-gray-200" aria-label="Kapcsolatfelvételi űrlap">
+                <div className="mb-1">
+                  <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1 sm:mb-2 flex items-center">
+                    <span className="w-8 sm:w-10 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mr-2 sm:mr-3"></span>
                     Írj nekem!
                   </h2>
                   <p className="text-gray-600 leading-relaxed text-sm">
