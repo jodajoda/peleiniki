@@ -31,42 +31,51 @@ const Navigation = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-2' : 'bg-white/95 py-4'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? 'bg-white/98 backdrop-blur-md shadow-soft-lg py-2'
+          : 'bg-gradient-to-b from-white via-white/95 to-white/90 py-4'
       }`}
     >
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center">
-            <img
-              src={getAssetPath('assets/icons/pnfotos.png')}
-              alt="Pelei Niki Fotós"
-              className={`transition-all duration-300 ${
-                isScrolled ? 'h-12' : 'h-16'
-              }`}
-            />
+          <Link
+            to="/"
+            className="flex items-center group -ml-2 p-2 rounded-lg"
+            aria-label="Kezdőlap"
+          >
+            <div className="relative">
+              <img
+                src={getAssetPath('assets/icons/pnfotos.png')}
+                alt="Pelei Niki Fotós"
+                className={`transition-all duration-500 ${
+                  isScrolled ? 'h-10 sm:h-12' : 'h-12 sm:h-16'
+                } group-hover:scale-105`}
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-accent-warm/0 via-accent-warm/10 to-accent-warm/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg blur-xl" />
+            </div>
           </Link>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu button - Enhanced touch target */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
+            className="lg:hidden p-3 -mr-2 rounded-lg hover:bg-primary-50 active:bg-primary-100 transition-all duration-200 group min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Menü megnyitása"
             aria-expanded={isOpen}
           >
             <div className="w-6 h-5 flex flex-col justify-between">
               <span
-                className={`block h-0.5 w-full bg-gray-800 transition-all duration-300 ${
+                className={`block h-0.5 w-full bg-gray-800 rounded-full transition-all duration-300 group-hover:bg-primary-700 ${
                   isOpen ? 'rotate-45 translate-y-2' : ''
                 }`}
               />
               <span
-                className={`block h-0.5 w-full bg-gray-800 transition-all duration-300 ${
+                className={`block h-0.5 w-full bg-gray-800 rounded-full transition-all duration-300 group-hover:bg-primary-700 ${
                   isOpen ? 'opacity-0' : ''
                 }`}
               />
               <span
-                className={`block h-0.5 w-full bg-gray-800 transition-all duration-300 ${
+                className={`block h-0.5 w-full bg-gray-800 rounded-full transition-all duration-300 group-hover:bg-primary-700 ${
                   isOpen ? '-rotate-45 -translate-y-2' : ''
                 }`}
               />
@@ -74,47 +83,93 @@ const Navigation = () => {
           </button>
 
           {/* Desktop menu */}
-          <ul className="hidden lg:flex items-center space-x-8">
-            {navLinks.map(({ path, label }) => (
-              <li key={path}>
-                <Link
-                  to={path}
-                  className={`text-base font-medium transition-colors hover:text-primary-600 ${
-                    location.pathname === path
-                      ? 'text-primary-700 border-b-2 border-primary-700 pb-1'
-                      : 'text-gray-700'
-                  }`}
-                  aria-current={location.pathname === path ? 'page' : undefined}
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
+          <ul className="hidden lg:flex items-center space-x-2">
+            {navLinks.map(({ path, label }) => {
+              const isActive = location.pathname === path;
+              return (
+                <li key={path}>
+                  <Link
+                    to={path}
+                    className={`relative px-4 py-2 text-base font-medium transition-all duration-300 rounded-lg group ${
+                      isActive
+                        ? 'text-primary-800'
+                        : 'text-gray-700 hover:text-primary-700'
+                    }`}
+                    aria-current={isActive ? 'page' : undefined}
+                  >
+                    <span className="relative z-10">{label}</span>
+
+                    {/* Hover background effect */}
+                    <span
+                      className={`absolute inset-0 bg-gradient-to-r from-primary-50 to-accent-warm/20 rounded-lg transition-all duration-300 ${
+                        isActive
+                          ? 'opacity-100 scale-100'
+                          : 'opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
+                      }`}
+                    />
+
+                    {/* Active indicator */}
+                    {isActive && (
+                      <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-gradient-to-r from-primary-600 to-accent-warm rounded-full" />
+                    )}
+
+                    {/* Hover underline effect */}
+                    <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-primary-500 to-accent-warm rounded-full transition-all duration-300 ${
+                      isActive
+                        ? 'w-0'
+                        : 'w-0 group-hover:w-full'
+                    }`} />
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile menu - Optimized for touch */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isOpen ? 'max-h-96 mt-4' : 'max-h-0'
+          className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${
+            isOpen ? 'max-h-[32rem] mt-4 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <ul className="flex flex-col space-y-2 pb-4">
-            {navLinks.map(({ path, label }) => (
-              <li key={path}>
-                <Link
-                  to={path}
-                  className={`block px-4 py-2 rounded-md text-base font-medium transition-colors ${
-                    location.pathname === path
-                      ? 'bg-primary-100 text-primary-800'
-                      : 'text-gray-700 hover:bg-gray-100'
+          <ul className="flex flex-col space-y-2 pb-4 border-t border-primary-100 pt-4">
+            {navLinks.map(({ path, label }, index) => {
+              const isActive = location.pathname === path;
+              return (
+                <li
+                  key={path}
+                  className={`transition-all duration-300 ${
+                    isOpen
+                      ? 'translate-x-0 opacity-100'
+                      : '-translate-x-4 opacity-0'
                   }`}
-                  aria-current={location.pathname === path ? 'page' : undefined}
+                  style={{ transitionDelay: isOpen ? `${index * 50}ms` : '0ms' }}
                 >
-                  {label}
-                </Link>
-              </li>
-            ))}
+                  <Link
+                    to={path}
+                    onClick={() => setIsOpen(false)}
+                    className={`relative block px-4 py-4 rounded-lg text-base font-medium transition-all duration-200 group overflow-hidden min-h-[48px] flex items-center ${
+                      isActive
+                        ? 'bg-gradient-to-r from-primary-100 to-accent-warm/30 text-primary-900 shadow-soft'
+                        : 'text-gray-700 hover:bg-primary-50 active:bg-primary-100'
+                    }`}
+                    aria-current={isActive ? 'page' : undefined}
+                  >
+                    <span className="relative z-10 flex items-center">
+                      {isActive && (
+                        <span className="w-1.5 h-1.5 bg-primary-600 rounded-full mr-3 animate-pulse" />
+                      )}
+                      {label}
+                    </span>
+
+                    {/* Hover effect */}
+                    {!isActive && (
+                      <span className="absolute inset-0 bg-gradient-to-r from-primary-50 to-accent-warm/20 translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
+                    )}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </nav>
