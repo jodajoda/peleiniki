@@ -1,8 +1,35 @@
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SEO from '../components/SEO';
 
 const Packages = () => {
   const navigate = useNavigate();
+  const [isVisible, setIsVisible] = useState(false);
+  const [visibleCards, setVisibleCards] = useState(new Set());
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    setIsVisible(true);
+
+    // Intersection Observer for card animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = entry.target.getAttribute('data-card-index');
+            setVisibleCards((prev) => new Set([...prev, parseInt(index)]));
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    cardRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const handlePackageClick = (packageTitle) => {
     const message = `Szia! Érdeklődnék a "${packageTitle}" csomaggal kapcsolatban. Kérek további információt!`;
@@ -46,7 +73,7 @@ const Packages = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <div className="min-h-screen pt-24 pb-16 relative overflow-hidden">
       <SEO
         title="Fotózási Csomagok"
         description="Válassz a fotózási csomagjaim közül - játszótéri fotózás, családi fotózás, kismama fotózás, keresztelő és egyedi rendezvények. Árak és részletek."
@@ -55,85 +82,164 @@ const Packages = () => {
         ogImageAlt="Fotózási Csomagok és Árak"
         canonicalUrl="/packages"
       />
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in text-gradient-primary pb-2">
-          Fotózási Csomagok
-        </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {packages.map((pkg, index) => (
-            <article
-              key={pkg.id}
-              onClick={() => handlePackageClick(pkg.title)}
-              className="bg-gradient-to-br from-white via-primary-50 to-gray-50 border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer animate-fade-in hover:scale-[1.02]"
-              style={{
-                animationDelay: `${index * 0.1}s`,
-                animationFillMode: 'both'
-              }}
-            >
-              <h2 className="text-2xl font-bold text-primary-800 mb-3">
-                {pkg.title}
-              </h2>
-              <p className="text-gray-600 mb-6">{pkg.description}</p>
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-orange-200 to-amber-300 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-gradient-to-tl from-amber-200 to-orange-300 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-orange-100 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
+      </div>
 
-              {pkg.duration || pkg.photos ? (
-                <ul className="space-y-3 mb-6">
-                  {pkg.duration && (
-                    <li className="flex items-start">
-                      <svg
-                        className="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <div>
-                        <strong className="text-gray-900">Időtartam:</strong>{' '}
-                        <span className="text-gray-700">{pkg.duration}</span>
-                      </div>
-                    </li>
-                  )}
-                  {pkg.photos && (
-                    <li className="flex items-start">
-                      <svg
-                        className="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <div>
-                        <strong className="text-gray-900">Képek száma:</strong>{' '}
-                        <span className="text-gray-700">{pkg.photos}</span>
-                      </div>
-                    </li>
-                  )}
-                </ul>
-              ) : null}
+      {/* Decorative pattern overlay */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="packages-dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+              <circle cx="20" cy="20" r="2" fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#packages-dots)" />
+        </svg>
+      </div>
 
-              <div className="border-t border-gray-200 pt-4">
-                <p className="text-3xl font-bold text-primary-700" aria-label={`Ár: ${pkg.price}`}>
-                  {pkg.price}
-                </p>
-                {pkg.note && (
-                  <p className="text-sm text-gray-600 mt-2">{pkg.note}</p>
-                )}
-              </div>
-            </article>
-          ))}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Enhanced Header */}
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 md:mb-12">
+          <div className={`inline-block mb-2 sm:mb-3 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <span className="text-primary-600 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase font-semibold">Áraim</span>
+          </div>
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-4 text-gray-900 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            Fotózási Csomagok
+          </h1>
+          <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-3 sm:mb-4 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
+          <p className={`text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            Válassz a fotózási csomagjaim közül, és örökítsük meg együtt a családod legszebb pillanatait
+          </p>
         </div>
 
-        <p className="text-center text-sm text-gray-600 mt-12 italic animate-fade-in">
-          * Az árak a választott helyszíntől függően változhatnak.
-        </p>
+        {/* Package Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
+          {packages.map((pkg, index) => {
+            const isCardVisible = visibleCards.has(index);
+            return (
+              <article
+                key={pkg.id}
+                ref={(el) => (cardRefs.current[index] = el)}
+                data-card-index={index}
+                onClick={() => handlePackageClick(pkg.title)}
+                className={`relative group bg-gradient-to-br from-white via-primary-50 to-white border border-gray-200 rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 shadow-soft hover:shadow-soft-lg transition-all duration-700 cursor-pointer overflow-hidden ${
+                  isCardVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                }`}
+                style={{
+                  transitionDelay: `${index * 0.15}s`
+                }}
+              >
+                {/* Hover gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-amber-50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+
+                {/* Decorative corner accent */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-100 to-amber-100 opacity-0 group-hover:opacity-20 rounded-bl-full transition-all duration-700 transform translate-x-16 -translate-y-16 group-hover:translate-x-0 group-hover:translate-y-0"></div>
+
+                <div className="relative z-10 flex flex-col h-full">
+                  {/* Package Title */}
+                  <div className="mb-3 sm:mb-4">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-800 mb-2 group-hover:text-primary-900 transition-colors duration-500">
+                      {pkg.title}
+                    </h2>
+                    <div className="w-10 sm:w-12 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full transform origin-left transition-all duration-500 group-hover:w-16 sm:group-hover:w-20"></div>
+                  </div>
+
+                  <p className="text-gray-600 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 md:mb-8 leading-relaxed">{pkg.description}</p>
+
+                  {/* Package Details */}
+                  {pkg.duration || pkg.photos ? (
+                    <ul className="space-y-3 sm:space-y-4 mb-5 sm:mb-6 md:mb-8">
+                      {pkg.duration && (
+                        <li className="flex items-start group/item">
+                          <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-500">
+                            <svg
+                              className="w-4 h-4 sm:w-5 sm:h-5 text-primary-600"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          </div>
+                          <div className="flex-1">
+                            <strong className="text-gray-900 text-sm sm:text-base block mb-1">Időtartam</strong>
+                            <span className="text-gray-700 text-sm sm:text-base">{pkg.duration}</span>
+                          </div>
+                        </li>
+                      )}
+                      {pkg.photos && (
+                        <li className="flex items-start group/item">
+                          <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-500">
+                            <svg
+                              className="w-4 h-4 sm:w-5 sm:h-5 text-primary-600"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          </div>
+                          <div className="flex-1">
+                            <strong className="text-gray-900 text-sm sm:text-base block mb-1">Képek száma</strong>
+                            <span className="text-gray-700 text-sm sm:text-base">{pkg.photos}</span>
+                          </div>
+                        </li>
+                      )}
+                    </ul>
+                  ) : null}
+
+                  {/* Spacer to push price to bottom */}
+                  <div className="flex-grow"></div>
+
+                  {/* Call to Action Hint */}
+                  <div className="mb-3 sm:mb-4 text-xs sm:text-sm text-primary-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    Kattints a részletekért →
+                  </div>
+
+                  {/* Price Section - Now at the bottom */}
+                  <div className="border-t border-gray-200 pt-4 sm:pt-5 md:pt-6 pb-1">
+                    <div className="flex items-baseline justify-between">
+                      <div className="pb-1">
+                        <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wide mb-1">Ár</p>
+                        <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent leading-tight pb-2" aria-label={`Ár: ${pkg.price}`}>
+                          {pkg.price}
+                        </p>
+                      </div>
+                      <div className="text-primary-600 group-hover:translate-x-2 transition-transform duration-500">
+                        <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                      </div>
+                    </div>
+                    {pkg.note && (
+                      <p className="text-xs sm:text-sm text-gray-600 mt-2 sm:mt-3 italic">{pkg.note}</p>
+                    )}
+                  </div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+
+        {/* Bottom Note */}
+        <div className={`text-center mt-8 sm:mt-12 md:mt-16 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="inline-block bg-gradient-to-r from-orange-50 to-amber-50 rounded-full px-4 sm:px-6 py-2 sm:py-3 border border-orange-200">
+            <p className="text-xs sm:text-sm text-gray-700 italic">
+              * Az árak a választott helyszíntől függően változhatnak
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
