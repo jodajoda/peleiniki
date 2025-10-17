@@ -5,11 +5,6 @@
 @layer base {
   body {
     @apply font-sans bg-white text-gray-900;
-    /* Enable smooth scrolling and hardware acceleration on mobile */
-    -webkit-overflow-scrolling: touch;
-    /* Force GPU acceleration for smoother scrolling */
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
   }
 
   /* Enhanced Focus Indicators for Accessibility */
@@ -330,43 +325,5 @@
   /* Prevent scroll when lightbox/modal is open */
   body.no-scroll {
     overflow: hidden !important;
-  }
-
-  /* Mobile Scrolling Optimizations */
-  @media (max-width: 768px) {
-    /* Enable hardware acceleration for all scrollable elements */
-    * {
-      -webkit-overflow-scrolling: touch;
-      -webkit-transform: translateZ(0);
-      transform: translateZ(0);
-    }
-
-    /* Optimize image rendering on mobile */
-    img {
-      will-change: transform;
-      transform: translateZ(0);
-      -webkit-transform: translateZ(0);
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-    }
-
-    /* Optimize container scrolling */
-    .min-h-screen,
-    main,
-    section {
-      -webkit-overflow-scrolling: touch;
-      transform: translate3d(0, 0, 0);
-      -webkit-transform: translate3d(0, 0, 0);
-    }
-  }
-
-  /* Improve performance for transformed elements */
-  .transition-transform,
-  .hover-zoom,
-  .hover-lift,
-  .hover-tilt {
-    will-change: transform;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
   }
 }
