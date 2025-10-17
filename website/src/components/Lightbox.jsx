@@ -133,11 +133,11 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
       {/* Close button */}
       <button
         onClick={handleClose}
-        className="absolute top-4 right-4 text-white hover:text-gray-300 transition-all duration-300 z-10 hover:scale-110"
+        className="absolute top-2 sm:top-4 right-2 sm:right-4 text-white hover:text-gray-300 transition-all duration-300 z-10 hover:scale-110 p-2 sm:p-0"
         aria-label="Bezárás"
       >
         <svg
-          className="w-8 h-8"
+          className="w-6 h-6 sm:w-8 sm:h-8"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -158,11 +158,11 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
             e.stopPropagation();
             handlePrev();
           }}
-          className="absolute left-4 text-white hover:text-gray-300 transition-all duration-300 z-10 hover:scale-110"
+          className="absolute left-2 sm:left-4 text-white hover:text-gray-300 transition-all duration-300 z-10 hover:scale-110 p-2 sm:p-0"
           aria-label="Előző kép"
         >
           <svg
-            className="w-10 h-10"
+            className="w-8 h-8 sm:w-10 sm:h-10"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -179,7 +179,7 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
 
       {/* Image */}
       <div
-        className="lightbox-content max-w-7xl max-h-[90vh] p-4 select-none relative"
+        className="lightbox-content w-full max-w-7xl max-h-[90vh] px-2 sm:px-4 py-4 select-none relative"
         onClick={(e) => e.stopPropagation()}
         onContextMenu={(e) => e.preventDefault()}
         role="img"
@@ -190,7 +190,7 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
           src={getAssetPath(currentImage.src)}
           alt={currentImage.alt}
           draggable={false}
-          className={`max-w-full max-h-[90vh] object-contain transition-all duration-300 ${
+          className={`w-full h-auto max-h-[85vh] sm:max-h-[90vh] object-contain transition-all duration-300 ${
             direction === 'left'
               ? 'animate-slide-in-left'
               : direction === 'right'
@@ -200,7 +200,7 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
           style={{ userSelect: 'none' }}
         />
         {/* Copyright watermark */}
-        <div className="absolute bottom-8 right-8 text-white/60 text-sm font-medium pointer-events-none select-none backdrop-blur-sm bg-black/30 px-3 py-2 rounded">
+        <div className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 text-white/60 text-xs sm:text-sm font-medium pointer-events-none select-none backdrop-blur-sm bg-black/30 px-2 sm:px-3 py-1 sm:py-2 rounded">
           © Pelei Niki
         </div>
       </div>
@@ -212,11 +212,11 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
             e.stopPropagation();
             handleNext();
           }}
-          className="absolute right-4 text-white hover:text-gray-300 transition-all duration-300 z-10 hover:scale-110"
+          className="absolute right-2 sm:right-4 text-white hover:text-gray-300 transition-all duration-300 z-10 hover:scale-110 p-2 sm:p-0"
           aria-label="Következő kép"
         >
           <svg
-            className="w-10 h-10"
+            className="w-8 h-8 sm:w-10 sm:h-10"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -233,7 +233,7 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
 
       {/* Counter and EXIF data */}
       <div
-        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm text-center space-y-2"
+        className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 text-white text-xs sm:text-sm text-center space-y-1 sm:space-y-2"
         role="status"
         aria-live="polite"
         aria-atomic="true"
@@ -241,7 +241,7 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
         <div className="font-medium">
           {currentIndex + 1} / {images.length}
         </div>
-        <ImageDetails imageSrc={currentImage.src} className="text-white/80" />
+        <ImageDetails imageSrc={currentImage.src} className="text-white/80 text-xs sm:text-sm" />
       </div>
     </div>
   );

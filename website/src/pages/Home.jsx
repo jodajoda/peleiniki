@@ -140,49 +140,49 @@ const Home = () => {
 
         {/* Hero Content */}
         <div className="relative h-full flex items-center justify-center">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container mx-auto px-4 sm:px-6 text-center">
             {/* Decorative line above title */}
-            <div className={`flex items-center justify-center mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <div className="h-px w-12 bg-gradient-to-r from-transparent to-white/50"></div>
-              <div className="mx-4 text-white/80 text-sm tracking-[0.3em] uppercase font-light">Természetes fényképészet</div>
-              <div className="h-px w-12 bg-gradient-to-l from-transparent to-white/50"></div>
+            <div className={`flex items-center justify-center mb-4 sm:mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+              <div className="h-px w-8 sm:w-12 bg-gradient-to-r from-transparent to-white/50"></div>
+              <div className="mx-2 sm:mx-4 text-white/80 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase font-light">Természetes fényképészet</div>
+              <div className="h-px w-8 sm:w-12 bg-gradient-to-l from-transparent to-white/50"></div>
             </div>
 
-            <h1 className={`text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 drop-shadow-2xl transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <h1 className={`text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-4 sm:mb-6 drop-shadow-2xl transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <span className="inline-block bg-gradient-to-r from-white via-white to-white/90 bg-clip-text text-transparent">
                 Pelei Niki
               </span>
               <br />
-              <span className="text-3xl md:text-5xl lg:text-6xl font-light tracking-wide text-white/95">
+              <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-light tracking-wide text-white/95">
                 Fotográfus
               </span>
             </h1>
 
-            <p className={`text-xl md:text-3xl text-white/95 max-w-4xl mx-auto mb-4 drop-shadow-lg font-light leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <p className={`text-lg sm:text-xl md:text-3xl text-white/95 max-w-4xl mx-auto mb-3 sm:mb-4 drop-shadow-lg font-light leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               Családi pillanatok megörökítése
             </p>
-            <p className={`text-base md:text-xl text-white/85 max-w-3xl mx-auto drop-shadow-md font-light transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <p className={`text-sm sm:text-base md:text-xl text-white/85 max-w-3xl mx-auto drop-shadow-md font-light transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               természetes, spontán környezetben
             </p>
 
-            <div className={`mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className={`mt-8 sm:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <Link
                 to="/contact"
-                className="group relative inline-flex items-center gap-2 bg-white text-gray-900 px-10 py-5 rounded-full font-semibold text-lg hover:bg-white transition-all duration-500 shadow-2xl hover:shadow-glow-warm hover:scale-105 overflow-hidden"
+                className="group relative inline-flex items-center gap-2 bg-white text-gray-900 px-8 sm:px-10 py-4 sm:py-5 rounded-full font-semibold text-base sm:text-lg hover:bg-white transition-all duration-500 shadow-2xl hover:shadow-glow-warm hover:scale-105 overflow-hidden"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-accent-warm/20 to-accent-gold/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
                 <span className="relative">Kapcsolatfelvétel</span>
-                <svg className="relative w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="relative w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
 
               <Link
                 to="/portfolio"
-                className="group inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white border-2 border-white/50 px-10 py-5 rounded-full font-semibold text-lg hover:bg-white/20 hover:border-white transition-all duration-300 shadow-lg hover:scale-105"
+                className="group inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white border-2 border-white/50 px-8 sm:px-10 py-4 sm:py-5 rounded-full font-semibold text-base sm:text-lg hover:bg-white/20 hover:border-white transition-all duration-300 shadow-lg hover:scale-105"
               >
                 <span>Portfólió</span>
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </Link>
@@ -202,19 +202,19 @@ const Home = () => {
       </section>
 
       {/* Preview Sections */}
-      <section className="container mx-auto px-4 py-20 md:py-28">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-28">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-block mb-4">
-            <span className="text-primary-600 text-sm tracking-[0.3em] uppercase font-semibold">Ismerd meg munkáimat</span>
+        <div className="text-center mb-12 sm:mb-14 md:mb-16">
+          <div className="inline-block mb-3 sm:mb-4">
+            <span className="text-primary-600 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase font-semibold">Ismerd meg munkáimat</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3 sm:mb-4">
             Fedezd fel
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-accent-warm to-accent-gold mx-auto rounded-full"></div>
+          <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-accent-warm to-accent-gold mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">
           {previewSections.map((section, index) => (
             <Link
               key={section.id}
@@ -223,7 +223,7 @@ const Home = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Image Container */}
-              <div className="relative h-96 md:h-[28rem] overflow-hidden">
+              <div className="relative h-80 sm:h-96 md:h-[28rem] overflow-hidden">
                 <img
                   src={getAssetPath(section.image)}
                   alt={section.title}
@@ -236,31 +236,31 @@ const Home = () => {
               </div>
 
               {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+              <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 md:p-8 text-white">
                 {/* Category badge */}
-                <div className="inline-block mb-3 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-semibold tracking-wider uppercase opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+                <div className="inline-block mb-2 sm:mb-3 px-2 sm:px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-semibold tracking-wider uppercase opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
                   {section.id === 1 ? 'Élmény' : section.id === 2 ? 'Galéria' : section.id === 3 ? 'Történet' : 'Árak'}
                 </div>
 
-                <h3 className="text-3xl md:text-4xl font-bold mb-3 transform group-hover:translate-y-[-6px] transition-transform duration-500">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 transform group-hover:translate-y-[-6px] transition-transform duration-500">
                   {section.title}
                 </h3>
 
-                <p className="text-white/90 text-base md:text-lg leading-relaxed mb-4 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+                <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed mb-3 sm:mb-4 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500 delay-75">
                   {section.description}
                 </p>
 
                 {/* Enhanced Arrow with background */}
-                <div className="inline-flex items-center gap-3 px-5 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/30 group-hover:bg-white group-hover:text-gray-900 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
-                  <span className="text-sm font-semibold tracking-wide">Megnézem</span>
-                  <svg className="w-5 h-5 transform group-hover:translate-x-2 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-5 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/30 group-hover:bg-white group-hover:text-gray-900 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
+                  <span className="text-xs sm:text-sm font-semibold tracking-wide">Megnézem</span>
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 transform group-hover:translate-x-2 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </div>
               </div>
 
               {/* Number indicator */}
-              <div className="absolute top-6 left-6 w-14 h-14 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white font-bold text-xl opacity-0 group-hover:opacity-100 transform scale-90 group-hover:scale-100 transition-all duration-500">
+              <div className="absolute top-4 sm:top-6 left-4 sm:left-6 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white font-bold text-lg sm:text-xl opacity-0 group-hover:opacity-100 transform scale-90 group-hover:scale-100 transition-all duration-500">
                 {section.id}
               </div>
             </Link>
@@ -269,7 +269,7 @@ const Home = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="relative bg-gradient-to-br from-primary-50 via-white to-primary-100 py-24 md:py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary-50 via-white to-primary-100 py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-accent-warm to-accent-gold rounded-full blur-3xl animate-float"></div>
@@ -289,35 +289,35 @@ const Home = () => {
           </svg>
         </div>
 
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           {/* Icon or decorative element */}
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-orange-300 to-amber-400 mb-8 shadow-lg animate-bounce-in">
-            <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-orange-300 to-amber-400 mb-6 sm:mb-8 shadow-lg animate-bounce-in">
+            <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">
             Foglalj időpontot!
           </h2>
 
-          <p className="text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-3 sm:mb-4 max-w-3xl mx-auto leading-relaxed">
             Örökítsük meg együtt családod különleges pillanatait
           </p>
 
-          <p className="text-base md:text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-8 sm:mb-10 max-w-2xl mx-auto">
             Természetes, spontán fotózás Budapest legszebb helyszínein
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-10 sm:mb-12">
             <Link
               to="/contact"
-              className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-orange-400 to-amber-400 text-white px-10 py-5 rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 overflow-hidden"
+              className="group relative inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-orange-400 to-amber-400 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 overflow-hidden"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-amber-400 to-orange-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-              <svg className="relative w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="relative w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
               <span className="relative">Kapcsolatfelvétel</span>
@@ -325,9 +325,9 @@ const Home = () => {
 
             <Link
               to="/packages"
-              className="group inline-flex items-center gap-3 bg-white text-gray-900 border-2 border-gray-300 px-10 py-5 rounded-full font-bold text-lg hover:border-orange-300 hover:text-orange-500 transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg"
+              className="group inline-flex items-center gap-2 sm:gap-3 bg-white text-gray-900 border-2 border-gray-300 px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg hover:border-orange-300 hover:text-orange-500 transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
               </svg>
               <span>Csomagok megtekintése</span>
@@ -335,25 +335,25 @@ const Home = () => {
           </div>
 
           {/* Trust indicators */}
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 text-gray-600">
+          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-12 text-gray-600">
             <div className="flex items-center gap-2">
-              <svg className="w-6 h-6 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
               </svg>
-              <span className="text-sm md:text-base font-medium">Elégedett családok</span>
+              <span className="text-xs sm:text-sm md:text-base font-medium">Elégedett családok</span>
             </div>
             <div className="flex items-center gap-2">
-              <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              <span className="text-sm md:text-base font-medium">Budapest és környéke</span>
+              <span className="text-xs sm:text-sm md:text-base font-medium">Budapest és környéke</span>
             </div>
             <div className="flex items-center gap-2">
-              <svg className="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span className="text-sm md:text-base font-medium">Rugalmas időpontok</span>
+              <span className="text-xs sm:text-sm md:text-base font-medium">Rugalmas időpontok</span>
             </div>
           </div>
         </div>

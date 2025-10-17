@@ -98,22 +98,22 @@ const Photoshooting = () => {
         canonicalUrl="/photoshooting"
       />
       {/* Enhanced Header */}
-      <div className="container mx-auto px-4 mb-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-10 md:mb-12">
         <div className="text-center max-w-3xl mx-auto">
-          <div className={`inline-block mb-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <span className="text-primary-600 text-sm tracking-[0.3em] uppercase font-semibold">Hogyan dolgozom</span>
+          <div className={`inline-block mb-2 sm:mb-3 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <span className="text-primary-600 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase font-semibold">Hogyan dolgozom</span>
           </div>
-          <h1 className={`text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gray-900 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-4 text-gray-900 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             A fotózás velem
           </h1>
-          <div className={`w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-6 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
-          <p className={`text-lg md:text-xl text-gray-600 leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-3 sm:mb-4 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
+          <p className={`text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Lazán, természetesen, sok nevetéssel - fedezd fel, hogyan zajlik egy családi fotózás
           </p>
         </div>
       </div>
 
-      <div className="space-y-20">
+      <div className="space-y-8 sm:space-y-10 md:space-y-12">
         {sections.map((section, sectionIndex) => {
           const isSectionVisible = visibleSections.has(sectionIndex);
           return (
@@ -121,9 +121,9 @@ const Photoshooting = () => {
             key={section.id}
             ref={(el) => (sectionRefs.current[sectionIndex] = el)}
             data-section-index={sectionIndex}
-            className="relative bg-gradient-to-br from-primary-50 via-white to-primary-100 overflow-hidden py-20 md:py-24"
+            className="relative bg-gradient-to-br from-primary-50 via-white to-primary-100 overflow-hidden py-8 sm:py-10 md:py-12 lg:py-16"
           >
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               {/* Enhanced floating blur elements */}
               <div className="absolute inset-0 opacity-15 pointer-events-none">
                 <div className="absolute top-10 left-10 w-80 h-80 bg-gradient-to-br from-orange-200 to-amber-300 rounded-full blur-3xl animate-float"></div>
@@ -143,14 +143,14 @@ const Photoshooting = () => {
                 </svg>
               </div>
 
-              <div className="text-center mb-12 relative z-10">
-                <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 transition-all duration-1000 ${isSectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className="text-center mb-6 sm:mb-7 md:mb-8 relative z-10">
+                <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 transition-all duration-1000 ${isSectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                   {section.title}
                 </h2>
-                <div className={`w-16 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mx-auto transition-all duration-1000 delay-200 ${isSectionVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
+                <div className={`w-12 sm:w-14 md:w-16 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mx-auto transition-all duration-1000 delay-200 ${isSectionVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
               </div>
 
-              <div className={`grid lg:grid-cols-2 gap-12 items-center relative z-10 ${sectionIndex % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+              <div className={`grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center relative z-10 ${sectionIndex % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                 {/* Image - alternating order */}
                 <div className={`${sectionIndex % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
                   <div className={`group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-2xl transition-all duration-1000 transform hover:scale-[1.02] delay-300 ${isSectionVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${sectionIndex % 2 === 1 ? 'translate-x-8' : '-translate-x-8'}`}`}>
@@ -165,7 +165,7 @@ const Photoshooting = () => {
                 </div>
 
                 {/* Text content - alternating order */}
-                <div className={`space-y-6 ${sectionIndex % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
+                <div className={`space-y-4 sm:space-y-5 md:space-y-6 ${sectionIndex % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
                   {section.content.map((paragraph, index) => {
                     const paragraphDelay = 500 + (index * 200);
                     // Check if this is the last section (Készen állsz?) and first paragraph
@@ -173,7 +173,7 @@ const Photoshooting = () => {
                       // Split at "vedd fel velem a kapcsolatot"
                       const parts = paragraph.split('vedd fel velem a kapcsolatot');
                       return (
-                        <p key={index} className={`text-base md:text-lg text-gray-700 leading-relaxed transition-all duration-1000 ${isSectionVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${sectionIndex % 2 === 1 ? '-translate-x-8' : 'translate-x-8'}`}`} style={{ transitionDelay: `${paragraphDelay}ms` }}>
+                        <p key={index} className={`text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed transition-all duration-1000 ${isSectionVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${sectionIndex % 2 === 1 ? '-translate-x-8' : 'translate-x-8'}`}`} style={{ transitionDelay: `${paragraphDelay}ms` }}>
                           {parts[0]}
                           <Link
                             to="/contact"
@@ -185,7 +185,7 @@ const Photoshooting = () => {
                         </p>
                       );
                     }
-                    return <p key={index} className={`text-base md:text-lg text-gray-700 leading-relaxed transition-all duration-1000 ${isSectionVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${sectionIndex % 2 === 1 ? '-translate-x-8' : 'translate-x-8'}`}`} style={{ transitionDelay: `${paragraphDelay}ms` }}>{paragraph}</p>;
+                    return <p key={index} className={`text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed transition-all duration-1000 ${isSectionVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${sectionIndex % 2 === 1 ? '-translate-x-8' : 'translate-x-8'}`}`} style={{ transitionDelay: `${paragraphDelay}ms` }}>{paragraph}</p>;
                   })}
                 </div>
               </div>
@@ -195,7 +195,7 @@ const Photoshooting = () => {
         })}
 
         {/* Enhanced CTA */}
-        <div className="relative mt-16 bg-gradient-to-br from-primary-50 via-white to-primary-100 py-20 md:py-24 overflow-hidden">
+        <div className="relative mt-12 sm:mt-14 md:mt-16 bg-gradient-to-br from-primary-50 via-white to-primary-100 py-16 sm:py-20 md:py-24 overflow-hidden">
           {/* Animated background elements */}
           <div className="absolute inset-0 opacity-15 pointer-events-none">
             <div className="absolute top-10 left-10 w-80 h-80 bg-gradient-to-br from-orange-200 to-amber-300 rounded-full blur-3xl animate-float"></div>
@@ -215,26 +215,26 @@ const Photoshooting = () => {
             </svg>
           </div>
 
-          <div className="container mx-auto px-4 text-center relative z-10">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-orange-300 to-amber-400 mb-8 shadow-lg">
-              <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-orange-300 to-amber-400 mb-6 sm:mb-8 shadow-lg">
+              <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
               Készen állsz a fotózásra?
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto">
               Foglalj időpontot még ma, és örökítsük meg együtt családod különleges pillanatait!
             </p>
 
             <Link
               to="/contact"
-              className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-orange-400 to-amber-400 text-white px-10 py-5 rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 overflow-hidden"
+              className="group relative inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-orange-400 to-amber-400 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 overflow-hidden"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-amber-400 to-orange-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-              <svg className="relative w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="relative w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
               <span className="relative">Kapcsolatfelvétel</span>
