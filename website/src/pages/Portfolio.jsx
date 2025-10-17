@@ -150,7 +150,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <div className="min-h-screen pt-28 sm:pt-32 pb-16">
       <SEO
         title="Portfólió"
         description="Tekintse meg korábbi munkáimat - családfotózás, gyermekfotózás, kismama fotózás, keresztelő, szülinap és különleges családi pillanatok."

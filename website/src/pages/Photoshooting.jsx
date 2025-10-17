@@ -88,7 +88,7 @@ const Photoshooting = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <div className="min-h-screen pt-28 sm:pt-32 pb-16">
       <SEO
         title="A fotózás velem"
         description="Lazán, természetesen, sok nevetéssel - fedezd fel, hogyan zajlik egy családi fotózás. Őszinte pillanatok otthon vagy szabadban."

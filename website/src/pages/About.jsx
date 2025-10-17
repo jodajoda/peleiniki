@@ -28,7 +28,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <div className="min-h-screen pt-28 sm:pt-32 pb-16">
       <SEO
         title="Rólam"
         description="Pelei Niki vagyok, családi és gyermekfotós. Ismerd meg jobban a történetemet és azt, miért szeretem megörökíteni a családok őszinte pillanatait."

@@ -73,7 +73,7 @@ const Packages = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-24 pb-16 relative overflow-hidden">
+    <div className="min-h-screen pt-28 sm:pt-32 pb-16 relative overflow-hidden">
       <SEO
         title="Fotózási Csomagok"
         description="Válassz a fotózási csomagjaim közül - játszótéri fotózás, családi fotózás, kismama fotózás, keresztelő és egyedi rendezvények. Árak és részletek."

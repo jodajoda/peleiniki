@@ -126,7 +126,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen pt-24 pb-16 relative overflow-hidden">
+    <div className="min-h-screen pt-28 sm:pt-32 pb-16 relative overflow-hidden">
       <SEO
         title="Kapcsolat"
         description="Vedd fel velem a kapcsolatot fotózási időpont egyeztetéséhez. Elérhető vagyok emailen és közösségi médiában. Várom megkeresésed!"

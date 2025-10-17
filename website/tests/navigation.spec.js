@@ -6,8 +6,8 @@ test.describe('Navigation Component', () => {
   });
 
   test('should display logo and navigation links', async ({ page }) => {
-    // Check if logo is visible
-    const logo = page.locator('img[alt="Pelei Niki Fotós"]');
+    // Check if logo is visible in header (not footer)
+    const logo = page.locator('header img[alt="Pelei Niki Fotós"]');
     await expect(logo).toBeVisible();
 
     // Check if all navigation links are present (desktop view)
@@ -52,7 +52,7 @@ test.describe('Navigation Component', () => {
   });
 
   test('should shrink header on scroll', async ({ page }) => {
-    const logo = page.locator('img[alt="Pelei Niki Fotós"]');
+    const logo = page.locator('header img[alt="Pelei Niki Fotós"]');
 
     // Get initial logo height
     const initialBox = await logo.boundingBox();

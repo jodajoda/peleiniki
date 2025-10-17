@@ -152,8 +152,8 @@ test.describe('Page Routing and Navigation', () => {
       'Kapcsolat',
     ];
 
-    // Check navigation on homepage
-    const logo = page.locator('img[alt="Pelei Niki Fotós"]');
+    // Check navigation on homepage (target header logo, not footer logo)
+    const logo = page.locator('header img[alt="Pelei Niki Fotós"]');
     await expect(logo).toBeVisible({ timeout: 10000 });
     await expect(desktopNav.getByRole('link', { name: 'Kezdőlap' })).toBeVisible({ timeout: 10000 });
 

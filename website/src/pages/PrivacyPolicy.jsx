@@ -2,7 +2,7 @@ import SEO from '../components/SEO';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <div className="min-h-screen pt-28 sm:pt-32 pb-16">
       <SEO
         title="Adatkezelési Tájékoztató"
         description="Pelei Niki Fotográfus adatvédelmi és adatkezelési tájékoztatója. GDPR megfelelés, személyes adatok kezelése, fotózással kapcsolatos jogok."
