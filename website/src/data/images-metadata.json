@@ -815,6 +815,12 @@
         "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-6-1200w.webp",
         "jpegSize": 291753,
         "webpSize": 117266
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-6-1600w.jpg",
+        "webp": "/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-6-1600w.webp",
+        "jpegSize": 366139,
+        "webpSize": 145488
       }
     }
   },
@@ -842,6 +848,12 @@
         "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-1-1200w.webp",
         "jpegSize": 302740,
         "webpSize": 145846
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-1-1600w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-1-1600w.webp",
+        "jpegSize": 386839,
+        "webpSize": 201196
       }
     }
   },
@@ -902,6 +914,12 @@
         "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-3-1200w.webp",
         "jpegSize": 358710,
         "webpSize": 177192
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-3-1600w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-3-1600w.webp",
+        "jpegSize": 436874,
+        "webpSize": 220446
       }
     }
   },
@@ -1160,6 +1178,12 @@
         "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-6-1200w.webp",
         "jpegSize": 239628,
         "webpSize": 86358
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-6-1600w.jpg",
+        "webp": "/assets/portfolio/jatszoteri-moka/jatszoteri-moka-6-1600w.webp",
+        "jpegSize": 306395,
+        "webpSize": 105946
       }
     }
   },
@@ -1517,6 +1541,12 @@
         "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5-1200w.webp",
         "jpegSize": 387702,
         "webpSize": 216920
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5-1600w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5-1600w.webp",
+        "jpegSize": 474412,
+        "webpSize": 262282
       }
     }
   },
@@ -1544,6 +1574,12 @@
         "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-6-1200w.webp",
         "jpegSize": 367464,
         "webpSize": 206400
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-6-1600w.JPG",
+        "webp": "/assets/portfolio/kismamafotozas-otthon/kismama-otthon-6-1600w.webp",
+        "jpegSize": 450448,
+        "webpSize": 258210
       }
     }
   },

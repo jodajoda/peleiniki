@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Responsive Images</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .pass { color: green; }
+    .fail { color: red; }
+    .test { margin: 10px 0; padding: 10px; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+  <h1>Responsive Image Path Test</h1>
+  <p>Current window width: <span id="currentWidth"></span>px</p>
+  <div id="results"></div>
+
+  <script type="module">
+    import { getResponsiveImagePath } from './src/utils/assets.js';
+
+    const testPath = '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1.jpg';
+
+    document.getElementById('currentWidth').textContent = window.innerWidth;
+
+    const tests = [
+      { width: 375, expected: '800w', label: 'Mobile (375px)' },
+      { width: 640, expected: '800w', label: 'Mobile max (640px)' },
+      { width: 768, expected: '1200w', label: 'Tablet (768px)' },
+      { width: 1024, expected: '1200w', label: 'Tablet max (1024px)' },
+      { width: 1920, expected: '1600w', label: 'Desktop (1920px)' },
+    ];
+
+    const results = document.getElementById('results');
+    tests.forEach(test => {
+      const path = getResponsiveImagePath(testPath, test.width);
+      const matches = path.includes(test.expected);
+      const result = document.createElement('div');
+      result.className = 'test ' + (matches ? 'pass' : 'fail');
+      result.innerHTML = `
+        <strong>${test.label}</strong><br>
+        Expected: ${test.expected}<br>
+        Got: ${path}<br>
+        Status: ${matches ? '✓ PASS' : '✗ FAIL'}
+      `;
+      results.appendChild(result);
+    });
+
+    // Test with current screen width
+    const currentResult = document.createElement('div');
+    currentResult.className = 'test';
+    currentResult.style.background = '#f0f0f0';
+    const currentPath = getResponsiveImagePath(testPath);
+    currentResult.innerHTML = `
+      <strong>Current Window (${window.innerWidth}px)</strong><br>
+      Path: ${currentPath}
+    `;
+    results.appendChild(currentResult);
+  </script>
+</body>
+</html>

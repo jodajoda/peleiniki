@@ -140,6 +140,26 @@ Custom theme extensions in [tailwind.config.js](website/tailwind.config.js):
 - `bg-gradient-*` - Pre-defined gradient backgrounds (primary, warm, sunset, dreamy, ocean)
 - `animate-shimmer` - Shimmer loading effect
 
+### Responsive Images
+
+The lightbox automatically serves optimized image sizes based on screen width for better performance:
+
+**Image Sizes:**
+- **Mobile (≤640px)**: 800w images (~71KB WebP)
+- **Tablet (641-1024px)**: 1200w images (~127KB WebP)
+- **Desktop (>1024px)**: 1600w images (~188KB WebP)
+
+**Implementation:**
+- [src/utils/assets.js](website/src/utils/assets.js) - `getResponsiveImagePath()` function
+- [src/components/Lightbox.jsx](website/src/components/Lightbox.jsx) - Uses responsive images automatically
+- Prefers WebP format for better compression (~60-70% smaller than JPEG)
+
+**Benefits:**
+- **62% smaller images** on mobile devices
+- Faster page load times on slower connections
+- Reduced data usage for mobile users
+- Automatic selection based on viewport width
+
 ### EmailJS Integration
 
 Contact form in [Contact.jsx](website/src/pages/Contact.jsx) uses EmailJS for email delivery. Credentials are managed via environment variables.

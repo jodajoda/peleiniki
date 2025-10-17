@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useSwipeable } from 'react-swipeable';
-import { getAssetPath } from '../utils/assets';
+import { getResponsiveImagePath } from '../utils/assets';
 import ImageDetails from './ImageDetails';
 
 const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
@@ -187,7 +187,7 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
       >
         <img
           key={imageKey}
-          src={getAssetPath(currentImage.src)}
+          src={getResponsiveImagePath(currentImage.src)}
           alt={currentImage.alt}
           draggable={false}
           className={`w-full h-auto max-h-[85vh] sm:max-h-[90vh] object-contain transition-all duration-300 ${

@@ -9,6 +9,8 @@
  * - Creates LQIP (Low Quality Image Placeholders) for blur-up effect
  * - Maintains original images
  * - Generates metadata JSON for easy integration
+ * - Smart handling: For images smaller than 1600px, generates 1600w version at original size
+ *   (e.g., 1333px image will have 400w, 800w, 1200w sized down, and 1600w at 1333px)
  *
  * Usage:
  *   node scripts/optimize-images-advanced.js
@@ -151,11 +153,13 @@ async function processImage(inputPath) {
     };
 
     let totalOptimizedSize = 0;
+    let largestGeneratedWidth = 0;
 
     // Generate responsive variants
     for (const width of CONFIG.widths) {
       // Skip if width is larger than original
       if (width > dimensions.width) {
+        console.log(`  ⊘ Skipping ${width}w (original is ${dimensions.width}px wide)`);
         continue;
       }
 
@@ -196,6 +200,49 @@ async function processImage(inputPath) {
       const relativeWebp = path.relative(CONFIG.sourceDir, webpPath).replace(/\\/g, '/');
 
       imageMetadata.variants[width] = {
+        jpeg: `/assets/${relativeJpeg}`,
+        webp: `/assets/${relativeWebp}`,
+        jpegSize: jpegSize,
+        webpSize: webpSize,
+      };
+
+      largestGeneratedWidth = width;
+    }
+
+    // If image is larger than largest generated size but smaller than max target,
+    // generate an additional version at the next target size using original dimensions
+    // This ensures desktop users always have a 1600w version available (or closest)
+    const maxTargetWidth = CONFIG.widths[CONFIG.widths.length - 1];
+    if (largestGeneratedWidth > 0 && largestGeneratedWidth < maxTargetWidth && dimensions.width > largestGeneratedWidth) {
+      console.log(`  → Generating ${maxTargetWidth}w at original size (${dimensions.width}px)...`);
+
+      const baseName = parsedPath.name;
+      const jpegName = `${baseName}-${maxTargetWidth}w${parsedPath.ext}`;
+      const webpName = `${baseName}-${maxTargetWidth}w.webp`;
+
+      const jpegPath = path.join(parsedPath.dir, jpegName);
+      const webpPath = path.join(parsedPath.dir, webpName);
+
+      // Generate JPEG at original size
+      await sharp(inputPath)
+        .jpeg({ quality: CONFIG.jpegQuality, progressive: true })
+        .toFile(jpegPath);
+
+      // Generate WebP at original size
+      await sharp(inputPath)
+        .webp({ quality: CONFIG.webpQuality })
+        .toFile(webpPath);
+
+      // Track sizes
+      const jpegSize = fs.statSync(jpegPath).size;
+      const webpSize = fs.statSync(webpPath).size;
+      totalOptimizedSize += jpegSize + webpSize;
+
+      // Store metadata
+      const relativeJpeg = path.relative(CONFIG.sourceDir, jpegPath).replace(/\\/g, '/');
+      const relativeWebp = path.relative(CONFIG.sourceDir, webpPath).replace(/\\/g, '/');
+
+      imageMetadata.variants[maxTargetWidth] = {
         jpeg: `/assets/${relativeJpeg}`,
         webp: `/assets/${relativeWebp}`,
         jpegSize: jpegSize,
