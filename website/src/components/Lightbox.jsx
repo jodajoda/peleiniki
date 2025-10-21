@@ -179,7 +179,7 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
 
       {/* Image */}
       <div
-        className="lightbox-content w-full max-w-7xl max-h-[90vh] px-2 sm:px-4 py-4 select-none relative"
+        className="lightbox-content w-full max-w-7xl max-h-screen px-0 sm:px-4 py-0 sm:py-4 select-none relative"
         onClick={(e) => e.stopPropagation()}
         onContextMenu={(e) => e.preventDefault()}
         role="img"
@@ -190,7 +190,7 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
           src={getResponsiveImagePath(currentImage.src)}
           alt={currentImage.alt}
           draggable={false}
-          className={`w-full h-auto max-h-[85vh] sm:max-h-[90vh] object-contain transition-all duration-300 ${
+          className={`w-full h-auto max-h-screen sm:max-h-[90vh] object-contain transition-all duration-300 ${
             direction === 'left'
               ? 'animate-slide-in-left'
               : direction === 'right'

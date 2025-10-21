@@ -567,7 +567,7 @@ const Portfolio = () => {
       )}
 
       {/* Scroll to top button */}
-      <ScrollToTopButton />
+      <ScrollToTopButton isLightboxOpen={lightboxIndex !== null} />
     </div>
   );
 };

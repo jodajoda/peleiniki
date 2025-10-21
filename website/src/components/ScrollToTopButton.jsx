@@ -9,8 +9,9 @@ import { useState, useEffect } from 'react';
  * - Mobile-friendly touch target
  * - Accessible keyboard navigation
  * - Smooth fade in/out animations
+ * - Hides when lightbox is open
  */
-const ScrollToTopButton = () => {
+const ScrollToTopButton = ({ isLightboxOpen = false }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -43,7 +44,7 @@ const ScrollToTopButton = () => {
     <button
       onClick={scrollToTop}
       className={`fixed bottom-6 right-6 z-50 p-3 sm:p-4 bg-gradient-to-br from-orange-500 to-amber-500 text-white rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-orange-400 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16 pointer-events-none'
+        isVisible && !isLightboxOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16 pointer-events-none'
       }`}
       aria-label="Vissza a tetejére"
       title="Vissza a tetejére"
