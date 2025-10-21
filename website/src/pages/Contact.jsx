@@ -175,6 +175,47 @@ const Contact = () => {
           <div className="grid md:grid-cols-2 gap-5 sm:gap-6 md:gap-8">
             {/* Contact Information */}
             <div className={`space-y-3 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+              {/* Social Media Section */}
+              <div className="bg-gradient-to-br from-white via-primary-50 to-white rounded-xl sm:rounded-2xl p-4 shadow-soft border border-gray-200">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 flex items-center">
+                  <span className="w-8 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mr-2"></span>
+                  Közösségi média
+                </h3>
+                <p className="text-sm text-gray-600 mb-3 leading-relaxed">
+                  Kövess be Instagramon és Facebookon, hogy ne maradj le a legfrissebb munkáimról!
+                </p>
+                <div className="flex space-x-2 sm:space-x-3">
+                  <a
+                    href="https://www.instagram.com/peleinikifotoi/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative p-3 bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl hover:shadow-soft-lg transition-all duration-500 hover:-translate-y-2 hover:rotate-3 border border-orange-100"
+                    aria-label="Instagram"
+                  >
+                    <img
+                      src={getAssetPath('assets/icons/instagram.svg')}
+                      alt="Instagram"
+                      className="w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-200 to-amber-200 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/peleinikifoto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative p-3 bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl hover:shadow-soft-lg transition-all duration-500 hover:-translate-y-2 hover:rotate-3 border border-orange-100"
+                    aria-label="Facebook"
+                  >
+                    <img
+                      src={getAssetPath('assets/icons/facebook.svg')}
+                      alt="Facebook"
+                      className="w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-200 to-amber-200 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                  </a>
+                </div>
+              </div>
+
               <div className="bg-gradient-to-br from-white via-primary-50 to-white rounded-xl sm:rounded-2xl p-4 shadow-soft border border-gray-200">
                 <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 flex items-center">
                   <span className="w-8 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mr-2"></span>
@@ -235,47 +276,6 @@ const Contact = () => {
                       </a>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              {/* Social Media Section */}
-              <div className="bg-gradient-to-br from-white via-primary-50 to-white rounded-xl sm:rounded-2xl p-4 shadow-soft border border-gray-200">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 flex items-center">
-                  <span className="w-8 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mr-2"></span>
-                  Közösségi média
-                </h3>
-                <p className="text-sm text-gray-600 mb-3 leading-relaxed">
-                  Kövess be Instagramon és Facebookon, hogy ne maradj le a legfrissebb munkáimról!
-                </p>
-                <div className="flex space-x-2 sm:space-x-3">
-                  <a
-                    href="https://www.instagram.com/peleinikifotoi/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative p-3 bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl hover:shadow-soft-lg transition-all duration-500 hover:-translate-y-2 hover:rotate-3 border border-orange-100"
-                    aria-label="Instagram"
-                  >
-                    <img
-                      src={getAssetPath('assets/icons/instagram.svg')}
-                      alt="Instagram"
-                      className="w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-200 to-amber-200 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                  </a>
-                  <a
-                    href="https://www.facebook.com/peleinikifoto"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative p-3 bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl hover:shadow-soft-lg transition-all duration-500 hover:-translate-y-2 hover:rotate-3 border border-orange-100"
-                    aria-label="Facebook"
-                  >
-                    <img
-                      src={getAssetPath('assets/icons/facebook.svg')}
-                      alt="Facebook"
-                      className="w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-200 to-amber-200 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                  </a>
                 </div>
               </div>
             </div>

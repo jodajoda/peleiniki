@@ -33,8 +33,8 @@ const Navigation = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-white backdrop-blur-md shadow-soft-lg py-2'
-          : 'bg-gradient-to-b from-white via-white/95 to-white/90 py-4'
+          ? 'bg-white backdrop-blur-md shadow-soft-lg py-1'
+          : 'bg-gradient-to-b from-white via-white/95 to-white/90 py-2'
       }`}
     >
       <nav className="container mx-auto px-4">
@@ -49,7 +49,7 @@ const Navigation = () => {
                 src={getAssetPath('assets/icons/pnfotos.png')}
                 alt="Pelei Niki Fotós"
                 className={`transition-all duration-500 ${
-                  isScrolled ? 'h-10 sm:h-12' : 'h-12 sm:h-16'
+                  isScrolled ? 'h-8 sm:h-10' : 'h-10 sm:h-12'
                 } group-hover:scale-105`}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-accent-warm/0 via-accent-warm/10 to-accent-warm/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg blur-xl" />
