@@ -86,9 +86,13 @@ test.describe('Navigation Component', () => {
       await menuButton.click();
       await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
 
-      // Wait for menu link to be visible (indicates menu is fully open)
-      const portfolioLink = page.getByRole('link', { name: 'Portfólió', exact: true }).last();
-      await expect(portfolioLink).toBeVisible({ timeout: 10000 });
+      // Wait for mobile menu overlay to become interactive (has pointer-events-auto)
+      const mobileMenuOverlay = page.locator('div.lg\\:hidden.fixed.inset-0').first();
+      await expect(mobileMenuOverlay).toHaveClass(/pointer-events-auto/, { timeout: 2000 });
+
+      // Wait for menu items to be visible (within the overlay)
+      const portfolioLink = mobileMenuOverlay.getByRole('link', { name: 'Portfólió', exact: true });
+      await expect(portfolioLink).toBeVisible({ timeout: 2000 });
 
       // Close menu by clicking hamburger
       await menuButton.click();
@@ -102,9 +106,13 @@ test.describe('Navigation Component', () => {
       await menuButton.click();
       await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
 
-      // Wait for menu to be visible and click navigation link
-      const portfolioLink = page.getByRole('link', { name: 'Portfólió', exact: true }).last();
-      await expect(portfolioLink).toBeVisible({ timeout: 10000 });
+      // Wait for mobile menu overlay to be interactive
+      const mobileMenuOverlay = page.locator('div.lg\\:hidden.fixed.inset-0').first();
+      await expect(mobileMenuOverlay).toHaveClass(/pointer-events-auto/, { timeout: 2000 });
+
+      // Click navigation link within the overlay
+      const portfolioLink = mobileMenuOverlay.getByRole('link', { name: 'Portfólió', exact: true });
+      await expect(portfolioLink).toBeVisible({ timeout: 2000 });
       await portfolioLink.click();
 
       await expect(page).toHaveURL(/.*portfolio/);
@@ -118,15 +126,17 @@ test.describe('Navigation Component', () => {
       await menuButton.click();
       await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
 
-      // Wait for first link to be visible, then check all items
-      await expect(page.getByRole('link', { name: 'Kezdőlap', exact: true }).last()).toBeVisible({ timeout: 10000 });
+      // Wait for mobile menu overlay to be interactive
+      const mobileMenuOverlay = page.locator('div.lg\\:hidden.fixed.inset-0').first();
+      await expect(mobileMenuOverlay).toHaveClass(/pointer-events-auto/, { timeout: 2000 });
 
-      // Check all menu items are present in full-screen mobile menu
-      await expect(page.getByRole('link', { name: 'A fotózás velem', exact: true }).last()).toBeVisible();
-      await expect(page.getByRole('link', { name: 'Portfólió', exact: true }).last()).toBeVisible();
-      await expect(page.getByRole('link', { name: 'Rólam', exact: true }).last()).toBeVisible();
-      await expect(page.getByRole('link', { name: 'Csomagok', exact: true }).last()).toBeVisible();
-      await expect(page.getByRole('link', { name: 'Kapcsolat', exact: true }).last()).toBeVisible();
+      // Check all menu items are present within the overlay
+      await expect(mobileMenuOverlay.getByRole('link', { name: 'Kezdőlap', exact: true })).toBeVisible({ timeout: 2000 });
+      await expect(mobileMenuOverlay.getByRole('link', { name: 'A fotózás velem', exact: true })).toBeVisible({ timeout: 2000 });
+      await expect(mobileMenuOverlay.getByRole('link', { name: 'Portfólió', exact: true })).toBeVisible({ timeout: 2000 });
+      await expect(mobileMenuOverlay.getByRole('link', { name: 'Rólam', exact: true })).toBeVisible({ timeout: 2000 });
+      await expect(mobileMenuOverlay.getByRole('link', { name: 'Csomagok', exact: true })).toBeVisible({ timeout: 2000 });
+      await expect(mobileMenuOverlay.getByRole('link', { name: 'Kapcsolat', exact: true })).toBeVisible({ timeout: 2000 });
     });
 
     test('should close mobile menu when clicking backdrop', async ({ page }) => {
@@ -136,12 +146,13 @@ test.describe('Navigation Component', () => {
       await menuButton.click();
       await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
 
-      // Wait for menu to be visible
-      const portfolioLink = page.getByRole('link', { name: 'Portfólió', exact: true }).last();
-      await expect(portfolioLink).toBeVisible({ timeout: 10000 });
+      // Wait for overlay to be interactive
+      const mobileMenuOverlay = page.locator('div.lg\\:hidden.fixed.inset-0').first();
+      await expect(mobileMenuOverlay).toHaveClass(/pointer-events-auto/, { timeout: 2000 });
 
-      // Click on the backdrop (click outside the menu content, in top-left corner)
-      await page.mouse.click(10, 10);
+      // Click the backdrop (the gradient div that handles onClick)
+      const backdrop = mobileMenuOverlay.locator('div.absolute.inset-0.bg-gradient-to-br').first();
+      await backdrop.click({ force: true });
 
       // Menu should be closed
       await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
