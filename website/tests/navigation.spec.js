@@ -86,18 +86,18 @@ test.describe('Navigation Component', () => {
 
       // Open menu
       await menuButton.click();
-      await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
 
-      // Simple wait for animation
+      // Wait for menu to open with increased timeout
+      await expect(menuButton).toHaveAttribute('aria-expanded', 'true', { timeout: 3000 });
+
+      // Wait for animation
       await page.waitForTimeout(1000);
-
-      // Just verify the button state changed - don't check menu content
-      await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
 
       // Close menu by clicking hamburger
       await menuButton.click();
-      await page.waitForTimeout(600);
-      await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+
+      // Wait for menu to close with increased timeout
+      await expect(menuButton).toHaveAttribute('aria-expanded', 'false', { timeout: 3000 });
     });
 
     test('should close mobile menu after navigation', async ({ page }) => {
@@ -188,19 +188,18 @@ test.describe('Navigation Component', () => {
 
       // Open menu
       await menuButton.click();
-      await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+      await expect(menuButton).toHaveAttribute('aria-expanded', 'true', { timeout: 3000 });
 
       // Wait for animation
       await page.waitForTimeout(1000);
 
-      // Click in the top-left corner (backdrop area)
-      await page.mouse.click(10, 10);
+      // Click on the backdrop element directly (it's inside the mobile menu container)
+      // The backdrop is the div with the gradient background and onClick handler
+      const backdrop = page.locator('.lg\\:hidden.fixed.inset-0 > div').first();
+      await backdrop.click({ position: { x: 50, y: 400 } }); // Click in a safe area away from header
 
-      // Wait a bit for close animation
-      await page.waitForTimeout(600);
-
-      // Menu should be closed
-      await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+      // Wait for menu to close with increased timeout
+      await expect(menuButton).toHaveAttribute('aria-expanded', 'false', { timeout: 3000 });
     });
   });
 
