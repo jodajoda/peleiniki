@@ -123,13 +123,13 @@ test.describe('Navigation Component', () => {
               clicked = true;
               break;
             }
-          } catch (e) {
+          } catch {
             // Continue to next link
             continue;
           }
         }
         expect(clicked).toBe(true);
-      } catch (error) {
+      } catch {
         // If we can't find/click the link, fail gracefully
         throw new Error('Could not find or click Portfólió link');
       }
@@ -170,12 +170,12 @@ test.describe('Navigation Component', () => {
                 foundVisible = true;
                 break;
               }
-            } catch (e) {
+            } catch {
               continue;
             }
           }
           expect(foundVisible).toBe(true);
-        } catch (error) {
+        } catch {
           throw new Error(`Could not find visible link: ${linkName}`);
         }
       }
