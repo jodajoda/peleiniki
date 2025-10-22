@@ -123,13 +123,43 @@ const Navigation = () => {
                 </li>
               );
             })}
+
+            {/* Social media links - Desktop */}
+            <li className="flex items-center gap-2 ml-2 pl-2 border-l border-primary-200">
+              <a
+                href="https://www.instagram.com/peleinikifotoi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="group relative p-2 rounded-lg hover:bg-primary-50 transition-all duration-300"
+              >
+                <img
+                  src={getAssetPath('assets/icons/instagram.svg')}
+                  alt="Instagram"
+                  className="w-5 h-5 transition-transform duration-300 group-hover:scale-110"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/peleinikifoto"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="group relative p-2 rounded-lg hover:bg-primary-50 transition-all duration-300"
+              >
+                <img
+                  src={getAssetPath('assets/icons/facebook.svg')}
+                  alt="Facebook"
+                  className="w-5 h-5 transition-transform duration-300 group-hover:scale-110"
+                />
+              </a>
+            </li>
           </ul>
         </div>
 
         {/* Mobile menu - Optimized for touch */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-            isOpen ? 'max-h-[32rem] mt-4 opacity-100' : 'max-h-0 opacity-0'
+            isOpen ? 'max-h-[36rem] mt-4 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
           <ul className="flex flex-col space-y-2 pb-4 border-t border-primary-100 pt-4">
@@ -170,6 +200,48 @@ const Navigation = () => {
                 </li>
               );
             })}
+
+            {/* Social media links - Mobile */}
+            <li
+              className={`transition-all duration-300 ${
+                isOpen
+                  ? 'translate-x-0 opacity-100'
+                  : '-translate-x-4 opacity-0'
+              }`}
+              style={{ transitionDelay: isOpen ? `${navLinks.length * 50}ms` : '0ms' }}
+            >
+              <div className="px-4 pt-3 pb-2 border-t border-primary-100 mt-2">
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Kövess be</p>
+                <div className="flex gap-3">
+                  <a
+                    href="https://www.instagram.com/peleinikifotoi/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    className="group relative p-3 rounded-xl bg-gradient-to-br from-orange-50 to-amber-50 hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 border border-orange-100 flex-1 flex items-center justify-center min-h-[48px]"
+                  >
+                    <img
+                      src={getAssetPath('assets/icons/instagram.svg')}
+                      alt="Instagram"
+                      className="w-6 h-6 transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/peleinikifoto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                    className="group relative p-3 rounded-xl bg-gradient-to-br from-orange-50 to-amber-50 hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 border border-orange-100 flex-1 flex items-center justify-center min-h-[48px]"
+                  >
+                    <img
+                      src={getAssetPath('assets/icons/facebook.svg')}
+                      alt="Facebook"
+                      className="w-6 h-6 transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </a>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </nav>
