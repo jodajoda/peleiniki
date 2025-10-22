@@ -233,9 +233,13 @@ test.describe('Lightbox Component', () => {
       // Wait for lightbox to open
       await page.waitForSelector('div[class*="fixed inset-0 z-50"]');
 
+      // Wait for animations to settle
+      await page.waitForTimeout(500);
+
       // Navigate to last image if not already there
       // Check counter to verify we're on last image - use status role to find the counter specifically
       const counterElement = page.locator('div[role="status"][aria-live="polite"] > div.font-medium').first();
+      await counterElement.waitFor({ state: 'visible' });
       const counter = await counterElement.textContent();
       const currentIndex = parseInt(counter.split('/')[0].trim());
       const totalImages = parseInt(counter.split('/')[1].trim());
