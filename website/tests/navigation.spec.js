@@ -194,10 +194,10 @@ test.describe('Navigation Component', () => {
       await page.waitForTimeout(1000);
 
       // Click on the backdrop element directly
-      // The backdrop has pointer-events-auto only when menu is open
-      // Click in top-left area where there's definitely only backdrop, not menu content
+      // Use force because menu content (sibling, rendered later) paints on top of backdrop
+      // Force ensures we trigger backdrop's onClick handler
       const backdrop = page.locator('.lg\\:hidden.fixed.inset-0 > div').first();
-      await backdrop.click({ position: { x: 10, y: 10 } });
+      await backdrop.click({ position: { x: 10, y: 10 }, force: true });
 
       // Wait for menu to close with increased timeout
       await expect(menuButton).toHaveAttribute('aria-expanded', 'false', { timeout: 3000 });
