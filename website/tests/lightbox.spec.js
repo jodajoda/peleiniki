@@ -50,16 +50,20 @@ test.describe('Lightbox Component', () => {
     await portfolioImages.first().waitFor({ state: 'visible' });
     await portfolioImages.first().click({ force: true });
 
-    // Wait for lightbox to open
+    // Wait for lightbox to open and be fully visible
     const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
     await expect(lightbox).toBeVisible();
 
-    // Click close button within the lightbox dialog
+    // Wait for fade-in animation to complete
+    await page.waitForTimeout(500);
+
+    // Click close button within the lightbox dialog - ensure it's visible first
     const closeButton = lightbox.getByRole('button', { name: 'Bezárás' });
+    await expect(closeButton).toBeVisible();
     await closeButton.click();
 
-    // Wait for close animation (300ms) and expect lightbox to be hidden
-    await expect(lightbox).not.toBeVisible({ timeout: 2000 });
+    // Wait for close animation (300ms) and element to unmount, then expect lightbox to be hidden
+    await expect(lightbox).toBeHidden({ timeout: 2000 });
   });
 
   test('should close lightbox when pressing Escape key', async ({ page }) => {
@@ -68,15 +72,18 @@ test.describe('Lightbox Component', () => {
     await firstImage.waitFor({ state: 'visible' });
     await firstImage.click({ force: true });
 
-    // Wait for lightbox to open
+    // Wait for lightbox to open and be fully visible
     const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
     await expect(lightbox).toBeVisible();
+
+    // Wait for fade-in animation to complete
+    await page.waitForTimeout(500);
 
     // Press Escape key
     await page.keyboard.press('Escape');
 
-    // Wait for close animation (300ms) and expect lightbox to be hidden
-    await expect(lightbox).not.toBeVisible({ timeout: 2000 });
+    // Wait for close animation (300ms) and element to unmount, then expect lightbox to be hidden
+    await expect(lightbox).toBeHidden({ timeout: 2000 });
   });
 
   test('should close lightbox when clicking backdrop', async ({ page }) => {
@@ -85,15 +92,18 @@ test.describe('Lightbox Component', () => {
     await firstImage.waitFor({ state: 'visible' });
     await firstImage.click({ force: true });
 
-    // Wait for lightbox to open
+    // Wait for lightbox to open and be fully visible
     const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
     await expect(lightbox).toBeVisible();
 
-    // Click on backdrop (not on image)
+    // Wait for fade-in animation to complete
+    await page.waitForTimeout(500);
+
+    // Click on backdrop (top-left corner, away from image and buttons)
     await lightbox.click({ position: { x: 10, y: 10 } });
 
-    // Wait for close animation (300ms) and expect lightbox to be hidden
-    await expect(lightbox).not.toBeVisible({ timeout: 2000 });
+    // Wait for close animation (300ms) and element to unmount, then expect lightbox to be hidden
+    await expect(lightbox).toBeHidden({ timeout: 2000 });
   });
 
   test('should navigate to next image with arrow button', async ({ page }) => {
