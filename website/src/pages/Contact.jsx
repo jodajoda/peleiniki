@@ -184,52 +184,43 @@ const Contact = () => {
                 <p className="text-sm text-gray-600 mb-3 leading-relaxed">
                   Kövess be Instagramon és Facebookon, vagy írj e-mailt!
                 </p>
-                <div className="flex items-center gap-3 sm:gap-4">
+                <div className="flex items-center gap-3">
                   <a
                     href="https://www.instagram.com/peleinikifotoi/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram profil"
-                    className="group relative p-3.5 sm:p-3 rounded-full bg-white shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 active:scale-95 min-w-[48px] min-h-[48px] sm:min-w-0 sm:min-h-0 flex items-center justify-center"
+                    className="group relative w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 shadow-soft hover:shadow-soft-lg transition-all duration-500 hover:scale-110 active:scale-95 flex items-center justify-center"
                   >
                     <img
                       src={getAssetPath('assets/icons/instagram.svg')}
                       alt="Instagram ikon"
-                      width="24"
-                      height="24"
-                      className="relative z-10 transition-transform duration-300 group-hover:scale-110"
+                      className="w-6 h-6 brightness-0 invert transition-transform duration-300 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-400 via-pink-500 to-orange-400 opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300" />
                   </a>
                   <a
                     href="https://www.facebook.com/peleinikifoto"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook oldal"
-                    className="group relative p-3.5 sm:p-3 rounded-full bg-white shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 active:scale-95 min-w-[48px] min-h-[48px] sm:min-w-0 sm:min-h-0 flex items-center justify-center"
+                    className="group relative w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 shadow-soft hover:shadow-soft-lg transition-all duration-500 hover:scale-110 active:scale-95 flex items-center justify-center"
                   >
                     <img
                       src={getAssetPath('assets/icons/facebook.svg')}
                       alt="Facebook ikon"
-                      width="24"
-                      height="24"
-                      className="relative z-10 transition-transform duration-300 group-hover:scale-110"
+                      className="w-6 h-6 brightness-0 invert transition-transform duration-300 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-blue-500 opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300" />
                   </a>
                   <a
                     href="mailto:peleinikifotoi@gmail.com"
                     aria-label="E-mail küldése"
-                    className="group relative p-3.5 sm:p-3 rounded-full bg-white shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 active:scale-95 min-w-[48px] min-h-[48px] sm:min-w-0 sm:min-h-0 flex items-center justify-center"
+                    className="group relative w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 shadow-soft hover:shadow-soft-lg transition-all duration-500 hover:scale-110 active:scale-95 flex items-center justify-center"
                   >
                     <img
                       src={getAssetPath('assets/icons/email.svg')}
                       alt="E-mail ikon"
-                      width="24"
-                      height="24"
-                      className="relative z-10 transition-transform duration-300 group-hover:scale-110"
+                      className="w-6 h-6 brightness-0 invert transition-transform duration-300 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-accent-warm opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300" />
                   </a>
                 </div>
               </div>
@@ -240,39 +231,39 @@ const Contact = () => {
                   Elérhetőségek
                 </h2>
 
-                <div className="space-y-2">
-                  <div className="group flex items-start p-3 rounded-lg bg-gradient-to-r from-orange-50 to-transparent hover:from-orange-100 transition-all duration-500 hover:shadow-soft hover:translate-x-2">
-                    <div className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white shadow-soft flex items-center justify-center mr-2 sm:mr-3 group-hover:scale-110 transition-transform duration-500">
+                <div className="space-y-3">
+                  <div className="group flex items-center p-4 rounded-xl bg-gradient-to-r from-orange-50 to-transparent hover:from-orange-100 transition-all duration-500 hover:shadow-soft hover:translate-x-2">
+                    <div className="flex-shrink-0 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 shadow-soft flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 group-hover:shadow-soft-lg transition-all duration-500">
                       <img
                         src={getAssetPath('assets/icons/email.svg')}
                         alt="Email ikon"
-                        className="w-4 h-4 sm:w-5 sm:h-5"
+                        className="w-5 h-5 sm:w-6 sm:h-6 brightness-0 invert"
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Email</div>
+                      <div className="font-bold text-gray-900 mb-1 text-sm sm:text-base">Email</div>
                       <a
                         href="mailto:peleinikifotoi@gmail.com"
-                        className="text-primary-600 hover:text-primary-700 transition-colors duration-300 break-all text-sm sm:text-base"
+                        className="text-primary-600 hover:text-primary-700 font-medium transition-colors duration-300 break-all text-sm sm:text-base"
                       >
                         peleinikifotoi@gmail.com
                       </a>
                     </div>
                   </div>
 
-                  <div className="group flex items-start p-3 rounded-lg bg-gradient-to-r from-orange-50 to-transparent hover:from-orange-100 transition-all duration-500 hover:shadow-soft hover:translate-x-2">
-                    <div className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white shadow-soft flex items-center justify-center mr-2 sm:mr-3 group-hover:scale-110 transition-transform duration-500">
+                  <div className="group flex items-center p-4 rounded-xl bg-gradient-to-r from-orange-50 to-transparent hover:from-orange-100 transition-all duration-500 hover:shadow-soft hover:translate-x-2">
+                    <div className="flex-shrink-0 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 shadow-soft flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 group-hover:shadow-soft-lg transition-all duration-500">
                       <img
-                        src={getAssetPath('assets/icons/phone.svg')}
+                        src={`${getAssetPath('assets/icons/phone.svg')}?v=2`}
                         alt="Telefon ikon"
-                        className="w-4 h-4 sm:w-5 sm:h-5"
+                        className="w-5 h-5 sm:w-6 sm:h-6 brightness-0 invert"
                       />
                     </div>
-                    <div className="flex-1">
-                      <div className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Telefon</div>
+                    <div className="flex-1 min-w-0">
+                      <div className="font-bold text-gray-900 mb-1 text-sm sm:text-base">Telefon</div>
                       <a
                         href="tel:+36203655393"
-                        className="text-primary-600 hover:text-primary-700 transition-colors duration-300 text-sm sm:text-base"
+                        className="text-primary-600 hover:text-primary-700 font-medium transition-colors duration-300 text-sm sm:text-base"
                       >
                         +36 20 365 5393
                       </a>

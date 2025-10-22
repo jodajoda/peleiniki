@@ -42,6 +42,7 @@ const Navigation = () => {
   ];
 
   return (
+    <>
     <header
       className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-500 ${
         isScrolled
@@ -178,28 +179,30 @@ const Navigation = () => {
             </li>
           </ul>
         </div>
+      </nav>
+    </header>
 
-        {/* Mobile menu - Full screen overlay */}
-        <div
-          className={`lg:hidden fixed inset-0 z-[70] transition-all duration-500 pointer-events-none ${
-            isOpen ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
+      {/* Mobile menu - Full screen overlay */}
+      <div
+        className={`lg:hidden fixed inset-0 z-[70] transition-all duration-500 ${
+          isOpen ? 'visible pointer-events-auto' : 'invisible pointer-events-none'
+        }`}
+      >
           {/* Backdrop */}
           <div
-            className={`absolute inset-0 bg-gradient-to-br from-primary-900/95 via-primary-800/95 to-accent-warm/95 backdrop-blur-sm transition-opacity duration-500 ${
-              isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+            className={`absolute inset-0 bg-white/85 backdrop-blur-sm transition-opacity duration-500 ${
+              isOpen ? 'opacity-100' : 'opacity-0'
             }`}
             onClick={() => setIsOpen(false)}
           />
 
           {/* Menu content */}
           <div
-            className={`relative h-full flex flex-col justify-center px-6 py-20 transition-transform duration-500 ${
+            className={`relative h-full flex flex-col justify-center py-20 transition-transform duration-500 ${
               isOpen ? 'translate-x-0 pointer-events-auto' : '-translate-x-full pointer-events-none'
             }`}
           >
-            <ul className="flex flex-col space-y-3 max-w-md mx-auto w-full">
+            <ul className="flex flex-col space-y-0 w-full">
               {navLinks.map(({ path, label }, index) => {
                 const isActive = location.pathname === path;
                 return (
@@ -215,23 +218,23 @@ const Navigation = () => {
                     <Link
                       to={path}
                       onClick={() => setIsOpen(false)}
-                      className={`relative block px-6 py-5 rounded-2xl text-lg font-semibold transition-all duration-300 group overflow-hidden min-h-[60px] flex items-center ${
+                      className={`relative px-8 py-5 text-lg font-semibold transition-all duration-300 group overflow-hidden min-h-[60px] flex items-center ${
                         isActive
-                          ? 'bg-white/20 text-white shadow-soft-lg backdrop-blur-md border border-white/30'
-                          : 'text-white/90 hover:bg-white/10 active:bg-white/20 hover:text-white border border-white/10'
+                          ? 'text-primary-700 bg-primary-50/50'
+                          : 'text-gray-700'
                       }`}
                       aria-current={isActive ? 'page' : undefined}
                     >
                       <span className="relative z-10 flex items-center">
                         {isActive && (
-                          <span className="w-2 h-2 bg-white rounded-full mr-4 animate-pulse shadow-glow" />
+                          <span className="w-2 h-2 bg-primary-600 rounded-full mr-4" />
                         )}
                         {label}
                       </span>
 
-                      {/* Hover effect */}
+                      {/* Hover effect - fade in from transparent */}
                       {!isActive && (
-                        <span className="absolute inset-0 bg-white/5 translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
+                        <span className="absolute inset-0 bg-primary-100/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       )}
                     </Link>
                   </li>
@@ -247,20 +250,20 @@ const Navigation = () => {
                 }`}
                 style={{ transitionDelay: isOpen ? `${navLinks.length * 80}ms` : '0ms' }}
               >
-                <div className="px-2">
-                  <p className="text-sm font-semibold text-white/70 uppercase tracking-wider mb-4 text-center">Kövess be</p>
-                  <div className="flex gap-4 justify-center">
+                <div className="px-6">
+                  <p className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-4">Kövess be</p>
+                  <div className="flex gap-4">
                     <a
                       href="https://www.instagram.com/peleinikifotoi/"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Instagram profil"
-                      className="group relative p-4 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-110 hover:shadow-soft-lg min-w-[60px] min-h-[60px] flex items-center justify-center"
+                      className="group relative p-3 rounded-lg hover:bg-gray-100 transition-all duration-300 min-w-[48px] min-h-[48px] flex items-center justify-center"
                     >
                       <img
                         src={getAssetPath('assets/icons/instagram.svg')}
                         alt="Instagram ikon"
-                        className="w-7 h-7 transition-transform duration-300 group-hover:scale-110 brightness-0 invert"
+                        className="w-6 h-6 transition-transform duration-300 group-hover:scale-110"
                       />
                     </a>
                     <a
@@ -268,23 +271,23 @@ const Navigation = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Facebook oldal"
-                      className="group relative p-4 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-110 hover:shadow-soft-lg min-w-[60px] min-h-[60px] flex items-center justify-center"
+                      className="group relative p-3 rounded-lg hover:bg-gray-100 transition-all duration-300 min-w-[48px] min-h-[48px] flex items-center justify-center"
                     >
                       <img
                         src={getAssetPath('assets/icons/facebook.svg')}
                         alt="Facebook ikon"
-                        className="w-7 h-7 transition-transform duration-300 group-hover:scale-110 brightness-0 invert"
+                        className="w-6 h-6 transition-transform duration-300 group-hover:scale-110"
                       />
                     </a>
                     <a
                       href="mailto:peleinikifotoi@gmail.com"
                       aria-label="E-mail küldése"
-                      className="group relative p-4 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-110 hover:shadow-soft-lg min-w-[60px] min-h-[60px] flex items-center justify-center"
+                      className="group relative p-3 rounded-lg hover:bg-gray-100 transition-all duration-300 min-w-[48px] min-h-[48px] flex items-center justify-center"
                     >
                       <img
                         src={getAssetPath('assets/icons/email.svg')}
                         alt="E-mail ikon"
-                        className="w-7 h-7 transition-transform duration-300 group-hover:scale-110 brightness-0 invert"
+                        className="w-6 h-6 transition-transform duration-300 group-hover:scale-110"
                       />
                     </a>
                   </div>
@@ -293,8 +296,7 @@ const Navigation = () => {
             </ul>
           </div>
         </div>
-      </nav>
-    </header>
+    </>
   );
 };
 

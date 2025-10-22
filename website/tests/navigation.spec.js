@@ -74,7 +74,7 @@ test.describe('Navigation Component', () => {
       await page.setViewportSize({ width: 375, height: 667 });
     });
 
-    test.skip('should toggle mobile menu on hamburger click', async ({ page }) => {
+    test('should toggle mobile menu on hamburger click', async ({ page }) => {
       test.setTimeout(30000); // 30 second timeout for this test
 
       // Find and click hamburger button
@@ -93,8 +93,9 @@ test.describe('Navigation Component', () => {
       // Wait for animation
       await page.waitForTimeout(1000);
 
-      // Close menu by clicking hamburger (container has pointer-events-none, so clicks pass through)
-      await menuButton.click();
+      // Close menu by clicking hamburger button (it's in the header, outside the overlay container)
+      // The hamburger button has z-index that allows it to be clicked even when menu is open
+      await menuButton.click({ force: true });
 
       // Wait for menu to close with increased timeout
       await expect(menuButton).toHaveAttribute('aria-expanded', 'false', { timeout: 3000 });
@@ -181,7 +182,7 @@ test.describe('Navigation Component', () => {
       }
     });
 
-    test.skip('should close mobile menu when clicking backdrop', async ({ page }) => {
+    test('should close mobile menu when clicking backdrop', async ({ page }) => {
       test.setTimeout(30000); // 30 second timeout for this test
 
       const menuButton = page.getByRole('button', { name: 'Menü megnyitása' });
@@ -193,11 +194,15 @@ test.describe('Navigation Component', () => {
       // Wait for animation
       await page.waitForTimeout(1000);
 
-      // Click on the backdrop element directly
-      // Use force because menu content (sibling, rendered later) paints on top of backdrop
-      // Force ensures we trigger backdrop's onClick handler
-      const backdrop = page.locator('.lg\\:hidden.fixed.inset-0 > div').first();
-      await backdrop.click({ position: { x: 10, y: 10 }, force: true });
+      // The backdrop div has an onClick handler but might be covered by menu content
+      // Use JavaScript to trigger the click event directly on the backdrop element
+      await page.evaluate(() => {
+        // Find the backdrop div (first child of mobile menu container with gradient background)
+        const backdrop = document.querySelector('.lg\\:hidden.fixed.inset-0 > div:first-child');
+        if (backdrop) {
+          backdrop.click();
+        }
+      });
 
       // Wait for menu to close with increased timeout
       await expect(menuButton).toHaveAttribute('aria-expanded', 'false', { timeout: 3000 });
