@@ -182,36 +182,54 @@ const Contact = () => {
                   Közösségi média
                 </h3>
                 <p className="text-sm text-gray-600 mb-3 leading-relaxed">
-                  Kövess be Instagramon és Facebookon, hogy ne maradj le a legfrissebb munkáimról!
+                  Kövess be Instagramon és Facebookon, vagy írj e-mailt!
                 </p>
-                <div className="flex space-x-2 sm:space-x-3">
+                <div className="flex items-center gap-3 sm:gap-4">
                   <a
                     href="https://www.instagram.com/peleinikifotoi/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group relative p-3 bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl hover:shadow-soft-lg transition-all duration-500 hover:-translate-y-2 hover:rotate-3 border border-orange-100"
-                    aria-label="Instagram"
+                    aria-label="Instagram profil"
+                    className="group relative p-3.5 sm:p-3 rounded-full bg-white shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 active:scale-95 min-w-[48px] min-h-[48px] sm:min-w-0 sm:min-h-0 flex items-center justify-center"
                   >
                     <img
                       src={getAssetPath('assets/icons/instagram.svg')}
-                      alt="Instagram"
-                      className="w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:scale-110"
+                      alt="Instagram ikon"
+                      width="24"
+                      height="24"
+                      className="relative z-10 transition-transform duration-300 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-200 to-amber-200 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-400 via-pink-500 to-orange-400 opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300" />
                   </a>
                   <a
                     href="https://www.facebook.com/peleinikifoto"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group relative p-3 bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl hover:shadow-soft-lg transition-all duration-500 hover:-translate-y-2 hover:rotate-3 border border-orange-100"
-                    aria-label="Facebook"
+                    aria-label="Facebook oldal"
+                    className="group relative p-3.5 sm:p-3 rounded-full bg-white shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 active:scale-95 min-w-[48px] min-h-[48px] sm:min-w-0 sm:min-h-0 flex items-center justify-center"
                   >
                     <img
                       src={getAssetPath('assets/icons/facebook.svg')}
-                      alt="Facebook"
-                      className="w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:scale-110"
+                      alt="Facebook ikon"
+                      width="24"
+                      height="24"
+                      className="relative z-10 transition-transform duration-300 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-200 to-amber-200 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-blue-500 opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300" />
+                  </a>
+                  <a
+                    href="mailto:peleinikifotoi@gmail.com"
+                    aria-label="E-mail küldése"
+                    className="group relative p-3.5 sm:p-3 rounded-full bg-white shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 active:scale-95 min-w-[48px] min-h-[48px] sm:min-w-0 sm:min-h-0 flex items-center justify-center"
+                  >
+                    <img
+                      src={getAssetPath('assets/icons/email.svg')}
+                      alt="E-mail ikon"
+                      width="24"
+                      height="24"
+                      className="relative z-10 transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-accent-warm opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300" />
                   </a>
                 </div>
               </div>
