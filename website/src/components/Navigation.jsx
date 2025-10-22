@@ -20,6 +20,18 @@ const Navigation = () => {
     setIsOpen(false);
   }, [location]);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const navLinks = [
     { path: '/', label: 'Kezdőlap' },
     { path: '/photoshooting', label: 'A fotózás velem' },
@@ -31,7 +43,7 @@ const Navigation = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-500 ${
         isScrolled
           ? 'bg-white backdrop-blur-md shadow-soft-lg py-1'
           : 'bg-gradient-to-b from-white via-white/95 to-white/90 py-2'
@@ -167,104 +179,119 @@ const Navigation = () => {
           </ul>
         </div>
 
-        {/* Mobile menu - Optimized for touch */}
+        {/* Mobile menu - Full screen overlay */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-            isOpen ? 'max-h-[36rem] mt-4 opacity-100' : 'max-h-0 opacity-0'
+          className={`lg:hidden fixed inset-0 z-50 transition-all duration-500 ${
+            isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
         >
-          <ul className="flex flex-col space-y-2 pb-4 border-t border-primary-100 pt-4">
-            {navLinks.map(({ path, label }, index) => {
-              const isActive = location.pathname === path;
-              return (
-                <li
-                  key={path}
-                  className={`transition-all duration-300 ${
-                    isOpen
-                      ? 'translate-x-0 opacity-100'
-                      : '-translate-x-4 opacity-0'
-                  }`}
-                  style={{ transitionDelay: isOpen ? `${index * 50}ms` : '0ms' }}
-                >
-                  <Link
-                    to={path}
-                    onClick={() => setIsOpen(false)}
-                    className={`relative block px-4 py-4 rounded-lg text-base font-medium transition-all duration-200 group overflow-hidden min-h-[48px] flex items-center ${
-                      isActive
-                        ? 'bg-gradient-to-r from-primary-100 to-accent-warm/30 text-primary-900 shadow-soft'
-                        : 'text-gray-700 hover:bg-primary-50 active:bg-primary-100'
+          {/* Backdrop */}
+          <div
+            className={`absolute inset-0 bg-gradient-to-br from-primary-900/95 via-primary-800/95 to-accent-warm/95 backdrop-blur-sm transition-opacity duration-500 ${
+              isOpen ? 'opacity-100' : 'opacity-0'
+            }`}
+            onClick={() => setIsOpen(false)}
+          />
+
+          {/* Menu content */}
+          <div
+            className={`relative h-full flex flex-col justify-center px-6 py-20 transition-transform duration-500 ${
+              isOpen ? 'translate-x-0' : '-translate-x-full'
+            }`}
+          >
+            <ul className="flex flex-col space-y-3 max-w-md mx-auto w-full">
+              {navLinks.map(({ path, label }, index) => {
+                const isActive = location.pathname === path;
+                return (
+                  <li
+                    key={path}
+                    className={`transition-all duration-500 ${
+                      isOpen
+                        ? 'translate-x-0 opacity-100'
+                        : '-translate-x-8 opacity-0'
                     }`}
-                    aria-current={isActive ? 'page' : undefined}
+                    style={{ transitionDelay: isOpen ? `${index * 80}ms` : '0ms' }}
                   >
-                    <span className="relative z-10 flex items-center">
-                      {isActive && (
-                        <span className="w-1.5 h-1.5 bg-primary-600 rounded-full mr-3 animate-pulse" />
+                    <Link
+                      to={path}
+                      onClick={() => setIsOpen(false)}
+                      className={`relative block px-6 py-5 rounded-2xl text-lg font-semibold transition-all duration-300 group overflow-hidden min-h-[60px] flex items-center ${
+                        isActive
+                          ? 'bg-white/20 text-white shadow-soft-lg backdrop-blur-md border border-white/30'
+                          : 'text-white/90 hover:bg-white/10 active:bg-white/20 hover:text-white border border-white/10'
+                      }`}
+                      aria-current={isActive ? 'page' : undefined}
+                    >
+                      <span className="relative z-10 flex items-center">
+                        {isActive && (
+                          <span className="w-2 h-2 bg-white rounded-full mr-4 animate-pulse shadow-glow" />
+                        )}
+                        {label}
+                      </span>
+
+                      {/* Hover effect */}
+                      {!isActive && (
+                        <span className="absolute inset-0 bg-white/5 translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
                       )}
-                      {label}
-                    </span>
+                    </Link>
+                  </li>
+                );
+              })}
 
-                    {/* Hover effect */}
-                    {!isActive && (
-                      <span className="absolute inset-0 bg-gradient-to-r from-primary-50 to-accent-warm/20 translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
-                    )}
-                  </Link>
-                </li>
-              );
-            })}
-
-            {/* Social media links - Mobile */}
-            <li
-              className={`transition-all duration-300 ${
-                isOpen
-                  ? 'translate-x-0 opacity-100'
-                  : '-translate-x-4 opacity-0'
-              }`}
-              style={{ transitionDelay: isOpen ? `${navLinks.length * 50}ms` : '0ms' }}
-            >
-              <div className="px-4 pt-3 pb-2 border-t border-primary-100 mt-2">
-                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Kövess be</p>
-                <div className="flex gap-3">
-                  <a
-                    href="https://www.instagram.com/peleinikifotoi/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram profil"
-                    className="group relative p-3 rounded-xl bg-gradient-to-br from-orange-50 to-amber-50 hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 border border-orange-100 flex-1 flex items-center justify-center min-h-[48px]"
-                  >
-                    <img
-                      src={getAssetPath('assets/icons/instagram.svg')}
-                      alt="Instagram ikon"
-                      className="w-6 h-6 transition-transform duration-300 group-hover:scale-110"
-                    />
-                  </a>
-                  <a
-                    href="https://www.facebook.com/peleinikifoto"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook oldal"
-                    className="group relative p-3 rounded-xl bg-gradient-to-br from-orange-50 to-amber-50 hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 border border-orange-100 flex-1 flex items-center justify-center min-h-[48px]"
-                  >
-                    <img
-                      src={getAssetPath('assets/icons/facebook.svg')}
-                      alt="Facebook ikon"
-                      className="w-6 h-6 transition-transform duration-300 group-hover:scale-110"
-                    />
-                  </a>
-                  <a
-                    href="mailto:peleinikifotoi@gmail.com"
-                    aria-label="E-mail küldése"
-                    className="group relative p-3 rounded-xl bg-gradient-to-br from-orange-50 to-amber-50 hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 border border-orange-100 flex-1 flex items-center justify-center min-h-[48px]"
-                  >
-                    <img
-                      src={getAssetPath('assets/icons/email.svg')}
-                      alt="E-mail ikon"
-                      className="w-6 h-6 transition-transform duration-300 group-hover:scale-110"
-                    />
-                  </a>
+              {/* Social media links - Mobile */}
+              <li
+                className={`transition-all duration-500 pt-6 ${
+                  isOpen
+                    ? 'translate-x-0 opacity-100'
+                    : '-translate-x-8 opacity-0'
+                }`}
+                style={{ transitionDelay: isOpen ? `${navLinks.length * 80}ms` : '0ms' }}
+              >
+                <div className="px-2">
+                  <p className="text-sm font-semibold text-white/70 uppercase tracking-wider mb-4 text-center">Kövess be</p>
+                  <div className="flex gap-4 justify-center">
+                    <a
+                      href="https://www.instagram.com/peleinikifotoi/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram profil"
+                      className="group relative p-4 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-110 hover:shadow-soft-lg min-w-[60px] min-h-[60px] flex items-center justify-center"
+                    >
+                      <img
+                        src={getAssetPath('assets/icons/instagram.svg')}
+                        alt="Instagram ikon"
+                        className="w-7 h-7 transition-transform duration-300 group-hover:scale-110 brightness-0 invert"
+                      />
+                    </a>
+                    <a
+                      href="https://www.facebook.com/peleinikifoto"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Facebook oldal"
+                      className="group relative p-4 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-110 hover:shadow-soft-lg min-w-[60px] min-h-[60px] flex items-center justify-center"
+                    >
+                      <img
+                        src={getAssetPath('assets/icons/facebook.svg')}
+                        alt="Facebook ikon"
+                        className="w-7 h-7 transition-transform duration-300 group-hover:scale-110 brightness-0 invert"
+                      />
+                    </a>
+                    <a
+                      href="mailto:peleinikifotoi@gmail.com"
+                      aria-label="E-mail küldése"
+                      className="group relative p-4 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-110 hover:shadow-soft-lg min-w-[60px] min-h-[60px] flex items-center justify-center"
+                    >
+                      <img
+                        src={getAssetPath('assets/icons/email.svg')}
+                        alt="E-mail ikon"
+                        className="w-7 h-7 transition-transform duration-300 group-hover:scale-110 brightness-0 invert"
+                      />
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
