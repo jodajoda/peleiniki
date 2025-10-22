@@ -124,7 +124,7 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
       role="dialog"
       aria-modal="true"
       aria-label="Képnéző"
-      className={`fixed inset-0 z-[70] bg-black/95 flex items-center justify-center transition-opacity duration-300 overflow-hidden ${
+      className={`fixed inset-0 z-[90] bg-black/95 flex items-center justify-center transition-opacity duration-300 overflow-hidden ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
       onClick={handleClose}

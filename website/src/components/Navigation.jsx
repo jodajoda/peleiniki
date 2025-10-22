@@ -44,7 +44,7 @@ const Navigation = () => {
   return (
     <>
     <header
-      className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-[80] transition-all duration-500 ${
         isScrolled
           ? 'bg-white backdrop-blur-md shadow-soft-lg py-1'
           : 'bg-gradient-to-b from-white via-white/95 to-white/90 py-2'
