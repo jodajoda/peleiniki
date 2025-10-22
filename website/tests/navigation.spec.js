@@ -84,7 +84,7 @@ test.describe('Navigation Component', () => {
       // Menu should be closed initially
       await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
 
-      // Open menu (no force needed - no overlay blocking it)
+      // Open menu
       await menuButton.click();
 
       // Wait for menu to open with increased timeout
@@ -93,8 +93,8 @@ test.describe('Navigation Component', () => {
       // Wait for animation
       await page.waitForTimeout(1000);
 
-      // Close menu by clicking hamburger (force needed - overlay is present)
-      await menuButton.click({ force: true });
+      // Close menu by clicking hamburger (container has pointer-events-none, so clicks pass through)
+      await menuButton.click();
 
       // Wait for menu to close with increased timeout
       await expect(menuButton).toHaveAttribute('aria-expanded', 'false', { timeout: 3000 });
@@ -186,18 +186,18 @@ test.describe('Navigation Component', () => {
 
       const menuButton = page.getByRole('button', { name: 'Menü megnyitása' });
 
-      // Open menu (no force needed)
+      // Open menu
       await menuButton.click();
       await expect(menuButton).toHaveAttribute('aria-expanded', 'true', { timeout: 3000 });
 
       // Wait for animation
       await page.waitForTimeout(1000);
 
-      // Click on the backdrop element directly (it's inside the mobile menu container)
-      // The backdrop is the div with the gradient background and onClick handler
-      // Use force because backdrop has pointer-events-auto but Playwright might see menu content
+      // Click on the backdrop element directly
+      // The backdrop has pointer-events-auto only when menu is open
+      // Click in top-left area where there's definitely only backdrop, not menu content
       const backdrop = page.locator('.lg\\:hidden.fixed.inset-0 > div').first();
-      await backdrop.click({ position: { x: 50, y: 400 }, force: true });
+      await backdrop.click({ position: { x: 10, y: 10 } });
 
       // Wait for menu to close with increased timeout
       await expect(menuButton).toHaveAttribute('aria-expanded', 'false', { timeout: 3000 });
