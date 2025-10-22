@@ -181,14 +181,14 @@ const Navigation = () => {
 
         {/* Mobile menu - Full screen overlay */}
         <div
-          className={`lg:hidden fixed inset-0 z-50 transition-all duration-500 ${
-            isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          className={`lg:hidden fixed inset-0 z-[70] transition-all duration-500 pointer-events-none ${
+            isOpen ? 'opacity-100' : 'opacity-0'
           }`}
         >
           {/* Backdrop */}
           <div
             className={`absolute inset-0 bg-gradient-to-br from-primary-900/95 via-primary-800/95 to-accent-warm/95 backdrop-blur-sm transition-opacity duration-500 ${
-              isOpen ? 'opacity-100' : 'opacity-0'
+              isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
             }`}
             onClick={() => setIsOpen(false)}
           />
@@ -196,7 +196,7 @@ const Navigation = () => {
           {/* Menu content */}
           <div
             className={`relative h-full flex flex-col justify-center px-6 py-20 transition-transform duration-500 ${
-              isOpen ? 'translate-x-0' : '-translate-x-full'
+              isOpen ? 'translate-x-0 pointer-events-auto' : '-translate-x-full pointer-events-none'
             }`}
           >
             <ul className="flex flex-col space-y-3 max-w-md mx-auto w-full">
