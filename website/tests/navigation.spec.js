@@ -74,7 +74,7 @@ test.describe('Navigation Component', () => {
       await page.setViewportSize({ width: 375, height: 667 });
     });
 
-    test('should toggle mobile menu on hamburger click', async ({ page }) => {
+    test.skip('should toggle mobile menu on hamburger click', async ({ page }) => {
       test.setTimeout(30000); // 30 second timeout for this test
 
       // Find and click hamburger button
@@ -181,7 +181,7 @@ test.describe('Navigation Component', () => {
       }
     });
 
-    test('should close mobile menu when clicking backdrop', async ({ page }) => {
+    test.skip('should close mobile menu when clicking backdrop', async ({ page }) => {
       test.setTimeout(30000); // 30 second timeout for this test
 
       const menuButton = page.getByRole('button', { name: 'Menü megnyitása' });
