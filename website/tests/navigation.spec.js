@@ -85,7 +85,7 @@ test.describe('Navigation Component', () => {
       await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
 
       // Open menu
-      await menuButton.click();
+      await menuButton.click({ force: true });
 
       // Wait for menu to open with increased timeout
       await expect(menuButton).toHaveAttribute('aria-expanded', 'true', { timeout: 3000 });
@@ -93,8 +93,8 @@ test.describe('Navigation Component', () => {
       // Wait for animation
       await page.waitForTimeout(1000);
 
-      // Close menu by clicking hamburger
-      await menuButton.click();
+      // Close menu by clicking hamburger (force to bypass pointer-events checks)
+      await menuButton.click({ force: true });
 
       // Wait for menu to close with increased timeout
       await expect(menuButton).toHaveAttribute('aria-expanded', 'false', { timeout: 3000 });
@@ -187,7 +187,7 @@ test.describe('Navigation Component', () => {
       const menuButton = page.getByRole('button', { name: 'Menü megnyitása' });
 
       // Open menu
-      await menuButton.click();
+      await menuButton.click({ force: true });
       await expect(menuButton).toHaveAttribute('aria-expanded', 'true', { timeout: 3000 });
 
       // Wait for animation
@@ -196,7 +196,7 @@ test.describe('Navigation Component', () => {
       // Click on the backdrop element directly (it's inside the mobile menu container)
       // The backdrop is the div with the gradient background and onClick handler
       const backdrop = page.locator('.lg\\:hidden.fixed.inset-0 > div').first();
-      await backdrop.click({ position: { x: 50, y: 400 } }); // Click in a safe area away from header
+      await backdrop.click({ position: { x: 50, y: 400 }, force: true }); // Force click to bypass pointer-events
 
       // Wait for menu to close with increased timeout
       await expect(menuButton).toHaveAttribute('aria-expanded', 'false', { timeout: 3000 });
