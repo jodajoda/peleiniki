@@ -45,7 +45,6 @@ export const getResponsiveImagePath = (path, screenWidth = window.innerWidth) =>
     return getAssetPath(path);
   }
 
-  const extension = path.substring(lastDot + 1).toLowerCase();
   const basePath = path.substring(0, lastDot);
 
   // Try each target width with WebP format first

@@ -130,12 +130,12 @@ const Navigation = () => {
                 href="https://www.instagram.com/peleinikifotoi/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram"
+                aria-label="Instagram profil"
                 className="group relative p-2 rounded-lg hover:bg-primary-50 transition-all duration-300"
               >
                 <img
                   src={getAssetPath('assets/icons/instagram.svg')}
-                  alt="Instagram"
+                  alt="Instagram ikon"
                   className="w-5 h-5 transition-transform duration-300 group-hover:scale-110"
                 />
               </a>
@@ -143,12 +143,23 @@ const Navigation = () => {
                 href="https://www.facebook.com/peleinikifoto"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Facebook"
+                aria-label="Facebook oldal"
                 className="group relative p-2 rounded-lg hover:bg-primary-50 transition-all duration-300"
               >
                 <img
                   src={getAssetPath('assets/icons/facebook.svg')}
-                  alt="Facebook"
+                  alt="Facebook ikon"
+                  className="w-5 h-5 transition-transform duration-300 group-hover:scale-110"
+                />
+              </a>
+              <a
+                href="mailto:peleinikifotoi@gmail.com"
+                aria-label="E-mail küldése"
+                className="group relative p-2 rounded-lg hover:bg-primary-50 transition-all duration-300"
+              >
+                <img
+                  src={getAssetPath('assets/icons/email.svg')}
+                  alt="E-mail ikon"
                   className="w-5 h-5 transition-transform duration-300 group-hover:scale-110"
                 />
               </a>
@@ -217,12 +228,12 @@ const Navigation = () => {
                     href="https://www.instagram.com/peleinikifotoi/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Instagram"
+                    aria-label="Instagram profil"
                     className="group relative p-3 rounded-xl bg-gradient-to-br from-orange-50 to-amber-50 hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 border border-orange-100 flex-1 flex items-center justify-center min-h-[48px]"
                   >
                     <img
                       src={getAssetPath('assets/icons/instagram.svg')}
-                      alt="Instagram"
+                      alt="Instagram ikon"
                       className="w-6 h-6 transition-transform duration-300 group-hover:scale-110"
                     />
                   </a>
@@ -230,12 +241,23 @@ const Navigation = () => {
                     href="https://www.facebook.com/peleinikifoto"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Facebook"
+                    aria-label="Facebook oldal"
                     className="group relative p-3 rounded-xl bg-gradient-to-br from-orange-50 to-amber-50 hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 border border-orange-100 flex-1 flex items-center justify-center min-h-[48px]"
                   >
                     <img
                       src={getAssetPath('assets/icons/facebook.svg')}
-                      alt="Facebook"
+                      alt="Facebook ikon"
+                      className="w-6 h-6 transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </a>
+                  <a
+                    href="mailto:peleinikifotoi@gmail.com"
+                    aria-label="E-mail küldése"
+                    className="group relative p-3 rounded-xl bg-gradient-to-br from-orange-50 to-amber-50 hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 border border-orange-100 flex-1 flex items-center justify-center min-h-[48px]"
+                  >
+                    <img
+                      src={getAssetPath('assets/icons/email.svg')}
+                      alt="E-mail ikon"
                       className="w-6 h-6 transition-transform duration-300 group-hover:scale-110"
                     />
                   </a>
