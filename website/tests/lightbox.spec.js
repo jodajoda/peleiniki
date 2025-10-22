@@ -39,8 +39,9 @@ test.describe('Lightbox Component', () => {
     const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
     await expect(lightbox).toBeVisible();
 
-    // Should show close button
-    await expect(page.getByRole('button', { name: 'Bezárás' })).toBeVisible();
+    // Should show close button within the lightbox
+    const closeButton = lightbox.getByRole('button', { name: 'Bezárás' });
+    await expect(closeButton).toBeVisible();
   });
 
   test('should close lightbox when clicking close button', async ({ page }) => {
@@ -53,11 +54,12 @@ test.describe('Lightbox Component', () => {
     const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
     await expect(lightbox).toBeVisible();
 
-    // Click close button
-    await page.getByRole('button', { name: 'Bezárás' }).click({ force: true });
+    // Click close button within the lightbox dialog
+    const closeButton = lightbox.getByRole('button', { name: 'Bezárás' });
+    await closeButton.click();
 
-    // Lightbox should close
-    await expect(lightbox).not.toBeVisible({ timeout: 1000 });
+    // Wait for close animation (300ms) and expect lightbox to be hidden
+    await expect(lightbox).not.toBeVisible({ timeout: 2000 });
   });
 
   test('should close lightbox when pressing Escape key', async ({ page }) => {
@@ -73,8 +75,8 @@ test.describe('Lightbox Component', () => {
     // Press Escape key
     await page.keyboard.press('Escape');
 
-    // Lightbox should close
-    await expect(lightbox).not.toBeVisible({ timeout: 1000 });
+    // Wait for close animation (300ms) and expect lightbox to be hidden
+    await expect(lightbox).not.toBeVisible({ timeout: 2000 });
   });
 
   test('should close lightbox when clicking backdrop', async ({ page }) => {
@@ -90,8 +92,8 @@ test.describe('Lightbox Component', () => {
     // Click on backdrop (not on image)
     await lightbox.click({ position: { x: 10, y: 10 } });
 
-    // Lightbox should close
-    await expect(lightbox).not.toBeVisible({ timeout: 1000 });
+    // Wait for close animation (300ms) and expect lightbox to be hidden
+    await expect(lightbox).not.toBeVisible({ timeout: 2000 });
   });
 
   test('should navigate to next image with arrow button', async ({ page }) => {
