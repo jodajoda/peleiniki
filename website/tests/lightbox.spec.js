@@ -17,7 +17,7 @@ test.describe('Lightbox Component', () => {
 
   test.afterEach(async ({ page }) => {
     // Close lightbox if it's open to ensure clean state for next test
-    const lightbox = page.locator('div[class*="fixed inset-0 z-50"]');
+    const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
     try {
       if (await lightbox.isVisible({ timeout: 1000 })) {
         await page.keyboard.press('Escape');
@@ -36,7 +36,7 @@ test.describe('Lightbox Component', () => {
     await portfolioImages.first().click({ force: true });
 
     // Lightbox should be visible
-    const lightbox = page.locator('div[class*="fixed inset-0 z-50"]');
+    const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
     await expect(lightbox).toBeVisible();
 
     // Should show close button
@@ -50,15 +50,14 @@ test.describe('Lightbox Component', () => {
     await portfolioImages.first().click({ force: true });
 
     // Wait for lightbox to open
-    await page.waitForSelector('div[class*="fixed inset-0 z-50"]');
+    const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
+    await expect(lightbox).toBeVisible();
 
     // Click close button
     await page.getByRole('button', { name: 'Bezárás' }).click({ force: true });
 
     // Lightbox should close
-    await expect(page.locator('div[class*="fixed inset-0 z-50"]')).not.toBeVisible({
-      timeout: 1000,
-    });
+    await expect(lightbox).not.toBeVisible({ timeout: 1000 });
   });
 
   test('should close lightbox when pressing Escape key', async ({ page }) => {
@@ -68,7 +67,7 @@ test.describe('Lightbox Component', () => {
     await firstImage.click({ force: true });
 
     // Wait for lightbox to open
-    const lightbox = page.locator('div[class*="fixed inset-0 z-50"]');
+    const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
     await expect(lightbox).toBeVisible();
 
     // Press Escape key
@@ -85,7 +84,7 @@ test.describe('Lightbox Component', () => {
     await firstImage.click({ force: true });
 
     // Wait for lightbox to open
-    const lightbox = page.locator('div[class*="fixed inset-0 z-50"]');
+    const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
     await expect(lightbox).toBeVisible();
 
     // Click on backdrop (not on image)
@@ -102,7 +101,8 @@ test.describe('Lightbox Component', () => {
     await firstImage.click({ force: true });
 
     // Wait for lightbox to open
-    await page.waitForSelector('div[class*="fixed inset-0 z-50"]');
+    const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
+    await expect(lightbox).toBeVisible();
 
     // Get initial counter value - use status role to find the counter specifically
     const counterElement = page.locator('div[role="status"][aria-live="polite"] > div.font-medium').first();
@@ -132,7 +132,8 @@ test.describe('Lightbox Component', () => {
       await images.nth(1).click({ force: true });
 
       // Wait for lightbox to open
-      await page.waitForSelector('div[class*="fixed inset-0 z-50"]');
+      const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
+      await expect(lightbox).toBeVisible();
 
       // Previous button should be visible
       const prevButton = page.getByRole('button', { name: 'Előző kép' });
@@ -158,7 +159,8 @@ test.describe('Lightbox Component', () => {
     await firstImage.click({ force: true });
 
     // Wait for lightbox to open
-    await page.waitForSelector('div[class*="fixed inset-0 z-50"]');
+    const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
+    await expect(lightbox).toBeVisible();
 
     // Get initial counter - use status role to find the counter specifically
     const counterElement = page.locator('div[role="status"][aria-live="polite"] > div.font-medium').first();
@@ -196,7 +198,8 @@ test.describe('Lightbox Component', () => {
     await firstImage.click({ force: true });
 
     // Wait for lightbox to open
-    await page.waitForSelector('div[class*="fixed inset-0 z-50"]');
+    const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
+    await expect(lightbox).toBeVisible();
 
     // Counter should be visible and show current position - use status role to find the counter specifically
     const counterElement = page.locator('div[role="status"][aria-live="polite"] > div.font-medium').first();
@@ -214,7 +217,8 @@ test.describe('Lightbox Component', () => {
     await firstImage.click({ force: true });
 
     // Wait for lightbox to open
-    await page.waitForSelector('div[class*="fixed inset-0 z-50"]');
+    const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
+    await expect(lightbox).toBeVisible();
 
     // Previous button should not be visible
     const prevButton = page.getByRole('button', { name: 'Előző kép' });
@@ -231,7 +235,8 @@ test.describe('Lightbox Component', () => {
       await images.nth(imageCount - 1).click({ force: true });
 
       // Wait for lightbox to open
-      await page.waitForSelector('div[class*="fixed inset-0 z-50"]');
+      const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
+      await expect(lightbox).toBeVisible();
 
       // Wait for animations to settle
       await page.waitForTimeout(500);
@@ -259,7 +264,8 @@ test.describe('Lightbox Component', () => {
     await firstImage.click({ force: true });
 
     // Wait for lightbox to open
-    await page.waitForSelector('div[class*="fixed inset-0 z-50"]');
+    const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
+    await expect(lightbox).toBeVisible();
 
     // Check body has no-scroll class and overflow hidden
     const bodyState = await page.evaluate(() => {
@@ -293,10 +299,11 @@ test.describe('Lightbox Component', () => {
     await firstImage.click({ force: true });
 
     // Wait for lightbox to open
-    await page.waitForSelector('div[class*="fixed inset-0 z-50"]');
+    const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
+    await expect(lightbox).toBeVisible();
 
     // Lightbox image should be visible and properly styled
-    const lightboxImage = page.locator('div[class*="fixed inset-0 z-50"] img');
+    const lightboxImage = page.getByRole('dialog', { name: 'Képnéző' }).locator('img');
     await expect(lightboxImage).toBeVisible();
 
     // Check if image is within viewport constraints
@@ -313,7 +320,8 @@ test.describe('Lightbox Component', () => {
     await firstImage.click({ force: true });
 
     // Wait for lightbox to open
-    await page.waitForSelector('div[class*="fixed inset-0 z-50"]');
+    const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
+    await expect(lightbox).toBeVisible();
 
     // Rapidly press arrow keys
     await page.keyboard.press('ArrowRight');
@@ -321,7 +329,6 @@ test.describe('Lightbox Component', () => {
     await page.keyboard.press('ArrowRight');
 
     // Should still work correctly
-    const lightbox = page.locator('div[class*="fixed inset-0 z-50"]');
     await expect(lightbox).toBeVisible();
   });
 
@@ -332,10 +339,11 @@ test.describe('Lightbox Component', () => {
     await firstImage.click({ force: true });
 
     // Wait for lightbox to open
-    await page.waitForSelector('div[class*="fixed inset-0 z-50"]');
+    const lightbox = page.getByRole('dialog', { name: 'Képnéző' });
+    await expect(lightbox).toBeVisible();
 
     // Get lightbox image
-    const lightboxImage = page.locator('div[class*="fixed inset-0 z-50"] img');
+    const lightboxImage = page.getByRole('dialog', { name: 'Képnéző' }).locator('img');
 
     // Check that object-fit is contain (preserves aspect ratio)
     const objectFit = await lightboxImage.evaluate((el) =>
