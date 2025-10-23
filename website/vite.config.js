@@ -172,7 +172,7 @@ export default defineConfig({
     react(),
     criticalCSSPlugin(),
   ],
-  base: '/',
+  base: '/peleiniki/',
   build: {
     outDir: 'dist',
     // Improve build performance and output
