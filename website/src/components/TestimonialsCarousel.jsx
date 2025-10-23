@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { getAssetPath } from '../utils/assets';
 
 const TestimonialsCarousel = ({ autoRotate = true, interval = 5000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -98,7 +99,7 @@ const TestimonialsCarousel = ({ autoRotate = true, interval = 5000 }) => {
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-lg">
               <img
                 key={currentTestimonial.id}
-                src={currentTestimonial.image}
+                src={getAssetPath(currentTestimonial.image)}
                 alt={`${currentTestimonial.name} - ${currentTestimonial.sessionType}`}
                 className={`w-full h-full object-cover transition-all duration-700 ${
                   direction === 'next' ? 'animate-slideInRight' : 'animate-slideInLeft'
