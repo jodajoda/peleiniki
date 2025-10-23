@@ -3,6 +3,7 @@ import Lightbox from '../components/Lightbox';
 import LazyImage from '../components/LazyImage';
 import SEO from '../components/SEO';
 import ScrollToTopButton from '../components/ScrollToTopButton';
+import PhotoStory from '../components/PhotoStory';
 
 const Portfolio = () => {
   const [lightboxIndex, setLightboxIndex] = useState(null);

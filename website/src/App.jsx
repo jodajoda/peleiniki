@@ -6,6 +6,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import Home from './pages/Home';
 import Photoshooting from './pages/Photoshooting';
 import Portfolio from './pages/Portfolio';
+import PhotoStories from './pages/PhotoStories';
 import About from './pages/About';
 import Packages from './pages/Packages';
 import Contact from './pages/Contact';
@@ -30,6 +31,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/photoshooting" element={<Photoshooting />} />
               <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/photo-stories" element={<PhotoStories />} />
               <Route path="/about" element={<About />} />
               <Route path="/packages" element={<Packages />} />
               <Route path="/contact" element={<Contact />} />

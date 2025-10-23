@@ -22,13 +22,26 @@ const Contact = () => {
 
     if (location.state?.message) {
       setFormData((prev) => ({ ...prev, message: location.state.message }));
-      // Scroll to form section on mobile
+      // Scroll to form section with enhanced smooth scrolling
       setTimeout(() => {
         const formElement = document.getElementById('contact-form');
         if (formElement) {
-          formElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          const headerOffset = 100; // Account for sticky header
+          const elementPosition = formElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+
+          // Add subtle highlight animation to the form
+          formElement.classList.add('form-highlight');
+          setTimeout(() => {
+            formElement.classList.remove('form-highlight');
+          }, 2000);
         }
-      }, 100);
+      }, 300);
     }
   }, [location.state]);
   const [status, setStatus] = useState({ type: '', message: '' });

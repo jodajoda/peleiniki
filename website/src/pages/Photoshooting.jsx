@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { getAssetPath } from '../utils/assets';
 import ScrollToTopButton from '../components/ScrollToTopButton';
+import ImageCarousel from '../components/ImageCarousel';
 
 const Photoshooting = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -40,7 +41,11 @@ const Photoshooting = () => {
     {
       id: 'lazabb-fotozes',
       title: 'A Lazább fotózás',
-      image: '/assets/photoshooting/lazabb-fotozes.jpg',
+      images: [
+        '/assets/photoshooting/lazabb-fotozes.jpg',
+        '/assets/photoshooting/lazabb-fotozes-2.jpg',
+        '/assets/photoshooting/lazabb-fotozes-3.jpg',
+      ],
       content: [
         'Nálam nem kell kicsinosítanod magad, felöltöznöd, tökéletesnek lenned. Sőt! Annál jobb, minél lazábban érzitek magatokat. Akár pizsamában, kócos hajjal, kávéval a kezedben – pont olyannak, amilyenek vagytok egy hétköznap reggelén.',
         'Ez nem egy klasszikus "fotózás". Ez inkább olyan, mintha átjönnék egy kávéra, miközben ti csináljátok a dolgotokat. Játszotok a gyerekkel, bújós, cicázás, vagy csak úgy lótok-futotok a lakásban. Én meg közben csendben megörökítem, ahogy éltek, nevetgéltek, ölelgezitek egymást.',
@@ -50,7 +55,11 @@ const Photoshooting = () => {
     {
       id: 'nincs-poz',
       title: 'Nincs póz, csak élet',
-      image: '/assets/photoshooting/nincs-poz.jpg',
+      images: [
+        '/assets/photoshooting/nincs-poz.jpg',
+        '/assets/photoshooting/nincs-poz-2.jpg',
+        '/assets/photoshooting/nincs-poz-3.jpg',
+      ],
       content: [
         'Nálam nem lesz „Nézz a kamerába és mosolyogj!" felszólítás. Ehelyett játszotok, nevettek, ölelitek egymást, és én közben diszkréten megörökítem a pillanatokat. A képek tele lesznek élettel: a gyerek őszinte nevetésével, az apuka büszke pillantásával, az anyuka gyengéd simogatásával.',
         'Minden érzelem helyet kap: a játékos percek, a nevetés, de akár a könnycseppek és a megnyugtató ölelések is. Ezek az őszinte pillanatok teszik a fotókat igazán különlegessé és értékessé.',
@@ -59,7 +68,11 @@ const Photoshooting = () => {
     {
       id: 'helyszin',
       title: 'A helyszín',
-      image: '/assets/photoshooting/helyszin.jpg',
+      images: [
+        '/assets/photoshooting/helyszin.jpg',
+        '/assets/photoshooting/helyszin-2.jpg',
+        '/assets/photoshooting/helyszin-3.jpg',
+      ],
       content: [
         'Fotózhatunk otthon, a kerted zugaiban, a kedvenc játszótereken, parkokban, vagy bármilyen más helyen, ami számotokra fontos és biztonságot ad. A saját környezetetek adja a leghitelesebb hátteret – nincs szükség stúdióra vagy mesterséges díszletekre.',
         'A lényeg, hogy olyan legyen a helyszín, ahol jól érzitek magatokat, ahol szabadon mozoghattok, és ahol a gyerekek is természetesen viselkednek.',
@@ -68,18 +81,14 @@ const Photoshooting = () => {
     {
       id: 'fotozes-utan',
       title: 'A fotózás után',
-      image: '/assets/photoshooting/fotozes-utan.jpg',
+      images: [
+        '/assets/photoshooting/fotozes-utan.jpg',
+        '/assets/photoshooting/fotozes-utan-2.jpg',
+        '/assets/photoshooting/fotozes-utan-3.jpg',
+      ],
       content: [
         'A fotózást követően gondosan átválogatom az összes felvételt, és kiválasztom a legszebb, legkifejezőbb pillanatokat. Ezeket professzionális szoftverekkel retusálom és színkorrigálom, hogy a végeredmény tökéletes legyen.',
         'A kész képeket online galérián keresztül kapjátok meg, ahonnan könnyedén letölthetők és megoszthatók. A képek a tieitek lesznek – nyomtathatjátok, keretezhetitek, megoszthatjátok a családdal és barátokkal.',
-      ],
-    },
-    {
-      id: 'kepzeld-el',
-      title: 'Képzeld el!',
-      image: '/assets/photoshooting/kepzeld-el.jpg',
-      content: [
-        'Képzeld el, hogy évek múlva visszanézed ezeket a képeket, és emlékszel arra a napra, amikor a kicsi még csak ennyike volt. A mosolyára, a nevetésére, arra, ahogy simult hozzád. Ezek az emlékek felbecsülhetetlen értékűek, és a fotók segítenek megőrizni őket.',
       ],
     },
     {
@@ -157,16 +166,29 @@ const Photoshooting = () => {
               </div>
 
               <div className={`grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center relative z-10 ${sectionIndex % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
-                {/* Image - alternating order */}
+                {/* Image/Carousel - alternating order */}
                 <div className={`${sectionIndex % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
-                  <div className={`group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-2xl transition-all duration-700 delay-100 md:duration-1000 md:delay-300 transform hover:scale-[1.02] ${isSectionVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${sectionIndex % 2 === 1 ? 'translate-x-8' : '-translate-x-8'}`}`}>
-                    <img
-                      src={getAssetPath(section.image)}
-                      alt={section.title}
-                      className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  <div className={`group transition-all duration-700 delay-100 md:duration-1000 md:delay-300 ${isSectionVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${sectionIndex % 2 === 1 ? 'translate-x-8' : '-translate-x-8'}`}`}>
+                    {section.images ? (
+                      <ImageCarousel
+                        images={section.images}
+                        alt={section.title}
+                        className="shadow-soft hover:shadow-2xl transition-shadow duration-700"
+                        autoplay={true}
+                        interval={5000}
+                        startOnVisible={true}
+                      />
+                    ) : (
+                      <div className="relative overflow-hidden rounded-2xl shadow-soft hover:shadow-2xl transition-shadow duration-700">
+                        <img
+                          src={getAssetPath(section.image)}
+                          alt={section.title}
+                          className="w-full h-auto object-cover"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                      </div>
+                    )}
                   </div>
                 </div>
 

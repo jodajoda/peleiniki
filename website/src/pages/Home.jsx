@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import SEO from '../components/SEO';
 import { getAssetPath } from '../utils/assets';
 import ScrollToTopButton from '../components/ScrollToTopButton';
+import TestimonialsCarousel from '../components/TestimonialsCarousel';
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -282,6 +283,31 @@ const Home = () => {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="relative py-4 sm:py-6 md:py-8 lg:py-10 overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-primary-50/30 to-white"></div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <div className="inline-block mb-3 sm:mb-4">
+              <span className="text-primary-600 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase font-semibold">Elégedett családok</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Rólam mondták
+            </h2>
+            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-accent-warm to-accent-gold mx-auto rounded-full mb-4"></div>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+              Nézd meg, mit mondanak azok a családok, akikkel dolgoztam
+            </p>
+          </div>
+
+          {/* Testimonials Carousel */}
+          <TestimonialsCarousel autoRotate={true} interval={6000} />
         </div>
       </section>
 

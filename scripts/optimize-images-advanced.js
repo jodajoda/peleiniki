@@ -81,6 +81,48 @@ function getImageFiles(dir, fileList = []) {
 }
 
 /**
+ * Delete all generated image variants (keep only originals)
+ * Deletes files with patterns: *-400w.*, *-800w.*, *-1200w.*, *-1600w.*, *-optimized.*, *.webp
+ */
+function deleteGeneratedImages(dir) {
+  const files = fs.readdirSync(dir);
+  let deletedCount = 0;
+
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      // Skip certain directories
+      const dirName = path.basename(filePath);
+      if (!CONFIG.skipDirs.includes(dirName)) {
+        deletedCount += deleteGeneratedImages(filePath);
+      }
+    } else {
+      const fileName = path.basename(file);
+
+      // Check if file matches generated variant patterns
+      const isGeneratedVariant =
+        /-\d+w\.(jpg|jpeg|png|webp)$/i.test(fileName) ||  // Responsive variants
+        /-optimized\.(jpg|jpeg|png)$/i.test(fileName) ||   // Optimized originals
+        /\.webp$/i.test(fileName);                          // WebP versions
+
+      if (isGeneratedVariant) {
+        try {
+          fs.unlinkSync(filePath);
+          console.log(`  🗑️  Deleted: ${path.relative(CONFIG.sourceDir, filePath)}`);
+          deletedCount++;
+        } catch (error) {
+          console.error(`  ✗ Failed to delete ${filePath}:`, error.message);
+        }
+      }
+    }
+  });
+
+  return deletedCount;
+}
+
+/**
  * Generate LQIP (Low Quality Image Placeholder) as base64
  */
 async function generateLQIP(inputPath) {
@@ -312,9 +354,14 @@ async function main() {
   console.log(`WebP quality: ${CONFIG.webpQuality}%`);
   console.log(`LQIP width: ${CONFIG.lqipWidth}px\n`);
 
+  // Delete all previously generated images
+  console.log('Cleaning up previously generated images...\n');
+  const deletedCount = deleteGeneratedImages(CONFIG.sourceDir);
+  console.log(`\n✓ Deleted ${deletedCount} generated image(s)\n`);
+
   // Get all images
   const images = getImageFiles(CONFIG.sourceDir);
-  console.log(`Found ${images.length} images to process\n`);
+  console.log(`Found ${images.length} original images to process\n`);
 
   // Process each image
   for (const imagePath of images) {

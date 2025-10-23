@@ -37,7 +37,27 @@ const Packages = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handlePackageClick = (packageTitle) => {
+  const handlePackageClick = (packageId, event) => {
+    // Don't navigate if clicking on the button
+    if (event.target.closest('button')) {
+      return;
+    }
+
+    // Map packages to their corresponding photo stories
+    const packageStoryMap = {
+      1: 'varosliget-story',      // Játszótéri móka → Városliget story
+      2: 'varosliget-story',      // Röpke pillanatok → Városliget story
+      3: 'varosliget-story',      // Mindennapi csodák → Városliget story
+      4: 'keresztelo-story'       // Események → Keresztelő story
+    };
+
+    const storyId = packageStoryMap[packageId];
+    if (storyId) {
+      navigate('/photo-stories', { state: { scrollToStory: storyId } });
+    }
+  };
+
+  const handleInterestClick = (packageTitle) => {
     const message = `Szia! Érdeklődnék a "${packageTitle}" csomaggal kapcsolatban. Kérek további információt!`;
     navigate('/contact', { state: { message } });
   };
@@ -132,8 +152,7 @@ const Packages = () => {
                 key={pkg.id}
                 ref={(el) => (cardRefs.current[index] = el)}
                 data-card-index={index}
-                onClick={() => handlePackageClick(pkg.title)}
-                className={`relative group bg-gradient-to-br from-white via-primary-50 to-white border border-gray-200 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-soft hover:shadow-soft-lg transition-all duration-600 md:duration-700 cursor-pointer overflow-hidden ${
+                className={`relative group bg-gradient-to-br from-white via-primary-50 to-white border border-gray-200 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-soft hover:shadow-soft-lg transition-all duration-600 md:duration-700 overflow-hidden ${
                   isCardVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                 }`}
                 style={{
@@ -176,8 +195,8 @@ const Packages = () => {
                             </svg>
                           </div>
                           <div className="flex-1">
-                            <strong className="text-gray-900 text-xs sm:text-sm block mb-0.5">Időtartam</strong>
-                            <span className="text-gray-700 text-xs sm:text-sm">{pkg.duration}</span>
+                            <strong className="text-gray-900 text-sm sm:text-base block mb-0.5">Időtartam</strong>
+                            <span className="text-gray-700 text-sm sm:text-base">{pkg.duration}</span>
                           </div>
                         </li>
                       )}
@@ -197,8 +216,8 @@ const Packages = () => {
                             </svg>
                           </div>
                           <div className="flex-1">
-                            <strong className="text-gray-900 text-xs sm:text-sm block mb-0.5">Képek száma</strong>
-                            <span className="text-gray-700 text-xs sm:text-sm">{pkg.photos}</span>
+                            <strong className="text-gray-900 text-sm sm:text-base block mb-0.5">Képek száma</strong>
+                            <span className="text-gray-700 text-sm sm:text-base">{pkg.photos}</span>
                           </div>
                         </li>
                       )}
@@ -208,24 +227,71 @@ const Packages = () => {
                   {/* Spacer to push price to bottom */}
                   <div className="flex-grow"></div>
 
-                  {/* Call to Action Hint */}
-                  <div className="mb-2 sm:mb-3 text-xs text-primary-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    Kattints a részletekért →
-                  </div>
-
-                  {/* Price Section - Now at the bottom */}
+                  {/* Price Section with Action Icons */}
                   <div className="border-t border-gray-200 pt-2 sm:pt-3 pb-1">
-                    <div className="flex items-baseline justify-between">
+                    <div className="flex items-center justify-between gap-3">
+                      {/* Price */}
                       <div className="pb-1">
                         <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Ár</p>
                         <p className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent leading-tight pb-1" aria-label={`Ár: ${pkg.price}`}>
                           {pkg.price}
                         </p>
                       </div>
-                      <div className="text-primary-600 group-hover:translate-x-2 transition-transform duration-500">
-                        <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
+
+                      {/* Action Icons - Right Side */}
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        {/* View Photo Story Icon */}
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            const packageStoryMap = {
+                              1: 'varosliget-story',
+                              2: 'varosliget-story',
+                              3: 'varosliget-story',
+                              4: 'keresztelo-story'
+                            };
+                            const storyId = packageStoryMap[pkg.id];
+                            if (storyId) {
+                              navigate('/photo-stories', { state: { scrollToStory: storyId } });
+                            }
+                          }}
+                          className="group/story transition-all duration-300 hover:scale-110"
+                          aria-label={`${pkg.title} fotótörténet megtekintése`}
+                          title="Fotótörténet megtekintése"
+                        >
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 shadow-md hover:shadow-lg flex items-center justify-center transition-all duration-300">
+                            <svg
+                              className="w-5 h-5 sm:w-6 sm:h-6 text-white"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                          </div>
+                        </button>
+
+                        {/* Interest Icon */}
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleInterestClick(pkg.title);
+                          }}
+                          className="group/email transition-all duration-300 hover:scale-110"
+                          aria-label={`Érdeklődés a ${pkg.title} csomagról`}
+                          title="Érdeklődöm"
+                        >
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 shadow-md hover:shadow-lg flex items-center justify-center transition-all duration-300">
+                            <svg
+                              className="w-5 h-5 sm:w-6 sm:h-6 text-white"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                          </div>
+                        </button>
                       </div>
                     </div>
                     {pkg.note && (
