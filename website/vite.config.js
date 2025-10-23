@@ -170,7 +170,7 @@ function extractCriticalCSS(css) {
 export default defineConfig({
   plugins: [
     react(),
-    criticalCSSPlugin(),
+    // criticalCSSPlugin(), // Disabled - causing navigation styling issues
   ],
   base: '/peleiniki/',
   build: {
