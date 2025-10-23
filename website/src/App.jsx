@@ -16,7 +16,7 @@ import NotFound from './pages/NotFound';
 function App() {
   return (
     <ErrorBoundary>
-      <Router basename="/">
+      <Router basename="/peleiniki">
         <ScrollToTop />
         <a
           href="#main-content"
