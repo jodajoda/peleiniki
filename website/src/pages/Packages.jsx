@@ -37,26 +37,6 @@ const Packages = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handlePackageClick = (packageId, event) => {
-    // Don't navigate if clicking on the button
-    if (event.target.closest('button')) {
-      return;
-    }
-
-    // Map packages to their corresponding photo stories
-    const packageStoryMap = {
-      1: 'varosliget-story',      // Játszótéri móka → Városliget story
-      2: 'varosliget-story',      // Röpke pillanatok → Városliget story
-      3: 'varosliget-story',      // Mindennapi csodák → Városliget story
-      4: 'keresztelo-story'       // Események → Keresztelő story
-    };
-
-    const storyId = packageStoryMap[packageId];
-    if (storyId) {
-      navigate('/photo-stories', { state: { scrollToStory: storyId } });
-    }
-  };
-
   const handleInterestClick = (packageTitle) => {
     const message = `Szia! Érdeklődnék a "${packageTitle}" csomaggal kapcsolatban. Kérek további információt!`;
     navigate('/contact', { state: { message } });
