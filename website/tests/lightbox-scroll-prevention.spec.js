@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Lightbox Scroll Prevention', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/peleiniki/portfolio');
+    await page.goto('/portfolio');
     await page.waitForLoadState('networkidle');
   });
 
