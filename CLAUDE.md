@@ -207,7 +207,7 @@ The symlink ensures assets are accessible during development and get copied duri
 
 ## Deployment
 
-### GitHub Pages (Automated)
+### Firebase Hosting (Automated)
 
 Deployment is automated via GitHub Actions on push to `main`:
 
@@ -222,50 +222,73 @@ Deployment is automated via GitHub Actions on push to `main`:
    - Runs in `website/` directory
    - Executes `npm run build`
    - Injects EmailJS secrets as environment variables
+   - Uploads build artifacts
 
-3. **Deploy Job** - Publishes to GitHub Pages (requires build to pass)
-   - Uploads `website/dist/` to GitHub Pages with CNAME file
+3. **Deploy Job** - Publishes to Firebase Hosting (requires build to pass)
+   - Downloads build artifacts from `website/dist/`
+   - Deploys to Firebase project: `peleiniki-portfolio`
    - Site deploys to: https://peleiniki.com
 
-Configuration in [.github/workflows/deploy.yml](.github/workflows/deploy.yml).
+Configuration in [.github/workflows/firebase-deploy.yml](.github/workflows/firebase-deploy.yml).
 
 **Additional CI/CD Workflows:**
 - **[playwright-tests.yml](.github/workflows/playwright-tests.yml)** - Runs tests on PRs to `main` and pushes to `develop` branch
 - **[ci.yml](.github/workflows/ci.yml)** - Runs linting and build checks on PRs and `develop` branch
 
-Note: Tests only run once on push to `main` (in deploy.yml). Separate test workflow handles PRs and develop branch.
+Note: Tests only run once on push to `main` (in firebase-deploy.yml). Separate test workflow handles PRs and develop branch.
+
+### Firebase Configuration
+
+**Project ID:** `peleiniki-portfolio`
+
+**Configuration Files:**
+- [firebase.json](firebase.json) - Firebase Hosting configuration
+- [.firebaserc](.firebaserc) - Firebase project settings
+
+**Setup Instructions:**
+
+For first-time setup or troubleshooting, see [FIREBASE_SETUP.md](FIREBASE_SETUP.md) for:
+- Generating Firebase service account credentials
+- Adding GitHub secrets
+- Configuring custom domain DNS
+- Testing local deployment
+- Troubleshooting common issues
+
+**Required GitHub Secrets:**
+- `FIREBASE_SERVICE_ACCOUNT_PELEINIKI_PORTFOLIO` - Firebase service account credentials
+- `VITE_EMAILJS_SERVICE_ID` - EmailJS service ID
+- `VITE_EMAILJS_TEMPLATE_ID` - EmailJS template ID
+- `VITE_EMAILJS_PUBLIC_KEY` - EmailJS public key
 
 ### DNS Configuration for Custom Domain
 
-To configure the custom domain `peleiniki.com` with GitHub Pages:
+To configure the custom domain `peleiniki.com` with Firebase Hosting:
+
+**Firebase Console Setup:**
+
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Select project: `peleiniki-portfolio`
+3. Navigate to **Hosting** → **Add custom domain**
+4. Enter domain: `peleiniki.com`
+5. Firebase will provide DNS records to configure
 
 **DNS Settings:**
 
-Add the following DNS records at your domain registrar:
+Add the DNS records provided by Firebase to your domain registrar. Typically:
 
 1. **A Records** (for apex domain):
-   ```
-   185.199.108.153
-   185.199.109.153
-   185.199.110.153
-   185.199.111.153
-   ```
+   - Firebase will provide specific IP addresses
+   - Remove old GitHub Pages A records first
 
-2. **CNAME Record** (optional, for www subdomain):
+2. **CNAME Record** (for www subdomain):
    ```
-   www.peleiniki.com → [YOUR-USERNAME].github.io
+   www.peleiniki.com → peleiniki-portfolio.web.app
    ```
-
-**GitHub Pages Settings:**
-
-1. Go to repository **Settings** → **Pages**
-2. Under **Custom domain**, enter: `peleiniki.com`
-3. Enable **Enforce HTTPS** (after DNS propagation)
-4. The CNAME file in `website/public/` ensures the domain persists after deployment
 
 **Verification:**
 - DNS propagation can take 24-48 hours
 - Check DNS status: `dig peleiniki.com` or use [dnschecker.org](https://dnschecker.org)
+- Firebase automatically provisions SSL certificates
 - Once propagated, site will be accessible at https://peleiniki.com
 
 ### Manual Deployment
@@ -275,9 +298,26 @@ Add the following DNS records at your domain registrar:
 Simply push your changes to the `main` branch and GitHub Actions will:
 1. Run all tests
 2. Build the production bundle from `website/`
-3. Deploy directly from `website/dist/` to GitHub Pages
+3. Deploy to Firebase Hosting
 
-**Note:** The root directory should NOT contain deployment files (index.html, assets/, etc.) - these are automatically generated and deployed by GitHub Actions. They are gitignored to keep the repository clean.
+**Optional: Local Firebase Testing**
+
+If you want to test Firebase deployment locally:
+
+```bash
+cd website
+
+# Build the project
+npm run build
+
+# Test Firebase hosting locally
+firebase serve
+
+# Deploy manually (optional)
+firebase deploy
+```
+
+**Note:** You need Firebase CLI installed (`npm install -g firebase-tools`) and be logged in (`firebase login`) for local commands.
 
 ## Development Patterns
 

@@ -4,7 +4,8 @@ import { resolve } from 'path'
 import fs from 'fs'
 import { glob } from 'glob'
 
-// Custom plugin to inline critical CSS
+// Custom plugin to inline critical CSS (currently disabled)
+// eslint-disable-next-line no-unused-vars
 function criticalCSSPlugin() {
   let config;
 
@@ -75,7 +76,7 @@ function criticalCSSPlugin() {
           // Write the result
           fs.writeFileSync(indexPath, html);
 
-          const inlinedSize = Buffer.byteLength(criticalCSS, 'utf8');
+          const inlinedSize = new TextEncoder().encode(criticalCSS).length;
           console.log('✅ Critical CSS inlined successfully!');
           console.log(`   Inlined: ${(inlinedSize / 1024).toFixed(2)} KB of critical CSS`);
           console.log(`   Remaining CSS will load asynchronously`);
@@ -154,7 +155,7 @@ function extractCriticalCSS(css) {
 
   // If still too large, truncate to ~12KB
   const maxSize = 12 * 1024; // 12KB
-  if (Buffer.byteLength(criticalCSS, 'utf8') > maxSize) {
+  if (new TextEncoder().encode(criticalCSS).length > maxSize) {
     criticalCSS = criticalCSS.substring(0, maxSize);
     // Ensure we end on a complete rule
     const lastBrace = criticalCSS.lastIndexOf('}');
