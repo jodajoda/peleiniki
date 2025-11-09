@@ -275,11 +275,13 @@ VITE_EMAILJS_PUBLIC_KEY=your_public_key_here
 ### GitHub Secrets:
 
 Update these three secrets in GitHub repository settings:
-- `VITE_EMAILJS_SERVICE_ID`
-- `VITE_EMAILJS_TEMPLATE_ID`
-- `VITE_EMAILJS_PUBLIC_KEY`
+1. Go to repository **Settings** → **Secrets and variables** → **Actions**
+2. Update these three secrets:
+   - `VITE_EMAILJS_SERVICE_ID`
+   - `VITE_EMAILJS_TEMPLATE_ID`
+   - `VITE_EMAILJS_PUBLIC_KEY`
 
-See [GITHUB_SECRETS_SETUP.md](GITHUB_SECRETS_SETUP.md) for instructions.
+See [FIREBASE_SETUP.md](FIREBASE_SETUP.md) for detailed instructions on managing GitHub Secrets.
 
 ---
 

@@ -177,8 +177,8 @@ Contact form in [Contact.jsx](website/src/pages/Contact.jsx) uses EmailJS for em
    VITE_EMAILJS_PUBLIC_KEY=your_public_key
    ```
 
-**Production Deployment (GitHub Pages):**
-1. Add credentials as GitHub Secrets (see [GITHUB_SECRETS_SETUP.md](GITHUB_SECRETS_SETUP.md))
+**Production Deployment (Firebase Hosting):**
+1. Add credentials as GitHub Secrets (see [FIREBASE_SETUP.md](FIREBASE_SETUP.md))
 2. **CRITICAL**: Configure domain whitelist in EmailJS dashboard (see [SECURITY.md](SECURITY.md))
 
 **Security features:**
@@ -417,8 +417,6 @@ The website meets WCAG 2.1 Level AA standards with comprehensive accessibility f
 - Automated accessibility tests using axe-core
 - 180+ test cases covering WCAG compliance
 - Run tests: `npm test -- accessibility.spec.js`
-
-See [ACCESSIBILITY.md](../ACCESSIBILITY.md) for complete documentation.
 
 ## Troubleshooting
 
