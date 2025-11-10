@@ -1,17 +1,21 @@
+import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import ErrorBoundary from './components/ErrorBoundary';
-import Home from './pages/Home';
-import Photoshooting from './pages/Photoshooting';
-import Portfolio from './pages/Portfolio';
-import PhotoStories from './pages/PhotoStories';
-import About from './pages/About';
-import Packages from './pages/Packages';
-import Contact from './pages/Contact';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import NotFound from './pages/NotFound';
+import PageLoader from './components/PageLoader';
+
+// Lazy load all page components for better performance
+const Home = lazy(() => import('./pages/Home'));
+const Photoshooting = lazy(() => import('./pages/Photoshooting'));
+const Portfolio = lazy(() => import('./pages/Portfolio'));
+const PhotoStories = lazy(() => import('./pages/PhotoStories'));
+const About = lazy(() => import('./pages/About'));
+const Packages = lazy(() => import('./pages/Packages'));
+const Contact = lazy(() => import('./pages/Contact'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
   return (
@@ -27,17 +31,19 @@ function App() {
         <div className="flex flex-col min-h-screen">
           <Navigation />
           <main id="main-content" className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/photoshooting" element={<Photoshooting />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/photo-stories" element={<PhotoStories />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/packages" element={<Packages />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/adatkezelesi-tajekoztato" element={<PrivacyPolicy />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            <Suspense fallback={<PageLoader />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/photoshooting" element={<Photoshooting />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/photo-stories" element={<PhotoStories />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/packages" element={<Packages />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/adatkezelesi-tajekoztato" element={<PrivacyPolicy />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
           </main>
           <Footer />
         </div>
