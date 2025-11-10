@@ -2,16 +2,17 @@ import { useEffect, useState, useCallback } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import { getResponsiveImagePath } from '../utils/assets';
 import ImageDetails from './ImageDetails';
+import { useFadeIn } from '../hooks/useFadeIn';
+import { useLightboxKeyboard } from '../hooks/useKeyboardNavigation';
+import { useScrollLock } from '../hooks/useScrollLock';
 
 const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const isVisible = useFadeIn();
   const [imageKey, setImageKey] = useState(0);
   const [direction, setDirection] = useState('none');
 
-  useEffect(() => {
-    // Trigger fade-in animation on mount
-    setIsVisible(true);
-  }, []);
+  // Use scroll lock hook
+  useScrollLock(currentIndex !== null);
 
   useEffect(() => {
     // Trigger image transition animation when index changes
@@ -19,12 +20,6 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
   }, [currentIndex]);
 
   const handleClose = useCallback(() => {
-    setIsVisible(false);
-
-    // Simply remove the no-scroll class - no scroll restoration needed
-    document.body.classList.remove('no-scroll');
-    document.body.style.removeProperty('padding-right');
-
     setTimeout(() => onClose(), 300);
   }, [onClose]);
 
@@ -44,6 +39,9 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
     }, 150);
   }, [onPrev]);
 
+  // Use keyboard navigation hook
+  useLightboxKeyboard(handleClose, handleNext, handlePrev, currentIndex !== null);
+
   // Swipeable handlers for touch gestures
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => {
@@ -60,59 +58,6 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
     trackMouse: true, // Also enables mouse dragging
     delta: 50, // Minimum distance for swipe
   });
-
-  // Separate effect for keyboard navigation
-  useEffect(() => {
-    if (currentIndex === null) return;
-
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') handleClose();
-      if (e.key === 'ArrowLeft') handlePrev();
-      if (e.key === 'ArrowRight') handleNext();
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [currentIndex, handleClose, handleNext, handlePrev]);
-
-  // Separate effect for scroll prevention (only runs on mount/unmount)
-  useEffect(() => {
-    if (currentIndex === null) return;
-
-    // Calculate scrollbar width to prevent layout shift
-    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-
-    // Apply no-scroll class and compensate for scrollbar
-    document.body.classList.add('no-scroll');
-    document.body.style.paddingRight = `${scrollbarWidth}px`;
-
-    // Prevent touch and wheel scrolling
-    const preventScroll = (e) => {
-      if (e.target.closest('.lightbox-content')) {
-        // Allow scrolling within lightbox content if needed
-        return;
-      }
-      e.preventDefault();
-    };
-
-    document.addEventListener('touchmove', preventScroll, { passive: false });
-    document.addEventListener('wheel', preventScroll, { passive: false });
-
-    return () => {
-      // Only remove event listeners; scroll restoration is handled in handleClose
-      document.removeEventListener('touchmove', preventScroll);
-      document.removeEventListener('wheel', preventScroll);
-
-      // Failsafe: restore if component unmounts without handleClose being called
-      if (document.body.classList.contains('no-scroll')) {
-        document.body.classList.remove('no-scroll');
-        document.body.style.removeProperty('padding-right');
-      }
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // Only run on mount/unmount, not when currentIndex changes
 
   if (currentIndex === null) return null;
 

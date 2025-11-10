@@ -1,44 +1,17 @@
-import { useState, useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import Lightbox from '../components/Lightbox';
-import LazyImage from '../components/LazyImage';
+import GalleryImage from '../components/GalleryImage';
+import DecorativeBackground from '../components/DecorativeBackground';
 import SEO from '../components/SEO';
 import ScrollToTopButton from '../components/ScrollToTopButton';
-import PhotoStory from '../components/PhotoStory';
+import { useFadeIn } from '../hooks/useFadeIn';
+import { useMultipleIntersectionObserver } from '../hooks/useIntersectionObserver';
+import { useImageLightbox } from '../hooks/useImageLightbox';
 
 const Portfolio = () => {
-  const [lightboxIndex, setLightboxIndex] = useState(null);
-  const [currentGroup, setCurrentGroup] = useState(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const [visibleSections, setVisibleSections] = useState(new Set());
+  // Use custom hooks for cleaner code
+  const isVisible = useFadeIn();
   const sectionRefs = useRef([]);
-
-  useEffect(() => {
-    setIsVisible(true);
-
-    // Intersection Observer for section animations
-    // On mobile: trigger earlier with reduced rootMargin for faster content appearance
-    const isMobile = window.innerWidth < 768;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = entry.target.getAttribute('data-section-index');
-            setVisibleSections((prev) => new Set([...prev, parseInt(index)]));
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-        rootMargin: isMobile ? '0px 0px 50px 0px' : '0px 0px 0px 0px'
-      }
-    );
-
-    sectionRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => observer.disconnect();
-  }, []);
 
   const portfolioGroups = [
     {
@@ -132,29 +105,22 @@ const Portfolio = () => {
     },
   ];
 
-  const openLightbox = (groupIndex, imageIndex) => {
-    setCurrentGroup(groupIndex);
-    setLightboxIndex(imageIndex);
-  };
+  // Use lightbox hook for state management
+  const {
+    isOpen: isLightboxOpen,
+    currentIndex: lightboxIndex,
+    currentGroup,
+    openLightbox,
+    closeLightbox,
+    nextImage,
+    prevImage,
+  } = useImageLightbox(portfolioGroups);
 
-  const closeLightbox = () => {
-    setLightboxIndex(null);
-    setCurrentGroup(null);
-  };
-
-  const nextImage = () => {
-    if (currentGroup !== null) {
-      const totalImages = portfolioGroups[currentGroup].images.length;
-      setLightboxIndex((prev) => (prev + 1) % totalImages);
-    }
-  };
-
-  const prevImage = () => {
-    if (currentGroup !== null) {
-      const totalImages = portfolioGroups[currentGroup].images.length;
-      setLightboxIndex((prev) => (prev - 1 + totalImages) % totalImages);
-    }
-  };
+  // Use intersection observer for section visibility
+  const { visibleIndices: visibleSections } = useMultipleIntersectionObserver(
+    portfolioGroups.length,
+    { threshold: 0.1, useMobileOptimization: true }
+  );
 
   return (
     <div className="min-h-screen pt-28 sm:pt-32 pb-16">
@@ -192,24 +158,13 @@ const Portfolio = () => {
             data-section-index={groupIndex}
             className="relative bg-gradient-to-br from-primary-50 via-white to-primary-100 overflow-hidden py-6 sm:py-8 md:py-10"
           >
-            {/* Enhanced floating blur elements */}
-            <div className="absolute inset-0 opacity-15 pointer-events-none">
-              <div className="absolute top-10 left-10 w-80 h-80 bg-gradient-to-br from-orange-200 to-amber-300 rounded-full blur-3xl animate-float"></div>
-              <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-tl from-amber-200 to-orange-300 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-              <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-orange-100 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
-            </div>
-
-            {/* Decorative pattern overlay */}
-            <div className="absolute inset-0 opacity-5 pointer-events-none">
-              <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <pattern id={`dots-${group.id}`} x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                    <circle cx="20" cy="20" r="2" fill="currentColor" />
-                  </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill={`url(#dots-${group.id})`} />
-              </svg>
-            </div>
+            {/* Use DecorativeBackground component */}
+            <DecorativeBackground
+              patternId={`dots-${group.id}`}
+              variant="orange"
+              showPattern={true}
+              blurIntensity={0.15}
+            />
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="mb-4 sm:mb-5 md:mb-6 relative z-10 text-center md:text-left max-w-4xl mx-auto">
@@ -516,37 +471,14 @@ const Portfolio = () => {
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10">
                   {group.images.map((image, imageIndex) => (
-                    <button
+                    <GalleryImage
                       key={imageIndex}
-                      type="button"
-                      className="relative overflow-hidden rounded-2xl cursor-pointer group hover:shadow-2xl transition-all duration-700 transform hover:scale-[1.02] w-full text-left focus:outline-none focus:ring-4 focus:ring-orange-400"
-                      style={{ animationDelay: `${imageIndex * 0.05}s` }}
+                      src={image.src}
+                      alt={image.alt}
                       onClick={() => openLightbox(groupIndex, imageIndex)}
-                      aria-label={`${image.alt} megnyitása nagyobb méretben`}
-                    >
-                      <LazyImage
-                        src={image.src}
-                        alt={image.alt}
-                        className="h-72 hover-zoom image-soft-glow"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex items-center justify-center">
-                        <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                          <svg
-                            className="w-14 h-14 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-90 group-hover:scale-100"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
+                      imageClassName="h-72 hover-zoom image-soft-glow"
+                      animationDelay={imageIndex * 0.05}
+                    />
                   ))}
                 </div>
               )}
@@ -557,7 +489,7 @@ const Portfolio = () => {
       </div>
 
       {/* Lightbox */}
-      {lightboxIndex !== null && currentGroup !== null && (
+      {isLightboxOpen && currentGroup !== null && (
         <Lightbox
           images={portfolioGroups[currentGroup].images}
           currentIndex={lightboxIndex}
@@ -568,7 +500,7 @@ const Portfolio = () => {
       )}
 
       {/* Scroll to top button */}
-      <ScrollToTopButton isLightboxOpen={lightboxIndex !== null} />
+      <ScrollToTopButton isLightboxOpen={isLightboxOpen} />
     </div>
   );
 };
