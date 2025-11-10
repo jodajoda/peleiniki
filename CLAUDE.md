@@ -41,6 +41,34 @@ npm run test:report  # View last test report
 # No manual deployment needed - GitHub Actions handles everything
 ```
 
+## MCP Configuration (Context7)
+
+This project is configured with **Context7 MCP** for enhanced AI assistance with up-to-date documentation.
+
+**What is Context7?**
+Context7 is a Model Context Protocol (MCP) server that dynamically fetches current, version-specific documentation and code examples from official sources. It helps Claude Code provide more accurate guidance for React, Vite, Tailwind, and other frameworks used in this project.
+
+**Configuration:**
+The project includes `.mcp.json` at the root directory with Context7 pre-configured. This file is checked into version control so all team members automatically have access to enhanced documentation.
+
+**How to use Context7:**
+Simply include "use context7" in your prompts when you need up-to-date documentation:
+
+```bash
+# Example prompts:
+"Use context7 to show me the latest React 19 hooks best practices"
+"Use context7 to find current Vite 7 configuration options"
+"Use context7 for Tailwind CSS 3.4 arbitrary variants syntax"
+```
+
+**Benefits:**
+- ✅ Always up-to-date documentation (not limited by AI training cutoff)
+- ✅ Version-specific examples for exact framework versions
+- ✅ Official API references and best practices
+- ✅ Shared across team via version control
+
+**Note:** Context7 automatically activates when Claude Code detects framework references in prompts. No API key required for basic usage.
+
 ## Architecture
 
 ### Tech Stack

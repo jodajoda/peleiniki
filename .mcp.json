@@ -1,0 +1,10 @@
+{
+  "$schema": "https://schema.claudecode.com/mcp.json",
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"],
+      "description": "Up-to-date documentation for React, Vite, Tailwind, and other frameworks"
+    }
+  }
+}
