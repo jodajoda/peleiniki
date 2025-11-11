@@ -2,17 +2,21 @@ import { useEffect, useState, useCallback } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import { getResponsiveImagePath } from '../utils/assets';
 import ImageDetails from './ImageDetails';
-import { useFadeIn } from '../hooks/useFadeIn';
 import { useLightboxKeyboard } from '../hooks/useKeyboardNavigation';
 import { useScrollLock } from '../hooks/useScrollLock';
 
 const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
-  const isVisible = useFadeIn();
+  const [isVisible, setIsVisible] = useState(false);
   const [imageKey, setImageKey] = useState(0);
   const [direction, setDirection] = useState('none');
 
-  // Use scroll lock hook
-  useScrollLock(currentIndex !== null);
+  // Use scroll lock hook with manual control
+  const { unlockScroll } = useScrollLock(currentIndex !== null);
+
+  useEffect(() => {
+    // Trigger fade-in animation on mount
+    setIsVisible(true);
+  }, []);
 
   useEffect(() => {
     // Trigger image transition animation when index changes
@@ -20,8 +24,11 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
   }, [currentIndex]);
 
   const handleClose = useCallback(() => {
+    setIsVisible(false);
+    // Manually unlock scroll immediately for better test reliability
+    unlockScroll();
     setTimeout(() => onClose(), 300);
-  }, [onClose]);
+  }, [onClose, unlockScroll]);
 
   const handleNext = useCallback(() => {
     setDirection('right');
