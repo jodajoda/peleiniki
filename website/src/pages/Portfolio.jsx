@@ -11,7 +11,6 @@ import { useImageLightbox } from '../hooks/useImageLightbox';
 const Portfolio = () => {
   // Use custom hooks for cleaner code
   const isVisible = useFadeIn();
-  const sectionRefs = useRef([]);
 
   const portfolioGroups = [
     {
@@ -117,7 +116,7 @@ const Portfolio = () => {
   } = useImageLightbox(portfolioGroups);
 
   // Use intersection observer for section visibility
-  const { visibleIndices: visibleSections } = useMultipleIntersectionObserver(
+  const { refs: sectionRefs, visibleIndices: visibleSections } = useMultipleIntersectionObserver(
     portfolioGroups.length,
     { threshold: 0.1, useMobileOptimization: true }
   );
