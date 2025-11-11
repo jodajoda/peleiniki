@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import Lightbox from '../components/Lightbox';
 import GalleryImage from '../components/GalleryImage';
 import DecorativeBackground from '../components/DecorativeBackground';
