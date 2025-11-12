@@ -16,8 +16,8 @@ function SEO({
   canonicalUrl,
   structuredData
 }) {
-  // Base URL for the website
-  const baseUrl = 'https://peleiniki.com';
+  // Base URL for the website (configurable via environment variable)
+  const baseUrl = import.meta.env.VITE_SITE_URL || 'https://peleiniki.com';
 
   // Default OG image if none provided
   const defaultOgImage = `${baseUrl}/assets/homepage/hero.jpg`;

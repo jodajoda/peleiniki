@@ -14,7 +14,8 @@
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --debug",
     "test:report": "playwright show-report",
-    "optimize-images": "node ../scripts/optimize-images-advanced.js"
+    "optimize-images": "node ../scripts/optimize-images-advanced.js",
+    "prepare": "husky"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
