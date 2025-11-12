@@ -1,15 +1,17 @@
+import { useState, useEffect, useRef } from 'react';
 import Lightbox from '../components/Lightbox';
 import GalleryImage from '../components/GalleryImage';
 import DecorativeBackground from '../components/DecorativeBackground';
 import SEO from '../components/SEO';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 import { useFadeIn } from '../hooks/useFadeIn';
-import { useMultipleIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { useImageLightbox } from '../hooks/useImageLightbox';
 
 const Portfolio = () => {
   // Use custom hooks for cleaner code
   const isVisible = useFadeIn();
+  const [visibleSections, setVisibleSections] = useState(new Set());
+  const sectionRefs = useRef([]);
 
   const portfolioGroups = [
     {
@@ -114,11 +116,31 @@ const Portfolio = () => {
     prevImage,
   } = useImageLightbox(portfolioGroups);
 
-  // Use intersection observer for section visibility
-  const { refs: sectionRefs, visibleIndices: visibleSections } = useMultipleIntersectionObserver(
-    portfolioGroups.length,
-    { threshold: 0.1, useMobileOptimization: true }
-  );
+  // Intersection Observer for section animations
+  useEffect(() => {
+    // On mobile: trigger earlier with reduced rootMargin for faster content appearance
+    const isMobile = window.innerWidth < 768;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = entry.target.getAttribute('data-section-index');
+            setVisibleSections((prev) => new Set([...prev, parseInt(index)]));
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: isMobile ? '0px 0px 50px 0px' : '0px 0px 0px 0px'
+      }
+    );
+
+    sectionRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="min-h-screen pt-28 sm:pt-32 pb-16">
