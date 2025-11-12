@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import { getResponsiveImagePath } from '../utils/assets';
 import ImageDetails from './ImageDetails';
+import { useLightboxKeyboard } from '../hooks/useKeyboardNavigation';
 
 const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -44,38 +45,8 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
     }, 150);
   }, [onPrev]);
 
-  // Swipeable handlers for touch gestures
-  const swipeHandlers = useSwipeable({
-    onSwipedLeft: () => {
-      if (currentIndex < images.length - 1) {
-        handleNext();
-      }
-    },
-    onSwipedRight: () => {
-      if (currentIndex > 0) {
-        handlePrev();
-      }
-    },
-    preventScrollOnSwipe: true,
-    trackMouse: true, // Also enables mouse dragging
-    delta: 50, // Minimum distance for swipe
-  });
-
-  // Separate effect for keyboard navigation
-  useEffect(() => {
-    if (currentIndex === null) return;
-
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') handleClose();
-      if (e.key === 'ArrowLeft') handlePrev();
-      if (e.key === 'ArrowRight') handleNext();
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [currentIndex, handleClose, handleNext, handlePrev]);
+  // Use keyboard navigation hook
+  useLightboxKeyboard(handleClose, handleNext, handlePrev, currentIndex !== null);
 
   // Separate effect for scroll prevention (only runs on mount/unmount)
   useEffect(() => {
@@ -113,6 +84,23 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // Only run on mount/unmount, not when currentIndex changes
+
+  // Swipeable handlers for touch gestures
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (currentIndex < images.length - 1) {
+        handleNext();
+      }
+    },
+    onSwipedRight: () => {
+      if (currentIndex > 0) {
+        handlePrev();
+      }
+    },
+    preventScrollOnSwipe: true,
+    trackMouse: true, // Also enables mouse dragging
+    delta: 50, // Minimum distance for swipe
+  });
 
   if (currentIndex === null) return null;
 
