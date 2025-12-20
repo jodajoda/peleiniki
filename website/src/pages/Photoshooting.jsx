@@ -56,7 +56,6 @@ const Photoshooting = () => {
       ],
       content: [
         'A legszebb képek mindig azok, amik maguktól születnek: egy nevetésből, egy ölelésből, játékból, kapcsolódásból. Nálam nincsenek erőltetett beállítások vagy „nézz ide és mosolyogj!” kérések. Inkább hagyom, hogy a gyerekek játsszanak, a szülők öleljenek, és a család pont olyan legyen, amilyen a mindennapokban.',
-        'A fotókon megjelenik majd mindaz, ami a leginkább jellemző rátok: - őszinte kacagás - egy szeretettel teli tekintet - apró érintések - meghitt pillanatok, akár könnyekkel együtt - az a csendes kapcsolat, ami szavak nélkül is érthető. Ezekből lesznek azok a természetes, időtálló családi képek, amiket szívesen őriztek majd évek múlva is.',
       ],
     },
     {
