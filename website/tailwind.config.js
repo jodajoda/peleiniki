@@ -8,6 +8,10 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        // New warm, family-friendly fonts
+        handwritten: ['Reenie Beanie', 'Dancing Script', 'cursive'],
+        serif: ['Crimson Pro', 'Lora', 'Georgia', 'serif'],
+        body: ['Outfit', 'Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
         primary: {
@@ -29,6 +33,25 @@ export default {
           rose: '#f06292',
           lavender: '#ba68c8',
         },
+        // New warm, intimate color palette inspired by family photography
+        warmPaper: '#faf7f3',
+        cream: {
+          50: '#fdfcfb',
+          100: '#f9f6f1',
+          200: '#f5f0e8',
+          300: '#ede6da',
+        },
+        peach: {
+          50: '#fef5f1',
+          100: '#fce8df',
+          200: '#f9d5c5',
+          300: '#f5b89b',
+        },
+        terracotta: '#d4856e',
+        sunsetOrange: '#e89b6f',
+        goldenHour: '#f4c791',
+        warmBrown: '#7a5e52',
+        charcoal: '#3d3632',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -69,6 +92,10 @@ export default {
           '0%': { opacity: '0', transform: 'translateX(-100%)' },
           '100%': { opacity: '1', transform: 'translateX(0)' },
         },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
       },
       animation: {
         shimmer: 'shimmer 2s infinite linear',
@@ -77,6 +104,10 @@ export default {
         fadeInDown: 'fadeInDown 0.6s ease-out forwards',
         slideInRight: 'slideInRight 0.7s ease-out',
         slideInLeft: 'slideInLeft 0.7s ease-out',
+        'float-slow': 'float 6s ease-in-out infinite',
+      },
+      boxShadow: {
+        '3xl': '0 30px 60px -12px rgba(0, 0, 0, 0.25)',
       },
     },
   },
