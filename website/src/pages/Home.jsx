@@ -302,7 +302,7 @@ const Home = () => {
             </h2>
             <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-accent-warm to-accent-gold mx-auto rounded-full mb-4"></div>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-              Nézd meg, mit mondanak azok a családok, akikkel dolgoztam
+              Nézd meg az ügyfeleim őszinte reakcióit a képek láttán.
             </p>
           </div>
 

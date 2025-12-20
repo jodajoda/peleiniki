@@ -105,7 +105,7 @@ const Photoshooting = () => {
           </h1>
           <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-2 sm:mb-3 transition-all duration-700 delay-100 md:duration-1000 md:delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
           <p className={`text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed transition-all duration-700 delay-150 md:duration-1000 md:delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            Lazán, természetesen, sok nevetéssel - fedezd fel, hogyan zajlik egy családi fotózás
+            Természetes ritmusban, a saját tempótokban – bepillantás a fotózás menetébe
           </p>
         </div>
       </div>
