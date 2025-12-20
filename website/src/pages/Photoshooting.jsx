@@ -42,7 +42,7 @@ const Photoshooting = () => {
       id: 'fotozas-velem',
       title: 'A fotózás velem',
       images: [
-        '/assets/photoshooting/lazabb-fotozes.jpg',
+        '/assets/photoshooting/nincs-poz.jpg',
       ],
       content: [
         'A családi fotózás nálam laza, természetes, szeretettel teli közös élmény. Nem kell megfelelni, nem kell tudni pózolni — csak együtt vagytok, én pedig csendben figyelem a közöttetek lévő kapcsolatot. A célom, hogy természetes, őszinte pillanatokat kapjak el, amik valóban rólatok szólnak.'
@@ -52,7 +52,7 @@ const Photoshooting = () => {
       id: 'nincs-poz',
       title: 'Nincs póz, csak élet',
       images: [
-        '/assets/photoshooting/nincs-poz.jpg',
+        '/assets/photoshooting/lazabb-fotozes.jpg',
       ],
       content: [
         'A legszebb képek mindig azok, amik maguktól születnek: egy nevetésből, egy ölelésből, játékból, kapcsolódásból. Nálam nincsenek erőltetett beállítások vagy „nézz ide és mosolyogj!” kérések. Inkább hagyom, hogy a gyerekek játsszanak, a szülők öleljenek, és a család pont olyan legyen, amilyen a mindennapokban.',
