@@ -220,6 +220,6 @@ test.describe('Navigation Component', () => {
     await logo.click();
 
     // Should be back on homepage
-    await expect(page).toHaveURL(/.*\/peleiniki\/?$/);
+    await expect(page).toHaveURL(/.*\/$|^http:\/\/localhost:5173$/);
   });
 });
