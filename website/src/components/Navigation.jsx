@@ -36,7 +36,6 @@ const Navigation = () => {
     { path: '/', label: 'Kezdőlap' },
     { path: '/photoshooting', label: 'A fotózás velem' },
     { path: '/portfolio', label: 'Portfólió' },
-    { path: '/photo-stories', label: 'Fotótörténetek' },
     { path: '/about', label: 'Rólam' },
     { path: '/packages', label: 'Csomagok' },
     { path: '/contact', label: 'Kapcsolat' },
