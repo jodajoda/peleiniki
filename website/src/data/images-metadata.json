@@ -395,204 +395,6 @@
       }
     }
   },
-  "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-1.JPG": {
-    "original": "portfolio/csaladfotozas-otthon-1/csalad-otthon-1-1.JPG",
-    "width": 2048,
-    "height": 1365,
-    "aspectRatio": 1.5003663003663004,
-    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQF/8QAIhAAAgEEAQQDAAAAAAAAAAAAARECAAMEEjETISJRMkFx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABYRAQEBAAAAAAAAAAAAAAAAAAABEv/aAAwDAQACEQMRAD8AtuTjFRkiCPdSRvdK5qWiWWg6ZJjbi9NvWxaqayYnEueA2fy+6ZtNSNSIiYg8/lKz8HImMdN9zzSg/9k=",
-    "variants": {
-      "400": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-1-400w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-1-400w.webp",
-        "jpegSize": 21254,
-        "webpSize": 13102
-      },
-      "800": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-1-800w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-1-800w.webp",
-        "jpegSize": 66932,
-        "webpSize": 35798
-      },
-      "1200": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-1-1200w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-1-1200w.webp",
-        "jpegSize": 142076,
-        "webpSize": 70522
-      },
-      "1600": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-1-1600w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-1-1600w.webp",
-        "jpegSize": 259584,
-        "webpSize": 141686
-      }
-    }
-  },
-  "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-2.JPG": {
-    "original": "portfolio/csaladfotozas-otthon-1/csalad-otthon-1-2.JPG",
-    "width": 2048,
-    "height": 1365,
-    "aspectRatio": 1.5003663003663004,
-    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBP/EAB0QAAICAwEBAQAAAAAAAAAAAAECABEDBCESQTH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AEbG85PhOA8qa9NsiayIymvhPwSVkRsL8ez03UoY1YjCxe1Y35qBPLEk9H7CDdaEi//Z",
-    "variants": {
-      "400": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-2-400w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-2-400w.webp",
-        "jpegSize": 18531,
-        "webpSize": 10650
-      },
-      "800": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-2-800w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-2-800w.webp",
-        "jpegSize": 58238,
-        "webpSize": 30576
-      },
-      "1200": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-2-1200w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-2-1200w.webp",
-        "jpegSize": 123683,
-        "webpSize": 58270
-      },
-      "1600": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-2-1600w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-2-1600w.webp",
-        "jpegSize": 223151,
-        "webpSize": 98182
-      }
-    }
-  },
-  "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-3.JPG": {
-    "original": "portfolio/csaladfotozas-otthon-1/csalad-otthon-1-3.JPG",
-    "width": 2048,
-    "height": 1365,
-    "aspectRatio": 1.5003663003663004,
-    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAC/8QAIRAAAgICAgEFAAAAAAAAAAAAAQIAAwQRIUESExRRcYH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AFOUtVoqcEWa/BxMe8Q1qXfflwAOj3LVbO1j1hm13FOLj1D1lr5+CeIET2knaMdfW5Qciwi5gAABKRf/2Q==",
-    "variants": {
-      "400": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-3-400w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-3-400w.webp",
-        "jpegSize": 22005,
-        "webpSize": 13066
-      },
-      "800": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-3-800w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-3-800w.webp",
-        "jpegSize": 67948,
-        "webpSize": 36086
-      },
-      "1200": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-3-1200w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-3-1200w.webp",
-        "jpegSize": 138405,
-        "webpSize": 67250
-      },
-      "1600": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-3-1600w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-3-1600w.webp",
-        "jpegSize": 242764,
-        "webpSize": 118710
-      }
-    }
-  },
-  "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-4.JPG": {
-    "original": "portfolio/csaladfotozas-otthon-1/csalad-otthon-1-4.JPG",
-    "width": 2048,
-    "height": 1365,
-    "aspectRatio": 1.5003663003663004,
-    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFAf/EACAQAQEAAgEDBQAAAAAAAAAAAAECABEDEiJBBBQhMVH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Ad5Kvj4DoSqNbX8zPcVPHNWT3eB+8RKvju3q2PzpwijlSWQ0dqeMCoVNAjscMlR625NAGnDA//9k=",
-    "variants": {
-      "400": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-4-400w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-4-400w.webp",
-        "jpegSize": 18565,
-        "webpSize": 11532
-      },
-      "800": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-4-800w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-4-800w.webp",
-        "jpegSize": 60387,
-        "webpSize": 33002
-      },
-      "1200": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-4-1200w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-4-1200w.webp",
-        "jpegSize": 130453,
-        "webpSize": 65568
-      },
-      "1600": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-4-1600w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-4-1600w.webp",
-        "jpegSize": 240595,
-        "webpSize": 127902
-      }
-    }
-  },
-  "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-5.JPG": {
-    "original": "portfolio/csaladfotozas-otthon-1/csalad-otthon-1-5.JPG",
-    "width": 2048,
-    "height": 1365,
-    "aspectRatio": 1.5003663003663004,
-    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EACEQAAEEAgICAwAAAAAAAAAAAAEAAgMRITESQQQUIlFh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AN7ZyTRAAUHyt9kix8mnfVJvHqRlludfaxTRsLiayNG0EhG17GHiAQ3JPf6hPEOTM3jG0IP/2Q==",
-    "variants": {
-      "400": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-5-400w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-5-400w.webp",
-        "jpegSize": 23046,
-        "webpSize": 14724
-      },
-      "800": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-5-800w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-5-800w.webp",
-        "jpegSize": 71771,
-        "webpSize": 40746
-      },
-      "1200": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-5-1200w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-5-1200w.webp",
-        "jpegSize": 140258,
-        "webpSize": 72704
-      },
-      "1600": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-5-1600w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-5-1600w.webp",
-        "jpegSize": 234817,
-        "webpSize": 113996
-      }
-    }
-  },
-  "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-6.JPG": {
-    "original": "portfolio/csaladfotozas-otthon-1/csalad-otthon-1-6.JPG",
-    "width": 2048,
-    "height": 1365,
-    "aspectRatio": 1.5003663003663004,
-    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAgX/xAAgEAACAgEFAAMAAAAAAAAAAAABAgMRABIhMUFhBFGB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AKWm06EUm9jzyM1OwdYyshXv7/M5kU7OzM4B0jatu8YLYA3ybHmA6T5YjamIvwYZI0tmyLPuGB//2Q==",
-    "variants": {
-      "400": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-6-400w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-6-400w.webp",
-        "jpegSize": 23096,
-        "webpSize": 14856
-      },
-      "800": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-6-800w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-6-800w.webp",
-        "jpegSize": 71172,
-        "webpSize": 40852
-      },
-      "1200": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-6-1200w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-6-1200w.webp",
-        "jpegSize": 140847,
-        "webpSize": 73410
-      },
-      "1600": {
-        "jpeg": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-6-1600w.JPG",
-        "webp": "/assets/portfolio/csaladfotozas-otthon-1/csalad-otthon-1-6-1600w.webp",
-        "jpegSize": 239945,
-        "webpSize": 115078
-      }
-    }
-  },
   "/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-1.jpg": {
     "original": "portfolio/csaladfotozes-a-varosligetben/varosliget-1.jpg",
     "width": 2000,
@@ -1151,6 +953,237 @@
         "webp": "/assets/portfolio/csaladfotozes-otthon/csalad-otthon-5-1600w.webp",
         "jpegSize": 290865,
         "webpSize": 143132
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-1.JPG": {
+    "original": "portfolio/csaladfotozes-otthon-1/csalad-otthon-1-1.JPG",
+    "width": 2048,
+    "height": 1365,
+    "aspectRatio": 1.5003663003663004,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQF/8QAIhAAAgEEAQQDAAAAAAAAAAAAARECAAMEEjETISJRMkFx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABYRAQEBAAAAAAAAAAAAAAAAAAABEv/aAAwDAQACEQMRAD8AtuTjFRkiCPdSRvdK5qWiWWg6ZJjbi9NvWxaqayYnEueA2fy+6ZtNSNSIiYg8/lKz8HImMdN9zzSg/9k=",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-1-400w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-1-400w.webp",
+        "jpegSize": 21254,
+        "webpSize": 13102
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-1-800w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-1-800w.webp",
+        "jpegSize": 66932,
+        "webpSize": 35798
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-1-1200w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-1-1200w.webp",
+        "jpegSize": 142076,
+        "webpSize": 70522
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-1-1600w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-1-1600w.webp",
+        "jpegSize": 259584,
+        "webpSize": 141686
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-2.JPG": {
+    "original": "portfolio/csaladfotozes-otthon-1/csalad-otthon-1-2.JPG",
+    "width": 2048,
+    "height": 1365,
+    "aspectRatio": 1.5003663003663004,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBP/EAB0QAAICAwEBAQAAAAAAAAAAAAECABEDBCESQTH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AEbG85PhOA8qa9NsiayIymvhPwSVkRsL8ez03UoY1YjCxe1Y35qBPLEk9H7CDdaEi//Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-2-400w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-2-400w.webp",
+        "jpegSize": 18531,
+        "webpSize": 10650
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-2-800w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-2-800w.webp",
+        "jpegSize": 58238,
+        "webpSize": 30576
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-2-1200w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-2-1200w.webp",
+        "jpegSize": 123683,
+        "webpSize": 58270
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-2-1600w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-2-1600w.webp",
+        "jpegSize": 223151,
+        "webpSize": 98182
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-3.JPG": {
+    "original": "portfolio/csaladfotozes-otthon-1/csalad-otthon-1-3.JPG",
+    "width": 2048,
+    "height": 1365,
+    "aspectRatio": 1.5003663003663004,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAC/8QAIRAAAgICAgEFAAAAAAAAAAAAAQIAAwQRIUESExRRcYH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AFOUtVoqcEWa/BxMe8Q1qXfflwAOj3LVbO1j1hm13FOLj1D1lr5+CeIET2knaMdfW5Qciwi5gAABKRf/2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-3-400w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-3-400w.webp",
+        "jpegSize": 22005,
+        "webpSize": 13066
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-3-800w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-3-800w.webp",
+        "jpegSize": 67948,
+        "webpSize": 36086
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-3-1200w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-3-1200w.webp",
+        "jpegSize": 138405,
+        "webpSize": 67250
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-3-1600w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-3-1600w.webp",
+        "jpegSize": 242764,
+        "webpSize": 118710
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-4.JPG": {
+    "original": "portfolio/csaladfotozes-otthon-1/csalad-otthon-1-4.JPG",
+    "width": 2048,
+    "height": 1365,
+    "aspectRatio": 1.5003663003663004,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFAf/EACAQAQEAAgEDBQAAAAAAAAAAAAECABEDEiJBBBQhMVH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Ad5Kvj4DoSqNbX8zPcVPHNWT3eB+8RKvju3q2PzpwijlSWQ0dqeMCoVNAjscMlR625NAGnDA//9k=",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-4-400w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-4-400w.webp",
+        "jpegSize": 18565,
+        "webpSize": 11532
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-4-800w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-4-800w.webp",
+        "jpegSize": 60387,
+        "webpSize": 33002
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-4-1200w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-4-1200w.webp",
+        "jpegSize": 130453,
+        "webpSize": 65568
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-4-1600w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-4-1600w.webp",
+        "jpegSize": 240595,
+        "webpSize": 127902
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-5.JPG": {
+    "original": "portfolio/csaladfotozes-otthon-1/csalad-otthon-1-5.JPG",
+    "width": 2048,
+    "height": 1365,
+    "aspectRatio": 1.5003663003663004,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EACEQAAEEAgICAwAAAAAAAAAAAAEAAgMRITESQQQUIlFh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AN7ZyTRAAUHyt9kix8mnfVJvHqRlludfaxTRsLiayNG0EhG17GHiAQ3JPf6hPEOTM3jG0IP/2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-5-400w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-5-400w.webp",
+        "jpegSize": 23046,
+        "webpSize": 14724
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-5-800w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-5-800w.webp",
+        "jpegSize": 71771,
+        "webpSize": 40746
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-5-1200w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-5-1200w.webp",
+        "jpegSize": 140258,
+        "webpSize": 72704
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-5-1600w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-5-1600w.webp",
+        "jpegSize": 234817,
+        "webpSize": 113996
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-6.JPG": {
+    "original": "portfolio/csaladfotozes-otthon-1/csalad-otthon-1-6.JPG",
+    "width": 2048,
+    "height": 1365,
+    "aspectRatio": 1.5003663003663004,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAgX/xAAgEAACAgEFAAMAAAAAAAAAAAABAgMRABIhMUFhBFGB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AKWm06EUm9jzyM1OwdYyshXv7/M5kU7OzM4B0jatu8YLYA3ybHmA6T5YjamIvwYZI0tmyLPuGB//2Q==",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-6-400w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-6-400w.webp",
+        "jpegSize": 23096,
+        "webpSize": 14856
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-6-800w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-6-800w.webp",
+        "jpegSize": 71172,
+        "webpSize": 40852
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-6-1200w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-6-1200w.webp",
+        "jpegSize": 140847,
+        "webpSize": 73410
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-6-1600w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-6-1600w.webp",
+        "jpegSize": 239945,
+        "webpSize": 115078
+      }
+    }
+  },
+  "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-7.JPG": {
+    "original": "portfolio/csaladfotozes-otthon-1/csalad-otthon-1-7.JPG",
+    "width": 1366,
+    "height": 2048,
+    "aspectRatio": 0.6669921875,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAIEAwEF/8QAJRAAAgEDAgUFAAAAAAAAAAAAAQIAAxEhBBIiIzJBURMxYoGS/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAB/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oADAMBAAIRAxEAPwBNA3JBPkyz1UAvY2AviRaBkSnZyLqek97yvVBXRnSoRwG4BxCbMaygchj+TCeeKFYjlkhfliEsRaig0ywGe8Skzsdu47fEpGnJQgvw3yLR20a0trUnbPuGE2WMsrVajBbWv9wnBRsOswg0sf/Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-7-400w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-7-400w.webp",
+        "jpegSize": 46928,
+        "webpSize": 28762
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-7-800w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-7-800w.webp",
+        "jpegSize": 184850,
+        "webpSize": 125076
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-7-1200w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-7-1200w.webp",
+        "jpegSize": 444087,
+        "webpSize": 317518
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-7-1600w.JPG",
+        "webp": "/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-7-1600w.webp",
+        "jpegSize": 592983,
+        "webpSize": 434298
       }
     }
   },
@@ -1814,6 +1847,39 @@
       }
     }
   },
+  "/assets/portfolio/kutyas-fotozas/kutya-3.JPG": {
+    "original": "portfolio/kutyas-fotozas/kutya-3.JPG",
+    "width": 2048,
+    "height": 1365,
+    "aspectRatio": 1.5003663003663004,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAACBf/EACAQAAIBAwQDAAAAAAAAAAAAAAECAAMREgQhMVETgsH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8AxQreNwATzuRFVGc5sbOuOwEFpUDkg9WjCoYKhviu1r8wwnOZQWJ+yjjo6PTD2lNVf//Z",
+    "variants": {
+      "400": {
+        "jpeg": "/assets/portfolio/kutyas-fotozas/kutya-3-400w.JPG",
+        "webp": "/assets/portfolio/kutyas-fotozas/kutya-3-400w.webp",
+        "jpegSize": 30100,
+        "webpSize": 22058
+      },
+      "800": {
+        "jpeg": "/assets/portfolio/kutyas-fotozas/kutya-3-800w.JPG",
+        "webp": "/assets/portfolio/kutyas-fotozas/kutya-3-800w.webp",
+        "jpegSize": 98601,
+        "webpSize": 67982
+      },
+      "1200": {
+        "jpeg": "/assets/portfolio/kutyas-fotozas/kutya-3-1200w.JPG",
+        "webp": "/assets/portfolio/kutyas-fotozas/kutya-3-1200w.webp",
+        "jpegSize": 199288,
+        "webpSize": 129662
+      },
+      "1600": {
+        "jpeg": "/assets/portfolio/kutyas-fotozas/kutya-3-1600w.JPG",
+        "webp": "/assets/portfolio/kutyas-fotozas/kutya-3-1600w.webp",
+        "jpegSize": 338327,
+        "webpSize": 218602
+      }
+    }
+  },
   "/assets/portfolio/kutyas-fotozas/kutya-4.JPG": {
     "original": "portfolio/kutyas-fotozas/kutya-4.JPG",
     "width": 2048,
@@ -1913,36 +1979,36 @@
       }
     }
   },
-  "/assets/portfolio/kutyas-fotozas/kutya3.JPG": {
-    "original": "portfolio/kutyas-fotozas/kutya3.JPG",
-    "width": 2048,
-    "height": 1365,
-    "aspectRatio": 1.5003663003663004,
-    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAACBf/EACAQAAIBAwQDAAAAAAAAAAAAAAECAAMREgQhMVETgsH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8AxQreNwATzuRFVGc5sbOuOwEFpUDkg9WjCoYKhviu1r8wwnOZQWJ+yjjo6PTD2lNVf//Z",
+  "/assets/portfolio/kutyas-fotozas/kutya-7.JPG": {
+    "original": "portfolio/kutyas-fotozas/kutya-7.JPG",
+    "width": 1365,
+    "height": 2048,
+    "aspectRatio": 0.66650390625,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFBAL/xAAjEAACAgECBgMAAAAAAAAAAAABAgARAwQhEhMxMlGRM2Fx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/AM+jz5cTjgJIvt8yxmIyKoqlIvf8k3lMqhsVUV4aHmNx5HXdgTQq94VRw2mYHuY+oRx1YJ+M+4SLBjI5Qo04Ng11jkzlCos9bmNGnRyUboGvMApnLhO7BLP1CSC7E2SSYSw6/9k=",
     "variants": {
       "400": {
-        "jpeg": "/assets/portfolio/kutyas-fotozas/kutya3-400w.JPG",
-        "webp": "/assets/portfolio/kutyas-fotozas/kutya3-400w.webp",
-        "jpegSize": 30100,
-        "webpSize": 22058
+        "jpeg": "/assets/portfolio/kutyas-fotozas/kutya-7-400w.JPG",
+        "webp": "/assets/portfolio/kutyas-fotozas/kutya-7-400w.webp",
+        "jpegSize": 68624,
+        "webpSize": 53988
       },
       "800": {
-        "jpeg": "/assets/portfolio/kutyas-fotozas/kutya3-800w.JPG",
-        "webp": "/assets/portfolio/kutyas-fotozas/kutya3-800w.webp",
-        "jpegSize": 98601,
-        "webpSize": 67982
+        "jpeg": "/assets/portfolio/kutyas-fotozas/kutya-7-800w.JPG",
+        "webp": "/assets/portfolio/kutyas-fotozas/kutya-7-800w.webp",
+        "jpegSize": 230018,
+        "webpSize": 168618
       },
       "1200": {
-        "jpeg": "/assets/portfolio/kutyas-fotozas/kutya3-1200w.JPG",
-        "webp": "/assets/portfolio/kutyas-fotozas/kutya3-1200w.webp",
-        "jpegSize": 199288,
-        "webpSize": 129662
+        "jpeg": "/assets/portfolio/kutyas-fotozas/kutya-7-1200w.JPG",
+        "webp": "/assets/portfolio/kutyas-fotozas/kutya-7-1200w.webp",
+        "jpegSize": 468651,
+        "webpSize": 320464
       },
       "1600": {
-        "jpeg": "/assets/portfolio/kutyas-fotozas/kutya3-1600w.JPG",
-        "webp": "/assets/portfolio/kutyas-fotozas/kutya3-1600w.webp",
-        "jpegSize": 338327,
-        "webpSize": 218602
+        "jpeg": "/assets/portfolio/kutyas-fotozas/kutya-7-1600w.JPG",
+        "webp": "/assets/portfolio/kutyas-fotozas/kutya-7-1600w.webp",
+        "jpegSize": 599249,
+        "webpSize": 421286
       }
     }
   },
