@@ -119,10 +119,10 @@ const Home = () => {
     <div className="min-h-screen">
       <SEO
         title="Főoldal"
-        description="Pelei Niki Fotográfus - Családi és gyermekfotózás természetes környezetben. Őszinte pillanatok megörökítése Budapesten és környékén."
+        description="Pelei Niki Fotós - Családi és gyermekfotózás természetes környezetben. Őszinte pillanatok megörökítése Budapesten és környékén."
         keywords="családi fotózás, gyermekfotózás, kismama fotózás, fotográfus Budapest, természetes fotók, családi fotós"
         ogImage="/assets/homepage/hero.jpg"
-        ogImageAlt="Pelei Niki Fotográfus - Családfotózás"
+        ogImageAlt="Pelei Niki Fotós - Családfotózás"
         canonicalUrl="/"
         structuredData={structuredData}
       />
@@ -162,7 +162,7 @@ const Home = () => {
             {/* Decorative line above title */}
             <div className={`flex items-center justify-center mb-4 sm:mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <div className="h-px w-8 sm:w-12 bg-gradient-to-r from-transparent to-white/50"></div>
-              <div className="mx-2 sm:mx-4 text-white/80 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase font-light">Természetes fényképészet</div>
+              <div className="mx-2 sm:mx-4 text-white/80 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase font-light">Természetes képek</div>
               <div className="h-px w-8 sm:w-12 bg-gradient-to-l from-transparent to-white/50"></div>
             </div>
 
@@ -172,15 +172,15 @@ const Home = () => {
               </span>
               <br />
               <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-light tracking-wide text-white/95">
-                Fotográfus
+                Fotós
               </span>
             </h1>
 
             <p className={`text-lg sm:text-xl md:text-3xl text-white/95 max-w-4xl mx-auto mb-3 sm:mb-4 drop-shadow-lg font-light leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              Családi pillanatok megörökítése
+              Őszinte, beállítás nélküli pillanatok megörökítése
             </p>
             <p className={`text-sm sm:text-base md:text-xl text-white/85 max-w-3xl mx-auto drop-shadow-md font-light transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              természetes, spontán környezetben
+              saját környezetben
             </p>
 
             <div className={`mt-8 sm:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

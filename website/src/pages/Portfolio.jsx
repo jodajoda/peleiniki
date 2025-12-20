@@ -42,22 +42,35 @@ const Portfolio = () => {
 
   const portfolioGroups = [
     {
-      id: 'margitsziget',
-      title: 'Családfotózás Margitszigeten',
-      description: 'Egy kellemes délután a Margitszigeten, ahol a család játékosan töltötte az időt.',
+      id: 'csalad-otthon-1',
+      title: 'Családfotózás otthon',
+      description: 'Otthoni környezetben, ahol a család a leginkább önmaga lehet.',
       images: [
-        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-2.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-3.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-4.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-5.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-6.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-1.JPG', alt: 'Családfotózás otthon' },
+        { src: '/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-2.JPG', alt: 'Családfotózás otthon' },
+        { src: '/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-3.JPG', alt: 'Családfotózás otthon' },
+        { src: '/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-4.JPG', alt: 'Családfotózás otthon' },
+        { src: '/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-5.JPG', alt: 'Családfotózás otthon' },
+        { src: '/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-6.JPG', alt: 'Családfotózás otthon' },
+      ],
+    },
+    {
+      id: 'kutyas-fotozas',
+      title: 'Kutyás fotózás a balatonnál',
+      description: 'Egy különleges kapcsolat,  egy csodás helyen.',
+      images: [
+        { src: '/assets/portfolio/kutyas-fotozas/kutya-1.jpg', alt: 'Kutyás fotózás' },
+        { src: '/assets/portfolio/kutyas-fotozas/kutya-2.jpg', alt: 'Kutyás fotózás' },
+        { src: '/assets/portfolio/kutyas-fotozas/kutya-3.jpg', alt: 'Kutyás fotózás' },
+        { src: '/assets/portfolio/kutyas-fotozas/kutya-4.jpg', alt: 'Kutyás fotózás' },
+        { src: '/assets/portfolio/kutyas-fotozas/kutya-5.jpg', alt: 'Kutyás fotózás' },
+        { src: '/assets/portfolio/kutyas-fotozas/kutya-6.jpg', alt: 'Kutyás fotózás' },
       ],
     },
     {
       id: 'jatszoteri-moka',
       title: 'Játszótéri móka',
-      description: 'Spontán pillanatok a játszótéren, ahol a gyerekek szabadon játszhatnak.',
+      description: 'Anyukák és gyermekeik kedvenc helye.',
       images: [
         { src: '/assets/portfolio/jatszoteri-moka/jatszoteri-moka-1.jpg', alt: 'Játszótéri fotózás' },
         { src: '/assets/portfolio/jatszoteri-moka/jatszoteri-moka-2.jpg', alt: 'Játszótéri fotózás' },
@@ -77,6 +90,19 @@ const Portfolio = () => {
         { src: '/assets/portfolio/keresztelo/keresztelo-4.JPG', alt: 'Keresztelő fotózás' },
         { src: '/assets/portfolio/keresztelo/keresztelo-5.JPG', alt: 'Keresztelő fotózás' },
         { src: '/assets/portfolio/keresztelo/keresztelo-6.JPG', alt: 'Keresztelő fotózás' },
+      ],
+    },
+    {
+      id: 'margitsziget',
+      title: 'Családfotózás Margitszigeten',
+      description: 'Egy kellemes délután a Margitszigeten, ahol a család játékosan töltötte az időt.',
+      images: [
+        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-2.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-3.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-4.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-5.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-6.jpg', alt: 'Családfotózás Margitszigeten' },
       ],
     },
     {

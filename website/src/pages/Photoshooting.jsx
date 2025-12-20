@@ -39,17 +39,13 @@ const Photoshooting = () => {
   }, []);
   const sections = [
     {
-      id: 'lazabb-fotozes',
-      title: 'A Lazább fotózás',
+      id: 'fotozas-velem',
+      title: 'A fotózás velem',
       images: [
-        '/assets/photoshooting/lazabb-fotozes.jpg',
-        '/assets/photoshooting/lazabb-fotozes-2.jpg',
-        '/assets/photoshooting/lazabb-fotozes-3.jpg',
+        '/assets/photoshooting/nincs-poz.jpg',
       ],
       content: [
-        'Nálam nem kell kicsinosítanod magad, felöltöznöd, tökéletesnek lenned. Sőt! Annál jobb, minél lazábban érzitek magatokat. Akár pizsamában, kócos hajjal, kávéval a kezedben – pont olyannak, amilyenek vagytok egy hétköznap reggelén.',
-        'Ez nem egy klasszikus "fotózás". Ez inkább olyan, mintha átjönnék egy kávéra, miközben ti csináljátok a dolgotokat. Játszotok a gyerekkel, bújós, cicázás, vagy csak úgy lótok-futotok a lakásban. Én meg közben csendben megörökítem, ahogy éltek, nevetgéltek, ölelgezitek egymást.',
-        'Lehet otthon a kanapén hempergőzve, a konyhában süti sütés közben, vagy a játszószőnyegen autózgatva. Az a lényeg, hogy ti jól érezzétek magatokat, és közben én elkaptam azokat a pillanatokat, amiket évek múlva is szeretnétek majd visszanézni.',
+        'A családi fotózás nálam laza, természetes, szeretettel teli közös élmény. Nem kell megfelelni, nem kell tudni pózolni — csak együtt vagytok, én pedig csendben figyelem a közöttetek lévő kapcsolatot. A célom, hogy természetes, őszinte pillanatokat kapjak el, amik valóban rólatok szólnak.'
       ],
     },
     {
@@ -57,12 +53,10 @@ const Photoshooting = () => {
       title: 'Nincs póz, csak élet',
       images: [
         '/assets/photoshooting/nincs-poz.jpg',
-        '/assets/photoshooting/nincs-poz-2.jpg',
-        '/assets/photoshooting/nincs-poz-3.jpg',
       ],
       content: [
-        'Nálam nem lesz „Nézz a kamerába és mosolyogj!" felszólítás. Ehelyett játszotok, nevettek, ölelitek egymást, és én közben diszkréten megörökítem a pillanatokat. A képek tele lesznek élettel: a gyerek őszinte nevetésével, az apuka büszke pillantásával, az anyuka gyengéd simogatásával.',
-        'Minden érzelem helyet kap: a játékos percek, a nevetés, de akár a könnycseppek és a megnyugtató ölelések is. Ezek az őszinte pillanatok teszik a fotókat igazán különlegessé és értékessé.',
+        'A legszebb képek mindig azok, amik maguktól születnek: egy nevetésből, egy ölelésből, játékból, kapcsolódásból. Nálam nincsenek erőltetett beállítások vagy „nézz ide és mosolyogj!” kérések. Inkább hagyom, hogy a gyerekek játsszanak, a szülők öleljenek, és a család pont olyan legyen, amilyen a mindennapokban.',
+        'A fotókon megjelenik majd mindaz, ami a leginkább jellemző rátok: - őszinte kacagás - egy szeretettel teli tekintet - apró érintések - meghitt pillanatok, akár könnyekkel együtt - az a csendes kapcsolat, ami szavak nélkül is érthető. Ezekből lesznek azok a természetes, időtálló családi képek, amiket szívesen őriztek majd évek múlva is.',
       ],
     },
     {
@@ -70,43 +64,31 @@ const Photoshooting = () => {
       title: 'A helyszín',
       images: [
         '/assets/photoshooting/helyszin.jpg',
-        '/assets/photoshooting/helyszin-2.jpg',
-        '/assets/photoshooting/helyszin-3.jpg',
       ],
       content: [
-        'Fotózhatunk otthon, a kerted zugaiban, a kedvenc játszótereken, parkokban, vagy bármilyen más helyen, ami számotokra fontos és biztonságot ad. A saját környezetetek adja a leghitelesebb hátteret – nincs szükség stúdióra vagy mesterséges díszletekre.',
-        'A lényeg, hogy olyan legyen a helyszín, ahol jól érzitek magatokat, ahol szabadon mozoghattok, és ahol a gyerekek is természetesen viselkednek.',
+        'Fotózhatunk otthon, a kertetekben, a kedvenc játszótéren, parkban, vagy bármilyen helyen, ami számotokra fontos és biztonságos.',
+        'Nem használok díszleteket vagy stúdiós háttereket — hiszem, hogy a legszebb fotókat az adja, ami már eleve a tiétek: a saját környezetetek, a gyerekek kedvenc játéka, a közös mozdulatok. Így lesz minden kép természetes és hiteles.',
       ],
     },
     {
-      id: 'fotozes-utan',
+      id: 'fotozas-utan',
       title: 'A fotózás után',
       images: [
         '/assets/photoshooting/fotozes-utan.jpg',
-        '/assets/photoshooting/fotozes-utan-2.jpg',
-        '/assets/photoshooting/fotozes-utan-3.jpg',
       ],
       content: [
-        'A fotózást követően gondosan átválogatom az összes felvételt, és kiválasztom a legszebb, legkifejezőbb pillanatokat. Ezeket professzionális szoftverekkel retusálom és színkorrigálom, hogy a végeredmény tökéletes legyen.',
-        'A kész képeket online galérián keresztül kapjátok meg, ahonnan könnyedén letölthetők és megoszthatók. A képek a tieitek lesznek – nyomtathatjátok, keretezhetitek, megoszthatjátok a családdal és barátokkal.',
+        'A fotózás után gondosan átnézem az összes képet, és kiválasztom azokat, amelyek a legszebben mesélik el a történeteteket. Finoman egységesítem őket - színek, hangulat, tónusok - éppen annyi utómunkával, amennyi kiemeli a történeteteket, úgy, hogy a fotók megőrizzék a pillanat valódiságát.',
+        'Ezután kaptok tőlem egy válogatást, amiből kényelmesen kiválaszthatjátok a kedvenceiteket.',
+        'A végleges, nagy felbontású képeket egy letölthető linken keresztül küldöm. Könnyedén elmenthetitek, megoszthatjátok, nyomtathatjátok.'
       ],
-    },
-    {
-      id: 'keszen-allsz',
-      title: 'Készen állsz?',
-      image: '/assets/photoshooting/keszen-allsz.jpg',
-      content: [
-        'Ha felkeltette az érdeklődésed a Lazább fotózás, és szeretnéd, hogy megörökítsem a ti különleges történeteteket, vedd fel velem a kapcsolatot! Meséljétek el, milyenek vagytok, mi teszi különlegessé a ti családotokat, és találjunk egy közös időpontot!',
-        'Szeretettel várlak benneteket!',
-      ],
-    },
+    }
   ];
 
   return (
     <div className="min-h-screen pt-28 sm:pt-32 pb-16">
       <SEO
         title="A fotózás velem"
-        description="Lazán, természetesen, sok nevetéssel - fedezd fel, hogyan zajlik egy családi fotózás. Őszinte pillanatok otthon vagy szabadban."
+        description="Természetes ritmusban, a saját tempótokban - bepillantás a fotózás menetébe."
         keywords="fotózás menete, családi fotózás Budapest, természetes fotózás, otthoni fotózás, kismama fotózás"
         ogImage="/assets/photoshooting/lazabb-fotozes.jpg"
         ogImageAlt="A fotózás velem - Természetes családi fotózás"
