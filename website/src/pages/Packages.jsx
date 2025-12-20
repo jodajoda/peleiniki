@@ -45,7 +45,7 @@ const Packages = () => {
   const packages = [
     {
       id: 1,
-      title: 'Játszótéri móka',
+      title: 'Kis kalandok',
       description: 'Kedvenc játszótereteken, vagy parkban.',
       duration: '40 perc fotózás',
       photos: '15 db digitális kép (online tárhelyről letölthető)',
