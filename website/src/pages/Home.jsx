@@ -180,7 +180,7 @@ const Home = () => {
               Őszinte, beállítás nélküli pillanatok megörökítése
             </p>
             <p className={`text-sm sm:text-base md:text-xl text-white/85 max-w-3xl mx-auto drop-shadow-md font-light transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              saját környezetben
+              Saját környezetben
             </p>
 
             <div className={`mt-8 sm:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
