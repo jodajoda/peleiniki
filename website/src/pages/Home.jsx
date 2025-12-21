@@ -113,21 +113,21 @@ const Home = () => {
             <div className={`max-w-2xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               {/* Handwritten tagline */}
               <p className="font-handwritten text-xl sm:text-2xl md:text-3xl text-goldenHour mb-2 sm:mb-3">
-                Természetes képek, őszinte mosolyok
+                Hétköznapi csodák
               </p>
 
               {/* Main heading */}
               <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-3 sm:mb-4">
                 Pelei Niki
                 <span className="block text-2xl sm:text-3xl md:text-4xl font-light text-white/90 mt-1">
-                  Fotográfus
+                  Fotós
                 </span>
               </h1>
 
-              {/* Short description */}
+              {/* Short description 
               <p className="font-body text-base sm:text-lg text-white/85 max-w-lg mb-6 sm:mb-8 leading-relaxed">
                 Családi pillanatok megörökítése, ahogy azok igazán történnek.
-              </p>
+              </p>*/}
 
               {/* CTA Buttons - Stack on mobile */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">

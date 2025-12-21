@@ -129,19 +129,6 @@ const Portfolio = () => {
       ],
     },
     {
-      id: 'csalad-otthon',
-      title: 'Családfotózás otthon',
-      description: 'Otthoni környezetben, ahol a család a leginkább önmaga lehet.',
-      images: [
-        { src: '/assets/portfolio/csaladfotozes-otthon/csalad-otthon-1.JPG', alt: 'Családfotózás otthon' },
-        { src: '/assets/portfolio/csaladfotozes-otthon/csalad-otthon-2.JPG', alt: 'Családfotózás otthon' },
-        { src: '/assets/portfolio/csaladfotozes-otthon/csalad-otthon-3.JPG', alt: 'Családfotózás otthon' },
-        { src: '/assets/portfolio/csaladfotozes-otthon/csalad-otthon-4.JPG', alt: 'Családfotózás otthon' },
-        { src: '/assets/portfolio/csaladfotozes-otthon/csalad-otthon-5.JPG', alt: 'Családfotózás otthon' },
-        { src: '/assets/portfolio/csaladfotozes-otthon/csalad-otthon-6.JPG', alt: 'Családfotózás otthon' },
-      ],
-    },
-    {
       id: 'szulinap',
       title: 'Szülinapi fotózás',
       description: 'Egy különleges nap, tele örömmel és nevetéssel.',
