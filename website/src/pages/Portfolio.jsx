@@ -223,18 +223,6 @@ const Portfolio = () => {
               <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-peach-100/50 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
             </div>
 
-            {/* Decorative pattern overlay */}
-            <div className="absolute inset-0 opacity-5 pointer-events-none">
-              <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <pattern id={`dots-${group.id}`} x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                    <circle cx="20" cy="20" r="2" fill="currentColor" />
-                  </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill={`url(#dots-${group.id})`} />
-              </svg>
-            </div>
-
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="mb-4 sm:mb-5 md:mb-6 relative z-10 text-center md:text-left max-w-4xl mx-auto">
                 <h2 className={`text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-charcoal mb-2 transition-all duration-700 md:duration-1000 ${isSectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

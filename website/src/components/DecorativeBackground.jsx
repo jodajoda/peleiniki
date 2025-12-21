@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
  * @param {number} blurIntensity - Opacity of blur elements (0-1)
  */
 const DecorativeBackground = memo(({
-  patternId = 'dots',
+  patternId = 'none',
   variant = 'orange',
   showPattern = true,
   blurIntensity = 0.15,
