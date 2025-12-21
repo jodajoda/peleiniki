@@ -86,11 +86,11 @@ const TestimonialsCarousel = ({ autoRotate = true, interval = 5000 }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Main testimonial card */}
-      <div className="relative bg-white rounded-3xl shadow-soft-lg overflow-hidden">
+      <div className="relative bg-warmPaper rounded-3xl shadow-soft-lg overflow-hidden border border-warmBrown/10">
         {/* Background decorative elements */}
         <div className="absolute inset-0 opacity-5 pointer-events-none">
-          <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-br from-orange-200 to-amber-300 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-48 h-48 bg-gradient-to-tl from-amber-200 to-orange-300 rounded-full blur-3xl"></div>
+          <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-br from-terracotta/30 to-goldenHour/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-48 h-48 bg-gradient-to-tl from-goldenHour/20 to-sunsetOrange/30 rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 p-6 sm:p-8 md:p-12">
@@ -109,13 +109,13 @@ const TestimonialsCarousel = ({ autoRotate = true, interval = 5000 }) => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
 
               {/* Session type badge */}
-              <div className="absolute top-4 left-4 px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full shadow-md">
-                <span className="text-sm font-semibold text-gray-800">{currentTestimonial.sessionType}</span>
+              <div className="absolute top-4 left-4 px-4 py-2 bg-warmPaper/90 backdrop-blur-sm rounded-full shadow-md border border-warmBrown/20">
+                <span className="text-sm font-semibold font-body text-charcoal">{currentTestimonial.sessionType}</span>
               </div>
             </div>
 
             {/* Quote decoration */}
-            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-br from-orange-400 to-amber-400 rounded-full flex items-center justify-center shadow-lg hidden md:flex">
+            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-br from-terracotta to-sunsetOrange rounded-full flex items-center justify-center shadow-lg hidden md:flex">
               <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
               </svg>
@@ -135,7 +135,7 @@ const TestimonialsCarousel = ({ autoRotate = true, interval = 5000 }) => {
               {[...Array(currentTestimonial.rating)].map((_, i) => (
                 <svg
                   key={i}
-                  className="w-6 h-6 md:w-7 md:h-7 text-amber-400 drop-shadow-sm"
+                  className="w-6 h-6 md:w-7 md:h-7 text-goldenHour drop-shadow-sm"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -147,7 +147,7 @@ const TestimonialsCarousel = ({ autoRotate = true, interval = 5000 }) => {
             {/* Testimonial text */}
             <blockquote
               key={`text-${currentTestimonial.id}`}
-              className={`text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6 md:mb-8 italic ${
+              className={`text-base sm:text-lg md:text-xl font-body text-warmBrown leading-relaxed mb-6 md:mb-8 italic ${
                 direction === 'next' ? 'animate-fadeInUp' : 'animate-fadeInDown'
               }`}
               style={{ animationDelay: '0.2s' }}
@@ -162,12 +162,12 @@ const TestimonialsCarousel = ({ autoRotate = true, interval = 5000 }) => {
               style={{ animationDelay: '0.3s' }}
             >
               <div className="flex items-center gap-3 mb-2">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-amber-400 flex items-center justify-center text-white font-bold text-lg shadow-md">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-terracotta to-sunsetOrange flex items-center justify-center text-white font-bold text-lg shadow-md">
                   {currentTestimonial.name.charAt(0)}
                 </div>
                 <div>
-                  <p className="font-bold text-gray-900 text-lg">{currentTestimonial.name}</p>
-                  <p className="text-sm text-gray-500 flex items-center gap-1">
+                  <p className="font-serif font-bold text-charcoal text-lg">{currentTestimonial.name}</p>
+                  <p className="text-sm font-body text-warmBrown/70 flex items-center gap-1">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -184,7 +184,7 @@ const TestimonialsCarousel = ({ autoRotate = true, interval = 5000 }) => {
       {/* Navigation arrows */}
       <button
         onClick={prevTestimonial}
-        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-6 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white shadow-lg hover:shadow-xl flex items-center justify-center text-gray-700 hover:text-orange-500 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-orange-400/50 z-10"
+        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-6 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-warmPaper shadow-lg hover:shadow-xl flex items-center justify-center text-warmBrown hover:text-terracotta transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-terracotta/50 z-10"
         aria-label="Előző vélemény"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -194,7 +194,7 @@ const TestimonialsCarousel = ({ autoRotate = true, interval = 5000 }) => {
 
       <button
         onClick={nextTestimonial}
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-6 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white shadow-lg hover:shadow-xl flex items-center justify-center text-gray-700 hover:text-orange-500 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-orange-400/50 z-10"
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-6 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-warmPaper shadow-lg hover:shadow-xl flex items-center justify-center text-warmBrown hover:text-terracotta transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-terracotta/50 z-10"
         aria-label="Következő vélemény"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -208,10 +208,10 @@ const TestimonialsCarousel = ({ autoRotate = true, interval = 5000 }) => {
           <button
             key={index}
             onClick={() => goToTestimonial(index)}
-            className={`transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 ${
+            className={`transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-terracotta focus:ring-offset-2 ${
               index === currentIndex
-                ? 'w-10 sm:w-12 h-3 bg-gradient-to-r from-orange-400 to-amber-400'
-                : 'w-3 h-3 bg-gray-300 hover:bg-gray-400'
+                ? 'w-10 sm:w-12 h-3 bg-gradient-to-r from-terracotta to-sunsetOrange'
+                : 'w-3 h-3 bg-warmBrown/30 hover:bg-warmBrown/50'
             }`}
             aria-label={`Ugrás a ${index + 1}. véleményhez`}
             aria-current={index === currentIndex ? 'true' : 'false'}

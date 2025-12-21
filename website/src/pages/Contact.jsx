@@ -152,9 +152,9 @@ const Contact = () => {
 
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-orange-200 to-amber-300 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-gradient-to-tl from-amber-200 to-orange-300 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-orange-100 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-terracotta/30 to-sunsetOrange/40 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-gradient-to-tl from-sunsetOrange/30 to-goldenHour/40 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-peach-100/50 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
       </div>
 
       {/* Decorative pattern overlay */}
@@ -174,13 +174,13 @@ const Contact = () => {
           {/* Enhanced Header */}
           <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-10">
             <div className={`inline-block mb-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <span className="text-primary-600 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase font-semibold">Kapcsolat</span>
+              <span className="font-handwritten text-terracotta text-xl sm:text-2xl md:text-3xl">Kapcsolat</span>
             </div>
-            <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 text-gray-900 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-2 sm:mb-3 text-charcoal transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               Vegyük fel a kapcsolatot!
             </h1>
-            <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto rounded-full mb-2 sm:mb-3 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
-            <p className={`text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className={`w-16 sm:w-20 h-1 bg-gradient-to-r from-terracotta to-sunsetOrange mx-auto rounded-full mb-2 sm:mb-3 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}></div>
+            <p className={`text-base sm:text-lg md:text-xl font-body text-warmBrown leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               Várom megkeresésed! Írj bátran, és beszéljük meg együtt, hogyan örökíthetem meg a családod legszebb pillanatait
             </p>
           </div>
@@ -189,12 +189,12 @@ const Contact = () => {
             {/* Contact Information */}
             <div className={`space-y-3 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
               {/* Social Media Section */}
-              <div className="bg-gradient-to-br from-white via-primary-50 to-white rounded-xl sm:rounded-2xl p-4 shadow-soft border border-gray-200">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 flex items-center">
-                  <span className="w-8 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mr-2"></span>
+              <div className="bg-gradient-to-br from-warmPaper via-peach-100 to-cream-100 rounded-xl sm:rounded-2xl p-4 shadow-soft border border-warmBrown/20">
+                <h3 className="text-lg sm:text-xl font-serif font-bold text-charcoal mb-2 sm:mb-3 flex items-center">
+                  <span className="w-8 h-1 bg-gradient-to-r from-terracotta to-sunsetOrange rounded-full mr-2"></span>
                   Közösségi média
                 </h3>
-                <p className="text-sm text-gray-600 mb-3 leading-relaxed">
+                <p className="text-sm font-body text-warmBrown mb-3 leading-relaxed">
                   Kövess be Instagramon és Facebookon, vagy írj e-mailt!
                 </p>
                 <div className="flex items-center gap-3">
@@ -227,7 +227,7 @@ const Contact = () => {
                   <a
                     href="mailto:peleinikifotoi@gmail.com"
                     aria-label="E-mail küldése"
-                    className="group relative w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 shadow-soft hover:shadow-soft-lg transition-all duration-500 hover:scale-110 active:scale-95 flex items-center justify-center"
+                    className="group relative w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-gradient-to-br from-terracotta to-sunsetOrange shadow-soft hover:shadow-soft-lg transition-all duration-500 hover:scale-110 active:scale-95 flex items-center justify-center"
                   >
                     <img
                       src={getAssetPath('assets/icons/email.svg')}
@@ -238,15 +238,15 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-white via-primary-50 to-white rounded-xl sm:rounded-2xl p-4 shadow-soft border border-gray-200">
-                <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 flex items-center">
-                  <span className="w-8 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mr-2"></span>
+              <div className="bg-gradient-to-br from-warmPaper via-peach-100 to-cream-100 rounded-xl sm:rounded-2xl p-4 shadow-soft border border-warmBrown/20">
+                <h2 className="text-lg sm:text-xl font-serif font-bold text-charcoal mb-3 flex items-center">
+                  <span className="w-8 h-1 bg-gradient-to-r from-terracotta to-sunsetOrange rounded-full mr-2"></span>
                   Elérhetőségek
                 </h2>
 
                 <div className="space-y-3">
-                  <div className="group flex items-center p-4 rounded-xl bg-gradient-to-r from-orange-50 to-transparent hover:from-orange-100 transition-all duration-500 hover:shadow-soft hover:translate-x-2">
-                    <div className="flex-shrink-0 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 shadow-soft flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 group-hover:shadow-soft-lg transition-all duration-500">
+                  <div className="group flex items-center p-4 rounded-xl bg-gradient-to-r from-peach-100 to-transparent hover:from-cream-100 transition-all duration-500 hover:shadow-soft hover:translate-x-2">
+                    <div className="flex-shrink-0 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-terracotta to-sunsetOrange shadow-soft flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 group-hover:shadow-soft-lg transition-all duration-500">
                       <img
                         src={getAssetPath('assets/icons/email.svg')}
                         alt="Email ikon"
@@ -254,18 +254,18 @@ const Contact = () => {
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="font-bold text-gray-900 mb-1 text-sm sm:text-base">Email</div>
+                      <div className="font-serif font-bold text-charcoal mb-1 text-sm sm:text-base">Email</div>
                       <a
                         href="mailto:peleinikifotoi@gmail.com"
-                        className="text-primary-600 hover:text-primary-700 font-medium transition-colors duration-300 break-all text-sm sm:text-base"
+                        className="font-body text-terracotta hover:text-sunsetOrange font-medium transition-colors duration-300 break-all text-sm sm:text-base"
                       >
                         peleinikifotoi@gmail.com
                       </a>
                     </div>
                   </div>
 
-                  <div className="group flex items-center p-4 rounded-xl bg-gradient-to-r from-orange-50 to-transparent hover:from-orange-100 transition-all duration-500 hover:shadow-soft hover:translate-x-2">
-                    <div className="flex-shrink-0 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 shadow-soft flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 group-hover:shadow-soft-lg transition-all duration-500">
+                  <div className="group flex items-center p-4 rounded-xl bg-gradient-to-r from-peach-100 to-transparent hover:from-cream-100 transition-all duration-500 hover:shadow-soft hover:translate-x-2">
+                    <div className="flex-shrink-0 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-terracotta to-sunsetOrange shadow-soft flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 group-hover:shadow-soft-lg transition-all duration-500">
                       <img
                         src={`${getAssetPath('assets/icons/phone.svg')}?v=2`}
                         alt="Telefon ikon"
@@ -273,10 +273,10 @@ const Contact = () => {
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="font-bold text-gray-900 mb-1 text-sm sm:text-base">Telefon</div>
+                      <div className="font-serif font-bold text-charcoal mb-1 text-sm sm:text-base">Telefon</div>
                       <a
                         href="tel:+36203655393"
-                        className="text-primary-600 hover:text-primary-700 font-medium transition-colors duration-300 text-sm sm:text-base"
+                        className="font-body text-terracotta hover:text-sunsetOrange font-medium transition-colors duration-300 text-sm sm:text-base"
                       >
                         +36 20 365 5393
                       </a>
@@ -288,19 +288,19 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
-              <form id="contact-form" onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 p-4 rounded-2xl bg-gradient-to-br from-white via-primary-50 to-white shadow-soft-lg border border-gray-200" aria-label="Kapcsolatfelvételi űrlap">
+              <form id="contact-form" onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 p-4 rounded-2xl bg-gradient-to-br from-warmPaper via-peach-100 to-cream-100 shadow-soft-lg border border-warmBrown/20" aria-label="Kapcsolatfelvételi űrlap">
                 <div className="mb-1">
-                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 flex items-center">
-                    <span className="w-8 h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mr-2"></span>
+                  <h2 className="text-lg sm:text-xl font-serif font-bold text-charcoal mb-1 flex items-center">
+                    <span className="w-8 h-1 bg-gradient-to-r from-terracotta to-sunsetOrange rounded-full mr-2"></span>
                     Írj nekem!
                   </h2>
-                  <p className="text-gray-600 leading-relaxed text-sm">
+                  <p className="font-body text-warmBrown leading-relaxed text-sm">
                     Töltsd ki az űrlapot, és hamarosan jelentkezem
                   </p>
                 </div>
 
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-serif font-semibold text-charcoal mb-2">
                     Név *
                   </label>
                   <input
@@ -310,13 +310,13 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-400 focus:border-orange-400 transition-all duration-300 hover:border-gray-300 hover:shadow-soft bg-white"
+                    className="w-full px-4 py-3 border-2 border-warmBrown/20 rounded-xl focus:ring-2 focus:ring-terracotta focus:border-terracotta transition-all duration-300 hover:border-warmBrown/40 hover:shadow-soft bg-warmPaper"
                     placeholder="Teljes neved"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-serif font-semibold text-charcoal mb-2">
                     Email *
                   </label>
                   <input
@@ -326,13 +326,13 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-400 focus:border-orange-400 transition-all duration-300 hover:border-gray-300 hover:shadow-soft bg-white"
+                    className="w-full px-4 py-3 border-2 border-warmBrown/20 rounded-xl focus:ring-2 focus:ring-terracotta focus:border-terracotta transition-all duration-300 hover:border-warmBrown/40 hover:shadow-soft bg-warmPaper"
                     placeholder="email@pelda.hu"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="phone" className="block text-sm font-serif font-semibold text-charcoal mb-2">
                     Telefonszám
                   </label>
                   <input
@@ -341,13 +341,13 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-400 focus:border-orange-400 transition-all duration-300 hover:border-gray-300 hover:shadow-soft bg-white"
+                    className="w-full px-4 py-3 border-2 border-warmBrown/20 rounded-xl focus:ring-2 focus:ring-terracotta focus:border-terracotta transition-all duration-300 hover:border-warmBrown/40 hover:shadow-soft bg-warmPaper"
                     placeholder="+36 20 123 4567"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-serif font-semibold text-charcoal mb-2">
                     Üzenet *
                   </label>
                   <textarea
@@ -357,7 +357,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-400 focus:border-orange-400 resize-none transition-all duration-300 hover:border-gray-300 hover:shadow-soft bg-white"
+                    className="w-full px-4 py-3 border-2 border-warmBrown/20 rounded-xl focus:ring-2 focus:ring-terracotta focus:border-terracotta resize-none transition-all duration-300 hover:border-warmBrown/40 hover:shadow-soft bg-warmPaper"
                     placeholder="Milyen fotózásra gondoltál? Mikor és hol szeretnéd?"
                   />
                 </div>
@@ -377,7 +377,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="group relative w-full bg-gradient-to-r from-orange-600 to-amber-600 text-white px-6 py-4 rounded-xl font-semibold text-lg hover:from-orange-700 hover:to-amber-700 hover:shadow-soft-lg transition-all duration-500 hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 overflow-hidden"
+                  className="group relative w-full bg-gradient-to-r from-terracotta to-sunsetOrange text-white px-6 py-4 rounded-xl font-serif font-semibold text-lg hover:from-sunsetOrange hover:to-goldenHour hover:shadow-soft-lg transition-all duration-500 hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 overflow-hidden"
                 >
                   <span className="relative z-10 flex items-center justify-center">
                     {isSubmitting ? (
@@ -397,7 +397,7 @@ const Contact = () => {
                       </>
                     )}
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-700 to-amber-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-sunsetOrange to-goldenHour opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </button>
 
                 {status.message && (

@@ -66,6 +66,7 @@ export default {
         'soft-lg': '0 10px 40px -10px rgba(0, 0, 0, 0.1)',
         'glow': '0 0 25px rgba(191, 160, 148, 0.5)',
         'glow-warm': '0 0 30px rgba(255, 138, 101, 0.4)',
+        '3xl': '0 30px 60px -12px rgba(0, 0, 0, 0.25)',
       },
       keyframes: {
         shimmer: {
@@ -105,9 +106,6 @@ export default {
         slideInRight: 'slideInRight 0.7s ease-out',
         slideInLeft: 'slideInLeft 0.7s ease-out',
         'float-slow': 'float 6s ease-in-out infinite',
-      },
-      boxShadow: {
-        '3xl': '0 30px 60px -12px rgba(0, 0, 0, 0.25)',
       },
     },
   },
