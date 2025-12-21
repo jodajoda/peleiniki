@@ -106,9 +106,9 @@ const NavigationRedesign = () => {
                     <Link
                       to={path}
                       className={`relative px-4 py-2.5 font-body text-base font-medium transition-all duration-300 rounded-full group ${
-                        isActive
-                          ? 'text-terracotta'
-                          : 'text-warmBrown hover:text-sunsetOrange'
+                        location.pathname === '/' && !isScrolled
+                          ? isActive ? 'text-white' : 'text-white hover:text-goldenHour'
+                          : isActive ? 'text-terracotta' : 'text-warmBrown hover:text-sunsetOrange'
                       }`}
                       aria-current={isActive ? 'page' : undefined}
                     >
