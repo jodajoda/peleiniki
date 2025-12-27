@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 @layer base {
+  /* Increase base font size on mobile for better readability */
+  html {
+    font-size: 18px; /* Increase from default 16px on mobile */
+  }
+
+  /* Reset to default on larger screens */
+  @media (min-width: 640px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
   body {
     @apply font-sans bg-white text-gray-900;
   }
