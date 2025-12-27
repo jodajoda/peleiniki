@@ -12,7 +12,6 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
     message: '',
     website: '', // Honeypot field - should remain empty
   });
@@ -48,20 +47,8 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [lastSubmitTime, setLastSubmitTime] = useState(0);
 
-  const validatePhone = (phone) => {
-    // Allow empty phone or valid phone format (numbers, spaces, +, -, parentheses)
-    const phoneRegex = /^[\d\s+()-]*$/;
-    return !phone || phoneRegex.test(phone);
-  };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    // Validate phone number format
-    if (name === 'phone' && !validatePhone(value)) {
-      return; // Reject invalid characters
-    }
-
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -75,7 +62,7 @@ const Contact = () => {
         type: 'success',
         message: 'Köszönöm az üzeneted! Hamarosan jelentkezem.',
       });
-      setFormData({ name: '', email: '', phone: '', message: '', website: '' });
+      setFormData({ name: '', email: '', message: '', website: '' });
       return;
     }
 
@@ -111,7 +98,6 @@ const Contact = () => {
       const sanitizedData = {
         from_name: DOMPurify.sanitize(formData.name, { ALLOWED_TAGS: [] }),
         from_email: DOMPurify.sanitize(formData.email, { ALLOWED_TAGS: [] }),
-        phone: DOMPurify.sanitize(formData.phone, { ALLOWED_TAGS: [] }),
         message: DOMPurify.sanitize(formData.message, { ALLOWED_TAGS: [] }),
       };
 
@@ -127,7 +113,7 @@ const Contact = () => {
         type: 'success',
         message: 'Köszönöm az üzeneted! Hamarosan jelentkezem.',
       });
-      setFormData({ name: '', email: '', phone: '', message: '', website: '' });
+      setFormData({ name: '', email: '', message: '', website: '' });
     } catch (error) {
       console.error('EmailJS Error:', error);
       setStatus({
@@ -264,24 +250,6 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="group flex items-center p-4 rounded-xl bg-gradient-to-r from-peach-100 to-transparent hover:from-cream-100 transition-all duration-500 hover:shadow-soft hover:translate-x-2">
-                    <div className="flex-shrink-0 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-terracotta to-sunsetOrange shadow-soft flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 group-hover:shadow-soft-lg transition-all duration-500">
-                      <img
-                        src={`${getAssetPath('assets/icons/phone.svg')}?v=2`}
-                        alt="Telefon ikon"
-                        className="w-5 h-5 sm:w-6 sm:h-6 brightness-0 invert"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="font-serif font-bold text-charcoal mb-1 text-sm sm:text-base">Telefon</div>
-                      <a
-                        href="tel:+36203655393"
-                        className="font-body text-terracotta hover:text-sunsetOrange font-medium transition-colors duration-300 text-sm sm:text-base"
-                      >
-                        +36 20 365 5393
-                      </a>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -328,21 +296,6 @@ const Contact = () => {
                     required
                     className="w-full px-4 py-3 border-2 border-warmBrown/20 rounded-xl focus:ring-2 focus:ring-terracotta focus:border-terracotta transition-all duration-300 hover:border-warmBrown/40 hover:shadow-soft bg-warmPaper"
                     placeholder="email@pelda.hu"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-serif font-semibold text-charcoal mb-2">
-                    Telefonszám
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-warmBrown/20 rounded-xl focus:ring-2 focus:ring-terracotta focus:border-terracotta transition-all duration-300 hover:border-warmBrown/40 hover:shadow-soft bg-warmPaper"
-                    placeholder="+36 20 123 4567"
                   />
                 </div>
 
