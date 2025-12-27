@@ -40,7 +40,7 @@ const PrivacyPolicy = () => {
                 <p className="mb-2"><strong>Neve:</strong> Pelei Nikolett egyéni vállalkozó</p>
                 <p className="mb-2"><strong>Székhely:</strong> 1138 Budapest, Bodor utca 1 3/8</p>
                 <p className="mb-2"><strong>Adószám:</strong> 90024939-1-41</p>
-                <p><strong>Elérhetőség:</strong> peleinikifotos@gmail.com</p>
+                <p><strong>Elérhetőség:</strong> peleinikifotoi@gmail.com</p>
               </div>
             </section>
 
@@ -109,7 +109,7 @@ const PrivacyPolicy = () => {
                 Az adatkezelés időtartama: hozzájárulás visszavonásáig.
               </p>
               <p className="leading-relaxed">
-                A hozzájárulását bármikor visszavonhatja egy üzenettel a <strong>peleinikifotos@gmail.com</strong> e-mail
+                A hozzájárulását bármikor visszavonhatja egy üzenettel a <strong>peleinikifotoi@gmail.com</strong> e-mail
                 címre. Ebben az esetben haladéktalanul törölni fogom az Ön által kért adatokat. A hozzájárulás
                 visszavonását megelőző adatkezelés jogszerűnek tekinthető.
               </p>
@@ -211,7 +211,7 @@ const PrivacyPolicy = () => {
                 kérjük, vegye fel velem a kapcsolatot:
               </p>
               <div className="bg-peach-100 p-6 rounded-lg">
-                <p className="mb-2"><strong>E-mail:</strong> peleinikifotos@gmail.com</p>
+                <p className="mb-2"><strong>E-mail:</strong> peleinikifotoi@gmail.com</p>
                 <p><strong>Instagram:</strong> @peleinikifotoi</p>
               </div>
             </section>
