@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { getAssetPath } from '../utils/assets';
 
-const TestimonialsCarousel = ({ autoRotate = true, interval = 5000 }) => {
+const TestimonialsCarousel = ({ autoRotate = true, interval = 10000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [direction, setDirection] = useState('next');
