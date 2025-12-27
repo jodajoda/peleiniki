@@ -32,7 +32,7 @@ const TestimonialsCarousel = ({ autoRotate = true, interval = 5000 }) => {
       rating: 5,
       text: 'Jaaaaaaj, elképesztően tetszenek a képek!!! <3 Nem is rémlett, hogy ennyi mosolyt sikerült J-ből előhívni.. :) Imádom az összes képet, nagyon-nagyon köszönjük a munkád! Csodás érzéked van a pillanatok elkapásához, élmény nézegetni a képeket egymás után. <3',
       image: 'assets/testimonials/martindori.jpg',
-      location: 'III. kerület',
+      location: 'Budapest',
     },
     {
       id: 4,
