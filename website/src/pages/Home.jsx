@@ -153,8 +153,8 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Scroll indicator */}
-          <div className={`absolute bottom-4 left-1/2 -translate-x-1/2 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-60' : 'opacity-0'}`}>
+          {/* Scroll indicator - hidden on mobile, visible on tablet and up */}
+          <div className={`hidden sm:block absolute bottom-4 left-1/2 -translate-x-1/2 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-60' : 'opacity-0'}`}>
             <div className="flex flex-col items-center gap-1 text-white/70 animate-bounce">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
