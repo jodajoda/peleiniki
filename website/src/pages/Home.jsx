@@ -84,10 +84,10 @@ const Home = () => {
     <div className="min-h-screen bg-warmPaper">
       <SEO
         title="Főoldal"
-        description="Pelei Niki Fotós - Családi és gyermekfotózás természetes környezetben. Őszinte pillanatok megörökítése Budapesten és környékén."
-        keywords="családi fotózás, gyermekfotózás, kismama fotózás, fotográfus Budapest, természetes fotók, családi fotós"
+        description="Pelei Niki Fotós - Családi és gyermekfotózás természetes környezetben Budapesten. Játszótéri, otthoni és szabadtéri fotózás. 5+ év tapasztalat, 100+ boldog család."
+        keywords="családi fotózás Budapest, gyermekfotózás, kismama fotózás, játszótéri fotózás, otthoni fotózás, természetes fotók, családi fotós Budapest, keresztelő fotózás"
         ogImage="/assets/homepage/hero.jpg"
-        ogImageAlt="Pelei Niki Fotós - Családfotózás"
+        ogImageAlt="Pelei Niki Fotós - Természetes családi és gyermekfotózás Budapesten"
         canonicalUrl="/"
         structuredData={structuredData}
       />

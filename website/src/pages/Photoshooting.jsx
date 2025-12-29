@@ -87,10 +87,10 @@ const Photoshooting = () => {
     <div className="min-h-screen bg-warmPaper pt-28 sm:pt-32 pb-16">
       <SEO
         title="A fotózás velem"
-        description="Természetes ritmusban, a saját tempótokban - bepillantás a fotózás menetébe."
-        keywords="fotózás menete, családi fotózás Budapest, természetes fotózás, otthoni fotózás, kismama fotózás"
+        description="Hogyan zajlik egy családi fotózás? Természetes ritmusban, nincs póz, csak élet. Ismerj meg, és nézd meg, hogyan dolgozom Budapesten."
+        keywords="fotózás menete, családi fotózás Budapest, természetes fotózás, hogyan zajlik fotózás, otthoni fotózás, játszótéri fotózás, kismama fotózás"
         ogImage="/assets/photoshooting/lazabb-fotozes.jpg"
-        ogImageAlt="A fotózás velem - Természetes családi fotózás"
+        ogImageAlt="A fotózás velem - Természetes és laza családi fotózás Budapesten"
         canonicalUrl="/photoshooting"
       />
       {/* Enhanced Header */}

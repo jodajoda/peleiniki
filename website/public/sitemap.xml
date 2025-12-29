@@ -5,75 +5,103 @@
   <!-- Homepage -->
   <url>
     <loc>https://peleiniki.com/</loc>
-    <lastmod>2025-10-15</lastmod>
+    <lastmod>2025-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://peleiniki.com/assets/homepage/hero.jpg</image:loc>
-      <image:title>Pelei Niki Fotográfus - Családfotózás</image:title>
+      <image:title>Pelei Niki Fotós - Családi és Gyermekfotózás Budapest</image:title>
     </image:image>
   </url>
 
   <!-- Photoshooting Page -->
   <url>
     <loc>https://peleiniki.com/photoshooting</loc>
-    <lastmod>2025-10-15</lastmod>
+    <lastmod>2025-12-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://peleiniki.com/assets/photoshooting/lazabb-fotozes.jpg</image:loc>
-      <image:title>A fotózás velem - Természetes családi fotózás</image:title>
+      <image:title>A fotózás velem - Természetes családi fotózás menete</image:title>
     </image:image>
   </url>
 
   <!-- Portfolio Page -->
   <url>
     <loc>https://peleiniki.com/portfolio</loc>
-    <lastmod>2025-10-15</lastmod>
+    <lastmod>2025-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://peleiniki.com/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1.jpg</image:loc>
-      <image:title>Portfólió - Családfotózás Margitszigeten</image:title>
+      <image:title>Portfólió - Családfotózás a Margitszigeten</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://peleiniki.com/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-1.jpg</image:loc>
+      <image:title>Családfotózás a Városligetben</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://peleiniki.com/assets/portfolio/kismamafotozas-otthon/kismama-otthon-1.JPG</image:loc>
+      <image:title>Kismamafotózás otthoni környezetben</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://peleiniki.com/assets/portfolio/keresztelo/keresztelo-1.JPG</image:loc>
+      <image:title>Keresztelő fotózás Budapesten</image:title>
     </image:image>
   </url>
 
   <!-- About Page -->
   <url>
     <loc>https://peleiniki.com/about</loc>
-    <lastmod>2025-10-15</lastmod>
+    <lastmod>2025-12-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://peleiniki.com/assets/about-me/magamrol_202410-03733-2.jpg</image:loc>
-      <image:title>Pelei Niki fotográfus portréja</image:title>
+      <image:title>Pelei Niki fotográfus bemutatkozása</image:title>
     </image:image>
   </url>
 
   <!-- Packages Page -->
   <url>
     <loc>https://peleiniki.com/packages</loc>
-    <lastmod>2025-10-15</lastmod>
+    <lastmod>2025-12-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://peleiniki.com/assets/homepage/csomagok.jpg</image:loc>
-      <image:title>Fotózási Csomagok és Árak</image:title>
+      <image:title>Fotózási csomagok és árak - Családi fotózás Budapest</image:title>
     </image:image>
   </url>
 
   <!-- Contact Page -->
   <url>
     <loc>https://peleiniki.com/contact</loc>
-    <lastmod>2025-10-15</lastmod>
+    <lastmod>2025-12-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Photo Stories Page -->
+  <url>
+    <loc>https://peleiniki.com/photo-stories</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://peleiniki.com/assets/portfolio/keresztelo/keresztelo-1.JPG</image:loc>
+      <image:title>Fotótörténetek - Keresztelő és családi események képekben</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://peleiniki.com/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-1.jpg</image:loc>
+      <image:title>Fotótörténet - Délután a Városligetben</image:title>
+    </image:image>
   </url>
 
   <!-- Privacy Policy Page -->
   <url>
     <loc>https://peleiniki.com/adatkezelesi-tajekoztato</loc>
-    <lastmod>2025-10-15</lastmod>
+    <lastmod>2025-12-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

@@ -14,6 +14,37 @@ const PhotoStories = () => {
   const sectionRefs = useRef([]);
   const storyRefs = useRef({});
 
+  // Structured data for PhotoStories page - Article/Blog schema for narrative content
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Fotótörténetek - Pelei Niki Fotós",
+    "description": "Narratív fotózás Budapesten - kövess végig teljes fotózásokat elejétől a végéig. Keresztelő és családi események képekben.",
+    "url": "https://peleiniki.com/photo-stories",
+    "author": {
+      "@type": "Person",
+      "name": "Pelei Niki",
+      "url": "https://peleiniki.com"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Egy keresztelő története",
+          "description": "Kövessük végig ezt a különleges napot a felkészüléstől az ünneplésig."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Délután a Városligetben",
+          "description": "Egy családi fotózás története, ahol a természet és a játék találkozik."
+        }
+      ]
+    }
+  };
+
   useEffect(() => {
     setIsVisible(true);
 
@@ -226,11 +257,12 @@ const PhotoStories = () => {
     <div className="min-h-screen pt-28 sm:pt-32 pb-16">
       <SEO
         title="Fotótörténetek"
-        description="Kövess végig teljes fotózásokat elejétől a végéig. Nézd meg, hogyan mesélem el képekben az eseményeket."
-        keywords="fotótörténet, fotózás story, események fotózása, narratív fotózás, fotóriportázs"
+        description="Narratív családi fotózás Budapesten - kövess végig teljes fotózásokat elejétől a végéig. Keresztelő és családi események képekben, történetként elmesélve."
+        keywords="fotótörténet, narratív fotózás Budapest, keresztelő fotózás story, családi esemény fotózás, fotóriportázs, események megörökítése"
         ogImage="/assets/portfolio/keresztelo/keresztelo-1.JPG"
-        ogImageAlt="Fotótörténetek - Pelei Niki Fotográfus"
+        ogImageAlt="Fotótörténetek - Családi események képekben elmesélve"
         canonicalUrl="/photo-stories"
+        structuredData={structuredData}
       />
 
       {/* Header */}

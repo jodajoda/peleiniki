@@ -12,6 +12,43 @@ const Portfolio = () => {
   const [visibleSections, setVisibleSections] = useState(new Set());
   const sectionRefs = useRef([]);
 
+  // Structured data for Portfolio page - ImageGallery schema
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Pelei Niki Fotós Portfólió",
+    "description": "Családi és gyermekfotózás portfólió - családfotózás, kismama fotózás, keresztelő, szülinapi és játszótéri fotózás Budapesten.",
+    "url": "https://peleiniki.com/portfolio",
+    "author": {
+      "@type": "Person",
+      "name": "Pelei Niki",
+      "jobTitle": "Családi és Gyermekfotós",
+      "url": "https://peleiniki.com"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Családfotózás"
+      },
+      {
+        "@type": "Thing",
+        "name": "Gyermekfotózás"
+      },
+      {
+        "@type": "Thing",
+        "name": "Kismamafotózás"
+      },
+      {
+        "@type": "Thing",
+        "name": "Keresztelő fotózás"
+      }
+    ],
+    "locationCreated": {
+      "@type": "Place",
+      "name": "Budapest és környéke"
+    }
+  };
+
   useEffect(() => {
     setIsVisible(true);
 
@@ -46,11 +83,11 @@ const Portfolio = () => {
       title: 'Családfotózás otthon',
       description: 'Otthoni környezetben, ahol a család a leginkább önmaga lehet.',
       images: [
-        { src: '/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-1.JPG', alt: 'Családfotózás otthon' },
-        { src: '/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-4.JPG', alt: 'Családfotózás otthon' },
-        { src: '/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-3.JPG', alt: 'Családfotózás otthon' },
-        { src: '/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-7.JPG', alt: 'Családfotózás otthon' },
-        { src: '/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-5.JPG', alt: 'Családfotózás otthon' },
+        { src: '/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-1.JPG', alt: 'Otthoni családfotózás - szülők és gyermek közös pillanata' },
+        { src: '/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-4.JPG', alt: 'Családi ölelés otthoni környezetben Budapesten' },
+        { src: '/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-3.JPG', alt: 'Természetes családi pillanat otthon - játék és nevetés' },
+        { src: '/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-7.JPG', alt: 'Meghitt családi fotó az otthon melegében' },
+        { src: '/assets/portfolio/csaladfotozes-otthon-1/csalad-otthon-1-5.JPG', alt: 'Gyermekfotózás otthon - őszinte mosoly' },
       ],
     },
     {
@@ -58,11 +95,11 @@ const Portfolio = () => {
       title: 'Kutyás fotózás a Balatonnál',
       description: 'Egy különleges kapcsolat,  egy csodás helyen.',
       images: [
-        { src: '/assets/portfolio/kutyas-fotozas/kutya-1.jpg', alt: 'Kutyás fotózás' },
-        { src: '/assets/portfolio/kutyas-fotozas/kutya-3.jpg', alt: 'Kutyás fotózás' },
-        { src: '/assets/portfolio/kutyas-fotozas/kutya-4.jpg', alt: 'Kutyás fotózás' },
-        { src: '/assets/portfolio/kutyas-fotozas/kutya-7.JPG', alt: 'Kutyás fotózás' },
-        { src: '/assets/portfolio/kutyas-fotozas/kutya-6.jpg', alt: 'Kutyás fotózás' },
+        { src: '/assets/portfolio/kutyas-fotozas/kutya-1.jpg', alt: 'Kutyás családi fotózás a Balatonnál - gazdi és kedvenc' },
+        { src: '/assets/portfolio/kutyas-fotozas/kutya-3.jpg', alt: 'Játékos pillanat kutyával a tóparton' },
+        { src: '/assets/portfolio/kutyas-fotozas/kutya-4.jpg', alt: 'Kutya és gazdi szeretet a Balaton mellett' },
+        { src: '/assets/portfolio/kutyas-fotozas/kutya-7.JPG', alt: 'Portré kutyával a balatoni naplementében' },
+        { src: '/assets/portfolio/kutyas-fotozas/kutya-6.jpg', alt: 'Boldog pillanatok kutyával a szabadban' },
       ],
     },
     {
@@ -70,11 +107,11 @@ const Portfolio = () => {
       title: 'Játszótéri móka',
       description: 'Anyukák és gyermekeik kedvenc helye.',
       images: [
-        { src: '/assets/portfolio/jatszoteri-moka/jatszoteri-moka-1.jpg', alt: 'Játszótéri fotózás' },
-        { src: '/assets/portfolio/jatszoteri-moka/jatszoteri-moka-2.jpg', alt: 'Játszótéri fotózás' },
-        { src: '/assets/portfolio/jatszoteri-moka/jatszoteri-moka-3.jpg', alt: 'Játszótéri fotózás' },
-        { src: '/assets/portfolio/jatszoteri-moka/jatszoteri-moka-5.jpg', alt: 'Játszótéri fotózás' },
-        { src: '/assets/portfolio/jatszoteri-moka/jatszoteri-moka-6.jpg', alt: 'Játszótéri fotózás' },
+        { src: '/assets/portfolio/jatszoteri-moka/jatszoteri-moka-1.jpg', alt: 'Játszótéri fotózás Budapest - anyuka és gyermeke hintázik' },
+        { src: '/assets/portfolio/jatszoteri-moka/jatszoteri-moka-2.jpg', alt: 'Gyermekfotózás játszótéren - nevetés és öröm' },
+        { src: '/assets/portfolio/jatszoteri-moka/jatszoteri-moka-3.jpg', alt: 'Anya és gyermek közös játéka a játszótéren' },
+        { src: '/assets/portfolio/jatszoteri-moka/jatszoteri-moka-5.jpg', alt: 'Természetes családi pillanat budapesti játszótéren' },
+        { src: '/assets/portfolio/jatszoteri-moka/jatszoteri-moka-6.jpg', alt: 'Játékos gyermekfotó szabadtéri környezetben' },
       ],
     },
     {
@@ -82,12 +119,12 @@ const Portfolio = () => {
       title: 'Keresztelő',
       description: 'Egy különleges családi esemény megörökítése.',
       images: [
-        { src: '/assets/portfolio/keresztelo/keresztelo-1.JPG', alt: 'Keresztelő fotózás' },
-        { src: '/assets/portfolio/keresztelo/keresztelo-2.JPG', alt: 'Keresztelő fotózás' },
-        { src: '/assets/portfolio/keresztelo/keresztelo-3.JPG', alt: 'Keresztelő fotózás' },
-        { src: '/assets/portfolio/keresztelo/keresztelo-4.JPG', alt: 'Keresztelő fotózás' },
-        { src: '/assets/portfolio/keresztelo/keresztelo-5.JPG', alt: 'Keresztelő fotózás' },
-        { src: '/assets/portfolio/keresztelo/keresztelo-6.JPG', alt: 'Keresztelő fotózás' },
+        { src: '/assets/portfolio/keresztelo/keresztelo-1.JPG', alt: 'Keresztelő fotózás Budapest - felkészülés az ünnepre' },
+        { src: '/assets/portfolio/keresztelo/keresztelo-2.JPG', alt: 'Családi pillanat a keresztelő előtt' },
+        { src: '/assets/portfolio/keresztelo/keresztelo-3.JPG', alt: 'Keresztelő ceremónia megörökítése templomban' },
+        { src: '/assets/portfolio/keresztelo/keresztelo-4.JPG', alt: 'Család együtt a keresztelő szertartáson' },
+        { src: '/assets/portfolio/keresztelo/keresztelo-5.JPG', alt: 'Keresztelő ünneplés - családi öröm' },
+        { src: '/assets/portfolio/keresztelo/keresztelo-6.JPG', alt: 'Boldog pillanatok a keresztelő után' },
       ],
     },
     {
@@ -95,12 +132,12 @@ const Portfolio = () => {
       title: 'Családfotózás Margitszigeten',
       description: 'Egy kellemes délután a Margitszigeten, ahol a család játékosan töltötte az időt.',
       images: [
-        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-2.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-3.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-4.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-5.jpg', alt: 'Családfotózás Margitszigeten' },
-        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-6.jpg', alt: 'Családfotózás Margitszigeten' },
+        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1.jpg', alt: 'Családfotózás a Margitszigeten - séta a parkban' },
+        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-2.jpg', alt: 'Természetes családi pillanat a Margitsziget zöldjében' },
+        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-3.jpg', alt: 'Gyermekfotózás a Margitszigeten - játék a fűben' },
+        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-4.jpg', alt: 'Család együtt a Margitsziget fái alatt' },
+        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-5.jpg', alt: 'Szülők és gyermek közös nevetése a Margitszigeten' },
+        { src: '/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-6.jpg', alt: 'Meghitt családi portré a Margitsziget parkjában' },
       ],
     },
     {
@@ -108,11 +145,11 @@ const Portfolio = () => {
       title: 'Kismamafotózás otthon',
       description: 'Intim pillanatok otthon, a babavárás izgalmával.',
       images: [
-        { src: '/assets/portfolio/kismamafotozas-otthon/kismama-otthon-1.JPG', alt: 'Kismamafotózás' }, // Column 1, Row 1
-        { src: '/assets/portfolio/kismamafotozas-otthon/kismama-otthon-2.JPG', alt: 'Kismamafotózás' }, // Column 1, Row 2
-        { src: '/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5.JPG', alt: 'Kismamafotózás' }, // Column 2 (standing)
-        { src: '/assets/portfolio/kismamafotozas-otthon/kismama-otthon-4.JPG', alt: 'Kismamafotózás' }, // Column 3, Row 1
-        { src: '/assets/portfolio/kismamafotozas-otthon/kismama-otthon-3.JPG', alt: 'Kismamafotózás' }, // Column 3, Row 2
+        { src: '/assets/portfolio/kismamafotozas-otthon/kismama-otthon-1.JPG', alt: 'Kismamafotózás otthon Budapest - várandós portré' },
+        { src: '/assets/portfolio/kismamafotozas-otthon/kismama-otthon-2.JPG', alt: 'Babavárás öröme - kismama fotó otthoni környezetben' },
+        { src: '/assets/portfolio/kismamafotozas-otthon/kismama-otthon-5.JPG', alt: 'Elegáns kismama portré természetes fényben' },
+        { src: '/assets/portfolio/kismamafotozas-otthon/kismama-otthon-4.JPG', alt: 'Várandós anya meghitt pillanata otthon' },
+        { src: '/assets/portfolio/kismamafotozas-otthon/kismama-otthon-3.JPG', alt: 'Kismamafotózás Budapest - intim családi fotó' },
       ],
     },
     {
@@ -120,12 +157,12 @@ const Portfolio = () => {
       title: 'Családfotózás a Városligetben',
       description: 'Természetes környezetben, a Városliget zöld oázisában.',
       images: [
-        { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-1.jpg', alt: 'Családfotózás Városligetben' },
-        { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-2.jpg', alt: 'Családfotózás Városligetben' },
-        { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-3.jpg', alt: 'Családfotózás Városligetben' },
-        { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-4.jpg', alt: 'Családfotózás Városligetben' },
-        { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-5.jpg', alt: 'Családfotózás Városligetben' },
-        { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-6.jpg', alt: 'Családfotózás Városligetben' },
+        { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-1.jpg', alt: 'Családfotózás a Városligetben Budapest - séta a parkban' },
+        { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-2.jpg', alt: 'Természetes családi pillanat a Városliget fái között' },
+        { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-3.jpg', alt: 'Gyermekfotózás a Városligetben - játék és nevetés' },
+        { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-4.jpg', alt: 'Család együtt a Városliget zöldjében' },
+        { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-5.jpg', alt: 'Szülők és gyermekek pihenése a Városligetben' },
+        { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-6.jpg', alt: 'Családi portré a budapesti Városliget parkjában' },
       ],
     },
     {
@@ -133,12 +170,12 @@ const Portfolio = () => {
       title: 'Szülinapi fotózás',
       description: 'Egy különleges nap, tele örömmel és nevetéssel.',
       images: [
-        { src: '/assets/portfolio/szulinap/szulinap-1.JPG', alt: 'Szülinapi fotózás' },
-        { src: '/assets/portfolio/szulinap/szulinap-2.JPG', alt: 'Szülinapi fotózás' },
-        { src: '/assets/portfolio/szulinap/szulinap-3.JPG', alt: 'Szülinapi fotózás' },
-        { src: '/assets/portfolio/szulinap/szulinap-4.JPG', alt: 'Szülinapi fotózás' },
-        { src: '/assets/portfolio/szulinap/szulinap-5.JPG', alt: 'Szülinapi fotózás' },
-        { src: '/assets/portfolio/szulinap/szulinap-6.jpg', alt: 'Szülinapi fotózás' },
+        { src: '/assets/portfolio/szulinap/szulinap-1.JPG', alt: 'Szülinapi fotózás Budapest - az ünnepelt mosolya' },
+        { src: '/assets/portfolio/szulinap/szulinap-2.JPG', alt: 'Gyermek születésnapi fotózás - torta és öröm' },
+        { src: '/assets/portfolio/szulinap/szulinap-3.JPG', alt: 'Születésnapi ünneplés megörökítése családdal' },
+        { src: '/assets/portfolio/szulinap/szulinap-4.JPG', alt: 'Boldog szülinapi pillanat - gyertyafújás' },
+        { src: '/assets/portfolio/szulinap/szulinap-5.JPG', alt: 'Szülinapi buli fotózás - nevetés és játék' },
+        { src: '/assets/portfolio/szulinap/szulinap-6.jpg', alt: 'Családi öröm a születésnapon' },
       ],
     },
   ];
@@ -171,11 +208,12 @@ const Portfolio = () => {
     <div className="min-h-screen pt-28 sm:pt-32 pb-16">
       <SEO
         title="Portfólió"
-        description="Tekintse meg korábbi munkáimat - családfotózás, gyermekfotózás, kismama fotózás, keresztelő, szülinap és különleges családi pillanatok."
-        keywords="portfólió, családi fotók, gyermekfotók, kismama fotók, keresztelő fotók, szülinapi fotók, fotó galéria"
+        description="Családi és gyermekfotózás portfólió Budapesten - családfotózás otthon, játszótéren és parkokban, kismama fotózás, keresztelő és szülinapi fotózás. Nézd meg korábbi munkáimat!"
+        keywords="portfólió, családi fotók Budapest, gyermekfotók, kismama fotók, keresztelő fotók, szülinapi fotók, fotó galéria, Margitsziget fotózás, Városliget fotózás"
         ogImage="/assets/portfolio/csaladfotozes-margitszigeten/margitsziget-1.jpg"
-        ogImageAlt="Portfólió - Családfotózás Margitszigeten"
+        ogImageAlt="Portfólió - Családfotózás a Margitszigeten"
         canonicalUrl="/portfolio"
+        structuredData={structuredData}
       />
       {/* Enhanced Header */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-6 sm:mb-8 md:mb-10">

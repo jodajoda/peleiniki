@@ -8,6 +8,35 @@ const About = () => {
   const [contentVisible, setContentVisible] = useState(false);
   const contentRef = useRef(null);
 
+  // Structured data for About page - Person schema
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pelei Niki",
+    "jobTitle": "Családi és Gyermekfotós",
+    "description": "Családi és gyermekfotós Budapesten. 5+ év tapasztalattal, 100+ boldog család. Természetes, őszinte pillanatok megörökítése játszótéren, otthon vagy a szabadban.",
+    "image": "https://peleiniki.com/assets/about-me/magamrol_202410-03733-2.jpg",
+    "url": "https://peleiniki.com/about",
+    "email": "peleinikifotoi@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Budapest",
+      "addressCountry": "HU"
+    },
+    "sameAs": [
+      "https://www.facebook.com/peleinikifoto",
+      "https://www.instagram.com/peleinikifotoi/"
+    ],
+    "knowsAbout": [
+      "Családi fotózás",
+      "Gyermekfotózás",
+      "Kismama fotózás",
+      "Keresztelő fotózás",
+      "Szülinapi fotózás",
+      "Természetes fotózás"
+    ]
+  };
+
   useEffect(() => {
     setIsVisible(true);
 
@@ -37,11 +66,12 @@ const About = () => {
     <div className="min-h-screen pt-28 sm:pt-32 pb-16">
       <SEO
         title="Rólam"
-        description="Pelei Niki vagyok, családi és gyermekfotós. Ismerd meg jobban a történetemet és azt, miért szeretem megörökíteni a családok őszinte pillanatait."
-        keywords="Pelei Niki, fotográfus bemutatkozás, családi fotós Budapest, fotós bemutatkozó"
+        description="Pelei Niki vagyok, családi és gyermekfotós Budapesten. 5+ év tapasztalat, 100+ boldog család. Ismerd meg történetemet és azt, miért szeretem megörökíteni a családok őszinte pillanatait."
+        keywords="Pelei Niki, családi fotós Budapest, gyermekfotós, fotográfus bemutatkozás, természetes fotózás, családi pillanatok"
         ogImage="/assets/about-me/magamrol_202410-03733-2.jpg"
-        ogImageAlt="Pelei Niki fotográfus portréja"
+        ogImageAlt="Pelei Niki családi és gyermekfotós Budapesten"
         canonicalUrl="/about"
+        structuredData={structuredData}
       />
 
       {/* Enhanced Header */}

@@ -9,6 +9,52 @@ const Packages = () => {
   const [visibleCards, setVisibleCards] = useState(new Set());
   const cardRefs = useRef([]);
 
+  // Structured data for Packages page - Service schema with offers
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Családi és Gyermekfotózás",
+    "name": "Pelei Niki Fotózási Csomagok",
+    "description": "Családi és gyermekfotózás csomagok Budapesten - játszótéri fotózás, családi fotózás, kismama fotózás, keresztelő és egyedi rendezvények.",
+    "url": "https://peleiniki.com/packages",
+    "provider": {
+      "@type": "Person",
+      "name": "Pelei Niki",
+      "url": "https://peleiniki.com"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Budapest"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Fotózási Csomagok",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Kis kalandok",
+          "description": "40 perc fotózás kedvenc játszótereteken vagy parkban, 15 db digitális kép",
+          "price": "25000",
+          "priceCurrency": "HUF"
+        },
+        {
+          "@type": "Offer",
+          "name": "Röpke pillanatok",
+          "description": "60 perc fotózás egy helyszínen (otthon, játszótéren vagy parkban), 30 db digitális kép",
+          "price": "35000",
+          "priceCurrency": "HUF"
+        },
+        {
+          "@type": "Offer",
+          "name": "Mindennapi csodák",
+          "description": "1.5-2 óra fotózás akár két helyszínen, 50 db digitális kép",
+          "price": "50000",
+          "priceCurrency": "HUF"
+        }
+      ]
+    }
+  };
+
   useEffect(() => {
     setIsVisible(true);
 
@@ -81,12 +127,13 @@ const Packages = () => {
   return (
     <div className="min-h-screen pt-28 sm:pt-32 pb-16 relative overflow-hidden">
       <SEO
-        title="Fotózási Csomagok"
-        description="Válassz a fotózási csomagjaim közül - játszótéri fotózás, családi fotózás, kismama fotózás, keresztelő és egyedi rendezvények. Árak és részletek."
-        keywords="fotózási csomagok, fotózás árak, családi fotózás ár, kismama fotózás ár, keresztelő fotózás ár, esküvői fotózás"
+        title="Fotózási Csomagok és Árak"
+        description="Családi fotózás árak Budapesten: Kis kalandok 25.000 Ft, Röpke pillanatok 35.000 Ft, Mindennapi csodák 50.000 Ft. Játszótéri, otthoni és szabadtéri fotózás."
+        keywords="fotózási csomagok, családi fotózás ár Budapest, gyermekfotózás ár, kismama fotózás ár, keresztelő fotózás ár, játszótéri fotózás ár"
         ogImage="/assets/homepage/csomagok.jpg"
-        ogImageAlt="Fotózási Csomagok és Árak"
+        ogImageAlt="Fotózási Csomagok és Árak - Pelei Niki Fotós Budapest"
         canonicalUrl="/packages"
+        structuredData={structuredData}
       />
 
       {/* Background decorative elements */}

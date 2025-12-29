@@ -129,10 +129,10 @@ const Contact = () => {
     <div className="min-h-screen pt-28 sm:pt-32 pb-16 relative overflow-hidden">
       <SEO
         title="Kapcsolat"
-        description="Vedd fel velem a kapcsolatot fotózási időpont egyeztetéséhez. Elérhető vagyok emailen és közösségi médiában. Várom megkeresésed!"
-        keywords="kapcsolat, fotózás foglalás, időpont egyeztetés, fotográfus elérhetőség, fotózás árajánlat"
+        description="Foglalj családi fotózást Budapesten! Vedd fel velem a kapcsolatot időpont egyeztetéshez. Elérhető vagyok emailen, Instagramon és Facebookon."
+        keywords="kapcsolat, családi fotózás foglalás Budapest, időpont egyeztetés, fotózás árajánlat, peleinikifotoi, fotós elérhetőség"
         ogImage="/assets/homepage/hero.jpg"
-        ogImageAlt="Kapcsolatfelvétel - Pelei Niki Fotográfus"
+        ogImageAlt="Kapcsolatfelvétel - Pelei Niki családi és gyermekfotós Budapest"
         canonicalUrl="/contact"
       />
 
