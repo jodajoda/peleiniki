@@ -19,7 +19,6 @@ const Home = () => {
     "image": "https://peleiniki.com/assets/homepage/hero.jpg",
     "description": "Családi és gyermekfotózás természetes környezetben. Őszinte pillanatok megörökítése Budapesten és környékén.",
     "url": "https://peleiniki.com",
-    "telephone": "+36-XX-XXX-XXXX",
     "email": "peleinikifotoi@gmail.com",
     "address": {
       "@type": "PostalAddress",
