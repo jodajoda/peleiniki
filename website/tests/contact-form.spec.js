@@ -22,7 +22,6 @@ test.describe('Contact Form', () => {
     // Check all form fields are present
     await expect(page.getByLabel('Név *')).toBeVisible({ timeout: 10000 });
     await expect(page.getByLabel('Email *')).toBeVisible();
-    await expect(page.getByLabel('Telefonszám')).toBeVisible();
     await expect(page.getByLabel('Üzenet *')).toBeVisible();
 
     // Check submit button
@@ -68,7 +67,6 @@ test.describe('Contact Form', () => {
     // Fill in all required fields
     await page.getByLabel('Név *').fill('Test Felhasználó');
     await page.getByLabel('Email *').fill('test@example.com');
-    await page.getByLabel('Telefonszám').fill('+36 30 123 4567');
     await page.getByLabel('Üzenet *').fill('Ez egy teszt üzenet a fotózással kapcsolatban.');
 
     // Submit button should be enabled
@@ -229,14 +227,11 @@ test.describe('Contact Form', () => {
     // Check all form elements have proper labels
     const nameInput = page.getByLabel('Név *');
     const emailInput = page.getByLabel('Email *');
-    const phoneInput = page.getByLabel('Telefonszám');
     const messageInput = page.getByLabel('Üzenet *');
 
     await expect(nameInput).toHaveAttribute('name', 'name');
     await expect(emailInput).toHaveAttribute('name', 'email');
     await expect(emailInput).toHaveAttribute('type', 'email');
-    await expect(phoneInput).toHaveAttribute('name', 'phone');
-    await expect(phoneInput).toHaveAttribute('type', 'tel');
     await expect(messageInput).toHaveAttribute('name', 'message');
   });
 
