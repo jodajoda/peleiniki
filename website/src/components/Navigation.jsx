@@ -46,8 +46,8 @@ const Navigation = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-[80] transition-all duration-500 ${
         isScrolled
-          ? 'bg-white backdrop-blur-md shadow-soft-lg py-1'
-          : 'bg-gradient-to-b from-white via-white/95 to-white/90 py-2'
+          ? 'bg-white backdrop-blur-md shadow-soft-lg py-0.5 sm:py-1'
+          : 'bg-gradient-to-b from-white via-white/95 to-white/90 py-2 sm:py-2'
       }`}
     >
       <nav className="container mx-auto px-4">
@@ -62,24 +62,28 @@ const Navigation = () => {
                 src={getAssetPath('assets/icons/pnfotos.png')}
                 alt="Pelei Niki Fotós"
                 className={`transition-all duration-500 ${
-                  isScrolled ? 'h-8 sm:h-10' : 'h-10 sm:h-12'
+                  isScrolled ? 'h-7 sm:h-10' : 'h-10 sm:h-12'
                 } group-hover:scale-105`}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-accent-warm/0 via-accent-warm/10 to-accent-warm/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg blur-xl" />
             </div>
           </Link>
 
-          {/* Mobile menu button - Enhanced touch target */}
+          {/* Mobile menu button - Enhanced touch target, shrinks on scroll */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-3 -mr-2 rounded-lg hover:bg-primary-50 active:bg-primary-100 transition-all duration-200 group min-w-[44px] min-h-[44px] flex items-center justify-center"
+            className={`lg:hidden -mr-2 rounded-lg hover:bg-primary-50 active:bg-primary-100 transition-all duration-500 group flex items-center justify-center ${
+              isScrolled ? 'p-2 min-w-[40px] min-h-[40px]' : 'p-3 min-w-[44px] min-h-[44px]'
+            }`}
             aria-label="Menü megnyitása"
             aria-expanded={isOpen}
           >
-            <div className="w-6 h-5 flex flex-col justify-between">
+            <div className={`flex flex-col justify-between transition-all duration-500 ${
+              isScrolled ? 'w-5 h-4' : 'w-6 h-5'
+            }`}>
               <span
                 className={`block h-0.5 w-full bg-gray-800 rounded-full transition-all duration-300 group-hover:bg-primary-700 ${
-                  isOpen ? 'rotate-45 translate-y-2' : ''
+                  isOpen ? (isScrolled ? 'rotate-45 translate-y-[7px]' : 'rotate-45 translate-y-2') : ''
                 }`}
               />
               <span
@@ -89,7 +93,7 @@ const Navigation = () => {
               />
               <span
                 className={`block h-0.5 w-full bg-gray-800 rounded-full transition-all duration-300 group-hover:bg-primary-700 ${
-                  isOpen ? '-rotate-45 -translate-y-2' : ''
+                  isOpen ? (isScrolled ? '-rotate-45 -translate-y-[7px]' : '-rotate-45 -translate-y-2') : ''
                 }`}
               />
             </div>
