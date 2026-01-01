@@ -78,7 +78,7 @@ jobs:
         run: npx playwright test --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
 
       - name: Upload test results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         if: always()
         with:
           name: playwright-report-${{ matrix.shardIndex }}
@@ -86,7 +86,7 @@ jobs:
           retention-days: 30
 
       - name: Upload test screenshots
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         if: failure()
         with:
           name: playwright-screenshots-${{ matrix.shardIndex }}
@@ -134,7 +134,7 @@ jobs:
           VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: build-files
           path: website/dist
