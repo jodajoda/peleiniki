@@ -62,7 +62,7 @@ jobs:
           cache-dependency-path: website/package-lock.json
 
       - name: Cache Vite build
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: |
             website/node_modules/.vite
