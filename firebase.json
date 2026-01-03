@@ -1,6 +1,13 @@
 {
   "hosting": {
     "public": "website/dist",
+    "redirects": [
+      {
+        "source": "**",
+        "destination": "https://peleiniki-portfolio.firebaseapp.com",
+        "type": 301
+      }
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
