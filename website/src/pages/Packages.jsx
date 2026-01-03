@@ -34,21 +34,21 @@ const Packages = () => {
           "@type": "Offer",
           "name": "Kis kalandok",
           "description": "40 perc fotózás kedvenc játszótereteken vagy parkban, 15 db digitális kép",
-          "price": "25000",
+          "price": "30000",
           "priceCurrency": "HUF"
         },
         {
           "@type": "Offer",
           "name": "Röpke pillanatok",
           "description": "60 perc fotózás egy helyszínen (otthon, játszótéren vagy parkban), 30 db digitális kép",
-          "price": "35000",
+          "price": "40000",
           "priceCurrency": "HUF"
         },
         {
           "@type": "Offer",
           "name": "Mindennapi csodák",
           "description": "1.5-2 óra fotózás akár két helyszínen, 50 db digitális kép",
-          "price": "50000",
+          "price": "60000",
           "priceCurrency": "HUF"
         }
       ]
@@ -143,17 +143,6 @@ const Packages = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-peach-100/50 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
       </div>
 
-      {/* Decorative pattern overlay */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none">
-        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="packages-dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-              <circle cx="20" cy="20" r="2" fill="currentColor" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#packages-dots)" />
-        </svg>
-      </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Enhanced Header */}

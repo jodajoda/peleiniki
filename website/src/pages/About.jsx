@@ -120,18 +120,18 @@ const About = () => {
               <div className="space-y-6 sm:space-y-8">
                 <div className="space-y-4 sm:space-y-5 md:space-y-6 font-body text-warmBrown text-sm sm:text-base md:text-lg leading-relaxed">
                   <p className={`transition-all duration-700 delay-75 md:duration-1000 md:delay-200 ${contentVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
-                    Pelei Niki vagyok - feleség, egy kislány anyukája és két kutya büszke gazdája. A fotózás iránti szeretetem a saját családom mindennapi pillanataiból indult. Rájöttem, hogy azok a kis, hétköznapi történések, amiket sokszor észre sem veszünk, valójában óriási kincsek. A fényképek segítenek megőrizni ezeket a múló, mégis nagyon fontos emlékeket.
+                    <span className="text-terracotta font-medium">Pelei Niki</span> vagyok - feleség, egy kislány anyukája és két kutya büszke gazdája. A fotózás iránti szeretetem a saját családom mindennapi pillanataiból indult. Rájöttem, hogy azok a kis, <span className="text-terracotta font-medium">hétköznapi történések</span>, amiket sokszor észre sem veszünk, valójában óriási kincsek. A fényképek segítenek megőrizni ezeket a múló, mégis nagyon fontos emlékeket.
                   </p>
 
                   <p className={`transition-all duration-700 delay-150 md:duration-1000 md:delay-400 ${contentVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
-                    Amit imádok a fotózásban, az az élet maga. A valódi történések, az ismerős terek, a család és barátok közelsége, a kutyák bohó jelenléte - minden, ami tényleg ti vagytok. Nincs beállított díszlet, nincs mesterkéltség: csak őszinte nevetések, mozdulatok és történetek.
+                    Amit imádok a fotózásban, az az élet maga. A <span className="text-terracotta font-medium">valódi történések</span>, az ismerős terek, a család és barátok közelsége, a kutyák bohó jelenléte - minden, ami tényleg ti vagytok. <span className="text-terracotta font-medium">Nincs beállított díszlet</span>, nincs mesterkéltség: csak őszinte nevetések, mozdulatok és történetek.
                   </p>
 
                   <p className={`transition-all duration-700 delay-200 md:duration-1000 md:delay-600 ${contentVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
-                    A fotózás számomra nem csupán munka, hanem szívből jövő szenvedély. Imádom megfigyelni az emberek közötti apró rezdüléseket: egy ölelést, egy mosolyt, egy fél pillantást. Szeretem ezeket a kapcsolatokat és érzelmeket természetesen, őszintén visszaadni a képeimen.
+                    A fotózás számomra nem csupán munka, hanem szívből jövő szenvedély. Imádom megfigyelni az emberek közötti apró rezdüléseket: egy ölelést, egy mosolyt, egy fél pillantást. Szeretem ezeket a kapcsolatokat és érzelmeket <span className="text-terracotta font-medium">természetesen</span>, őszintén visszaadni a képeimen.
                   </p>
                   <p className={`transition-all duration-700 delay-200 md:duration-1000 md:delay-600 ${contentVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
-                    Hiszem, hogy a legszebb fotók akkor születnek, amikor mindenki felszabadultan érzi magát. Ezért a fotózásokon barátságos, könnyed légkört teremtek, ahol nincs elvárás, nincs szerep - csak ti vagytok és a köztetek lévő szeretet.
+                    Hiszem, hogy a legszebb fotók akkor születnek, <span className="text-terracotta font-medium">amikor mindenki felszabadultan érzi magát.</span> Ezért a fotózásokon barátságos, könnyed légkört teremtek, ahol nincs elvárás, nincs szerep - csak ti vagytok és a köztetek lévő szeretet.
                   </p>
                   <p className={`transition-all duration-700 delay-200 md:duration-1000 md:delay-600 ${contentVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
                     A célom, hogy olyan családi fotókat készítsek, amelyek nemcsak szépek, hanem történetet is mesélnek. Olyan képeket, amelyekre évekkel később is örömmel néztek vissza, és amelyek újra előhozzák azt az érzést, amit abban a pillanatban megéltetek.

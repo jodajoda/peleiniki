@@ -155,7 +155,7 @@ const Portfolio = () => {
     {
       id: 'varosliget',
       title: 'Családfotózás a Városligetben',
-      description: 'Természetes környezetben, a Városliget zöld oázisában.',
+      description: 'Természet, játék és egy kis együtt töltött idő a Városligetben.',
       images: [
         { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-1.jpg', alt: 'Családfotózás a Városligetben Budapest - séta a parkban' },
         { src: '/assets/portfolio/csaladfotozes-a-varosligetben/varosliget-2.jpg', alt: 'Természetes családi pillanat a Városliget fái között' },

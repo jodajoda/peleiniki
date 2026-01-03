@@ -257,10 +257,6 @@ const HomeRedesign = () => {
               Örökítsük meg együtt családod különleges pillanatait
             </h2>
 
-            <p className="font-body text-warmBrown/80 text-base sm:text-lg mb-8 sm:mb-10 max-w-lg mx-auto">
-              Természetes fotózás Budapest legszebb helyszínein. Nincs kényszerítés, csak őszinte mosolyok.
-            </p>
-
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link

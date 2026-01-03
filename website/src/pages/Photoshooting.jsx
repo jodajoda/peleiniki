@@ -66,7 +66,7 @@ const Photoshooting = () => {
       ],
       content: [
         'Fotózhatunk otthon, a kertetekben, a kedvenc játszótéren, parkban, vagy bármilyen helyen, ami számotokra fontos és biztonságos.',
-        'Nem használok díszleteket vagy stúdiós háttereket — hiszem, hogy a legszebb fotókat az adja, ami már eleve a tiétek: a saját környezetetek, a gyerekek kedvenc játéka, a közös mozdulatok. Így lesz minden kép természetes és hiteles.',
+        'Nem használok díszleteket vagy stúdiós háttereket — hiszem, hogy a legszebb fotókat az adja, ami már eleve a tiétek: a saját környezetetek, a gyerekek kedvenc játékai, a közös mozdulatok. Így lesz minden kép természetes és hiteles.',
       ],
     },
     {
@@ -218,7 +218,7 @@ const Photoshooting = () => {
 
             <Link
               to="/contact"
-              className="group flex items-center justify-center gap-2 sm:gap-3 bg-gradient-to-r from-terracotta to-sunsetOrange text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-body font-bold text-base sm:text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95"
+              className="group inline-flex items-center justify-center gap-2 sm:gap-3 bg-gradient-to-r from-terracotta to-sunsetOrange text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-body font-bold text-base sm:text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95"
             >
               <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

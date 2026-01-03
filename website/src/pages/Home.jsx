@@ -259,12 +259,8 @@ const Home = () => {
             </p>
 
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-charcoal mb-4 sm:mb-6 leading-snug">
-              Örökítsük meg együtt családod különleges pillanatait
+              Örökítsük meg együtt családod különlegxes pillanatait
             </h2>
-
-            <p className="font-body text-warmBrown/80 text-base sm:text-lg mb-8 sm:mb-10 max-w-lg mx-auto">
-              Természetes fotózás Budapest legszebb helyszínein. Nincs kényszerítés, csak őszinte mosolyok.
-            </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
