@@ -128,7 +128,7 @@ const Packages = () => {
     <div className="min-h-screen pt-28 sm:pt-32 pb-16 relative overflow-hidden">
       <SEO
         title="Fotózási Csomagok és Árak"
-        description="Családi fotózás árak Budapesten: Kis kalandok 25.000 Ft, Röpke pillanatok 35.000 Ft, Mindennapi csodák 50.000 Ft. Játszótéri, otthoni és szabadtéri fotózás."
+        description="Családi fotózás árak Budapesten: Kis kalandok 30.000 Ft, Röpke pillanatok 40.000 Ft, Mindennapi csodák 60.000 Ft. Játszótéri, otthoni és szabadtéri fotózás."
         keywords="fotózási csomagok, családi fotózás ár Budapest, gyermekfotózás ár, kismama fotózás ár, keresztelő fotózás ár, játszótéri fotózás ár"
         ogImage="/assets/homepage/csomagok.jpg"
         ogImageAlt="Fotózási Csomagok és Árak - Pelei Niki Fotós Budapest"
