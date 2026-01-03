@@ -95,7 +95,7 @@ const Packages = () => {
       description: 'Kedvenc játszótereteken, vagy parkban.',
       duration: '40 perc fotózás',
       photos: '15 db digitális kép (online tárhelyről letölthető)',
-      price: '25.000 Ft',
+      price: '30.000 Ft',
     },
     {
       id: 2,
@@ -103,7 +103,7 @@ const Packages = () => {
       description: 'Egy helyszínen (otthon, kedvenc játszótereteken, vagy parkban).',
       duration: '60 perc fotózás',
       photos: '30 db digitális kép (online tárhelyről letölthető)',
-      price: '35.000 Ft',
+      price: '40.000 Ft',
     },
     {
       id: 3,
@@ -111,7 +111,7 @@ const Packages = () => {
       description: 'Akár két helyszínen (otthon, kertben, parkban, vagy más számotokra kedves környezetben).',
       duration: '1.5 – 2 óra fotózás',
       photos: '50 db digitális kép (online tárhelyről letölthető)',
-      price: '50.000 Ft',
+      price: '60.000 Ft',
     },
     {
       id: 4,
