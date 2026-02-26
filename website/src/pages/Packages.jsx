@@ -32,6 +32,13 @@ const Packages = () => {
       "itemListElement": [
         {
           "@type": "Offer",
+          "name": "Anyák napi mini",
+          "description": "30 perc fotózás szabadban vagy otthonotokban, 12 db digitális kép",
+          "price": "25000",
+          "priceCurrency": "HUF"
+        },
+        {
+          "@type": "Offer",
           "name": "Kis kalandok",
           "description": "40 perc fotózás kedvenc játszótereteken vagy parkban, 15 db digitális kép",
           "price": "30000",
@@ -89,6 +96,14 @@ const Packages = () => {
   };
 
   const packages = [
+    {
+      id: 0,
+      title: 'Anyák napi mini, mert megérdemled!',
+      description: 'Szabadban, vagy az otthonotokban.',
+      duration: '30 perc',
+      photos: '12 db digitális kép (online tárhelyről letölthető)',
+      price: '25.000 Ft',
+    },
     {
       id: 1,
       title: 'Kis kalandok',
@@ -261,6 +276,7 @@ const Packages = () => {
                           onClick={(e) => {
                             e.stopPropagation();
                             const packageStoryMap = {
+                              0: 'varosliget-story',
                               1: 'varosliget-story',
                               2: 'varosliget-story',
                               3: 'varosliget-story',
