@@ -81,7 +81,7 @@ const Portfolio = () => {
     {
       id: 'anyak-napi-mini',
       title: 'Anyák napi mini',
-      description: 'Tavaszi mini fotózás a Városligetben – pillanatok, amelyek megmaradnak.',
+      description: 'Tavaszi mini fotózás a Városligetben.',
       images: [
         { src: '/assets/portfolio/anyak-napi-mini/anyak-napi-mini--3.JPG', alt: 'Anyák napi mini fotózás Városligetben - anya emeli gyermekét a virágzó fa ágai felé' },
         { src: '/assets/portfolio/anyak-napi-mini/anyak-napi-mini--4.JPG', alt: 'Gyermekfotózás Városligetben - göndör hajú kisfiú pipaccsal' },
