@@ -79,6 +79,18 @@ const Portfolio = () => {
 
   const portfolioGroups = [
     {
+      id: 'anyak-napi-mini',
+      title: 'Anyák napi mini',
+      description: 'Tavaszi mini fotózás a Városligetben – pillanatok, amelyek megmaradnak.',
+      images: [
+        { src: '/assets/portfolio/anyak-napi-mini/anyak-napi-mini--3.JPG', alt: 'Anyák napi mini fotózás Városligetben - anya emeli gyermekét a virágzó fa ágai felé' },
+        { src: '/assets/portfolio/anyak-napi-mini/anyak-napi-mini--4.JPG', alt: 'Gyermekfotózás Városligetben - göndör hajú kisfiú pipaccsal' },
+        { src: '/assets/portfolio/anyak-napi-mini/anyak-napi-mini--12.JPG', alt: 'Anyák napi mini fotózás - anya két gyermekével sétál a parkban' },
+        { src: '/assets/portfolio/anyak-napi-mini/anyak-napi-mini--8.JPG', alt: 'Anyák napi mini fotózás - anya két gyermekével és kutyájával a Városligetben' },
+        { src: '/assets/portfolio/anyak-napi-mini/anyak-napi-mini--14.JPG', alt: 'Anyák napi mini fotózás Városligetben - anya a karján tartja kislányát, kisfia fut előre' },
+      ],
+    },
+    {
       id: 'csalad-otthon-1',
       title: 'Családfotózás otthon',
       description: 'Otthoni környezetben, ahol a család a leginkább önmaga lehet.',
@@ -257,7 +269,85 @@ const Portfolio = () => {
                   <p className={`text-sm sm:text-base md:text-lg font-body text-warmBrown leading-relaxed transition-all duration-700 delay-100 md:duration-1000 md:delay-300 ${isSectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>{group.description}</p>
                 </div>
 
-                {group.id === 'kutyas-fotozas' ? (
+                {group.id === 'anyak-napi-mini' ? (
+                  <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr_1fr] gap-4 relative z-10">
+                    {/* Left column: 2 landscape images (--3, --4) */}
+                    <div className="grid grid-cols-1 gap-4">
+                      {[0, 1].map((index) => {
+                        const image = group.images[index];
+                        return (
+                          <button
+                            key={index}
+                            type="button"
+                            className="relative overflow-hidden rounded-2xl cursor-pointer group hover:shadow-2xl transition-all duration-700 transform hover:scale-[1.02] w-full text-left focus:outline-none focus:ring-4 focus:ring-terracotta"
+                            style={{ animationDelay: `${index * 0.05}s` }}
+                            onClick={() => openLightbox(groupIndex, index)}
+                            aria-label={`${image.alt} megnyitása nagyobb méretben`}
+                          >
+                            <LazyImage
+                              src={image.src}
+                              alt={image.alt}
+                              className="h-72 object-cover transition-transform duration-1000 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                              <svg className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                              </svg>
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    {/* Middle column: --12 displayed as portrait (cropped center) */}
+                    <button
+                      type="button"
+                      className="relative overflow-hidden rounded-2xl cursor-pointer group hover:shadow-2xl transition-all duration-700 transform hover:scale-[1.02] w-full text-left focus:outline-none focus:ring-4 focus:ring-terracotta h-[calc(36rem+1rem)]"
+                      style={{ animationDelay: '0.1s' }}
+                      onClick={() => openLightbox(groupIndex, 2)}
+                      aria-label={`${group.images[2].alt} megnyitása nagyobb méretben`}
+                    >
+                      <LazyImage
+                        src={group.images[2].src}
+                        alt={group.images[2].alt}
+                        className="h-full object-cover object-center transition-transform duration-1000 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                        <svg className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                        </svg>
+                      </div>
+                    </button>
+
+                    {/* Right column: 2 landscape images (--8, --14) */}
+                    <div className="grid grid-cols-1 gap-4">
+                      {[3, 4].map((index) => {
+                        const image = group.images[index];
+                        return (
+                          <button
+                            key={index}
+                            type="button"
+                            className="relative overflow-hidden rounded-2xl cursor-pointer group hover:shadow-2xl transition-all duration-700 transform hover:scale-[1.02] w-full text-left focus:outline-none focus:ring-4 focus:ring-terracotta"
+                            style={{ animationDelay: `${(index - 2) * 0.05 + 0.15}s` }}
+                            onClick={() => openLightbox(groupIndex, index)}
+                            aria-label={`${image.alt} megnyitása nagyobb méretben`}
+                          >
+                            <LazyImage
+                              src={image.src}
+                              alt={image.alt}
+                              className="h-72 object-cover transition-transform duration-1000 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                              <svg className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                              </svg>
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ) : group.id === 'kutyas-fotozas' ? (
                   <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr_1fr] gap-4 relative z-10">
                     {/* First column: 2 landscape images (kutya-1, kutya-3) */}
                     <div className="grid grid-cols-1 gap-4">
